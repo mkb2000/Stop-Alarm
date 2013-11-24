@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		A9079FFB18388EF800D8267D /* train.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.csv */; };
 		A946CD4518363782003EE075 /* PTVAlarmFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */; };
-		A946CD4818363B65003EE075 /* PTVAlarmSelectFromStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4718363B65003EE075 /* PTVAlarmSelectFromStationViewController.m */; };
+		A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */; };
 		A946CD50183644C0003EE075 /* RegionalBusIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4B183644C0003EE075 /* RegionalBusIcon30px.gif */; };
 		A946CD51183644C0003EE075 /* RegionalTrainIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4C183644C0003EE075 /* RegionalTrainIcon30px.gif */; };
 		A946CD52183644C0003EE075 /* BusIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4D183644C0003EE075 /* BusIcon30px.gif */; };
 		A946CD53183644C0003EE075 /* TramIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4E183644C0003EE075 /* TramIcon30px.gif */; };
 		A946CD54183644C0003EE075 /* TrainIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4F183644C0003EE075 /* TrainIcon30px.gif */; };
+		A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9502EA01841CE8C00AE8F07 /* train1.csv */; };
 		A9961DE21835D54C00AAF1A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE11835D54C00AAF1A9 /* Foundation.framework */; };
 		A9961DE41835D54C00AAF1A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */; };
 		A9961DE61835D54C00AAF1A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE51835D54C00AAF1A9 /* UIKit.framework */; };
@@ -30,7 +31,7 @@
 		A9961E061835D54C00AAF1A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE51835D54C00AAF1A9 /* UIKit.framework */; };
 		A9961E0E1835D54C00AAF1A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9961E0C1835D54C00AAF1A9 /* InfoPlist.strings */; };
 		A9961E101835D54C00AAF1A9 /* PTV_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E0F1835D54C00AAF1A9 /* PTV_AlarmTests.m */; };
-		A9961E1B1835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E1A1835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.m */; };
+		A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */; };
 		A9961E631835EBF100AAF1A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961E621835EBF100AAF1A9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,13 +49,14 @@
 		A9079FFA18388EF800D8267D /* train.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.csv; sourceTree = "<group>"; };
 		A946CD4318363782003EE075 /* PTVAlarmFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmFavoriteViewController.h; sourceTree = "<group>"; };
 		A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmFavoriteViewController.m; sourceTree = "<group>"; };
-		A946CD4618363B65003EE075 /* PTVAlarmSelectFromStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmSelectFromStationViewController.h; sourceTree = "<group>"; };
-		A946CD4718363B65003EE075 /* PTVAlarmSelectFromStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmSelectFromStationViewController.m; sourceTree = "<group>"; };
+		A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmStationViewController.h; sourceTree = "<group>"; };
+		A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmStationViewController.m; sourceTree = "<group>"; };
 		A946CD4B183644C0003EE075 /* RegionalBusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = RegionalBusIcon30px.gif; path = ../../../../Downloads/RegionalBusIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4C183644C0003EE075 /* RegionalTrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = RegionalTrainIcon30px.gif; path = ../../../../Downloads/RegionalTrainIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4D183644C0003EE075 /* BusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = BusIcon30px.gif; path = ../../../../Downloads/BusIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4E183644C0003EE075 /* TramIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TramIcon30px.gif; path = ../../../../Downloads/TramIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4F183644C0003EE075 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TrainIcon30px.gif; path = ../../../../Downloads/TrainIcon30px.gif; sourceTree = "<group>"; };
+		A9502EA01841CE8C00AE8F07 /* train1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train1.csv; sourceTree = "<group>"; };
 		A9961DDE1835D54C00AAF1A9 /* PTV Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTV Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9961DE11835D54C00AAF1A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,8 +77,8 @@
 		A9961E0B1835D54C00AAF1A9 /* PTV AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTV AlarmTests-Info.plist"; sourceTree = "<group>"; };
 		A9961E0D1835D54C00AAF1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9961E0F1835D54C00AAF1A9 /* PTV_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTV_AlarmTests.m; sourceTree = "<group>"; };
-		A9961E191835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmSelectOnMapViewController.h; sourceTree = "<group>"; };
-		A9961E1A1835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmSelectOnMapViewController.m; sourceTree = "<group>"; };
+		A9961E191835DA0100AAF1A9 /* PTVAlarmMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapViewController.h; sourceTree = "<group>"; };
+		A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapViewController.m; sourceTree = "<group>"; };
 		A9961E621835EBF100AAF1A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -154,8 +156,8 @@
 				A9961DF01835D54C00AAF1A9 /* PTVAlarmAppDelegate.h */,
 				A9961DF11835D54C00AAF1A9 /* PTVAlarmAppDelegate.m */,
 				A9961DF31835D54C00AAF1A9 /* Main_iPhone.storyboard */,
-				A9961E191835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.h */,
-				A9961E1A1835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.m */,
+				A9961E191835DA0100AAF1A9 /* PTVAlarmMapViewController.h */,
+				A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */,
 				A9961DF61835D54C00AAF1A9 /* Main_iPad.storyboard */,
 				A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */,
 				A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */,
@@ -163,8 +165,8 @@
 				A9961DE81835D54C00AAF1A9 /* Supporting Files */,
 				A946CD4318363782003EE075 /* PTVAlarmFavoriteViewController.h */,
 				A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */,
-				A946CD4618363B65003EE075 /* PTVAlarmSelectFromStationViewController.h */,
-				A946CD4718363B65003EE075 /* PTVAlarmSelectFromStationViewController.m */,
+				A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */,
+				A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */,
 			);
 			path = "PTV Alarm";
 			sourceTree = "<group>";
@@ -172,6 +174,7 @@
 		A9961DE81835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9502EA01841CE8C00AE8F07 /* train1.csv */,
 				A9079FFA18388EF800D8267D /* train.csv */,
 				A946CD4A183644A1003EE075 /* image */,
 				A9961DE91835D54C00AAF1A9 /* PTV Alarm-Info.plist */,
@@ -287,6 +290,7 @@
 				A9961DF51835D54C00AAF1A9 /* Main_iPhone.storyboard in Resources */,
 				A946CD52183644C0003EE075 /* BusIcon30px.gif in Resources */,
 				A9961DEC1835D54C00AAF1A9 /* InfoPlist.strings in Resources */,
+				A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,10 +311,10 @@
 			files = (
 				A946CD4518363782003EE075 /* PTVAlarmFavoriteViewController.m in Sources */,
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
-				A946CD4818363B65003EE075 /* PTVAlarmSelectFromStationViewController.m in Sources */,
+				A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */,
 				A9961DFB1835D54C00AAF1A9 /* PTVAlarmViewController.m in Sources */,
 				A9961DF21835D54C00AAF1A9 /* PTVAlarmAppDelegate.m in Sources */,
-				A9961E1B1835DA0100AAF1A9 /* PTVAlarmSelectOnMapViewController.m in Sources */,
+				A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -178,10 +178,11 @@
     return cell;
 }
 
+// For sidebar navigation
 - (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView{
     return self.sortedAlpha;
 }
-
+// For sidebar navigation
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
     return [self.sortedAlpha indexOfObject:title];
 }
@@ -233,18 +234,6 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier isEqualToString:@"trainsegue"]) {
-        [self initDataWithFile:@"train1.csv"];
-        self.imgname=@"TrainIcon30px.gif";
-    }
-    if ([segue.identifier isEqualToString:@"tramsegue"]) {
-        [self initDataWithFile:@"train.csv"];
-        self.imgname=@"TramIcon30px.gif";
-    }
-    if ([segue.identifier isEqualToString:@"bussegue"]) {
-        [self initDataWithFile:@"train.csv"];
-        self.imgname=@"BusIcon30px.gif";
-    }
 }
 */
 
