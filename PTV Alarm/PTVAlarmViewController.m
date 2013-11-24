@@ -7,7 +7,7 @@
 //
 
 #import "PTVAlarmViewController.h"
-
+#import "PTVAlarmStationViewController.h"
 @interface PTVAlarmViewController ()
 
 @end
@@ -24,6 +24,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    PTVAlarmStationViewController *stationController=segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"trainsegue"]) {
+        stationController.filename= @"train1.csv";
+        stationController.imgname=@"TrainIcon30px.gif";
+    }
+    if ([segue.identifier isEqualToString:@"tramsegue"]) {
+        stationController.filename= @"train.csv";
+        stationController.imgname=@"TramIcon30px.gif";
+    }
+    if ([segue.identifier isEqualToString:@"bussegue"]) {
+        stationController.filename= @"train.csv";
+        stationController.imgname=@"BusIcon30px.gif";
+    }
 }
 
 @end

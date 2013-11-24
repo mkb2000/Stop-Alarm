@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTVAlarmViewController : UIViewController
+@interface PTVAlarmViewController : UITableViewController
 
 @end
