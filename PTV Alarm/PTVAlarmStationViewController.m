@@ -7,6 +7,7 @@
 //
 
 #import "PTVAlarmStationViewController.h"
+#import "PTVAlarmDetailViewController.h"
 
 @interface PTVAlarmStationViewController ()
 @property (strong,nonatomic) NSMutableDictionary *stationdic; //stationName : stationInfo
@@ -226,7 +227,7 @@
  }
  */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -234,8 +235,20 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    //    NSArray * x=[self.tableView indexPathsForSelectedRows];
+    if ([[segue identifier] isEqualToString:@"stationDetail"]) {
+        NSIndexPath * index=[self.tableView indexPathsForSelectedRows][0];
+        NSArray * selectedStation=[self statioAtRow:index.row andSection:index.section];
+        PTVAlarmDetailViewController * dvController=[segue destinationViewController];
+        dvController.stationName=selectedStation[0];
+        dvController.suburb=selectedStation[1];
+        dvController.address=selectedStation[2];
+        NSArray * cor=[selectedStation[3] componentsSeparatedByString:@","];
+        dvController.latitude=cor[0];
+        dvController.longitude=cor[1];
+        
+    }
 }
-*/
 
 
 @end

@@ -154,6 +154,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5o8-Hj-Zy9" kind="push" identifier="stationDetail" id="c13-iO-rHB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -166,6 +169,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QW8-XH-HgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1593" y="-4565"/>
+        </scene>
+        <!--Alarm Detail View Controller-->
+        <scene sceneID="Epk-Jv-6L5">
+            <objects>
+                <viewController id="5o8-Hj-Zy9" customClass="PTVAlarmDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5g3-vD-Q2w"/>
+                        <viewControllerLayoutGuide type="bottom" id="LcF-mL-0e0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a0l-o0-pv2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zbq-vC-BSP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gb1-nn-jHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="-4562"/>
         </scene>
         <!--Navigation Controller - Station-->
         <scene sceneID="awX-en-p1v">

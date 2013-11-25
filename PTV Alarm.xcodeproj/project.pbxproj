@@ -16,6 +16,7 @@
 		A946CD53183644C0003EE075 /* TramIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4E183644C0003EE075 /* TramIcon30px.gif */; };
 		A946CD54183644C0003EE075 /* TrainIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4F183644C0003EE075 /* TrainIcon30px.gif */; };
 		A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9502EA01841CE8C00AE8F07 /* train1.csv */; };
+		A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */; };
 		A9961DE21835D54C00AAF1A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE11835D54C00AAF1A9 /* Foundation.framework */; };
 		A9961DE41835D54C00AAF1A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */; };
 		A9961DE61835D54C00AAF1A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE51835D54C00AAF1A9 /* UIKit.framework */; };
@@ -57,6 +58,8 @@
 		A946CD4E183644C0003EE075 /* TramIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TramIcon30px.gif; path = ../../../../Downloads/TramIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4F183644C0003EE075 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TrainIcon30px.gif; path = ../../../../Downloads/TrainIcon30px.gif; sourceTree = "<group>"; };
 		A9502EA01841CE8C00AE8F07 /* train1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train1.csv; sourceTree = "<group>"; };
+		A9502EA21841E69400AE8F07 /* PTVAlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmDetailViewController.h; sourceTree = "<group>"; };
+		A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmDetailViewController.m; sourceTree = "<group>"; };
 		A9961DDE1835D54C00AAF1A9 /* PTV Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTV Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9961DE11835D54C00AAF1A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,6 +170,8 @@
 				A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */,
 				A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */,
 				A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */,
+				A9502EA21841E69400AE8F07 /* PTVAlarmDetailViewController.h */,
+				A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */,
 			);
 			path = "PTV Alarm";
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
 				A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */,
 				A9961DFB1835D54C00AAF1A9 /* PTVAlarmViewController.m in Sources */,
+				A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */,
 				A9961DF21835D54C00AAF1A9 /* PTVAlarmAppDelegate.m in Sources */,
 				A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */,
 			);
