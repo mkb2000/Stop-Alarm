@@ -10,11 +10,6 @@
 		A9079FFB18388EF800D8267D /* train.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.csv */; };
 		A946CD4518363782003EE075 /* PTVAlarmFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */; };
 		A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */; };
-		A946CD50183644C0003EE075 /* RegionalBusIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4B183644C0003EE075 /* RegionalBusIcon30px.gif */; };
-		A946CD51183644C0003EE075 /* RegionalTrainIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4C183644C0003EE075 /* RegionalTrainIcon30px.gif */; };
-		A946CD52183644C0003EE075 /* BusIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4D183644C0003EE075 /* BusIcon30px.gif */; };
-		A946CD53183644C0003EE075 /* TramIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4E183644C0003EE075 /* TramIcon30px.gif */; };
-		A946CD54183644C0003EE075 /* TrainIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A946CD4F183644C0003EE075 /* TrainIcon30px.gif */; };
 		A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9502EA01841CE8C00AE8F07 /* train1.csv */; };
 		A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */; };
 		A9961DE21835D54C00AAF1A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961DE11835D54C00AAF1A9 /* Foundation.framework */; };
@@ -48,15 +43,15 @@
 
 /* Begin PBXFileReference section */
 		A9079FFA18388EF800D8267D /* train.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.csv; sourceTree = "<group>"; };
+		A92F7E9A1842D50800045A09 /* RegionalBusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RegionalBusIcon30px.gif; sourceTree = "<group>"; };
+		A92F7E9B1842D50800045A09 /* RegionalTrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RegionalTrainIcon30px.gif; sourceTree = "<group>"; };
+		A92F7E9C1842D50800045A09 /* BusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BusIcon30px.gif; sourceTree = "<group>"; };
+		A92F7E9D1842D50800045A09 /* TramIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TramIcon30px.gif; sourceTree = "<group>"; };
+		A92F7E9E1842D50800045A09 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TrainIcon30px.gif; sourceTree = "<group>"; };
 		A946CD4318363782003EE075 /* PTVAlarmFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmFavoriteViewController.h; sourceTree = "<group>"; };
 		A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmFavoriteViewController.m; sourceTree = "<group>"; };
 		A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmStationViewController.h; sourceTree = "<group>"; };
 		A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmStationViewController.m; sourceTree = "<group>"; };
-		A946CD4B183644C0003EE075 /* RegionalBusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = RegionalBusIcon30px.gif; path = ../../../../Downloads/RegionalBusIcon30px.gif; sourceTree = "<group>"; };
-		A946CD4C183644C0003EE075 /* RegionalTrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = RegionalTrainIcon30px.gif; path = ../../../../Downloads/RegionalTrainIcon30px.gif; sourceTree = "<group>"; };
-		A946CD4D183644C0003EE075 /* BusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = BusIcon30px.gif; path = ../../../../Downloads/BusIcon30px.gif; sourceTree = "<group>"; };
-		A946CD4E183644C0003EE075 /* TramIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TramIcon30px.gif; path = ../../../../Downloads/TramIcon30px.gif; sourceTree = "<group>"; };
-		A946CD4F183644C0003EE075 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = TrainIcon30px.gif; path = ../../../../Downloads/TrainIcon30px.gif; sourceTree = "<group>"; };
 		A9502EA01841CE8C00AE8F07 /* train1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train1.csv; sourceTree = "<group>"; };
 		A9502EA21841E69400AE8F07 /* PTVAlarmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmDetailViewController.h; sourceTree = "<group>"; };
 		A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmDetailViewController.m; sourceTree = "<group>"; };
@@ -113,11 +108,11 @@
 		A946CD4A183644A1003EE075 /* image */ = {
 			isa = PBXGroup;
 			children = (
-				A946CD4B183644C0003EE075 /* RegionalBusIcon30px.gif */,
-				A946CD4C183644C0003EE075 /* RegionalTrainIcon30px.gif */,
-				A946CD4D183644C0003EE075 /* BusIcon30px.gif */,
-				A946CD4E183644C0003EE075 /* TramIcon30px.gif */,
-				A946CD4F183644C0003EE075 /* TrainIcon30px.gif */,
+				A92F7E9A1842D50800045A09 /* RegionalBusIcon30px.gif */,
+				A92F7E9B1842D50800045A09 /* RegionalTrainIcon30px.gif */,
+				A92F7E9C1842D50800045A09 /* BusIcon30px.gif */,
+				A92F7E9D1842D50800045A09 /* TramIcon30px.gif */,
+				A92F7E9E1842D50800045A09 /* TrainIcon30px.gif */,
 			);
 			name = image;
 			sourceTree = "<group>";
@@ -285,15 +280,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A946CD54183644C0003EE075 /* TrainIcon30px.gif in Resources */,
 				A9961DF81835D54C00AAF1A9 /* Main_iPad.storyboard in Resources */,
 				A9961DFD1835D54C00AAF1A9 /* Images.xcassets in Resources */,
-				A946CD51183644C0003EE075 /* RegionalTrainIcon30px.gif in Resources */,
-				A946CD50183644C0003EE075 /* RegionalBusIcon30px.gif in Resources */,
 				A9079FFB18388EF800D8267D /* train.csv in Resources */,
-				A946CD53183644C0003EE075 /* TramIcon30px.gif in Resources */,
 				A9961DF51835D54C00AAF1A9 /* Main_iPhone.storyboard in Resources */,
-				A946CD52183644C0003EE075 /* BusIcon30px.gif in Resources */,
 				A9961DEC1835D54C00AAF1A9 /* InfoPlist.strings in Resources */,
 				A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */,
 			);
