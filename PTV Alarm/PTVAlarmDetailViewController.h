@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PTVAlarmDetailViewController : UIViewController
+@interface PTVAlarmDetailViewController : UIViewController <MKMapViewDelegate>
 @property (nonatomic,strong) NSString * latitude;
 @property (nonatomic,strong) NSString * longitude;
 @property (nonatomic,strong) NSString * address;
 @property (nonatomic,strong) NSString * stationName;
 @property (nonatomic,strong) NSString * suburb;
+
 @end

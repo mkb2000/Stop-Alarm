@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A9079FFB18388EF800D8267D /* train.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.csv */; };
-		A946CD4518363782003EE075 /* PTVAlarmFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */; };
+		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
+		A946CD4518363782003EE075 /* PTVAlarmAlarmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */; };
 		A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */; };
 		A9502EA11841CE8C00AE8F07 /* train1.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9502EA01841CE8C00AE8F07 /* train1.csv */; };
 		A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */; };
@@ -29,6 +30,11 @@
 		A9961E101835D54C00AAF1A9 /* PTV_AlarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E0F1835D54C00AAF1A9 /* PTV_AlarmTests.m */; };
 		A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */; };
 		A9961E631835EBF100AAF1A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961E621835EBF100AAF1A9 /* MapKit.framework */; };
+		A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F579A6184701BE0065553F /* alarms.xcdatamodeld */; };
+		A9F579B1184721C20065553F /* Alarms+Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F579B0184721C20065553F /* Alarms+Alarm.m */; };
+		A9F579C3184725770065553F /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F579C2184725770065553F /* Alarms.m */; };
+		A9F579C5184739850065553F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F579C4184739850065553F /* CoreData.framework */; };
+		A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F579C7184748B60065553F /* PTVAlarmDefine.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +54,10 @@
 		A92F7E9C1842D50800045A09 /* BusIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = BusIcon30px.gif; sourceTree = "<group>"; };
 		A92F7E9D1842D50800045A09 /* TramIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TramIcon30px.gif; sourceTree = "<group>"; };
 		A92F7E9E1842D50800045A09 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TrainIcon30px.gif; sourceTree = "<group>"; };
-		A946CD4318363782003EE075 /* PTVAlarmFavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmFavoriteViewController.h; sourceTree = "<group>"; };
-		A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmFavoriteViewController.m; sourceTree = "<group>"; };
+		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
+		A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapAnnotation.m; sourceTree = "<group>"; };
+		A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmAlarmsViewController.h; sourceTree = "<group>"; };
+		A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmAlarmsViewController.m; sourceTree = "<group>"; };
 		A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmStationViewController.h; sourceTree = "<group>"; };
 		A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmStationViewController.m; sourceTree = "<group>"; };
 		A9502EA01841CE8C00AE8F07 /* train1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train1.csv; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 		A9961E191835DA0100AAF1A9 /* PTVAlarmMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapViewController.h; sourceTree = "<group>"; };
 		A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapViewController.m; sourceTree = "<group>"; };
 		A9961E621835EBF100AAF1A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A9F579A7184701BE0065553F /* alarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = alarms.xcdatamodel; sourceTree = "<group>"; };
+		A9F579AF184721C20065553F /* Alarms+Alarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alarms+Alarm.h"; sourceTree = "<group>"; };
+		A9F579B0184721C20065553F /* Alarms+Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Alarms+Alarm.m"; sourceTree = "<group>"; };
+		A9F579C1184725770065553F /* Alarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarms.h; sourceTree = "<group>"; };
+		A9F579C2184725770065553F /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
+		A9F579C4184739850065553F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A9F579C6184748B60065553F /* PTVAlarmDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmDefine.h; sourceTree = "<group>"; };
+		A9F579C7184748B60065553F /* PTVAlarmDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmDefine.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F579C5184739850065553F /* CoreData.framework in Frameworks */,
 				A9961E631835EBF100AAF1A9 /* MapKit.framework in Frameworks */,
 				A9961DE41835D54C00AAF1A9 /* CoreGraphics.framework in Frameworks */,
 				A9961DE61835D54C00AAF1A9 /* UIKit.framework in Frameworks */,
@@ -139,6 +156,7 @@
 		A9961DE01835D54C00AAF1A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9F579C4184739850065553F /* CoreData.framework */,
 				A9961E621835EBF100AAF1A9 /* MapKit.framework */,
 				A9961DE11835D54C00AAF1A9 /* Foundation.framework */,
 				A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */,
@@ -151,6 +169,7 @@
 		A9961DE71835D54C00AAF1A9 /* PTV Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				A9F579C9184874400065553F /* CoreData */,
 				A9961DF01835D54C00AAF1A9 /* PTVAlarmAppDelegate.h */,
 				A9961DF11835D54C00AAF1A9 /* PTVAlarmAppDelegate.m */,
 				A9961DF31835D54C00AAF1A9 /* Main_iPhone.storyboard */,
@@ -159,14 +178,17 @@
 				A9961DF61835D54C00AAF1A9 /* Main_iPad.storyboard */,
 				A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */,
 				A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */,
-				A9961DFC1835D54C00AAF1A9 /* Images.xcassets */,
 				A9961DE81835D54C00AAF1A9 /* Supporting Files */,
-				A946CD4318363782003EE075 /* PTVAlarmFavoriteViewController.h */,
-				A946CD4418363782003EE075 /* PTVAlarmFavoriteViewController.m */,
+				A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */,
+				A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */,
 				A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */,
 				A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */,
 				A9502EA21841E69400AE8F07 /* PTVAlarmDetailViewController.h */,
 				A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */,
+				A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */,
+				A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */,
+				A9F579C6184748B60065553F /* PTVAlarmDefine.h */,
+				A9F579C7184748B60065553F /* PTVAlarmDefine.m */,
 			);
 			path = "PTV Alarm";
 			sourceTree = "<group>";
@@ -174,6 +196,7 @@
 		A9961DE81835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9961DFC1835D54C00AAF1A9 /* Images.xcassets */,
 				A9502EA01841CE8C00AE8F07 /* train1.csv */,
 				A9079FFA18388EF800D8267D /* train.csv */,
 				A946CD4A183644A1003EE075 /* image */,
@@ -201,6 +224,18 @@
 				A9961E0C1835D54C00AAF1A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9F579C9184874400065553F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A9F579AF184721C20065553F /* Alarms+Alarm.h */,
+				A9F579B0184721C20065553F /* Alarms+Alarm.m */,
+				A9F579C1184725770065553F /* Alarms.h */,
+				A9F579C2184725770065553F /* Alarms.m */,
+				A9F579A6184701BE0065553F /* alarms.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,8 +339,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A946CD4518363782003EE075 /* PTVAlarmFavoriteViewController.m in Sources */,
+				A946CD4518363782003EE075 /* PTVAlarmAlarmsViewController.m in Sources */,
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
+				A9F579C3184725770065553F /* Alarms.m in Sources */,
+				A9F579B1184721C20065553F /* Alarms+Alarm.m in Sources */,
+				A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */,
+				A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */,
+				A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */,
 				A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */,
 				A9961DFB1835D54C00AAF1A9 /* PTVAlarmViewController.m in Sources */,
 				A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */,
@@ -450,7 +490,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -463,7 +505,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -541,6 +585,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9F579A6184701BE0065553F /* alarms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9F579A7184701BE0065553F /* alarms.xcdatamodel */,
+			);
+			currentVersion = A9F579A7184701BE0065553F /* alarms.xcdatamodel */;
+			path = alarms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A9961DD61835D54C00AAF1A9 /* Project object */;
 }
