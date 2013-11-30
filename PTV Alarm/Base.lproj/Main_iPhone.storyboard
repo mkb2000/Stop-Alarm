@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb1-nn-jHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2069" y="-4552"/>
+            <point key="canvasLocation" x="1931" y="-3774"/>
         </scene>
         <!--Navigation Controller - Station-->
         <scene sceneID="awX-en-p1v">
@@ -341,6 +341,7 @@
                                     <outlet property="mainlabel" destination="UY4-Or-29U" id="N3Z-sO-1qa"/>
                                     <outlet property="sublabel" destination="e5w-M2-I6g" id="6g9-vG-G9F"/>
                                     <outlet property="uiswitch" destination="0J8-7t-BeK" id="nbJ-GW-yr2"/>
+                                    <segue destination="5o8-Hj-Zy9" kind="push" identifier="alarmToDetail" id="Dh8-oi-Ros"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -353,7 +354,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1O-lE-rj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="-3090"/>
+            <point key="canvasLocation" x="1303" y="-3114"/>
         </scene>
         <!--Navigation Controller - Alarms-->
         <scene sceneID="eH6-Uz-cM8">
@@ -408,6 +409,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Dh8-oi-Ros"/>
         <segue reference="lcE-lr-r3b"/>
     </inferredMetricsTieBreakers>
 </document>

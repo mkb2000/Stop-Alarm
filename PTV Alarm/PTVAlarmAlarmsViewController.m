@@ -156,7 +156,6 @@
 //    UISwitch * stateSwitch;
 //    stateSwitch=(UISwitch *)[cell viewWithTag:4];
 //    stateSwitch.on=[event.state boolValue];
-//    cell.detailTextLabel.text=([event.state intValue]!=0) ? @"ON": @"OFF";
 }
 
 - (void)viewDidLoad {
@@ -282,5 +281,18 @@
 //    NSLog(@"row:%d section:%d",path.row,path.section);
 //    NSLog(@"sate: %d",s.on);
 //}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"alarmToDetail"]) {
+        PTVAlarmDetailViewController * dvc=(PTVAlarmDetailViewController *)segue.destinationViewController;
+        NSIndexPath *index=[self.tableView indexPathForSelectedRow];
+        Alarms * thisStation=[self.fetchedResultsController objectAtIndexPath:index];
+        dvc.stationName=thisStation.name;
+        dvc.address=thisStation.address;
+        dvc.stationType=thisStation.type.intValue;
+        dvc.suburb=thisStation.suburb;
+        dvc.latitude=thisStation.latitude;
+        dvc.longitude=thisStation.longitude;
+    }
+}
 
 @end
