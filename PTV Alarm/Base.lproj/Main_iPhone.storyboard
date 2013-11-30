@@ -303,7 +303,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="alarmCell" rowHeight="74" id="4wn-Kn-F1J">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="alarmCell" rowHeight="74" id="4wn-Kn-F1J" customClass="PTVAlarmTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4wn-Kn-F1J" id="YGJ-gX-3oo">
@@ -330,9 +330,18 @@
                                         <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0J8-7t-BeK">
                                             <rect key="frame" x="251" y="20" width="51" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="switchAction:" destination="4wn-Kn-F1J" eventType="valueChanged" id="pRH-Kp-bX1"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="img" destination="7Po-4g-SVp" id="Z4I-iR-ozL"/>
+                                    <outlet property="mainlabel" destination="UY4-Or-29U" id="N3Z-sO-1qa"/>
+                                    <outlet property="sublabel" destination="e5w-M2-I6g" id="6g9-vG-G9F"/>
+                                    <outlet property="uiswitch" destination="0J8-7t-BeK" id="nbJ-GW-yr2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

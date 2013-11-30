@@ -10,6 +10,7 @@
 #import "PTVAlarmDetailViewController.h"
 #import "Alarms.h"
 #import "PTVAlarmAppDelegate.h"
+#import "PTVAlarmTableViewCell.h"
 
 @interface PTVAlarmAlarmsViewController ()
 @property (nonatomic) NSFetchedResultsController* fetchedResultsController;
@@ -87,7 +88,7 @@
     /*
      Use a default table view cell to display the event's title.
      */
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PTVAlarmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
     [self configureCell:cell atIndexPath:indexPath];
     
@@ -95,44 +96,66 @@
 }
 
 // Customize the appearance of table view cells.
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)configureCell:(PTVAlarmTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    UILabel *label;
-    
-    label = (UILabel *)[cell viewWithTag:2];
-    label.text = event.name;
-    
-    label = (UILabel *)[cell viewWithTag:3];
-    label.text = event.address;
-    
+    cell.alarm=event;
+    cell.mainlabel.text=event.name;
+    cell.sublabel.text=event.address;
     NSString *imgstr;
-    int etype=event.type.intValue;
-    switch (etype) {
-        case Tram:
-            imgstr=IMG_TRAM;
-            break;
-        case Train:
-            imgstr=IMG_TRAIN;
-            break;
-        case Metrobus:
+        int etype=event.type.intValue;
+        switch (etype) {
+            case Tram:
+                imgstr=IMG_TRAM;
+                break;
+           case Train:
+               imgstr=IMG_TRAIN;
+               break;
+           case Metrobus:
             imgstr=IMG_METROBUS;
-            break;
-            
-        default:
-            imgstr=IMG_TRAM;
-            break;
-    }
-//    UIImage * img;
-//    img=[UIImage imageNamed:imgstr];
-    UIImageView *imgview;
-    imgview=(UIImageView *)[cell viewWithTag:1];
-    imgview.image=[UIImage imageNamed:imgstr];
+               break;
+
+           default:
+              imgstr=IMG_TRAM;
+               break;
+        }
+    cell.img.image=[UIImage imageNamed:imgstr];
+    cell.uiswitch.on=[event.state boolValue];
     
-    UISwitch * stateSwitch;
-    stateSwitch=(UISwitch *)[cell viewWithTag:4];
-    stateSwitch.on=[event.state boolValue];
+    //
+//    Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    
+//    UILabel *label;
+//    
+//    label = (UILabel *)[cell viewWithTag:2];
+//    label.text = event.name;
+//    
+//    label = (UILabel *)[cell viewWithTag:3];
+//    label.text = event.address;
+//    
+//    NSString *imgstr;
+//    int etype=event.type.intValue;
+//    switch (etype) {
+//        case Tram:
+//            imgstr=IMG_TRAM;
+//            break;
+//        case Train:
+//            imgstr=IMG_TRAIN;
+//            break;
+//        case Metrobus:
+//            imgstr=IMG_METROBUS;
+//            break;
+//            
+//        default:
+//            imgstr=IMG_TRAM;
+//            break;
+//    }
+//    UIImageView *imgview;
+//    imgview=(UIImageView *)[cell viewWithTag:1];
+//    imgview.image=[UIImage imageNamed:imgstr];
+//    
+//    UISwitch * stateSwitch;
+//    stateSwitch=(UISwitch *)[cell viewWithTag:4];
+//    stateSwitch.on=[event.state boolValue];
 //    cell.detailTextLabel.text=([event.state intValue]!=0) ? @"ON": @"OFF";
 }
 
@@ -206,6 +229,8 @@
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     
+//    NSLog(@"changing");
+    
     UITableView *tableView = self.tableView;
     
     switch(type) {
@@ -219,7 +244,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(PTVAlarmTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -250,5 +275,12 @@
     [self.tableView endUpdates];
 }
 
+//- (IBAction)switchAction:(id)sender {
+//    UISwitch * s=(UISwitch *) sender;
+//    s.
+//    NSIndexPath * path=[self.tableView indexPathForSelectedRow];
+//    NSLog(@"row:%d section:%d",path.row,path.section);
+//    NSLog(@"sate: %d",s.on);
+//}
 
 @end
