@@ -30,15 +30,18 @@
     PTVAlarmStationViewController *stationController=segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"trainsegue"]) {
         stationController.filename= @"train1.csv";
-        stationController.imgname=@"TrainIcon30px.gif";
+        stationController.imgname=IMG_TRAIN;
+        stationController.stationType=Train;
     }
     if ([segue.identifier isEqualToString:@"tramsegue"]) {
         stationController.filename= @"train.csv";
-        stationController.imgname=@"TramIcon30px.gif";
+        stationController.imgname=IMG_TRAM;
+        stationController.stationType=Tram;
     }
     if ([segue.identifier isEqualToString:@"bussegue"]) {
         stationController.filename= @"train.csv";
-        stationController.imgname=@"BusIcon30px.gif";
+        stationController.imgname=IMG_METROBUS;
+        stationController.stationType=Metrobus;
     }
 }
 

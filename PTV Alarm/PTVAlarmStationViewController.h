@@ -11,4 +11,5 @@
 @interface PTVAlarmStationViewController : UITableViewController
 @property (strong,nonatomic) NSString * imgname;
 @property (strong,nonatomic) NSString * filename;
+@property int stationType;
 @end

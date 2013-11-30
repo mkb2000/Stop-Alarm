@@ -36,7 +36,7 @@
 }
 
 - (IBAction)switchAction:(UISwitch *)sender{
-    
+    [self fetchResult];
     if (self.setAlarm.on) {
         //add this station to Alarms view. If existed, turn on this alarm.
         if ([self.result count]==1) {
@@ -51,25 +51,24 @@
             alarm.latitude=self.latitude;
             alarm.lastUse=[NSDate date];
             alarm.state=[NSNumber numberWithInt:ONSTATE];
-            [self.managedObjectContext save:nil];
+            alarm.type=[NSNumber numberWithInt:self.stationType];
         }
         else{
             NSLog(@"Fail to add alarm");
         }
     }
     else{
-        if ([self.result count]==0) {
-            
-        }
+        if ([self.result count]==0) {}
         else{
             ((Alarms *)self.result[0]).state=[NSNumber numberWithInt:OFFSTATE];
-            [self.managedObjectContext save:nil];
         }
         //turn off this alarm.
     }
-    [self fetchResult];
+    [self.managedObjectContext save:nil];
+    
 }
 
+//Fetch this station from stored alarms. May do not exist.
 - (void) fetchResult{
     PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
     self.managedObjectContext=delegate.managedObjectContext;
@@ -78,13 +77,17 @@
     self.result=[self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
+- (void)setSwitchState{
+    self.setAlarm.on=self.isOn;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     
     self.uiname.text=self.stationName;
@@ -108,7 +111,11 @@
     region.center = coordinate;
     [self.uiMapView setRegion:region animated:NO];
     
-    self.setAlarm.on=self.isOn;
+    [self setSwitchState];
+    
+    //Del in PTVAarmAlarmsViewController set the state OFF.
+    //TODO: only listen to PTVAarmAlarmsViewController. Find a way to get the instance.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setSwitchState) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
 
 @end

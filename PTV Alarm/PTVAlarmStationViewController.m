@@ -10,8 +10,8 @@
 #import "PTVAlarmDetailViewController.h"
 
 @interface PTVAlarmStationViewController ()
-@property (strong,nonatomic) NSMutableDictionary *stationdic; //stationName : stationInfo
-@property (strong,nonatomic) NSMutableDictionary *alphaToStations;// 'alpha': list of stations whose name started with 'alpha'
+@property (strong,nonatomic) NSMutableDictionary *stationdic; //{stationName : stationInfo}
+@property (strong,nonatomic) NSMutableDictionary *alphaToStations;// 'alphabet': list of stations whose name started with the letter.
 @property (strong,atomic) NSArray * sortedAlpha;
 @property (strong,atomic) NSArray * sortedkeysINstationdic;
 @end
@@ -27,28 +27,7 @@
     return self;
 }
 
-
-- (NSComparisonResult) singleAlphaCompare:(id) obj1 with: (id) obj2{
-    if ([obj1[0] isEqual:@""]) {
-        return (NSComparisonResult)NSOrderedAscending;
-    }
-    else if([obj2[0] isEqual:@""]) {
-        return (NSComparisonResult)NSOrderedDescending;
-    }
-    else{
-        char a=[(NSString *)((NSArray *) obj1[0]) characterAtIndex:0];
-        char b=[(NSString *)((NSArray *) obj2[0]) characterAtIndex:0];
-        if (a>b) {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        
-        if (a<b) {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        return (NSComparisonResult)NSOrderedSame;
-    }}
-
-//
+//load station file into dictionaries, sorted.
 - (void)initDataWithFile{
     NSString * fpath=self.filename;
     self.stationdic=[[NSMutableDictionary alloc] init];
@@ -245,7 +224,7 @@
         NSArray * cor=[selectedStation[3] componentsSeparatedByString:@","];
         dvController.latitude=cor[0];
         dvController.longitude=cor[1];
-        
+        dvController.stationType=self.stationType;
     }
 }
 

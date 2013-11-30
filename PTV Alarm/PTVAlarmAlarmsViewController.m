@@ -22,9 +22,6 @@
 @implementation PTVAlarmAlarmsViewController
 
 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
-    [self.tableView reloadData];
-}
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -75,6 +72,14 @@
 	return count;
 }
 
+//Change background color at each even row.
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row%2 == 0) {
+        UIColor *altCellColor = [UIColor colorWithWhite:0.7 alpha:0.1];
+        cell.backgroundColor = altCellColor;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"alarmCell";
@@ -83,31 +88,71 @@
      Use a default table view cell to display the event's title.
      */
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-	Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	cell.textLabel.text = event.name;
+	
+    [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	NSError *error;
+// Customize the appearance of table view cells.
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-	if (![self.fetchedResultsController performFetch:&error])
-    {
+    Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    UILabel *label;
+    
+    label = (UILabel *)[cell viewWithTag:2];
+    label.text = event.name;
+    
+    label = (UILabel *)[cell viewWithTag:3];
+    label.text = event.address;
+    
+    NSString *imgstr;
+    int etype=event.type.intValue;
+    switch (etype) {
+        case Tram:
+            imgstr=IMG_TRAM;
+            break;
+        case Train:
+            imgstr=IMG_TRAIN;
+            break;
+        case Metrobus:
+            imgstr=IMG_METROBUS;
+            break;
+            
+        default:
+            imgstr=IMG_TRAM;
+            break;
+    }
+//    UIImage * img;
+//    img=[UIImage imageNamed:imgstr];
+    UIImageView *imgview;
+    imgview=(UIImageView *)[cell viewWithTag:1];
+    imgview.image=[UIImage imageNamed:imgstr];
+    
+    UISwitch * stateSwitch;
+    stateSwitch=(UISwitch *)[cell viewWithTag:4];
+    stateSwitch.on=[event.state boolValue];
+//    cell.detailTextLabel.text=([event.state intValue]!=0) ? @"ON": @"OFF";
+}
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    // Set up the edit and add buttons.
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		abort();
-	}
-    
+        abort();
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,5 +160,95 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Delete the managed object.
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        
+        NSError *error;
+        if (![context save:&error]) {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
+}
+
+
+#pragma mark - Table view editing
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // The table view should not be re-orderable.
+    return NO;
+}
+
+
+
+
+/*
+ NSFetchedResultsController delegate methods to respond to additions, removals and so on.
+ */
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    
+    // The fetch controller is about to start sending change notifications, so prepare the table view for updates.
+    [self.tableView beginUpdates];
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+    }
+}
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    //    [self.tableView reloadData];
+    // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
+    [self.tableView endUpdates];
+}
+
 
 @end

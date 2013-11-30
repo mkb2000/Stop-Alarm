@@ -10,6 +10,13 @@
 #define ALARMSFILE @"Alarms"
 #define OFFSTATE 0
 #define ONSTATE 1
+#define IMG_TRAIN @"TrainIcon30px.gif"
+#define IMG_TRAM @"TramIcon30px.gif"
+#define IMG_METROBUS @"BusIcon30px.gif"
+
+typedef  enum{
+    Train,Metrobus,Tram,Vline
+} TransportType;
 
 @interface PTVAlarmDefine : NSObject
 @property NSURL * STATIONFILEURL;

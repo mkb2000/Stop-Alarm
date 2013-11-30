@@ -15,5 +15,5 @@
 @property (nonatomic,strong) NSString * address;
 @property (nonatomic,strong) NSString * stationName;
 @property (nonatomic,strong) NSString * suburb;
-
+@property int stationType;
 @end

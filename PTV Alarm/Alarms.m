@@ -2,7 +2,7 @@
 //  Alarms.m
 //  PTV Alarm
 //
-//  Created by Kangbo Mo on 28/11/2013.
+//  Created by Kangbo Mo on 30/11/2013.
 //  Copyright (c) 2013 Kangbo Mo. All rights reserved.
 //
 
@@ -11,12 +11,14 @@
 
 @implementation Alarms
 
-@dynamic name;
+@dynamic addDate;
 @dynamic address;
+@dynamic lastUse;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic name;
 @dynamic state;
-@dynamic lastUse;
-@dynamic addDate;
+@dynamic type;
+@dynamic suburb;
 
 @end
