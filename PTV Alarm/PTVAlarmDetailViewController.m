@@ -9,6 +9,7 @@
 #import "PTVAlarmDetailViewController.h"
 #import "PTVAlarmMapAnnotation.h"
 #import "PTVAlarmAppDelegate.h"
+#import "Stations.h"
 #import "Alarms.h"
 
 @interface PTVAlarmDetailViewController ()
@@ -25,11 +26,11 @@
 
 - (BOOL)isOn{
     [self fetchResult];
-    if (!self.result||[self.result count]==0) {
+    if (!self.result||[self.result count]==0||!((Stations *)self.result[0]).alarm) {
         _isOn=FALSE;
     }
     else{
-        _isOn= ((Alarms*)self.result[0]).state==[NSNumber numberWithInt:ONSTATE]? true: false;
+        _isOn= ((Stations*)self.result[0]).alarm.state==[NSNumber numberWithInt:ONSTATE]? true: false;
     }
     return _isOn;
 }
@@ -38,10 +39,10 @@
     [self fetchResult];
     if (self.setAlarm.on) {
         //add this station to Alarms view. If existed, turn on this alarm.
-        if ([self.result count]==1) {
-            ((Alarms *)self.result[0]).state=[NSNumber numberWithInt:ONSTATE];
+        if (((Stations *)self.result[0]).alarm) {
+            ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:ONSTATE];
         }
-        else if ([self.result count]==0){
+        else if (!((Stations *)self.result[0]).alarm){
             Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_ALARM inManagedObjectContext:self.managedObjectContext];
 //            alarm.address=self.address;
 //            alarm.addDate=[NSDate date];
@@ -51,14 +52,17 @@
 //            alarm.lastUse=[NSDate date];
 //            alarm.state=[NSNumber numberWithInt:ONSTATE];
 //            alarm.type=[NSNumber numberWithInt:self.stationType];
-            alarm.address=self.station.address;
+//            alarm.address=self.station.address;
             alarm.addDate=[NSDate date];
-            alarm.name=self.station.name;
-            alarm.latitude=self.station.latitude;
-            alarm.longitude=self.station.longitude;
+//            alarm.name=self.station.name;
+//            alarm.latitude=self.station.latitude;
+//            alarm.longitude=self.station.longitude;
             alarm.lastUse=[NSDate date];
+            alarm.toWhich=self.station;
             alarm.state=[NSNumber numberWithInt:ONSTATE];
-            alarm.type=self.station.type;
+            self.station.alarm=alarm;
+            
+//            alarm.type=self.station.type;
         }
         else{
             NSLog(@"Fail to add alarm");
@@ -67,7 +71,7 @@
     else{
         if ([self.result count]==0) {}
         else{
-            ((Alarms *)self.result[0]).state=[NSNumber numberWithInt:OFFSTATE];
+            ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:OFFSTATE];
         }
         //turn off this alarm.
     }
@@ -79,7 +83,7 @@
 - (void) fetchResult{
     PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
     self.managedObjectContext=delegate.managedObjectContext;
-    NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];
+    NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ENTITY_STATION];
     request.predicate=[NSPredicate predicateWithFormat:@"name=%@",self.station.name];
     self.result=[self.managedObjectContext executeFetchRequest:request error:nil];
 }
@@ -119,6 +123,7 @@
     [self.uiMapView setRegion:region animated:NO];
     
     [self setSwitchState];
+    
     
     //Del in PTVAarmAlarmsViewController set the state OFF.
     //TODO: only listen to PTVAarmAlarmsViewController. Find a way to get the instance.

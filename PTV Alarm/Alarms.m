@@ -7,6 +7,7 @@
 //
 
 #import "Alarms.h"
+#import "Stations.h"
 
 
 @implementation Alarms
@@ -14,5 +15,6 @@
 @dynamic addDate;
 @dynamic lastUse;
 @dynamic state;
+@dynamic toWhich;
 
 @end

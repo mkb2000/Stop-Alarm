@@ -7,6 +7,7 @@
 //
 
 #import "Stations.h"
+#import "Alarms.h"
 
 
 @implementation Stations
@@ -19,5 +20,6 @@
 @dynamic type;
 @dynamic initial;
 @dynamic stationID;
+@dynamic alarm;
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Alarms;
 
 @interface Stations : NSManagedObject
 
@@ -20,5 +21,6 @@
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSString * initial;
 @property (nonatomic, retain) NSNumber * stationID;
+@property (nonatomic, retain) Alarms *alarm;
 
 @end

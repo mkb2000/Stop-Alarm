@@ -39,8 +39,8 @@
 		A9A560D2184B12CE00B7D2EB /* vline.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9A560CF184B12CE00B7D2EB /* vline.csv */; };
 		A9A560D3184B12CE00B7D2EB /* tram.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9A560D0184B12CE00B7D2EB /* tram.csv */; };
 		A9A560D4184B12CE00B7D2EB /* bus.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9A560D1184B12CE00B7D2EB /* bus.csv */; };
-		A9A560FE184B2AFB00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560FD184B2AFB00B7D2EB /* Stations.m */; };
-		A9A56101184B2AFC00B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56100184B2AFC00B7D2EB /* Alarms.m */; };
+		A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5610F184B3B9900B7D2EB /* Alarms.m */; };
+		A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56112184B3B9A00B7D2EB /* Stations.m */; };
 		A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F579A6184701BE0065553F /* alarms.xcdatamodeld */; };
 		A9F579C5184739850065553F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F579C4184739850065553F /* CoreData.framework */; };
 		A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F579C7184748B60065553F /* PTVAlarmDefine.m */; };
@@ -107,10 +107,10 @@
 		A9A560CF184B12CE00B7D2EB /* vline.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vline.csv; sourceTree = "<group>"; };
 		A9A560D0184B12CE00B7D2EB /* tram.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tram.csv; sourceTree = "<group>"; };
 		A9A560D1184B12CE00B7D2EB /* bus.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bus.csv; sourceTree = "<group>"; };
-		A9A560FC184B2AFB00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
-		A9A560FD184B2AFB00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
-		A9A560FF184B2AFC00B7D2EB /* Alarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarms.h; sourceTree = "<group>"; };
-		A9A56100184B2AFC00B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
+		A9A5610E184B3B9900B7D2EB /* Alarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarms.h; sourceTree = "<group>"; };
+		A9A5610F184B3B9900B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
+		A9A56111184B3B9A00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
+		A9A56112184B3B9A00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
 		A9F579A7184701BE0065553F /* alarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = alarms.xcdatamodel; sourceTree = "<group>"; };
 		A9F579C4184739850065553F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9F579C6184748B60065553F /* PTVAlarmDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmDefine.h; sourceTree = "<group>"; };
@@ -276,11 +276,11 @@
 		A9F579C9184874400065553F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A9A5610E184B3B9900B7D2EB /* Alarms.h */,
+				A9A56111184B3B9A00B7D2EB /* Stations.h */,
+				A9A56112184B3B9A00B7D2EB /* Stations.m */,
+				A9A5610F184B3B9900B7D2EB /* Alarms.m */,
 				A9F579A6184701BE0065553F /* alarms.xcdatamodeld */,
-				A9A560FF184B2AFC00B7D2EB /* Alarms.h */,
-				A9A56100184B2AFC00B7D2EB /* Alarms.m */,
-				A9A560FC184B2AFB00B7D2EB /* Stations.h */,
-				A9A560FD184B2AFB00B7D2EB /* Stations.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -399,10 +399,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A560FE184B2AFB00B7D2EB /* Stations.m in Sources */,
+				A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */,
 				A946CD4518363782003EE075 /* PTVAlarmAlarmsViewController.m in Sources */,
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
-				A9A56101184B2AFC00B7D2EB /* Alarms.m in Sources */,
+				A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */,
 				A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */,
 				A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */,
 				A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */,

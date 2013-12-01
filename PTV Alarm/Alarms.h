@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Stations.h"
 
+@class Stations;
 
-@interface Alarms : Stations
+@interface Alarms : NSManagedObject
 
 @property (nonatomic, retain) NSDate * addDate;
 @property (nonatomic, retain) NSDate * lastUse;
 @property (nonatomic, retain) NSNumber * state;
+@property (nonatomic, retain) Stations *toWhich;
 
 @end

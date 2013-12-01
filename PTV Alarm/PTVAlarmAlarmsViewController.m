@@ -61,6 +61,7 @@
     self.managedObjectContext=delegate.managedObjectContext;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    fetchRequest.predicate=[NSPredicate predicateWithFormat:@"used=%d",[NSNumber numberWithBool:true]];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_ALARM
                                               inManagedObjectContext:self.managedObjectContext];
@@ -118,10 +119,10 @@
 - (void)configureCell:(PTVAlarmTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.alarm=event;
-    cell.mainlabel.text=event.name;
-    cell.sublabel.text=event.address;
+    cell.mainlabel.text=event.toWhich.name;
+    cell.sublabel.text=event.toWhich.address;
     NSString *imgstr;
-    int etype=event.type.intValue;
+    int etype=event.toWhich.type.intValue;
     switch (etype) {
         case Tram:
             imgstr=IMG_TRAM;
@@ -235,7 +236,7 @@
         PTVAlarmDetailViewController * dvc=(PTVAlarmDetailViewController *)segue.destinationViewController;
         NSIndexPath *index=[self.tableView indexPathForSelectedRow];
         Alarms * thisStation=[self.fetchedResultsController objectAtIndexPath:index];
-        dvc.station=thisStation;
+        dvc.station=thisStation.toWhich;
     }
 }
 
