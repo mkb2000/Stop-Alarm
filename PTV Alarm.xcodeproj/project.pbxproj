@@ -195,14 +195,13 @@
 		A9961DE71835D54C00AAF1A9 /* PTV Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				A9A560C5184A15D900B7D2EB /* View */,
 				A9F579C9184874400065553F /* CoreData */,
 				A9961DE81835D54C00AAF1A9 /* Supporting Files */,
 				A9961DF01835D54C00AAF1A9 /* PTVAlarmAppDelegate.h */,
 				A9961DF11835D54C00AAF1A9 /* PTVAlarmAppDelegate.m */,
-				A9961DF31835D54C00AAF1A9 /* Main_iPhone.storyboard */,
 				A9961E191835DA0100AAF1A9 /* PTVAlarmMapViewController.h */,
 				A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */,
-				A9961DF61835D54C00AAF1A9 /* Main_iPad.storyboard */,
 				A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */,
 				A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */,
 				A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */,
@@ -215,8 +214,6 @@
 				A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */,
 				A9F579C6184748B60065553F /* PTVAlarmDefine.h */,
 				A9F579C7184748B60065553F /* PTVAlarmDefine.m */,
-				A95311F61849D9B3007FBD89 /* PTVAlarmTableViewCell.h */,
-				A95311F71849D9B3007FBD89 /* PTVAlarmTableViewCell.m */,
 			);
 			path = "PTV Alarm";
 			sourceTree = "<group>";
@@ -252,6 +249,17 @@
 				A9961E0C1835D54C00AAF1A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9A560C5184A15D900B7D2EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9961DF61835D54C00AAF1A9 /* Main_iPad.storyboard */,
+				A9961DF31835D54C00AAF1A9 /* Main_iPhone.storyboard */,
+				A95311F61849D9B3007FBD89 /* PTVAlarmTableViewCell.h */,
+				A95311F71849D9B3007FBD89 /* PTVAlarmTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		A9F579C9184874400065553F /* CoreData */ = {
