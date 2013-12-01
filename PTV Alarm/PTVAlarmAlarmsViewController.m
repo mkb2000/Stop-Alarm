@@ -11,18 +11,41 @@
 #import "Alarms.h"
 #import "PTVAlarmAppDelegate.h"
 #import "PTVAlarmTableViewCell.h"
+#import "Stations.h"
 
 @interface PTVAlarmAlarmsViewController ()
 @property (nonatomic) NSFetchedResultsController* fetchedResultsController;
 @property (nonatomic)NSManagedObjectContext * managedObjectContext;
-//@property (nonatomic,strong) NSFetchRequest * fetchRequest;
-//@property (nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-//@property (nonatomic) NSManagedObjectModel *managedObjectModel;
 @end
 
 @implementation PTVAlarmAlarmsViewController
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    // Set up the edit and add buttons.
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma tableview datasource
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
@@ -39,7 +62,7 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:ALARMSFILE
+    NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_ALARM
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
@@ -84,10 +107,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"alarmCell";
-    
-    /*
-     Use a default table view cell to display the event's title.
-     */
     PTVAlarmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
     [self configureCell:cell atIndexPath:indexPath];
@@ -102,86 +121,27 @@
     cell.mainlabel.text=event.name;
     cell.sublabel.text=event.address;
     NSString *imgstr;
-        int etype=event.type.intValue;
-        switch (etype) {
-            case Tram:
-                imgstr=IMG_TRAM;
-                break;
-           case Train:
-               imgstr=IMG_TRAIN;
-               break;
-           case Metrobus:
+    int etype=event.type.intValue;
+    switch (etype) {
+        case Tram:
+            imgstr=IMG_TRAM;
+            break;
+        case Train:
+            imgstr=IMG_TRAIN;
+            break;
+        case Bus:
             imgstr=IMG_METROBUS;
-               break;
-
-           default:
-              imgstr=IMG_TRAM;
-               break;
-        }
+            break;
+            
+        default:
+            imgstr=IMG_TRAM;
+            break;
+    }
     cell.img.image=[UIImage imageNamed:imgstr];
     cell.uiswitch.on=[event.state boolValue];
-    
-    //
-//    Alarms *event = [self.fetchedResultsController objectAtIndexPath:indexPath];
-//    
-//    UILabel *label;
-//    
-//    label = (UILabel *)[cell viewWithTag:2];
-//    label.text = event.name;
-//    
-//    label = (UILabel *)[cell viewWithTag:3];
-//    label.text = event.address;
-//    
-//    NSString *imgstr;
-//    int etype=event.type.intValue;
-//    switch (etype) {
-//        case Tram:
-//            imgstr=IMG_TRAM;
-//            break;
-//        case Train:
-//            imgstr=IMG_TRAIN;
-//            break;
-//        case Metrobus:
-//            imgstr=IMG_METROBUS;
-//            break;
-//            
-//        default:
-//            imgstr=IMG_TRAM;
-//            break;
-//    }
-//    UIImageView *imgview;
-//    imgview=(UIImageView *)[cell viewWithTag:1];
-//    imgview.image=[UIImage imageNamed:imgstr];
-//    
-//    UISwitch * stateSwitch;
-//    stateSwitch=(UISwitch *)[cell viewWithTag:4];
-//    stateSwitch.on=[event.state boolValue];
 }
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    
-    // Set up the edit and add buttons.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    NSError *error;
-    if (![[self fetchedResultsController] performFetch:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-         */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Table view editing
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -204,16 +164,11 @@
     }
 }
 
-
-#pragma mark - Table view editing
-
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // The table view should not be re-orderable.
     return NO;
 }
-
-
 
 
 /*
@@ -228,7 +183,7 @@
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
     
-//    NSLog(@"changing");
+    //    NSLog(@"changing");
     
     UITableView *tableView = self.tableView;
     
@@ -274,24 +229,13 @@
     [self.tableView endUpdates];
 }
 
-//- (IBAction)switchAction:(id)sender {
-//    UISwitch * s=(UISwitch *) sender;
-//    s.
-//    NSIndexPath * path=[self.tableView indexPathForSelectedRow];
-//    NSLog(@"row:%d section:%d",path.row,path.section);
-//    NSLog(@"sate: %d",s.on);
-//}
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"alarmToDetail"]) {
         PTVAlarmDetailViewController * dvc=(PTVAlarmDetailViewController *)segue.destinationViewController;
         NSIndexPath *index=[self.tableView indexPathForSelectedRow];
         Alarms * thisStation=[self.fetchedResultsController objectAtIndexPath:index];
-        dvc.stationName=thisStation.name;
-        dvc.address=thisStation.address;
-        dvc.stationType=thisStation.type.intValue;
-        dvc.suburb=thisStation.suburb;
-        dvc.latitude=thisStation.latitude;
-        dvc.longitude=thisStation.longitude;
+        dvc.station=thisStation;
     }
 }
 

@@ -24,5 +24,20 @@
     }
     return instance;
 }
++ (TransportType) filenameToStationType:(NSString *) filename{
+    if ([filename isEqualToString:FILE_TRAIN]) {
+        return Train;
+    }
+    if ([filename isEqualToString:FILE_TRAM]) {
+        return Tram;
+    }
+    if ([filename isEqualToString:FILE_BUS]) {
+        return Bus;
+    }
+    if ([filename isEqualToString:FILE_VLINE]) {
+        return Vline;
+    }
+    return Train;
+}
 
 @end

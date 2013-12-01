@@ -7,19 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#define ALARMSFILE @"Alarms"
+#define ENTITY_ALARM @"Alarms"
+#define ENTITY_STATION @"Stations"
 #define OFFSTATE 0
 #define ONSTATE 1
 #define IMG_TRAIN @"TrainIcon30px.gif"
 #define IMG_TRAM @"TramIcon30px.gif"
 #define IMG_METROBUS @"BusIcon30px.gif"
+#define FILE_TRAIN @"train.csv"
+#define FILE_VLINE @"vline.csv"
+#define FILE_TRAM @"tram.csv"
+#define FILE_BUS @"bus.csv"
 
 typedef  enum{
-    Train,Metrobus,Tram,Vline
+    Train=0,Bus=1,Tram=2,Vline=3
 } TransportType;
 
 @interface PTVAlarmDefine : NSObject
 @property NSURL * STATIONFILEURL;
 
 + (PTVAlarmDefine *) globalVariables;
++ (TransportType) filenameToStationType:(NSString *) filename;
 @end

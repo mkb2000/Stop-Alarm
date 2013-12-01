@@ -7,7 +7,7 @@
 //
 
 #import "PTVAlarmAppDelegate.h"
-
+#import "Stations.h"
 @implementation PTVAlarmAppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -17,6 +17,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"lauched");
+    
+    if ([self stationIsEmpty]) {
+        [self loadStations];
+    }
     return YES;
 }
 							
@@ -51,6 +56,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//Core data preparations
 // 1
 - (NSManagedObjectContext *) managedObjectContext {
     if (_managedObjectContext != nil) {
@@ -96,4 +102,49 @@
 - (NSString *)applicationDocumentsDirectory {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
+
+//initialize stations from files
+- (BOOL) stationIsEmpty{
+    if ([[self fetchStation] count]==0) {
+        return true;
+    }
+    return false;
+}
+
+- (NSArray *) fetchStation{
+    NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ENTITY_STATION];
+    return [self.managedObjectContext executeFetchRequest:request error:nil];
+}
+
+- (void) loadStations{
+    NSArray * files=@[FILE_TRAIN,FILE_TRAM,FILE_BUS,FILE_VLINE];
+    
+    for (NSString * filename in files) {
+        NSFileManager *filem=[NSFileManager defaultManager];
+        NSString *filepath=[[NSBundle mainBundle] pathForResource:filename ofType:@""];
+        if ([filem fileExistsAtPath:filepath]) {
+            NSString *filestr=[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil];
+            NSArray *stations=[filestr componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+            for (NSString *station in stations) {
+                NSArray *parts=[station componentsSeparatedByString:@";"];
+                Stations *station=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_STATION
+                                                                inManagedObjectContext:self.managedObjectContext];
+                station.name=parts[0];
+                station.initial=[station.name substringToIndex:1];
+                station.suburb=parts[1];
+                station.address=parts[2];
+                NSArray * cor=[parts[3] componentsSeparatedByString:@","];
+                station.latitude=cor[0];
+                station.longitude=cor[1];
+                station.type=[NSNumber numberWithInt:[PTVAlarmDefine filenameToStationType:filename]];
+            }
+        }
+        else{
+            NSLog(@"file:%@ not exit",filename);
+        }
+    }
+    [self.managedObjectContext save:nil];
+    NSLog(@"files loaded!");
+}
+
 @end

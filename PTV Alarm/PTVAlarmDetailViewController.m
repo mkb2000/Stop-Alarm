@@ -8,9 +8,8 @@
 
 #import "PTVAlarmDetailViewController.h"
 #import "PTVAlarmMapAnnotation.h"
-#import "Alarms+Alarm.h"
 #import "PTVAlarmAppDelegate.h"
-
+#import "Alarms.h"
 
 @interface PTVAlarmDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *uiname;
@@ -43,15 +42,23 @@
             ((Alarms *)self.result[0]).state=[NSNumber numberWithInt:ONSTATE];
         }
         else if ([self.result count]==0){
-            Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:@"Alarms" inManagedObjectContext:self.managedObjectContext];
-            alarm.address=self.address;
+            Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_ALARM inManagedObjectContext:self.managedObjectContext];
+//            alarm.address=self.address;
+//            alarm.addDate=[NSDate date];
+//            alarm.name=self.stationName;
+//            alarm.longitude=self.longitude;
+//            alarm.latitude=self.latitude;
+//            alarm.lastUse=[NSDate date];
+//            alarm.state=[NSNumber numberWithInt:ONSTATE];
+//            alarm.type=[NSNumber numberWithInt:self.stationType];
+            alarm.address=self.station.address;
             alarm.addDate=[NSDate date];
-            alarm.name=self.stationName;
-            alarm.longitude=self.longitude;
-            alarm.latitude=self.latitude;
+            alarm.name=self.station.name;
+            alarm.latitude=self.station.latitude;
+            alarm.longitude=self.station.longitude;
             alarm.lastUse=[NSDate date];
             alarm.state=[NSNumber numberWithInt:ONSTATE];
-            alarm.type=[NSNumber numberWithInt:self.stationType];
+            alarm.type=self.station.type;
         }
         else{
             NSLog(@"Fail to add alarm");
@@ -68,12 +75,12 @@
     
 }
 
-//Fetch this station from stored alarms. May do not exist.
+//Fetch this station from stored alarms. May not exist.
 - (void) fetchResult{
     PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
     self.managedObjectContext=delegate.managedObjectContext;
-    NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ALARMSFILE];
-    request.predicate=[NSPredicate predicateWithFormat:@"name=%@",self.stationName];
+    NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];
+    request.predicate=[NSPredicate predicateWithFormat:@"name=%@",self.station.name];
     self.result=[self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
@@ -90,17 +97,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     
-    self.uiname.text=self.stationName;
-    self.uiaddress.text=self.address;
+    self.uiname.text=self.station.name;
+    self.uiaddress.text=self.station.address;
     self.uiMapView.delegate=self;
     
     CLLocationCoordinate2D coordinate;
-    coordinate.latitude=self.latitude.doubleValue;
-    coordinate.longitude=self.longitude.doubleValue;
+    coordinate.latitude=self.station.latitude.doubleValue;
+    coordinate.longitude=self.station.longitude.doubleValue;
     PTVAlarmMapAnnotation * mapPin=[[PTVAlarmMapAnnotation alloc] init];
     mapPin.theCoordinate=coordinate;
-    mapPin.name=[NSString stringWithFormat:@"%@ Station",self.stationName];
-    mapPin.address=self.address;
+    mapPin.name=[NSString stringWithFormat:@"%@ Station",self.station.name];
+    mapPin.address=self.station.address;
     
     [self.uiMapView addAnnotation:mapPin];
     MKCoordinateRegion region;

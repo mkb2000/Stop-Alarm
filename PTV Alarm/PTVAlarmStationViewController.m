@@ -8,12 +8,13 @@
 
 #import "PTVAlarmStationViewController.h"
 #import "PTVAlarmDetailViewController.h"
+#import "PTVAlarmAppDelegate.h"
+#import "Stations.h"
 
 @interface PTVAlarmStationViewController ()
-@property (strong,nonatomic) NSMutableDictionary *stationdic; //{stationName : stationInfo}
-@property (strong,nonatomic) NSMutableDictionary *alphaToStations;// 'alphabet': list of stations whose name started with the letter.
-@property (strong,atomic) NSArray * sortedAlpha;
-@property (strong,atomic) NSArray * sortedkeysINstationdic;
+
+@property (nonatomic) NSFetchedResultsController* fetchedResultsController;
+@property (nonatomic)NSManagedObjectContext * managedObjectContext;
 @end
 
 @implementation PTVAlarmStationViewController
@@ -27,86 +28,20 @@
     return self;
 }
 
-//load station file into dictionaries, sorted.
-- (void)initDataWithFile{
-    NSString * fpath=self.filename;
-    self.stationdic=[[NSMutableDictionary alloc] init];
-    self.alphaToStations=[[NSMutableDictionary alloc] init];
-    NSFileManager *filem=[NSFileManager defaultManager];
-    
-    //read file into dictionaries.
-    NSString *filepath=[[NSBundle mainBundle] pathForResource:fpath ofType:@""];
-    if ([filem fileExistsAtPath:filepath]) {
-        NSString *filestr=[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil];
-        NSArray *stations=[filestr componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        for (NSString *station in stations) {
-            NSArray *parts=[station componentsSeparatedByString:@";"];
-            self.stationdic[parts[0]]=parts;
-        }
-        self.sortedkeysINstationdic=[self.stationdic keysSortedByValueUsingComparator:^(id obj1, id obj2) {
-            if ([obj1[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            }
-            else if([obj2[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            else{
-                char a=[(NSString *)((NSArray *) obj1[0]) characterAtIndex:0];
-                char b=[(NSString *)((NSArray *) obj2[0]) characterAtIndex:0];
-                if (a>b) {
-                    return (NSComparisonResult)NSOrderedDescending;
-                }
-                
-                if (a<b) {
-                    return (NSComparisonResult)NSOrderedAscending;
-                }
-                return (NSComparisonResult)NSOrderedSame;
-            }}];
-        
-        char f='A';
-        NSMutableArray *tma=[[NSMutableArray alloc] init];
-        for (NSString *k in self.sortedkeysINstationdic) {
-            if ([k isEqual:@""]) {
-                continue;
-            }
-            if ([k characterAtIndex:0]!=f) {
-                [self.alphaToStations setObject:tma forKey:[NSString stringWithFormat:@"%c",f]];
-                tma=[[NSMutableArray alloc]init];
-                f=[k characterAtIndex:0];
-            }
-            [tma addObject:self.stationdic[k]];
-        }
-        
-        self.sortedAlpha=[self.alphaToStations keysSortedByValueUsingComparator:^(id obj1, id obj2) {
-            if ([obj1[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            }
-            else if([obj2[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            else{
-                char a=[(NSString *)((NSArray *) obj1[0][0]) characterAtIndex:0];
-                char b=[(NSString *)((NSArray *) obj2[0][0]) characterAtIndex:0];
-                if (a>b) {
-                    return (NSComparisonResult)NSOrderedDescending;
-                }
-                
-                if (a<b) {
-                    return (NSComparisonResult)NSOrderedAscending;
-                }
-                return (NSComparisonResult)NSOrderedSame;
-            }}];
-    }
-    else{
-        NSLog(@"file doesn't exist!");
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
     
-    [self initDataWithFile];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -121,32 +56,63 @@
 }
 
 #pragma mark - Table view data source
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil)
+    {
+        return _fetchedResultsController;
+    }
+    
+    /*
+     Set up the fetched results controller.
+     */
+    PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext=delegate.managedObjectContext;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    fetchRequest.predicate=[NSPredicate predicateWithFormat:@"type=%d",self.stationType];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_STATION
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Sort using * property.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *initDescriptor=[[NSSortDescriptor alloc] initWithKey:@"initial" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor, initDescriptor]];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                    managedObjectContext:self.managedObjectContext
+                                                                      sectionNameKeyPath:@"initial"
+                                                                               cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.alphaToStations count];
+    NSInteger n=[[self.fetchedResultsController sections] count];
+    return n;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.alphaToStations[self.sortedAlpha[section]] count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    
+	return [sectionInfo numberOfObjects];
 }
 
-- (NSArray *)statioAtRow:(NSInteger) row andSection:(NSInteger) section{
-    NSArray *re=self.alphaToStations[self.sortedAlpha[section]][row];
-    return re;
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"stationCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSArray * stationInfo=[self statioAtRow:indexPath.row andSection:indexPath.section];
-    cell.textLabel.text=stationInfo[0];
-    cell.detailTextLabel.text=stationInfo[1];
+    Stations * stationInfo=[self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text=stationInfo.name;
+    cell.detailTextLabel.text=stationInfo.suburb;
     
     UIImage * img=[UIImage imageNamed:self.imgname];
     cell.imageView.image=img;
@@ -158,13 +124,21 @@
     return cell;
 }
 
-// For sidebar navigation
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if ([[self.fetchedResultsController sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+        return [sectionInfo name];
+    } else
+        return nil;
+}
+
+ //For sidebar navigation
 - (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView{
-    return self.sortedAlpha;
+    return [self.fetchedResultsController sectionIndexTitles];
 }
 // For sidebar navigation
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
-    return [self.sortedAlpha indexOfObject:title];
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
 }
 
 /*
@@ -213,18 +187,12 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    //    NSArray * x=[self.tableView indexPathsForSelectedRows];
     if ([[segue identifier] isEqualToString:@"stationDetail"]) {
         NSIndexPath * index=[self.tableView indexPathsForSelectedRows][0];
-        NSArray * selectedStation=[self statioAtRow:index.row andSection:index.section];
         PTVAlarmDetailViewController * dvController=[segue destinationViewController];
-        dvController.stationName=selectedStation[0];
-        dvController.suburb=selectedStation[1];
-        dvController.address=selectedStation[2];
-        NSArray * cor=[selectedStation[3] componentsSeparatedByString:@","];
-        dvController.latitude=cor[0];
-        dvController.longitude=cor[1];
-        dvController.stationType=self.stationType;
+        Stations * station=[self.fetchedResultsController objectAtIndexPath:index];
+        dvController.station=station;
+
     }
 }
 

@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Alarms" representedClassName="Alarms" syncable="YES">
+    <entity name="Alarms" representedClassName="Alarms" parentEntity="Stations" syncable="YES">
         <attribute name="addDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastUse" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Stations" representedClassName="Stations" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initial" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="stationID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="suburb" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Alarms" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Alarms" positionX="0" positionY="9" width="128" height="88"/>
+        <element name="Stations" positionX="277" positionY="-64" width="128" height="163"/>
     </elements>
 </model>

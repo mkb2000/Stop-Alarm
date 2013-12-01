@@ -409,7 +409,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Dh8-oi-Ros"/>
         <segue reference="lcE-lr-r3b"/>
+        <segue reference="c13-iO-rHB"/>
     </inferredMetricsTieBreakers>
 </document>
