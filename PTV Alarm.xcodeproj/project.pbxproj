@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A9079FFB18388EF800D8267D /* train.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.csv */; };
 		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
+		A939217A184CA27400B5E967 /* weribee.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392179184CA27400B5E967 /* weribee.gpx */; };
+		A939217C184CAFED00B5E967 /* laverton.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217B184CAFED00B5E967 /* laverton.gpx */; };
+		A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */; };
+		A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392181184D916200B5E967 /* bikehike_course.gpx */; };
 		A946CD4518363782003EE075 /* PTVAlarmAlarmsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */; };
 		A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A946CD4718363B65003EE075 /* PTVAlarmStationViewController.m */; };
 		A949E6CC1848C8B2001E9C3E /* RegionalBusIcon30px.gif in Resources */ = {isa = PBXBuildFile; fileRef = A92F7E9A1842D50800045A09 /* RegionalBusIcon30px.gif */; };
@@ -71,6 +75,10 @@
 		A92F7E9E1842D50800045A09 /* TrainIcon30px.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TrainIcon30px.gif; sourceTree = "<group>"; };
 		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
 		A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapAnnotation.m; sourceTree = "<group>"; };
+		A9392179184CA27400B5E967 /* weribee.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = weribee.gpx; path = ../weribee.gpx; sourceTree = "<group>"; };
+		A939217B184CAFED00B5E967 /* laverton.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = laverton.gpx; path = ../laverton.gpx; sourceTree = "<group>"; };
+		A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "swhereTwerribee-2.gpx"; path = "../swhereTwerribee-2.gpx"; sourceTree = "<group>"; };
+		A9392181184D916200B5E967 /* bikehike_course.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = bikehike_course.gpx; path = ../bikehike_course.gpx; sourceTree = "<group>"; };
 		A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmAlarmsViewController.h; sourceTree = "<group>"; };
 		A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmAlarmsViewController.m; sourceTree = "<group>"; };
 		A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmStationViewController.h; sourceTree = "<group>"; };
@@ -230,6 +238,10 @@
 		A9961DE81835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9392179184CA27400B5E967 /* weribee.gpx */,
+				A939217B184CAFED00B5E967 /* laverton.gpx */,
+				A9392181184D916200B5E967 /* bikehike_course.gpx */,
+				A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */,
 				A9A560CF184B12CE00B7D2EB /* vline.csv */,
 				A9A560D0184B12CE00B7D2EB /* tram.csv */,
 				A9A560D1184B12CE00B7D2EB /* bus.csv */,
@@ -333,6 +345,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Kangbo Mo";
 				TargetAttributes = {
+					A9961DDD1835D54C00AAF1A9 = {
+						DevelopmentTeam = LJD2BJP99F;
+					};
 					A9961E011835D54C00AAF1A9 = {
 						TestTargetID = A9961DDD1835D54C00AAF1A9;
 					};
@@ -365,16 +380,20 @@
 				A949E6CC1848C8B2001E9C3E /* RegionalBusIcon30px.gif in Resources */,
 				A949E6CD1848C8B2001E9C3E /* RegionalTrainIcon30px.gif in Resources */,
 				A949E6CE1848C8B2001E9C3E /* BusIcon30px.gif in Resources */,
+				A939217A184CA27400B5E967 /* weribee.gpx in Resources */,
 				A949E6CF1848C8B2001E9C3E /* TramIcon30px.gif in Resources */,
+				A939217C184CAFED00B5E967 /* laverton.gpx in Resources */,
 				A949E6D01848C8B2001E9C3E /* TrainIcon30px.gif in Resources */,
 				A9F579E2184886470065553F /* clock.png in Resources */,
 				A9961DF81835D54C00AAF1A9 /* Main_iPad.storyboard in Resources */,
 				A9961DFD1835D54C00AAF1A9 /* Images.xcassets in Resources */,
 				A9A560D3184B12CE00B7D2EB /* tram.csv in Resources */,
 				A9079FFB18388EF800D8267D /* train.csv in Resources */,
+				A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */,
 				A9A560D4184B12CE00B7D2EB /* bus.csv in Resources */,
 				A9F579E71848867A0065553F /* location2@2x.png in Resources */,
 				A9961DF51835D54C00AAF1A9 /* Main_iPhone.storyboard in Resources */,
+				A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */,
 				A9F579E3184886470065553F /* clock@2x.png in Resources */,
 				A9A560D2184B12CE00B7D2EB /* vline.csv in Resources */,
 				A9F579DF184886350065553F /* magnifying-glass@2x.png in Resources */,
@@ -549,11 +568,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -564,11 +586,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

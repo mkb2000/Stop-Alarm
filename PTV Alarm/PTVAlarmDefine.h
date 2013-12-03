@@ -18,6 +18,8 @@
 #define FILE_VLINE @"vline.csv"
 #define FILE_TRAM @"tram.csv"
 #define FILE_BUS @"bus.csv"
+#define ALARM_DISTANCE 300 //When this far away, may triger the alarm.
+#define DELAY_TIMES 3 //Triger the alarm only when this many times of location updates within ALARM_DISTANCE.
 
 typedef  enum{
     Train=0,Bus=1,Tram=2,Vline=3

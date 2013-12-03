@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTVAlarmManager.h"
 
 @interface PTVAlarmAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -14,4 +15,8 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator ;
+@property (strong,nonatomic) PTVAlarmManager * ptvalarmmanager;
+
+- (NSArray *) activeAlarms;
+
 @end

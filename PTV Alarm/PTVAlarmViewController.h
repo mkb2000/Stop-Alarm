@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PTVAlarmViewController : UITableViewController
-
+- (void) updateTextField:(NSString *)str;//for test
 @end

@@ -10,5 +10,5 @@
 #import <MapKit/MapKit.h>
 
 @interface PTVAlarmMapViewController : UIViewController <MKMapViewDelegate>
-@property (nonatomic,strong) IBOutlet MKMapView *selectOnMapView;
+@property (nonatomic,strong) IBOutlet MKMapView *mapView;
 @end

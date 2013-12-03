@@ -7,8 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
 #import "Alarms.h"
-@interface PTVAlarmManager : NSObject
--(void) addAlarm:(Alarms *) newAlarm;
--(void) removeAlarm:(Alarms *) alarm;
+#import "Stations.h"
+#import "PTVAlarmViewController.h"
+
+
+@interface PTVAlarmManager : NSObject <CLLocationManagerDelegate>
+
+@property (weak,nonatomic) PTVAlarmViewController * delegate;//for test
+
+//-(void) addAlarm:(Alarms *) newAlarm;
+//-(void) removeAlarm:(Alarms *) alarm;
+//- (PTVAlarmManager *) initWithAlarms:(NSArray *) activealarms;
+-(void) activeAlarmsChange:(NSArray *) activealarms;
+
 @end

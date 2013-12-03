@@ -8,10 +8,10 @@
 
 #import "PTVAlarmAppDelegate.h"
 #import "Stations.h"
+
 @implementation PTVAlarmAppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
-
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -22,6 +22,10 @@
     if ([self stationIsEmpty]) {
         [self loadStations];
     }
+    self.ptvalarmmanager=[[PTVAlarmManager alloc] init];
+    [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
+//    [self activeAlarms];
     return YES;
 }
 							
@@ -56,7 +60,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-//Core data preparations
+#pragma mark - Core data preparations
 // 1
 - (NSManagedObjectContext *) managedObjectContext {
     if (_managedObjectContext != nil) {
@@ -103,7 +107,7 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
-//initialize stations from files
+#pragma mark - initialize stations from files
 - (BOOL) stationIsEmpty{
     if ([[self fetchStation] count]==0) {
         return true;
@@ -145,6 +149,20 @@
     }
     [self.managedObjectContext save:nil];
     NSLog(@"files loaded!");
+}
+
+- (NSArray *)activeAlarms{
+    NSFetchRequest * fetch=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];
+    NSPredicate *predicate=[NSPredicate predicateWithFormat:@"state=1"];
+    fetch.predicate=predicate;
+    NSArray * result;
+    result=[self.managedObjectContext executeFetchRequest:fetch error:nil];
+    NSLog(@"active alarm amount: %d", [result count]);
+    return result;
+}
+
+- (void) activeAlarmsChange{
+    [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
 }
 
 @end

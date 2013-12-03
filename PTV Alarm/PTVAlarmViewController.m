@@ -8,7 +8,10 @@
 
 #import "PTVAlarmViewController.h"
 #import "PTVAlarmStationViewController.h"
+#import "PTVAlarmAppDelegate.h"
+
 @interface PTVAlarmViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textfield;
 
 @end
 
@@ -18,6 +21,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    PTVAlarmAppDelegate *dele=[[UIApplication sharedApplication] delegate];
+    dele.ptvalarmmanager.delegate=self;
+}
+
+- (void) updateTextField:(NSString *)str{
+    str=[str stringByAppendingString:@"\n"];
+    self.textfield.text=[self.textfield.text stringByAppendingString:str];
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -12,6 +12,7 @@
 #import "Stations.h"
 #import "Alarms.h"
 
+
 @interface PTVAlarmDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *uiname;
 @property (weak, nonatomic) IBOutlet UILabel *uiaddress;
@@ -37,6 +38,7 @@
 
 - (IBAction)switchAction:(UISwitch *)sender{
     [self fetchResult];
+    
     if (self.setAlarm.on) {
         //add this station to Alarms view. If existed, turn on this alarm.
         if (((Stations *)self.result[0]).alarm) {
@@ -92,6 +94,7 @@
     self.setAlarm.on=self.isOn;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -125,7 +128,6 @@
     [self setSwitchState];
     
     
-    //Del in PTVAarmAlarmsViewController set the state OFF.
     //TODO: only listen to PTVAarmAlarmsViewController. Find a way to get the instance.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setSwitchState) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
