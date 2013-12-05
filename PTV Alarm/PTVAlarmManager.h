@@ -12,6 +12,7 @@
 #import "Alarms.h"
 #import "Stations.h"
 #import "PTVAlarmViewController.h"
+#import "PTVAlarmMapViewController.h"
 
 
 @interface PTVAlarmManager : NSObject <CLLocationManagerDelegate>

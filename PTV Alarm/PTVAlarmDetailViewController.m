@@ -46,25 +46,11 @@
         }
         else if (!((Stations *)self.result[0]).alarm){
             Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_ALARM inManagedObjectContext:self.managedObjectContext];
-//            alarm.address=self.address;
-//            alarm.addDate=[NSDate date];
-//            alarm.name=self.stationName;
-//            alarm.longitude=self.longitude;
-//            alarm.latitude=self.latitude;
-//            alarm.lastUse=[NSDate date];
-//            alarm.state=[NSNumber numberWithInt:ONSTATE];
-//            alarm.type=[NSNumber numberWithInt:self.stationType];
-//            alarm.address=self.station.address;
             alarm.addDate=[NSDate date];
-//            alarm.name=self.station.name;
-//            alarm.latitude=self.station.latitude;
-//            alarm.longitude=self.station.longitude;
             alarm.lastUse=[NSDate date];
             alarm.toWhich=self.station;
             alarm.state=[NSNumber numberWithInt:ONSTATE];
             self.station.alarm=alarm;
-            
-//            alarm.type=self.station.type;
         }
         else{
             NSLog(@"Fail to add alarm");

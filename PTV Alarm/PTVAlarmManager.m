@@ -7,6 +7,8 @@
 //
 //  Manage alive alarms. Alert when destination is arrived.
 
+//TODO: 1. background run. 2. when there are mutile active alarms, save power model. 3. show move and destination on map view.
+
 #import "PTVAlarmManager.h"
 #import <MapKit/MapKit.h>
 
@@ -27,99 +29,95 @@
     return _delayDict;
 }
 
-//init CLLocationManager and add activeAlarms to be monitored.
-//- (void) startMonitorRegions{
-//    
-//    if ([self.activeAlarms count]>0&&self.cllmng==nil) {
-//        [self initCLLocationManager];
-//        
-//        for (Alarms * al in self.activeAlarms) {
-//            [self addMonitoredRegion:al];
-//        }
-//    }
-//}
+-(void)activeAlarmsChange:(NSArray *)activealarms{
+
+    [self stopHighAccuracy];
+    for (CLRegion * r in [self.cllmng monitoredRegions]) {
+        //clear monitored regions.
+        [self.cllmng stopMonitoringForRegion:r];
+    }
+    self.cllmng=nil;
+    self.activeAlarms=[NSMutableArray arrayWithArray:activealarms];
+    for (Alarms * al in self.activeAlarms) {
+        [self addMonitoredRegion:al];
+    }
+    [self updateInfo:[NSString stringWithFormat:@"%lu monitored regions!",(unsigned long)[[self.cllmng monitoredRegions] count]]];
+    [self updateInfo:[NSString stringWithFormat:@"cllmng obj:%@",self.cllmng]];
+}
 
 - (void) initCLLocationManager{
     self.cllmng=[[CLLocationManager alloc]init];
     self.cllmng.delegate=self;
-    self.cllmng.desiredAccuracy=kCLLocationAccuracyBest;
-    self.cllmng.distanceFilter=10;
+    self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+    self.cllmng.distanceFilter=20;
     [self.cllmng startMonitoringSignificantLocationChanges];
 }
 
 -(void) addMonitoredRegion:(Alarms *) alarm{
-
+    
     if ([self.activeAlarms count]>0&&self.cllmng==nil) {
         [self initCLLocationManager];
     }
     
-    [self.delayDict setObject:[NSNumber numberWithInt:0] forKey:alarm.toWhich.name];
-    
-    CLLocationCoordinate2D centre;
-    centre.latitude=alarm.toWhich.latitude.doubleValue;
-    centre.longitude=alarm.toWhich.longitude.doubleValue;
-    MKCircle * overlay=[MKCircle circleWithCenterCoordinate:centre radius:200];
-    // If the overlay's radius is too large, registration fails automatically,
-    // so clamp the radius to the max value.
-    
-    CLLocationDegrees radius = overlay.radius;
-    if (radius > self.cllmng.maximumRegionMonitoringDistance) {
-        radius = self.cllmng.maximumRegionMonitoringDistance;
+    //add the destination to monitored regions.
+    if ([self.activeAlarms count]>0) {
+        [self.delayDict setObject:[NSNumber numberWithInt:0] forKey:alarm.toWhich.name];
+        
+        CLLocationCoordinate2D centre;
+        centre.latitude=alarm.toWhich.latitude.doubleValue;
+        centre.longitude=alarm.toWhich.longitude.doubleValue;
+        MKCircle * overlay=[MKCircle circleWithCenterCoordinate:centre radius:200];
+        // If the overlay's radius is too large, registration fails automatically,
+        // so clamp the radius to the max value.
+        
+        CLLocationDegrees radius = overlay.radius;
+        if (radius > self.cllmng.maximumRegionMonitoringDistance) {
+            radius = self.cllmng.maximumRegionMonitoringDistance;
+        }
+        
+        //    NSLog(@"mo: %f,%f, %f",coordinate.latitude,coordinate.longitude, radius);
+        // Create the geographic region to be monitored.
+        
+        CLCircularRegion *geoRegion = [[CLCircularRegion alloc]
+                                       initWithCenter:overlay.coordinate
+                                       radius:radius
+                                       identifier:alarm.toWhich.name];
+        
+        [self.cllmng requestStateForRegion:geoRegion];
+        
+        [self.cllmng startMonitoringForRegion:geoRegion];
     }
-    
-    //    NSLog(@"mo: %f,%f, %f",coordinate.latitude,coordinate.longitude, radius);
-    // Create the geographic region to be monitored.
-    
-    CLCircularRegion *geoRegion = [[CLCircularRegion alloc]
-                                   initWithCenter:overlay.coordinate
-                                   radius:radius
-                                   identifier:alarm.toWhich.name];
-    
-    [self.cllmng requestStateForRegion:geoRegion];
-    
-    [self.cllmng startMonitoringForRegion:geoRegion];
 }
 
-- (void) finishMonitor:(CLRegion *) region{
-    //remove from activeAlarms.
-//    for (Alarms * a in self.activeAlarms) {
-//        if ([region.identifier isEqualToString:a.toWhich.name]) {
-//            [self.activeAlarms removeObject:a];
-//        }
-//    }
-    //remove from monitored regions.
-    [self.cllmng stopMonitoringForRegion:region];
-}
 
 - (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region{
     if (state==CLRegionStateInside) {
         [self startHighAccuracy];
-        [self finishMonitor:region];
+        [self.cllmng stopMonitoringForRegion:region];
         
-        NSLog(@"You'v already in the region!");
-        [self.delegate updateTextField:@"You'v already in the region!"];
+        [self updateInfo:@"You'v already in the region!"];
     }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
     [self startHighAccuracy];
-    [self finishMonitor:region];
+    [self.cllmng stopMonitoringForRegion:region];
     
-    [self.delegate updateTextField:@"Enter region!"];
-    NSLog(@"Enter region!");
+    [self updateInfo:@"Enter region!"];
 }
 
 - (void) startHighAccuracy{
     if (!self.isHighAccuracy) {
+        //TODO background model.
         [self.cllmng stopMonitoringSignificantLocationChanges];
         [self.cllmng startUpdatingLocation];
         self.isHighAccuracy=true;
     }
 }
-
-- (void) updateInfo:(NSString *) msg{
-    NSLog(@"%@",msg);
-    [self.delegate updateTextField:msg];
+- (void) stopHighAccuracy{
+    self.isHighAccuracy=false;
+    [self.cllmng stopUpdatingLocation];
+    [self.cllmng startMonitoringSignificantLocationChanges];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
@@ -133,23 +131,54 @@
         CLLocationDistance distance=[targetLocation distanceFromLocation:currentLocation];
         if (distance<ALARM_DISTANCE) {
             [self closeEnoughToTarget:alarm];
+            //            break;
         }
     }
     
-    NSString *str=[NSString stringWithFormat:@"aalocation update:lat:%f,%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude];
+    NSString *str=[NSString stringWithFormat:@"location update:%f,%f",currentLocation.coordinate.latitude,currentLocation.coordinate.longitude];
     [self updateInfo:str];
 }
 
 -(void) closeEnoughToTarget:(Alarms *) destination{
     if ([[self.delayDict objectForKey:destination.toWhich.name] isEqualToNumber:[NSNumber numberWithInt:DELAY_TIMES]]) {
         //reach destination
-
-        destination.state=0;
-        //remove the destination/alarm.
-        [self.activeAlarms removeObject:destination];
-        UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:@"Arrival" message:@"Your destination is around the corner!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alertview show];
         
+        destination.state=0;
+        self.activeAlarms=nil;
+        self.delayDict=nil;
+        
+        [self.cllmng stopUpdatingLocation];
+        [self.cllmng stopMonitoringSignificantLocationChanges];
+        self.cllmng=nil;
+        
+        
+        //alert when arrival
+        if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive) {
+            UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:[@"Arrival" stringByAppendingString:destination.toWhich.name] message:@"Your destination is around the corner!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertview show];
+        }
+        else{
+            // alert from bacground.
+            
+            UIApplication* app = [UIApplication sharedApplication];
+            NSArray*    oldNotifications = [app scheduledLocalNotifications];
+            // Clear out the old notification before scheduling a new one.
+            if ([oldNotifications count] > 0)
+                [app cancelAllLocalNotifications];
+            // Create a new notification.
+            UILocalNotification* alarm = [[UILocalNotification alloc] init];
+            if (alarm)
+            {
+                
+                alarm.timeZone = [NSTimeZone defaultTimeZone];
+                alarm.repeatInterval = 0;
+                alarm.soundName = UILocalNotificationDefaultSoundName;
+                alarm.alertBody = @"Time to wake up!";
+                //                [app scheduleLocalNotification:alarm];
+                [app presentLocalNotificationNow:alarm];
+            }
+            
+        }
     }
     else{
         NSNumber * newnum=[NSNumber numberWithInt:([[self.delayDict objectForKey:destination.toWhich.name] intValue]+1)];
@@ -159,67 +188,8 @@
 }
 
 
-
-//- (void)addAlarm:(Alarms *)newAlarm{
-//    [self.activeAlarms addObject:newAlarm];
-//    [self addMonitoredRegion:newAlarm];
-//    //TODO: when new alarm is added, set up Core Location functions.
-//
-//}
-
-//- (void)removeAlarm:(Alarms *)alarm{
-//    [self.activeAlarms removeObject:alarm];
-//
-//    CLLocationDegrees radius = 100;
-//    CLLocationCoordinate2D coordinate;
-//    coordinate.latitude=alarm.toWhich.latitude.doubleValue;
-//    coordinate.longitude=alarm.toWhich.longitude.doubleValue;
-//
-//
-//
-//    if (radius > self.cllmng.maximumRegionMonitoringDistance) {
-//        radius = self.cllmng.maximumRegionMonitoringDistance;
-//    }
-//    // Create the geographic region to be monitored.
-//    CLCircularRegion *geoRegion = [[CLCircularRegion alloc]
-//                                   initWithCenter:coordinate
-//                                   radius:radius
-//                                   identifier:alarm.toWhich.name];
-//    [self.cllmng stopMonitoringForRegion:geoRegion];
-//
-//    if ([self.activeAlarms count]==0) {
-//        [self.cllmng stopMonitoringSignificantLocationChanges];
-//        [self.cllmng stopUpdatingLocation];
-//    }
-//}
-
--(void)activeAlarmsChange:(NSArray *)activealarms{
-    self.isHighAccuracy=false;
-    
-    
-    for (CLRegion * r in [self.cllmng monitoredRegions]) {
-        [self.cllmng stopMonitoringForRegion:r];
-    }
-    self.activeAlarms=[NSMutableArray arrayWithArray:activealarms];
-    for (Alarms * al in self.activeAlarms) {
-        [self addMonitoredRegion:al];
-    }
-    //    if ([self.activeAlarms count]==0) {
-    //        [self.cllmng stopMonitoringSignificantLocationChanges];
-    //        [self.cllmng stopUpdatingLocation];
-    //    }
-    
-    //test
-    //    for (Alarms *a in activealarms) {
-    //        NSLog(@"momo: %@",a.toWhich.name);
-    //    }
-    //    NSLog(@"111111");
-    //    sleep(2);
-    //    for (CLRegion * r in [self.cllmng monitoredRegions]) {
-    //        NSString *str=[NSString stringWithFormat:@"Monitored region: %@!",r.identifier];
-    //        NSLog(@"Monitored region: %@!",r.identifier);
-    //        [self.delegate updateTextField:str];
-    //    }
+- (void) updateInfo:(NSString *) msg{
+    NSLog(@"%@",msg);
+    [self.delegate updateTextField:msg];
 }
-
 @end
