@@ -29,20 +29,24 @@
     return _delayDict;
 }
 
+//start point of this class.
 -(void)activeAlarmsChange:(NSArray *)activealarms{
-
-    [self stopHighAccuracy];
     for (CLRegion * r in [self.cllmng monitoredRegions]) {
         //clear monitored regions.
         [self.cllmng stopMonitoringForRegion:r];
     }
-    self.cllmng=nil;
+    [self stopClocationService];
     self.activeAlarms=[NSMutableArray arrayWithArray:activealarms];
     for (Alarms * al in self.activeAlarms) {
         [self addMonitoredRegion:al];
     }
-    [self updateInfo:[NSString stringWithFormat:@"%lu monitored regions!",(unsigned long)[[self.cllmng monitoredRegions] count]]];
+    [self updateInfo:[NSString stringWithFormat:@"%d monitored regions!",[[self.cllmng monitoredRegions] count]]];
     [self updateInfo:[NSString stringWithFormat:@"cllmng obj:%@",self.cllmng]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+}
+
+-(void) enterBackground{
+    [self updateInfo:[NSString stringWithFormat:@"High accuracy model: %d",self.isHighAccuracy]];
 }
 
 - (void) initCLLocationManager{
@@ -114,10 +118,12 @@
         self.isHighAccuracy=true;
     }
 }
-- (void) stopHighAccuracy{
+
+- (void) stopClocationService{
     self.isHighAccuracy=false;
     [self.cllmng stopUpdatingLocation];
-    [self.cllmng startMonitoringSignificantLocationChanges];
+    [self.cllmng stopMonitoringSignificantLocationChanges];
+    self.cllmng=nil;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
@@ -140,6 +146,7 @@
 }
 
 -(void) closeEnoughToTarget:(Alarms *) destination{
+    [self startHighAccuracy];
     if ([[self.delayDict objectForKey:destination.toWhich.name] isEqualToNumber:[NSNumber numberWithInt:DELAY_TIMES]]) {
         //reach destination
         

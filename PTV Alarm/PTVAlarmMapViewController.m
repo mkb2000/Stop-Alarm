@@ -22,25 +22,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"view load!!");
     
     self.firstShow=TRUE;
     self.mapView.delegate=self;
     self.mapView.showsUserLocation=YES;
+
     
     //init CLLocationManager
     self.cllmng=[[CLLocationManager alloc]init];
     self.cllmng.delegate=self;
     self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
-    self.cllmng.distanceFilter=50;
+    self.cllmng.distanceFilter=30;
     [self.cllmng startUpdatingLocation];
     
     [self putDestinationsOnMap];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(putDestinationsOnMap) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
+- (void)enterBackground{
+    
+}
+
+- (void)enterForeground{
+
+}
+
+//triggered when change of alarm
+- (void)viewWillAppear:(BOOL)animated{
+    if (self.firstShow&&self.lastLocation) {
+        self.firstShow=false;
+        [self setMapViewVisiblePortion:self.lastLocation];
+    }
+        NSLog(@"veiw will load!!!");
+}
+//- (void)viewWillDisappear:(BOOL)animated{
+//    NSLog(@"veiw unload!!!");
+//    
+//}
+
 - (void) putDestinationsOnMap{
+    self.firstShow=TRUE;
     [self.mapView removeAnnotations:self.mapView.annotations];
+    [self.mapView removeOverlays:self.mapView.overlays];
     
     PTVAlarmAppDelegate * appdelegate=[[UIApplication sharedApplication] delegate];
     self.activeAlarms=[[appdelegate activeAlarms] copy];
@@ -68,8 +95,8 @@
 - (void)setMapViewVisiblePortion:(CLLocation *) currentLoci{
     MKCoordinateRegion r;
     MKCoordinateSpan span;
-    span.latitudeDelta = 3;
-    span.longitudeDelta = 3;
+    span.latitudeDelta = 1;
+    span.longitudeDelta = 1;
     r.span = span;
     CLLocationCoordinate2D c;
     c.longitude=currentLoci.coordinate.longitude;
@@ -121,9 +148,9 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     CLLocation * currentLoci=[locations lastObject];
     self.lastLocation=currentLoci;
-    if (self.firstShow&&currentLoci) {
+    if (self.firstShow&&self.lastLocation) {
         self.firstShow=false;
-        [self setMapViewVisiblePortion:currentLoci];
+        [self setMapViewVisiblePortion:self.lastLocation];
     }
     NSLog(@"loci changed!");
 }

@@ -139,6 +139,7 @@
             break;
     }
     cell.img.image=[UIImage imageNamed:imgstr];
+    cell.img.contentMode = UIViewContentModeScaleAspectFit;
     cell.uiswitch.on=[event.state boolValue];
 }
 
