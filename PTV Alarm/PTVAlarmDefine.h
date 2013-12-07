@@ -31,4 +31,5 @@ typedef  enum{
 + (NSString *) typeToImgFile:(TransportType) type;
 + (PTVAlarmDefine *) globalVariables;
 + (TransportType) filenameToStationType:(NSString *) filename;
++ (void) alertOfLocationServiceUnavailable:(id) delegate;
 @end

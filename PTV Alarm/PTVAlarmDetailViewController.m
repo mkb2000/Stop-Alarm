@@ -9,7 +9,6 @@
 #import "PTVAlarmDetailViewController.h"
 #import "PTVAlarmMapAnnotation.h"
 #import "PTVAlarmAppDelegate.h"
-#import "Stations.h"
 #import "Alarms.h"
 
 
@@ -37,24 +36,32 @@
     return _isOn;
 }
 
+
 - (IBAction)switchAction:(UISwitch *)sender{
     [self fetchResult];
     
     if (self.setAlarm.on) {
-        //add this station to Alarms view. If existed, turn on this alarm.
-        if (((Stations *)self.result[0]).alarm) {
-            ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:ONSTATE];
-        }
-        else if (!((Stations *)self.result[0]).alarm){
-            Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_ALARM inManagedObjectContext:self.managedObjectContext];
-            alarm.addDate=[NSDate date];
-            alarm.lastUse=[NSDate date];
-            alarm.toWhich=self.station;
-            alarm.state=[NSNumber numberWithInt:ONSTATE];
-            self.station.alarm=alarm;
+        if (![CLLocationManager locationServicesEnabled]|| [CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
+            PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
+            [PTVAlarmDefine alertOfLocationServiceUnavailable:delegate.ptvalarmmanager];
+            self.setAlarm.on=false;
         }
         else{
-            NSLog(@"Fail to add alarm");
+            //add this station to Alarms view. If existed, turn on this alarm.
+            if (((Stations *)self.result[0]).alarm) {
+                ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:ONSTATE];
+            }
+            else if (!((Stations *)self.result[0]).alarm){
+                Alarms * alarm=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_ALARM inManagedObjectContext:self.managedObjectContext];
+                alarm.addDate=[NSDate date];
+                alarm.lastUse=[NSDate date];
+                alarm.toWhich=self.station;
+                alarm.state=[NSNumber numberWithInt:ONSTATE];
+                self.station.alarm=alarm;
+            }
+            else{
+                NSLog(@"Fail to add alarm");
+            }
         }
     }
     else{
@@ -99,6 +106,7 @@
     self.uiaddress.text=self.station.address;
     self.uiMapView.delegate=self;
     self.iconImgView.image=[UIImage imageNamed:[PTVAlarmDefine typeToImgFile:self.station.type.intValue]];
+    [self setSwitchState];
     
     CLLocationCoordinate2D coordinate;
     coordinate.latitude=self.station.latitude.doubleValue;
@@ -117,7 +125,7 @@
     region.center = coordinate;
     [self.uiMapView setRegion:region animated:NO];
     
-    [self setSwitchState];
+    
     
     
     //TODO: only listen to PTVAarmAlarmsViewController. Find a way to get the instance.

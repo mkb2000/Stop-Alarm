@@ -156,7 +156,6 @@
     NSLog(@"files loaded!");
 }
 
-
 - (NSArray *)activeAlarms{
     NSFetchRequest * fetch=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];
     NSPredicate *predicate=[NSPredicate predicateWithFormat:@"state=1"];
@@ -171,5 +170,7 @@
     [self.managedObjectContext save:nil];
     [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
 }
+
+
 
 @end

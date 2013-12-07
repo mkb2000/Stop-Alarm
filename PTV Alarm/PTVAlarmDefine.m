@@ -61,5 +61,9 @@
     }
     return imgstr;
 }
++ (void) alertOfLocationServiceUnavailable:(id) delegate{
+    UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:@"Location Service Unavailable" message:@"This app requires Location Service to function. Please go Settings>Privacy>Location Services and authorise Location Service for this app." delegate:delegate cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertview show];
+}
 
 @end

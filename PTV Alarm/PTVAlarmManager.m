@@ -127,6 +127,20 @@
     self.cllmng=nil;
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    [self updateInfo:@"change authorization called"];
+    if (status==kCLAuthorizationStatusDenied) {
+        for (Alarms * a in self.activeAlarms) {
+            a.state=OFFSTATE;
+        }
+        [PTVAlarmDefine alertOfLocationServiceUnavailable:self];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    [self updateInfo:@"error call"];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
     NSLog(@"Started monitoring %@ region: %f,%f with R:%f", region.identifier,region.center.latitude,region.center.longitude, region.radius);
 }
@@ -200,4 +214,16 @@
     NSLog(@"%@",msg);
     [self.delegate updateTextField:msg];
 }
+
+//#pragma mark - alert view actions
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    switch (buttonIndex) {
+//        case 0:
+//            [[[UIApplication sharedApplication] delegate] application:<#(UIApplication *)#> openURL:<#(NSURL *)#> sourceApplication:<#(NSString *)#> annotation:<#(id)#>];
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"]];
+//            break;
+//        default:
+//            break;
+//    }
+//}
 @end
