@@ -1,9 +1,8 @@
-85 Franklin St (Adelaide City;SA);Franklin St, Adelaide City (SA) 5000;-34.927367,138.595017
+85 Franklin St;Adelaide City (SA);Franklin St, Adelaide City (SA) 5000;-34.927367,138.595017
 Post Office/Great Ocean Rd;Aireys Inlet;Albert Ave / Great Ocean Rd, Aireys Inlet 3231;-38.458738,144.106973
 Bambra Rd/Great Ocean Rd;Aireys Inlet;Bambra Rd / Great Ocean Rd, Aireys Inlet 3231;-38.464737,144.100247
 Alberton Store/South Gippsland Hwy;Alberton;Bank St / South Gippsland Hwy, Alberton 3971;-38.614618,146.666742
-Albury Railway Station (Albury (NSW));Bay 1 to 4;Smollett St / Hume Hwy, Albury (NSW) 2640;-36.084242,146.924327
-Albury Railway Station (Albury;NSW);Smollett St / Hume Hwy, Albury (NSW) 2640;-36.084263,146.924518
+Albury Railway Station;Albury (NSW);Smollett St / Hume Hwy, Albury (NSW) 2640;-36.084242,146.924327
 Creswick-Newstead Rd;Allendale;Creswick-Newstead Rd, Allendale 3364;-37.371820,143.921420
 Phillip Island Rd/Bass Hwy;Anderson;Phillip Island Rd / Bass Hwy, Anderson 3995;-38.526348,145.447528
 Post Office/Great Ocean Rd;Anglesea;Camp Rd / Great Ocean Rd, Anglesea 3230;-38.405172,144.189345
@@ -19,24 +18,21 @@ Ararat Town Hall/Barkly St;Ararat;Vincent St / Barkly St, Ararat 3377;-37.283640
 Ardeer Railway Station;Ardeer;Lawrence St / Forrest St, Ardeer 3022;-37.783063,144.802193
 Avenel Railway Station;Avenel;Queen St, Avenel 3664;-36.893644,145.229517
 Post Office/Sunraysia Hwy;Avoca;Cambridge St / Sunraysia Hwy, Avoca 3467;-37.088987,143.473840
-Bairnsdale Railway Station (Bairnsdale);Bay 4;Pyke St / Macleod St, Bairnsdale 3875;-37.828598,147.627597
 Bailey St/Princes Hwy;Bairnsdale;Bailey St / Princes Hwy, Bairnsdale 3875;-37.825510,147.632280
-Bairnsdale Railway Station;Bairnsdale;Pyke St / Macleod St, Bairnsdale 3875;-37.828717,147.627615
-Bairnsdale Railway Station/MacLeod St (Bairnsdale);Bay 5;Pyke St / MacLeod St, Bairnsdale 3875;-37.828212,147.627791
-Bairnsdale Railway Station (Bairnsdale);Bay 2;Pyke St / MacLeod St, Bairnsdale 3875;-37.828598,147.627597
+Bairnsdale Railway Station;Bairnsdale;Pyke St / MacLeod St, Bairnsdale 3875;-37.828598,147.627597
 Ballan Railway Station;Ballan;Fisken St / Atkinson St, Ballan 3342;-37.603427,144.224982
 Ballarat Railway Station;Ballarat Central;Lydiard St, Ballarat Central 3350;-37.558653,143.858758
 Ballarat Railway Station;Ballarat Central;Lydiard St / Main St, Ballarat Central 3350;-37.558790,143.859452
 Ballarat Hospital/Sturt St;Ballarat Central;Drummond St / Sturt St, Ballarat Central 3350;-37.560632,143.848246
-Heritage Park/Market St (Balranald;NSW);Market St, Balranald (NSW) 0;-34.643890,143.564440
+Heritage Park/Market St;Balranald (NSW);Market St, Balranald (NSW) 0;-34.643890,143.564440
 Fitzgerald Rd/Robinvale - Sea Lake Rd;Bannerton;Fitzgerald Rd / Robinvale - Sea Lake Rd, Bannerton 3549;-34.701103,142.793777
 McPhillips Rd/High St;Bannockburn;McPhillips Rd / High St, Bannockburn 3331;-38.045243,144.172305
-Border Service Station/Murray St (Barham;NSW);Thule St / Murray St, Barham (NSW) 0;-35.629898,144.125918
+Border Service Station/Murray St;Barham (NSW);Thule St / Murray St, Barham (NSW) 0;-35.629898,144.125918
 Moira Lakes Rd/Murray St;Barmah;Moira Lakes Rd / Murray St, Barmah 3639;-36.017565,144.957747
-General Store/Nangunia St (Barooga;NSW);Macfarland St / Nangunia St, Barooga (NSW) 0;-35.911933,145.690537
+General Store/Nangunia St;Barooga (NSW);Macfarland St / Nangunia St, Barooga (NSW) 0;-35.911933,145.690537
 Barraport East Rd/Boort - Quambatook Rd;Barraport;Barraport East Rd / Boort - Quambatook Rd, Barraport 3537;-36.009015,143.669192
 General Store/Hade Ave;Bass;Bass School Rd / Hade Ave, Bass 3991;-38.483983,145.466367
-Orient Street Bus Bay/Orient St (Batemans Bay;NSW);Orient St, Batemans Bay (NSW) 0;-35.710000,150.176940
+Orient Street Bus Bay/Orient St;Batemans Bay (NSW);Orient St, Batemans Bay (NSW) 0;-35.710000,150.176940
 Hotel/Midland Hwy;Batesford;River St / Midland Hwy, Batesford 3221;-38.089513,144.280335
 The Dog Rocks Hotel/Midland Hwy;Batesford;River St / Midland Hwy, Batesford 3221;-38.089270,144.279862
 Corner Store/Main St;Bealiba;Cochrane St / Main St, Bealiba 3475;-36.788212,143.550888
@@ -45,7 +41,7 @@ Beaufort Railway Station;Beaufort;Albert St / Pratt St, Beaufort 3373;-37.427772
 Havelock St/Neill St;Beaufort;Havelock St / Neill St, Beaufort 3373;-37.429584,143.381957
 Shell Roadhouse/Western Hwy;Beaufort;Livingstone St / Western Hwy, Beaufort 3373;-37.429394,143.380373
 Ford St/Camp St;Beechworth;Ford St / Camp St, Beechworth 3747;-36.359148,146.686791
-Information Centre/Gipps St (Bega;NSW);Gipps St, Bega (NSW) 2550;-36.676390,149.843330
+Information Centre/Gipps St;Bega (NSW);Gipps St, Bega (NSW) 2550;-36.676390,149.843330
 Adiscott Rd/Great Ocean Rd;Bellbrae;Adiscott Rd / Great Ocean Rd, Bellbrae 3228;-38.349557,144.257787
 School Rd/Great Ocean Rd;Bellbrae;School Rd / Great Ocean Rd, Bellbrae 3228;-38.338319,144.263573
 Jarosite Rd/Great Ocean Rd;Bellbrae;Jarosite Rd / Great Ocean Rd, Bellbrae 3228;-38.368596,144.244611
@@ -54,10 +50,10 @@ Strand Arcade/High St;Belmont;Roslyn Rd / High St, Belmont 3216;-38.174077,144.3
 Bemm River Rd/Princes Hwy;Bemm River;Bemm River Rd / Princes Hwy, Bemm River 3889;-37.672416,148.794210
 Benalla Railway Station;Benalla;Nixon St / Mackellar St, Benalla 3672;-36.544817,145.984002
 Mitchell St/Hargreaves St;Bendigo;Mitchell St / Hargreaves St, Bendigo 3550;-36.761020,144.279060
-Bendigo Railway Station (Bendigo);Bay 1;Railway Pl, Bendigo 3550;-36.765446,144.282855
+Bendigo Railway Station;Bendigo)  (Bay 1;Railway Pl, Bendigo 3550;-36.765446,144.282855
 Bendigo Railway Station;Bendigo;Mitchell St / Railway Pl, Bendigo 3550;-36.765673,144.283012
-Newsagency/Wallaga Lake Rd (Bermagui;NSW);Narrari St / Wallaga Lake Rd, Bermagui (NSW) 2546;-36.421547,150.064602
-Bermagui Motor Inn/Lamont St (Bermagui;NSW);Main Rd / Lamont St, Bermagui (NSW) 2546;-36.427106,150.076789
+Newsagency/Wallaga Lake Rd;Bermagui (NSW);Narrari St / Wallaga Lake Rd, Bermagui (NSW) 2546;-36.421547,150.064602
+Bermagui Motor Inn/Lamont St;Bermagui (NSW);Main Rd / Lamont St, Bermagui (NSW) 2546;-36.427106,150.076789
 Caltex Service Station/Calder Hwy;Berriwillock;Calder Hwy, Berriwillock 3531;-35.638247,142.998972
 Berwick Railway Station;Berwick;Enterprise Ave, Berwick 3806;-38.040410,145.345720
 Galaquil West Rd/Henty Hwy;Beulah;Galaquil West Rd / Henty Hwy, Beulah 3395;-35.995328,142.407695
@@ -67,11 +63,11 @@ Birregurra Railway Station/Birregurra Rd;Birregurra;Birregurra Rd, Birregurra 32
 Birregurra Railway Station;Birregurra;Birregurra Rd, Birregurra 3242;-38.328807,143.783620
 Roadknight St/Main St;Birregurra;Roadknight St / Main St, Birregurra 3242;-38.336195,143.783451
 Hotel/Midland Hwy;Blampied;Treweeks Rd / Midland Hwy, Blampied 3364;-37.367222,144.042233
-Shops/123 Princes Hwy (Bodalla;NSW);Princes Hwy, Bodalla (NSW) 0;-36.093818,150.051710
-War Memorial/Monaro Hwy (Bombala;NSW);Monaro Hwy, Bombala (NSW) 0;-36.908060,149.236110
+Shops/123 Princes Hwy;Bodalla (NSW);Princes Hwy, Bodalla (NSW) 0;-36.093818,150.051710
+War Memorial/Monaro Hwy;Bombala (NSW);Monaro Hwy, Bombala (NSW) 0;-36.908060,149.236110
 Phillip St/Bon Cres;Bonnie Doon;Phillip St / Bon Cres, Bonnie Doon 3720;-37.026572,145.853683
 Information Centre/Godfrey St;Boort;Station St / Godfrey St, Boort 3537;-36.116220,143.722495
-BJs Roadhouse/North Tce (Bordertown;SA);Woolshed St / North Tce, Bordertown (SA) 5268;-36.308400,140.774000
+BJs Roadhouse/North Tce;Bordertown (SA);Woolshed St / North Tce, Bordertown (SA) 5268;-36.308400,140.774000
 Perryman St/Boort Wedderburn Rd;Borung;Perryman St / Boort Wedderburn Rd, Borung 3518;-36.291920,143.750513
 Post Office/Murray Valley Hwy;Boundary Bend;Kooloonong Rd / Murray Valley Hwy, Boundary Bend 3599;-34.716053,143.150462
 Watts St/Whitehorse Rd;Box Hill;Watts St / Whitehorse Rd, Box Hill 3128;-37.818080,145.125700
@@ -99,8 +95,8 @@ General Store/Princes Hwy;Cabbage Tree Creek;Princes Hwy, Cabbage Tree Creek 388
 Campbellfield Plaza/Sydney Rd;Campbellfield;Sydney Rd, Campbellfield 3061;-37.686990,144.959464
 Opposite Old Garage/Creswick-Newstead Rd;Campbelltown;Creswick-Newstead Rd, Campbelltown 3364;-37.203470,143.946440
 Camperdown Railway Station;Camperdown;Pike St / Longmore St, Camperdown 3260;-38.228725,143.150582
-Jolimont Centre/Northbourne Ave (Canberra;ACT);Northbourne Ave, Canberra (ACT) 2600;-35.279440,149.128060
-Canberra Railway Station/Wentworth Ave (Canberra;ACT);Wentworth Ave, Canberra (ACT) 2600;-35.321670,149.148330
+Jolimont Centre/Northbourne Ave;Canberra (ACT);Northbourne Ave, Canberra (ACT) 2600;-35.279440,149.128060
+Canberra Railway Station/Wentworth Ave;Canberra (ACT);Wentworth Ave, Canberra (ACT) 2600;-35.321670,149.148330
 United Roadhouse/Cox St;Cann River;Princes Hwy / Cox St, Cann River 3890;-37.565280,149.154720
 Seaward Dr/Cape Paterson Rd;Cape Paterson;Seaward Dr / Cape Paterson Rd, Cape Paterson 3995;-38.667845,145.621130
 Panorama Dr/Phillip Island Rd;Cape Woolamai;Panorama Dr / Phillip Island Rd, Cape Woolamai 3925;-38.520700,145.337000
@@ -121,7 +117,7 @@ Butcher Shop/Service St;Clunes;Fraser St / Service St, Clunes 3370;-37.293688,14
 Clunes Railway Station;Clunes;Ballarat Maryborough Rd, Clunes 3370;-37.303143,143.781574
 Clunes Station/Ballarat Maryborough Rd;Clunes;Ballarat Maryborough Rd, Clunes 3370;-37.303143,143.781574
 Clyde - Five Ways Rd/South Gippsland Hwy;Clyde;Clyde - Five Ways Rd / South Gippsland Hwy, Clyde 3978;-38.159545,145.318173
-United Service Station/Princes Hwy (Cobargo;NSW);Princes Hwy, Cobargo (NSW) 0;-36.386473,149.889544
+United Service Station/Princes Hwy;Cobargo (NSW);Princes Hwy, Cobargo (NSW) 0;-36.386473,149.889544
 Cobram Station/Punt Rd;Cobram;Murray St / Punt Rd, Cobram 3644;-35.920478,145.644772
 North of Bell Street/Sydney Rd;Coburg;Bell St / Sydney Rd, Coburg 3058;-37.741150,144.966471
 Post Office/King Edward St;Cohuna;Sampson St / King Edward St, Cohuna 3568;-35.809070,144.219770
@@ -129,18 +125,18 @@ Colac Railway Station;Colac;Gellibrand St, Colac 3250;-38.343203,143.586483
 Colac Railway Station;Colac;Lavers Hill Rd / Gellibrand St, Colac 3250;-38.343378,143.586658
 General Store/Mitchell St;Colbinabbin;Collin St / Mitchell St, Colbinabbin 3559;-36.590374,144.796168
 General Store/Mitchell St;Colbinabbin;Collins St / Mitchell St, Colbinabbin 3559;-36.590220,144.796094
-Opposite Bendigo Bank/Kingfisher Ave (Coleambally;NSW);Brolga Pl / Kingfisher Ave, Coleambally (NSW) 2707;-34.805212,145.881245
+Opposite Bendigo Bank/Kingfisher Ave;Coleambally (NSW);Brolga Pl / Kingfisher Ave, Coleambally (NSW) 2707;-34.805212,145.881245
 Whyte St/Henty St;Coleraine;Whyte St / Henty St, Coleraine 3315;-37.598363,141.693557
-Centennial Park/Bombala St (Cooma;NSW);Bombala St, Cooma (NSW) 0;-36.234170,149.126940
-BP Roadhouse/North Tce (Coonalpyn;SA);North Tce, Coonalpyn (SA) 5265;-35.690830,139.854720
+Centennial Park/Bombala St;Cooma (NSW);Bombala St, Cooma (NSW) 0;-36.234170,149.126940
+BP Roadhouse/North Tce;Coonalpyn (SA);North Tce, Coonalpyn (SA) 5265;-35.690830,139.854720
 Corinella Rd/Bass Hwy;Corinella;Corinella Rd / Bass Hwy, Corinella 3984;-38.433067,145.496745
 Corio Railway Station;Corio;School Rd, Corio 3214;-38.072835,144.379770
 BP Service Station/1929 Midland Hwy;Corop;Midland Hwy, Corop 3559;-36.457827,144.797101
-Sanger St/River St (Corowa;NSW);Sanger St / River St, Corowa (NSW) 0;-35.998773,146.391420
+Sanger St/River St;Corowa (NSW);Sanger St / River St, Corowa (NSW) 0;-35.998773,146.391420
 Walton St/Thompson Ave;Cowes;Walton St / Thompson Ave, Cowes 3922;-38.459050,145.239070
 Thompson Ave/Chapel St;Cowes;Thompson Ave / Chapel St, Cowes 3922;-38.450220,145.238400
 McEwan Rd/Traralgon - Maffra Rd;Cowwarr;McEwan Rd / Traralgon - Maffra Rd, Cowwarr 3857;-38.014043,146.695495
-Summit Rd/South Eastern Fwy (Crafers;SA);Summit Rd / South Eastern Fwy, Crafers (SA) 5152;-34.998610,138.700830
+Summit Rd/South Eastern Fwy;Crafers (SA);Summit Rd / South Eastern Fwy, Crafers (SA) 5152;-34.998610,138.700830
 Craigieburn Railway Station;Craigieburn;Hothlyn Dr, Craigieburn 3064;-37.601925,144.943309
 Station St/High St;Cranbourne;Station St / High St, Cranbourne 3977;-38.101647,145.282646
 Cranbourne Shopping Centre/Lyall St;Cranbourne;High St / Lyall St, Cranbourne 3977;-38.109447,145.283819
@@ -149,22 +145,21 @@ Raglan St/Albert St;Creswick;Raglan St / Albert St, Creswick 3363;-37.424487,143
 Forest Resort/Midland Hwy;Creswick;Lakeside Dr / Midland Hwy, Creswick 3363;-37.444278,143.888475
 Creswick Railway Station;Creswick;Raglan St, Creswick 3363;-37.424605,143.888122
 Broomfield Rd/Clunes-Creswick Rd;Creswick North;Broomfield Rd / Clunes-Creswick Rd, Creswick North 3363;-37.408860,143.888229
-Dorset (before) Rd/Maroondah Hwy;Croydon;Dorset (before) Rd / Maroondah Hwy, Croydon 3136;-37.770472,145.295617
+Dorset;before) Rd/Maroondah Hwy (Croydon;Dorset (before) Rd / Maroondah Hwy, Croydon 3136;-37.770472,145.295617
 Exeter Rd/Maroondah Hwy;Croydon North;Exeter Rd / Maroondah Hwy, Croydon North 3136;-37.770442,145.295454
 Garage/Main St;Culgoa;Hoopers Rd / Main St, Culgoa 3530;-35.717982,143.108098
 Dadswells Bridge Motel/Western Hwy;Dadswells Bridge;Western Hwy, Dadswells Bridge 3385;-36.917603,142.513737
-Mort Ave/Princes Hwy (Dalmeny;NSW);Mort Ave / Princes Hwy, Dalmeny (NSW) 0;-36.169930,150.107940
+Mort Ave/Princes Hwy;Dalmeny (NSW);Mort Ave / Princes Hwy, Dalmeny (NSW) 0;-36.169930,150.107940
 Ozone Hotel/Bass Hwy;Dalyston;Walker St / Bass Hwy, Dalyston 3992;-38.563287,145.547002
 Walker St/Bass Hwy;Dalyston;Walker St / Bass Hwy, Dalyston 3992;-38.563585,145.547137
-Dandenong Railway Station (Dandenong);Bay 10/11;Foster St, Dandenong 3175;-37.989905,145.209577
-Dandenong Railway Station;Dandenong;Foster St, Dandenong 3175;-37.989968,145.209728
+Dandenong Railway Station;Dandenong;Foster St, Dandenong 3175;-37.989905,145.209577
 Hotel/Hamilton Hwy;Darlington;Hamilton Hwy, Darlington 3271;-37.998985,143.044685
-Coolabah Café/Bridge Rd (Darlington Point;NSW);Stock St / Bridge Rd, Darlington Point (NSW) 2706;-34.568032,146.000332
+Coolabah Café/Bridge Rd;Darlington Point (NSW);Stock St / Bridge Rd, Darlington Point (NSW) 2706;-34.568032,146.000332
 On-ramp/Princes Fwy;Darnum;On-ramp  / Princes Fwy, Darnum 3822;-38.186274,146.002018
 General Store/Greenham St;Dartmoor;Ascot St / Greenham St, Dartmoor 3304;-37.922233,141.276888
 Opposite CFA/Bridport St;Daylesford;Midland Hwy / Bridport St, Daylesford 3460;-37.342633,144.140855
 Deer Park Railway Station;Deer Park;Station Rd / Railway Pde, Deer Park 3023;-37.777760,144.772307
-344 Whitelock St (Deniliquin;NSW);Whitelock St, Deniliquin (NSW) 0;-35.528430,144.961398
+344 Whitelock St;Deniliquin (NSW);Whitelock St, Deniliquin (NSW) 0;-35.528430,144.961398
 General Store/Hamilton Hwy;Derrinallum;Hamilton Hwy, Derrinallum 3325;-37.947855,143.223572
 Town Hall/Devenish Rd;Devenish;Devenish Rd, Devenish 3726;-36.331070,145.894473
 Diggers Rest Railway Station;Diggers Rest;Old Calder Hwy, Diggers Rest 3427;-37.627013,144.719918
@@ -186,7 +181,7 @@ Echuca Railway Station;Echuca;Darling St / Sturt St, Echuca 3564;-36.130985,144.
 Echuca Railway Station/Sturt St;Echuca;Darling St / Sturt St, Echuca 3564;-36.131110,144.753610
 Caltex Roadhouse Rose St/Northern Hwy;Echuca;Northern Hwy, Echuca 3564;-36.144746,144.730241
 Sun River Home Park/Northern Hwy;Echuca;Northern Hwy, Echuca 3564;-36.145543,144.729977
-Caltex Service Station/Princes Hwy (Eden;NSW);Princes Hwy, Eden (NSW) 0;-37.063610,149.903890
+Caltex Service Station/Princes Hwy;Eden (NSW);Princes Hwy, Eden (NSW) 0;-37.063610,149.903890
 Thomas Rd/Midland Hwy;Eganstown;Thomas Rd / Midland Hwy, Eganstown 3461;-37.358200,144.073651
 General Store/Midland Hwy;Elaine;Pearsons Rd / Midland Hwy, Elaine 3334;-37.777237,144.028848
 Cardwell St/Northern Hwy;Elmore;Cardwell St / Northern Hwy, Elmore 3558;-36.495308,144.607892
@@ -196,10 +191,10 @@ Dunolly Rd;Emu;Dunolly Rd, Emu 3475;-36.731180,143.441100
 Essendon Railway Station;Essendon;Buckley St / Rose St, Essendon 3040;-37.756010,144.916200
 McGuinness St/Railway St;Euroa;McGuinness St / Railway St, Euroa 3666;-36.749277,145.568375
 Euroa Railway Station;Euroa;McGuinness St / Railway St, Euroa 3666;-36.749145,145.567865
-Caltex Roadhouse/Sturt Hwy (Euston;NSW);Sturt Hwy, Euston (NSW) 0;-34.574540,142.740100
+Caltex Roadhouse/Sturt Hwy;Euston (NSW);Sturt Hwy, Euston (NSW) 0;-34.574540,142.740100
 Everton General Store/Great Alpine Rd;Everton;Meadow Ct / Great Alpine Rd, Everton 3678;-36.432807,146.540926
 Yarringa Rd/Great Ocean Rd;Fairhaven;Yarringa Rd / Great Ocean Rd, Fairhaven 3231;-38.468167,144.085052
-Wollamai St/Murray St (Finley;NSW);Wollamai St / Murray St, Finley (NSW) 2713;-35.639750,145.578639
+Wollamai St/Murray St;Finley (NSW);Wollamai St / Murray St, Finley (NSW) 2713;-35.639750,145.578639
 Roo Fuel/Meeniyan - Promontory Rd;Fish Creek;Falls Rd / Meeniyan - Promontory Rd, Fish Creek 3959;-38.694073,146.082693
 La Trobe University/Retreat Rd;Flora Hill;Retreat Rd, Flora Hill 3550;-36.782800,144.288760
 La Trobe University/Sharon St;Flora Hill;Keck St / Sharon St, Flora Hill 3550;-36.777626,144.299351
@@ -207,10 +202,11 @@ Flowerdale Hotel/Whittlesea-Yea Rd;Flowerdale;Whittlesea-Yea Rd, Flowerdale 3717
 Footscray Railway Station;Footscray;Hopkins St / Irving St, Footscray 3011;-37.801410,144.902023
 Pulhams Store/Main St;Foster;Bridge St / Main St, Foster 3960;-38.652218,146.200170
 Garfield Railway Station;Garfield;Nar Nar Goon - Longwarry Rd, Garfield 3814;-38.091030,145.674220
+Geelong Railway Station;Geelong;Fenwick St / Railway Tce, Geelong 3220;-38.145063,144.355527
 Moorabool St/Malop St;Geelong;Moorabool St / Malop St, Geelong 3220;-38.147422,144.361148
 Geelong Railway Station;Geelong;Railway Tce / Mercer St, Geelong 3220;-38.144241,144.354992
 opposite Genoa Hotel/Alexanders Rd;Genoa;Alexanders Rd, Genoa 3891;-37.477220,149.588890
-Roadside Stop/Mallee Hwy (Geranium;SA);Mallee Hwy, Geranium (SA) 0;-35.377900,140.161694
+Roadside Stop/Mallee Hwy;Geranium (SA);Mallee Hwy, Geranium (SA) 0;-35.377900,140.161694
 Opposite Highway Bus Shelter/Midland Hwy;Gheringhap;Ryan Rd / Midland Hwy, Gheringhap 3331;-38.076948,144.234232
 Highway Bus Shelter/Midland Hwy;Gheringhap;Ryan Rd / Midland Hwy, Gheringhap 3331;-38.076898,144.234408
 Township/Gipsy Point Rd;Gipsy Point;Gipsy Point Rd, Gipsy Point 3891;-37.480487,149.679225
@@ -221,20 +217,20 @@ Opposite Hotel/Main St;Glengarry;Main St, Glengarry 3854;-38.125480,146.573544
 Glenloth Rd/Calder Hwy;Glenloth;Glenloth Rd / Calder Hwy, Glenloth 3527;-36.139012,143.287058
 Wills St/Edwards St;Glenorchy;Wills St / Edwards St, Glenorchy 3385;-36.906665,142.663948
 Cameron St/Glenelg Hwy;Glenthompson;Cameron St / Glenelg Hwy, Glenthompson 3293;-37.636608,142.546777
-Sovereign Hill/Bradshaw St (Golden Point;3350);Dunn St / Bradshaw St, Golden Point (3350) 0;-37.574730,143.866420
+Sovereign Hill/Bradshaw St;Golden Point (3350);Dunn St / Bradshaw St, Golden Point (3350) 0;-37.574730,143.866420
 Victory Park/Hall Rd;Goorambat;Park St / Hall Rd, Goorambat 3725;-36.411227,145.922757
 Goornong Newsagency/Midland Hwy;Goornong;Midland Hwy, Goornong 3557;-36.608060,144.531390
 Pier Rd/Bass Hwy;Grantville;Pier Rd / Bass Hwy, Grantville 3984;-38.406957,145.530387
 Mechanics Institute Hall/Western Hwy;Great Western;Cubitt St / Western Hwy, Great Western 3377;-37.152717,142.855620
 General Store/Western Hwy;Great Western;Cubitt St / Western Hwy, Great Western 3377;-37.151522,142.853618
 Township/Boort - Quambatook Rd;Gredgwin;Boort - Quambatook Rd, Gredgwin 3537;-35.969590,143.618820
-Visitors Centre/Jondaryan Ave (Griffith;NSW);Banna Ave / Jondaryan Ave, Griffith (NSW) 2680;-34.289622,146.050360
+Visitors Centre/Jondaryan Ave;Griffith (NSW);Banna Ave / Jondaryan Ave, Griffith (NSW) 2680;-34.289622,146.050360
 Pioneer Rd/Torquay Rd;Grovedale;Pioneer Rd / Torquay Rd, Grovedale 3216;-38.202464,144.340874
 Reserve Rd/Torquay Rd;Grovedale;Reserve Rd / Torquay Rd, Grovedale 3216;-38.204171,144.340818
 General Store/Midland Hwy;Guildford;Fryers Rd / Midland Hwy, Guildford 3451;-37.148802,144.166377
 Newsagent/Murray Valley Hwy;Gunbower;Murray Valley Hwy, Gunbower 3566;-35.956292,144.368792
 Gunbower Pyramid Rd/Murray Valley Hwy;Gunbower;Gunbower Pyramid Rd / Murray Valley Hwy, Gunbower 3566;-35.955980,144.368800
-Tourist Information Centre/249 Sheridan St (Gundagai;NSW);Sheridan St, Gundagai (NSW) 2722;-35.063023,148.101368
+Tourist Information Centre/249 Sheridan St;Gundagai (NSW);Sheridan St, Gundagai (NSW) 2722;-35.063023,148.101368
 V/Line stop nr Community Hall/Sago Hill Rd;Haddon;Sago Hill Rd, Haddon 3351;-37.589613,143.720585
 Haddon Community Hall/Sago Hill Rd;Haddon;Sago Hill Rd, Haddon 3351;-37.589545,143.720833
 Information Centre/Grampians Rd;Halls Gap;Grampians Rd, Halls Gap 3381;-37.140620,142.518975
@@ -257,7 +253,7 @@ Hexham-Chatsworth Rd/Hamilton Hwy;Hexham;Hexham-Chatsworth Rd / Hamilton Hwy, He
 Gordon St/Mary St;Heyfield;Gordon St / Mary St, Heyfield 3858;-37.979322,146.791235
 Temple St/Harbeck St;Heyfield;Temple St / Harbeck St, Heyfield 3858;-37.982592,146.784862
 Lindsay St/Princes Hwy;Heywood;Lindsay St / Princes Hwy, Heywood 3304;-38.132952,141.629795
-Westpac Bank/Hume Hwy (Holbrook;NSW);Hume Hwy, Holbrook (NSW) 2644;-35.723140,147.317720
+Westpac Bank/Hume Hwy;Holbrook (NSW);Hume Hwy, Holbrook (NSW) 2644;-35.723140,147.317720
 near Fire Station/Henty Hwy;Hopetoun;Austin St / Henty Hwy, Hopetoun 3396;-35.726892,142.364510
 Coach Terminal/24 Roberts Ave;Horsham;Roberts Ave, Horsham 3402;-36.714190,142.200520
 Horsham Railway Station;Horsham;Railway Ave, Horsham 3402;-36.707500,142.200560
@@ -265,12 +261,12 @@ Verdon St/Brooke St;Inglewood;Verdon St / Brooke St, Inglewood 3517;-36.575040,1
 Newsagent/Brooke St;Inglewood;Verdon St / Brooke St, Inglewood 3517;-36.575465,143.868310
 Ramsay Bvd/The Esplanade;Inverloch;Ramsay Bvd / The Esplanade , Inverloch 3996;-38.634608,145.729680
 Hassell St/Calder Hwy;Irymple;Hassell St / Calder Hwy, Irymple 3498;-34.236278,142.171893
-Jabuk Store/Mallee Hwy (Jabuk;SA);Mallee Hwy, Jabuk (SA) 0;-35.383610,140.055560
+Jabuk Store/Mallee Hwy;Jabuk (SA);Mallee Hwy, Jabuk (SA) 0;-35.383610,140.055560
 Bay Rd/Bass Hwy;Jam Jerrup;Bay Rd / Bass Hwy, Jam Jerrup 3984;-38.326749,145.544927
-Duffields Rd/Great Ocean (South) Rd;Jan Juc;Duffields Rd / Great Ocean (South) Rd, Jan Juc 3228;-38.338805,144.305898
+Duffields Rd/Great Ocean;South) Rd (Jan Juc;Duffields Rd / Great Ocean (South) Rd, Jan Juc 3228;-38.338805,144.305898
 Bells Bvd/Great Ocean Rd;Jan Juc;Bells Bvd / Great Ocean Rd, Jan Juc 3228;-38.338612,144.286790
-Duffields Rd/Great Ocean (North) Rd;Jan Juc;Duffields Rd / Great Ocean (North) Rd, Jan Juc 3228;-38.338729,144.306498
-Caltex Roadhouse/Newell Hwy (Jerilderie;NSW);Newell Hwy, Jerilderie (NSW) 2716;-35.358900,145.740017
+Duffields Rd/Great Ocean;North) Rd (Jan Juc;Duffields Rd / Great Ocean (North) Rd, Jan Juc 3228;-38.338729,144.306498
+Caltex Roadhouse/Newell Hwy;Jerilderie (NSW);Newell Hwy, Jerilderie (NSW) 2716;-35.358900,145.740017
 General Store/Princes Hwy;Johnsonville;Bumberrah Rd / Princes Hwy, Johnsonville 3902;-37.819848,147.831637
 Kaarimba Rd/Barmah - Shepparton Rd;Kaarimba;Kaarimba Rd / Barmah - Shepparton Rd, Kaarimba 3635;-36.150131,145.295023
 Lookout Rd/Princes Hwy;Kalimna;Lookout Rd / Princes Hwy, Kalimna 3909;-37.879245,147.961890
@@ -280,7 +276,7 @@ Kangaroo Flat Railway Station;Kangaroo Flat;Station St / Short St, Kangaroo Flat
 Mobil Roadhouse/Western Hwy;Kaniva;Baker St / Western Hwy, Kaniva 3419;-36.378850,141.240520
 Roadhouse/Western Hwy;Kaniva;Baker St / Western Hwy, Kaniva 3419;-36.378945,141.240770
 General Store/Numurkah Rd;Katunga;Carter St / Numurkah Rd, Katunga 3640;-35.999370,145.460428
-Makin St/Heritage St (Keith;SA);Makin St / Heritage St, Keith (SA) 5267;-36.098367,140.354777
+Makin St/Heritage St;Keith (SA);Makin St / Heritage St, Keith (SA) 5267;-36.098367,140.354777
 Hawdon Ave/Great Ocean Rd;Kennett River;Hawdon Ave / Great Ocean Rd, Kennett River 3221;-38.667951,143.861840
 Kennett River/Great Ocean Rd;Kennett River;Hawdon Ave / Great Ocean Rd, Kennett River 3221;-38.667950,143.861410
 South Kensington Railway Station;Kensington;Childers St, Kensington 3031;-37.799533,144.925469
@@ -295,6 +291,7 @@ La Trobe Uni Medical Centre/Plenty Rd;Kingsbury;Cash St / Plenty Rd, Kingsbury 3
 Bus Interchange/Rossiter Rd;Koo Wee Rup;Station St / Rossiter Rd, Koo Wee Rup 3981;-38.199843,145.490148
 Thompson St/Main St;Koondrook;Thompson St / Main St, Koondrook 3580;-35.643577,144.131192
 Big Strawberry Restaurant/Goulburn Valley Hwy;Koonoomoo;Cobram-Koonoomoo Rd / Goulburn Valley Hwy, Koonoomoo 3644;-35.888799,145.574269
+Koala Dr;Koonwarra;Koala Dr /  , Koonwarra 3954;-38.546688,145.946845
 Village Green/Commercial Rd;Koroit;Spring St / Commercial Rd, Koroit 3282;-38.291654,142.362514
 Village Green/North Rd;Koroit;Commercial Rd / North Rd, Koroit 3282;-38.291217,142.362535
 Korong Vale Post Office/Allen St;Korong Vale;Allen St, Korong Vale 3520;-36.355631,143.706178
@@ -315,7 +312,7 @@ Police Station/Roadknight St;Lakes Entrance;Myer St / Roadknight St, Lakes Entra
 Jetty Rd/Princes Hwy;Lakes Entrance;Jetty Rd / Princes Hwy, Lakes Entrance 3909;-37.874773,148.007469
 Eaglesons Rd/Clarendon-Lal Lal Rd;Lal Lal;Eaglesons Rd / Clarendon-Lal Lal Rd, Lal Lal 3352;-37.675410,144.012508
 McGregor's Garage/Donald - Swan Hill Rd;Lalbert;View St / Donald - Swan Hill Rd, Lalbert 3542;-35.670777,143.375332
-Post Office/Railway Tce (Lameroo;SA);Railway Tce, Lameroo (SA) 0;-35.328890,140.509440
+Post Office/Railway Tce;Lameroo (SA);Railway Tce, Lameroo (SA) 0;-35.328890,140.509440
 Weller Rd/Byrneside-Kyabram Rd;Lancaster;Weller Rd / Byrneside-Kyabram Rd, Lancaster 3620;-36.314782,145.131940
 High St/Romsey Rd;Lancefield;High St / Romsey Rd, Lancefield 3435;-37.278115,144.736610
 Comfort Station Bus Interchange/Western Port Rd;Lang Lang;Western Port Rd, Lang Lang 3984;-38.265722,145.562645
@@ -328,7 +325,7 @@ Leongatha Railway Station/Long St;Leongatha;Strzelecki Hwy / Long St, Leongatha 
 General Store/Midland Hwy;Lethbridge;Russell St / Midland Hwy, Lethbridge 3332;-37.966901,144.132033
 Opposite General Store/Midland Hwy;Lethbridge;Russell St / Midland Hwy, Lethbridge 3332;-37.967004,144.131935
 CFA Building/Western Hwy;Lillimur;Western Hwy, Lillimur 3415;-36.362138,141.129655
-Lilydale Railway Station/Maroondah Hwy (Lilydale);Bay 5;William Street East  / Maroondah Hwy, Lilydale 3140;-37.756546,145.347091
+Lilydale Railway Station/Maroondah Hwy;Lilydale;William Street East  / Maroondah Hwy, Lilydale 3140;-37.756546,145.347091
 Lindenow Rd/Princes Hwy;Lindenow;Lindenow Rd / Princes Hwy, Lindenow 3865;-37.881015,147.421785
 General Store/Glenelg Hwy;Linton;Gillespie St / Glenelg Hwy, Linton 3360;-37.687858,143.561692
 Newsagency/Hamilton Hwy;Lismore;Heriot St / Hamilton Hwy, Lismore 3324;-37.953853,143.343732
@@ -342,13 +339,11 @@ Longwarry Railway Station;Longwarry;Kennedy St / Nar Nar Goon - Longwarry Rd, Lo
 Longwarry Railway Station;Longwarry;Kennedy St / MacKay St, Longwarry 3816;-38.111450,145.768920
 Lorne Visitor Centre/Great Ocean Rd;Lorne;Otway St / Great Ocean Rd, Lorne 3232;-38.538837,143.975385
 Otway St/Great Ocean Rd;Lorne;Otway St / Great Ocean Rd, Lorne 3232;-38.538277,143.975115
-Lorne Hotel (opp)/Great Ocean Rd;Lorne;Bay St / Great Ocean Rd, Lorne 3232;-38.542963,143.976060
 Lorne Hotel/Great Ocean Rd;Lorne;Bay St / Great Ocean Rd, Lorne 3232;-38.542996,143.976040
 Main St/Daylesford-Trentham Rd;Lyonville;Main St / Daylesford-Trentham Rd, Lyonville 3461;-37.386632,144.261541
 Eversley St/Hamilton - Port Fairy Rd;Macarthur;Eversley St / Hamilton - Port Fairy Rd, Macarthur 3286;-38.033012,141.999733
 Macedon Railway Station;Macedon;Victoria St / Smith St, Macedon 3440;-37.423577,144.561397
 Bacchus Marsh Railway Station;Maddingley;Bond St / Station St, Maddingley 3340;-37.687582,144.436788
-Bacchus Marsh Railway Station;Maddingley;, Maddingley 3340;-37.687582,144.436788
 Boisdale St/Johnson St;Maffra;Boisdale St / Johnson St, Maffra 3860;-37.970400,146.982362
 Pearson St/Johnson St;Maffra;Pearson St / Johnson St, Maffra 3860;-37.966313,146.975632
 Maiden Gully Rd/Calder Hwy;Maiden Gully;Maiden Gully Rd / Calder Hwy, Maiden Gully 3551;-36.742573,144.211000
@@ -369,7 +364,7 @@ Napier St/Derby St;Maryborough;Napier St / Derby St, Maryborough 3465;-37.054010
 Highview College/Kars St;Maryborough;Burns St / Kars St, Maryborough 3465;-37.053346,143.736810
 Sutton Rd;Maryborough;Sutton Rd, Maryborough 3465;-37.048432,143.751744
 Maryborough Railway Station;Maryborough;Station St, Maryborough 3465;-37.050912,143.742399
-Caltex Service Station/Cobb Hwy (Mathoura;NSW);Lawrence St / Cobb Hwy, Mathoura (NSW) 0;-35.812762,144.902577
+Caltex Service Station/Cobb Hwy;Mathoura (NSW);Lawrence St / Cobb Hwy, Mathoura (NSW) 0;-35.812762,144.902577
 Hanily St/South Gippsland Hwy;Meeniyan;Hanily St / South Gippsland Hwy, Meeniyan 3956;-38.577743,146.014145
 Geale St/South Gippsland Hwy;Meeniyan;Geale St / South Gippsland Hwy, Meeniyan 3956;-38.578003,146.014200
 Qantas Domestic Terminal/Arrival Dr;Melbourne Airport;Arrival Dr, Melbourne Airport 3045;-37.669368,144.852364
@@ -379,7 +374,7 @@ Flinders Street Railway Station;Melbourne City;Swanston St / Flinders St, Melbou
 Melton Railway Station;Melton South;Staughton St, Melton South 3338;-37.703892,144.572077
 Melton Railway Station;Melton South;Station Rd / Staughton St, Melton South 3338;-37.703289,144.572525
 Lawler St/Midland Hwy;Meredith;Lawler St / Midland Hwy, Meredith 3333;-37.846137,144.076867
-Caltex Roadhouse/Merimbula Dr (Merimbula;NSW);Merimbula Dr, Merimbula (NSW) 0;-36.888060,149.909720
+Caltex Roadhouse/Merimbula Dr;Merimbula (NSW);Merimbula Dr, Merimbula (NSW) 0;-36.888060,149.909720
 Lions Park/Portland-Casterton Rd;Merino;Coleraine-Merino Rd / Portland-Casterton Rd, Merino 3310;-37.720090,141.547873
 Post Office/Portland-Casterton Rd;Merino;Hare St / Portland-Casterton Rd, Merino 3310;-37.714965,141.549333
 Caltex Service Station/Waverley Ave;Merrigum;Morrissey St / Waverley Ave, Merrigum 3618;-36.371850,145.132030
@@ -388,34 +383,35 @@ Euroa-Mansfield Rd/Maroondah Hwy;Merton;Euroa-Mansfield Rd / Maroondah Hwy, Mert
 Milawa-Bobinawarrah Rd/Snow Rd;Milawa;Milawa-Bobinawarrah Rd / Snow Rd, Milawa 3678;-36.449477,146.431716
 Mildura Railway Station;Mildura;Lime Ave / Seventh St, Mildura 3500;-34.182102,142.163238
 Main St/Church St;Minyip;Main St / Church St, Minyip 3392;-36.460292,142.587378
+Glossop St/Bendigo - Pyramid Rd;Mitiamo;Glossop St / Bendigo - Pyramid Rd, Mitiamo 3573;-36.211573,144.231862
 Glossip St/Bendigo - Pyramid Rd;Mitiamo;Glossip St / Bendigo - Pyramid Rd, Mitiamo 3573;-36.211288,144.231943
-Blair St/Cobb Hwy (Moama;NSW);Blair St / Cobb Hwy, Moama (NSW) 0;-36.114288,144.756107
+Blair St/Cobb Hwy;Moama (NSW);Blair St / Cobb Hwy, Moama (NSW) 0;-36.114288,144.756107
 Moe Railway Station;Moe;Linton Ave / Lloyd St, Moe 3825;-38.176713,146.262698
-Princes Hwy (Mogo;NSW);Princes Hwy, Mogo (NSW) 0;-35.782796,150.142313
+Princes Hwy;Mogo (NSW);Princes Hwy, Mogo (NSW) 0;-35.782796,150.142313
 General Store/Goulburn Valley Hwy;Molesworth;Goulburn Valley Hwy, Molesworth 3718;-37.167313,145.539052
 Riddells Creek Rd/Melbourne Rd;Monegeetta;Riddells Creek Rd / Melbourne Rd, Monegeetta 3433;-37.412796,144.748985
 Locks Lane/Pyrenees Hwy;Moolort;Locks Lane / Pyrenees Hwy, Moolort 3465;-37.079580,143.931135
 Mill St/Midland Hwy;Mooroopna;Mill St / Midland Hwy, Mooroopna 3629;-36.394078,145.361328
 Mooroopna Railway Station;Mooroopna;Young St, Mooroopna 3629;-36.399127,145.358217
 Webster St/Dunlop St;Mortlake;Webster St / Dunlop St, Mortlake 3272;-38.080688,142.804770
-Apex Park/Princes Hwy (Moruya;NSW);Princes Hwy, Moruya (NSW) 0;-35.911940,150.080280
+Apex Park/Princes Hwy;Moruya (NSW);Princes Hwy, Moruya (NSW) 0;-35.911940,150.080280
 Morwell Railway Station;Morwell;Princes Dr, Morwell 3840;-38.236847,146.397739
 Princes Dr;Morwell;Princes Dr, Morwell 3840;-38.235082,146.429542
 Mid Valley Shopping Centre/Mid Valley Dr;Morwell;Mid Valley Dr, Morwell 3840;-38.236848,146.431303
 Morwell Railway Station;Morwell;Church St / Princes Dr, Morwell 3840;-38.236723,146.396752
-Opposite Cornerstone College/Adelaide Rd (Mount Barker;SA);Hill St / Adelaide Rd, Mount Barker (SA) 5251;-35.060000,138.850000
+Opposite Cornerstone College/Adelaide Rd;Mount Barker (SA);Hill St / Adelaide Rd, Mount Barker (SA) 5251;-35.060000,138.850000
 Falls Creek Coaches/233 Kiewa Valley Hwy;Mount Beauty;Kiewa Valley Hwy, Mount Beauty 3699;-36.737983,147.160988
 Village Centre/Mt Buller Rd;Mount Buller;Mt Buller Rd, Mount Buller 3723;-37.148457,146.448968
 Gear Ave/Warrenheip St;Mount Helen;Gear Ave / Warrenheip St, Mount Helen 3350;-37.628118,143.879952
 Moyston - Dunkeld Rd/Ararat - Pomonal Rd;Moyston;Moyston - Dunkeld Rd / Ararat - Pomonal Rd, Moyston 3377;-37.300802,142.765545
-Tourist Information Centre/Jubilee Hwy East (Mt Gambier;SA);Jubilee Hwy East , Mt Gambier (SA) 5290;-37.825714,140.787007
-Melbourne St/Inglis St (Mulwala;NSW);Melbourne St / Inglis St, Mulwala (NSW) 0;-35.989224,146.005100
+Tourist Information Centre/Jubilee Hwy East;Mt Gambier (SA);Jubilee Hwy East , Mt Gambier (SA) 5290;-37.825714,140.787007
+Melbourne St/Inglis St;Mulwala (NSW);Melbourne St / Inglis St, Mulwala (NSW) 0;-35.989224,146.005100
 Murchison Bakery/Stevenson St;Murchison;Stevenson St, Murchison 3610;-36.616335,145.217133
 Murchinson Bakery/Stevenson St;Murchison;Stevenson St, Murchison 3610;-36.616577,145.217092
 Murchison East Railway Station;Murchison East;Goulburn Valley Hwy / Cassidys Rd, Murchison East 3610;-36.613045,145.240382
-Information Centre/South Tce (Murray Bridge;SA);South Tce, Murray Bridge (SA) 5253;-35.120560,139.273890
+Information Centre/South Tce;Murray Bridge (SA);South Tce, Murray Bridge (SA) 5253;-35.120560,139.273890
 Sharrock St/Mallee Hwy;Murrayville;Sharrock St / Mallee Hwy, Murrayville 3512;-35.263170,141.185880
-Murrumbateman Hotel/Barton Hwy (Murrumbateman;NSW);Barton Hwy, Murrumbateman (NSW) 2582;-34.983890,149.027500
+Murrumbateman Hotel/Barton Hwy;Murrumbateman (NSW);Barton Hwy, Murrumbateman (NSW) 2582;-34.983890,149.027500
 Murtoa Medical Centre/McDonald St;Murtoa;McDonald St, Murtoa 3390;-36.619745,142.470587
 Opposite Station/Daylesford-Trentham Rd;Musk;Daylesford-Trentham Rd, Musk 3461;-37.372008,144.192986
 Bendigo - Murchison Rd/Northern Hwy;Myola;Bendigo - Murchison Rd / Northern Hwy, Myola 3551;-36.599102,144.652965
@@ -426,8 +422,8 @@ Marie St/High St;Nagambie;Marie St / High St, Nagambie 3608;-36.785962,145.15368
 Nagambie Railway Station;Nagambie;Prentice St / Nash St, Nagambie 3608;-36.785460,145.160358
 Nar Nar Goon Railway Station;Nar Nar Goon;Seven Mile Rd / Nar Nar Goon - Longwarry Rd, Nar Nar Goon 3812;-38.081590,145.571670
 Nar Nar Goon Railway Station;Nar Nar Goon;Main St / Carney St, Nar Nar Goon 3812;-38.082141,145.570620
-ANZ Bank/Wagonga St (Narooma;NSW);Wagonga St, Narooma (NSW) 0;-36.219440,150.132220
-Narooma Information Centre/Princes Hwy (Narooma;NSW);Princes Hwy, Narooma (NSW) 0;-36.216110,150.126110
+ANZ Bank/Wagonga St;Narooma (NSW);Wagonga St, Narooma (NSW) 0;-36.219440,150.132220
+Narooma Information Centre/Princes Hwy;Narooma (NSW);Princes Hwy, Narooma (NSW) 0;-36.216110,150.126110
 Narrawong Store/Princes Hwy;Narrawong;Princes Hwy, Narrawong 3285;-38.254148,141.704288
 Nathalia Hotel/Blake St;Nathalia;Pearce St / Blake St, Nathalia 3638;-36.058531,145.203948
 Veterinary Surgery/Blake St;Nathalia;Pearce St / Blake St, Nathalia 3638;-36.058531,145.203761
@@ -449,7 +445,7 @@ Information Centre/Western Hwy;Nhill;Brougham St / Western Hwy, Nhill 3418;-36.3
 Nhill Railway Station;Nhill;Davis Ave, Nhill 3418;-36.332220,141.653890
 General Store/Princes Hwy;Nicholson;Sarsfield Rd / Princes Hwy, Nicholson 3882;-37.816640,147.739058
 Bloomfield Rd/Queen St;Nilma;Bloomfield Rd / Queen St, Nilma 3821;-38.169785,145.967322
-Clarke St/Main St (Nimmitabel;NSW);Clarke St / Main St, Nimmitabel (NSW) 0;-36.512516,149.284136
+Clarke St/Main St;Nimmitabel (NSW);Clarke St / Main St, Nimmitabel (NSW) 0;-36.512516,149.284136
 Bay of Islands;Nirranda;, Nirranda 3268;-38.532670,142.737197
 Post Office/Terang-Mortlake Rd;Noorat;Terang-Mortlake Rd, Noorat 3265;-38.192305,142.927595
 North Geelong Railway Station;North Geelong;Victoria St / Princes Hwy, North Geelong 3215;-38.122836,144.352277
@@ -471,18 +467,18 @@ Ouyen Community Park/Oke St;Ouyen;Pickering St / Oke St, Ouyen 3490;-35.070924,1
 Ely St/Snow Rd;Oxley;Ely St / Snow Rd, Oxley 3678;-36.443588,146.383304
 Pakenham Railway Station;Pakenham;Henry St / Railway Ave, Pakenham 3810;-38.080208,145.485973
 Pakenham Railway Station;Pakenham;Henry Rd / Railway Ave, Pakenham 3810;-38.080610,145.486370
-Pambula Post Office/Princes Hwy (Pambula;NSW);Princes Hwy, Pambula (NSW) 0;-36.929720,149.888890
-Parilla Store/Mallee Hwy (Parilla;SA);Mallee Hwy, Parilla (SA) 0;-35.294720,140.658610
-Highway turn-off/Mallee Hwy (Parrakie;SA);Mallee Hwy, Parrakie (SA) 0;-35.385000,140.247780
+Pambula Post Office/Princes Hwy;Pambula (NSW);Princes Hwy, Pambula (NSW) 0;-36.929720,149.888890
+Parilla Store/Mallee Hwy;Parilla (SA);Mallee Hwy, Parilla (SA) 0;-35.294720,140.658610
+Highway turn-off/Mallee Hwy;Parrakie (SA);Mallee Hwy, Parrakie (SA) 0;-35.385000,140.247780
 Raymond Island Ferry Terminal/Devon Rd;Paynesville;Devon Rd, Paynesville 3880;-37.919099,147.725069
-Peake Hotel/Mallee Hwy (Peake;SA);Mallee Hwy, Peake (SA) 0;-35.366546,139.952816
+Peake Hotel/Mallee Hwy;Peake (SA);Mallee Hwy, Peake (SA) 0;-35.366546,139.952816
 Hotel/Hamilton Hwy;Penshurst;Bell St / Hamilton Hwy, Penshurst 3289;-37.874843,142.290623
 Post Office/Hamilton Hwy;Penshurst;Bell St / Hamilton Hwy, Penshurst 3289;-37.874825,142.289927
 General Store/Macs St;Peterborough;Blair St / Macs St, Peterborough 3270;-38.607070,142.877193
 General Store/Murray St;Piangil;Station St / Murray St, Piangil 3597;-35.054217,143.310577
 Milk Bar/Echuca - Nathalia Rd;Picola;Echuca - Nathalia Rd, Picola 3639;-35.998930,145.110965
 Fisher St/Western Hwy;Pimpinio;Fisher St / Western Hwy, Pimpinio 3401;-36.584915,142.118272
-BP Roadhouse/Holmburg Tce (Pinnaroo;SA);Mallee Hwy / Holmburg Tce, Pinnaroo (SA) 0;-35.260560,140.914440
+BP Roadhouse/Holmburg Tce;Pinnaroo (SA);Mallee Hwy / Holmburg Tce, Pinnaroo (SA) 0;-35.260560,140.914440
 Kallay Dr/Bass Hwy;Pioneer Bay;Kallay Dr / Bass Hwy, Pioneer Bay 3984;-38.381500,145.553000
 Mamre Hotel/Princes Hwy;Pirron Yallock;Princes Hwy, Pirron Yallock 3249;-38.349270,143.429482
 Lake Fyans Tourist Rd/Ararat - Pomonal Rd;Pomonal;Lake Fyans Tourist Rd / Ararat - Pomonal Rd, Pomonal 3381;-37.191679,142.609040
@@ -538,7 +534,7 @@ Shepparton Railway Station;Shepparton;Purcell St, Shepparton 3630;-36.384045,145
 Fraser St/Wyndham St;Shepparton;Fraser St / Wyndham St, Shepparton 3630;-36.379839,145.399467
 Fryers St/Wyndham St;Shepparton;Fryers St / Wyndham St, Shepparton 3630;-36.379647,145.399732
 Goulburn Valley Health/Graham St;Shepparton;Dunlop St / Graham St, Shepparton 3630;-36.362534,145.404774
-Sherlock Store/Mallee Hwy (Sherlock;SA);Mallee Hwy, Sherlock (SA) 0;-35.318307,139.802383
+Sherlock Store/Mallee Hwy;Sherlock (SA);Mallee Hwy, Sherlock (SA) 0;-35.318307,139.802383
 Skenes Creek/Great Ocean Rd;Skenes Creek;Skenes Creek Valley Rd / Great Ocean Rd, Skenes Creek 3233;-38.724890,143.710165
 Skenes Creek Beach/Great Ocean Rd;Skenes Creek;Skenes Creek Valley Rd / Great Ocean Rd, Skenes Creek 3233;-38.724701,143.710162
 BP Roadhouse/Glenelg Hwy;Skipton;Windham St / Glenelg Hwy, Skipton 3361;-37.685240,143.361430
@@ -574,6 +570,125 @@ Swan Hill Railway Station;Swan Hill;McCrae St / Curlewis St, Swan Hill 3585;-35.
 General Store/Princes Hwy;Swan Reach;Swan Reach - Bruthen Rd / Princes Hwy, Swan Reach 3903;-37.821998,147.856772
 Forest Tech/Princes Hwy;Swan Reach;Princes Hwy, Swan Reach 3903;-37.840252,147.927309
 Watergardens Railway Station;Sydenham;Sydenham Rd, Sydenham 3037;-37.701128,144.774186
-Shell Roadhouse/North Tce (Tailem Bend;SA);North Tce, Tailem Bend (SA) 5260;-35.253649,139.452256
+Shell Roadhouse/North Tce;Tailem Bend (SA);North Tce, Tailem Bend (SA) 5260;-35.253649,139.452256
 Scandinavian Cres/Ballarat St;Talbot;Scandinavian Cres / Ballarat St, Talbot 3371;-37.170345,143.702320
 Tallarook Railway Station;Tallarook;Sanctuary Rd, Tallarook 3659;-37.092332,145.103002
+Victoria Rd/Goulburn Valley Hwy;Tallygaroopna;Victoria Rd / Goulburn Valley Hwy, Tallygaroopna 3634;-36.239117,145.431860
+Mobil Service Station/Hume Hwy;Tarcutta (NSW);Hume Hwy, Tarcutta (NSW) 2652;-35.286670,147.720280
+Poverty St/Commercial Rd;Tarnagulla;Poverty St / Commercial Rd, Tarnagulla 3551;-36.772245,143.833300
+Post Office Box Building/Hamilton Hwy;Tarrington;Hamilton Hwy, Tarrington 3301;-37.765909,142.094278
+Hogan St/Fraser St;Tatura;Hogan St / Fraser St, Tatura 3616;-36.440473,145.225313
+Teddywaddy Rd/Calder Hwy;Teddywaddy;Teddywaddy Rd / Calder Hwy, Teddywaddy 3525;-36.195518,143.340082
+General Store/Sunraysia Hwy;Tempy;Boschert St / Sunraysia Hwy, Tempy 3489;-35.345312,142.424800
+Boschert St/Sunraysia Hwy;Tempy;Boschert St / Sunraysia Hwy, Tempy 3489;-35.344985,142.424622
+Terang Railway Station;Terang;Lyons St / Swanston St, Terang 3264;-38.236423,142.911413
+Gurdies - St Helier Rd/Bass Hwy;The Gurdies;Gurdies - St Helier Rd / Bass Hwy, The Gurdies 3984;-38.371535,145.563058
+General Store/Traralgon-Maffra Rd;Tinamba;Tinamba-Seaton Rd / Traralgon-Maffra Rd, Tinamba 3859;-37.962712,146.891663
+Tintinara Travel Stop;Mobil Roadhouse)/Dukes Hwy (Tintinara (SA);Dukes Hwy, Tintinara (SA) 5266;-35.884440,140.055560
+Deniliquin Rd/Morris St;Tocumwal (NSW);Deniliquin Rd / Morris St, Tocumwal (NSW) 0;-35.811898,145.567367
+Mangan St/Henderson Rd;Tongala;Mangan St / Henderson Rd, Tongala 3621;-36.249943,144.948280
+Tongala Motors/Henderson Rd;Tongala;Mangan St / Henderson Rd, Tongala 3621;-36.249807,144.948080
+General Store/Northern Hwy;Tooborac;Northern Hwy, Tooborac 3522;-37.044415,144.798602
+General Store/Mallee Hwy;Tooleybuc (NSW);Mallee Hwy, Tooleybuc (NSW) 0;-35.027900,143.336800
+Axedale Rd/Northern Hwy;Toolleen;Axedale Rd / Northern Hwy, Toolleen 3551;-36.720888,144.682762
+Victoria St/Cowen St;Toongabbie;Victoria St / Cowen St, Toongabbie 3856;-38.059932,146.624158
+Newsagency/Stanley St;Toora;Gray St / Stanley St, Toora 3962;-38.664800,146.323885
+Lyall St/South Gippsland Hwy;Tooradin;Lyall St / South Gippsland Hwy, Tooradin 3980;-38.213660,145.381540
+Tooradin Post Office/South Gippsland Hwy;Tooradin;Mickle St / South Gippsland Hwy, Tooradin 3980;-38.213750,145.381050
+Grossmans Rd/Surf Coast Hwy;Torquay;Grossmans Rd / Surf Coast Hwy, Torquay 3228;-38.323055,144.318408
+Torquay Holiday Resort/Surf Coast Hwy;Torquay;Spring St / Surf Coast Hwy, Torquay 3228;-38.328772,144.317273
+Torquay Holiday Resort/Surf Coast Hwy;Torquay;Baines Cres / Surf Coast Hwy, Torquay 3228;-38.328999,144.316907
+General Store/Murray Valley Hwy;Torrumbarry;Murray Valley Hwy, Torrumbarry 3562;-36.028933,144.516570
+Wairena Rd/Princes Hwy;Tostaree;Wairena Rd / Princes Hwy, Tostaree 3888;-37.742450,148.157940
+Trafalgar Railway Station;Trafalgar;Contingent St / Princes Hwy, Trafalgar 3824;-38.207239,146.154770
+Traralgon Railway Station;Traralgon;Franklin St / Princes St, Traralgon 3844;-38.197983,146.538294
+Plaza Shopping Centre/Franklin St;Traralgon;Kay St / Franklin St, Traralgon 3844;-38.194546,146.538315
+Traralgon Railway Station;Traralgon;Franklin St / Princes Hwy, Traralgon 3844;-38.198889,146.537884
+Latrobe Regional Hospital;Traralgon;, Traralgon 3844;-38.219300,146.471300
+Trawalla Rd/Western Hwy;Trawalla;Trawalla Rd / Western Hwy, Trawalla 3373;-37.437067,143.469885
+Roadhouse/Western Hwy;Trawalla;Trawalla Rd / Western Hwy, Trawalla 3373;-37.437005,143.469772
+Milk Bar/Market St;Trentham;Market St, Trentham 3458;-37.389080,144.322974
+Saunders Reserve/Middleton St;Tungamah;Middleton St, Tungamah 3728;-36.164037,145.877535
+Hector McWilliams Dr/Princes Hwy;Tuross (NSW);Hector McWilliams Dr / Princes Hwy, Tuross (NSW) 0;-36.022273,150.102875
+CFA/Sunraysia Hwy;Turriff;Sunraysia Hwy, Turriff 3488;-35.457042,142.471122
+CFA/2099 Sunraysia Hwy;Turriff;Sunraysia Hwy, Turriff 3488;-35.456965,142.470927
+Tyers Primary School/79 Moe - Glengarry Rd;Tyers;Moe - Glengarry Rd, Tyers 3844;-38.148800,146.482244
+Tylden Produce Store/Tylden-Woodend Rd;Tylden;Tylden-Woodend Rd, Tylden 3444;-37.325947,144.406331
+Tynong Railway Station;Tynong;View St / Nar Nar Goon - Longwarry Rd, Tynong 3813;-38.084994,145.628231
+Tynong Railway Station;Tynong;Kerns Rd / Nar Nar Goon - Longwarry Rd, Tynong 3813;-38.085421,145.629558
+7126 Princes Hwy;Tyrendarra;Princes Hwy, Tyrendarra 3285;-38.218885,141.779333
+7131 Princes Hwy;Tyrendarra;Princes Hwy, Tyrendarra 3285;-38.218990,141.779348
+General Store/Mallee Hwy;Underbool;Malkin St / Mallee Hwy, Underbool 3509;-35.169799,141.808980
+Violet Town Railway Station;Violet Town;Cowslip St / Primrose St, Violet Town 3669;-36.638817,145.715926
+Violet Town Railway Station;Violet Town;Primrose St, Violet Town 3669;-36.639134,145.716087
+Blanche St/Foord St;Wahgunyah;Blanche St / Foord St, Wahgunyah 3687;-36.010280,146.394060
+Public Hall/Northern Hwy;Wallan;Queen St / Northern Hwy, Wallan 3756;-37.414505,144.979112
+Wallan Railway Station;Wallan;Wallan Rd / Station St, Wallan 3756;-37.417168,145.005252
+General Store/Mallee Hwy;Walpeup;Glen St / Mallee Hwy, Walpeup 3507;-35.135290,142.025110
+Wandong Railway Station;Wandong;Rail St, Wandong 3758;-37.354676,145.026414
+Wangaratta Railway Station;Wangaratta;Cusack St / Norton St, Wangaratta 3677;-36.355193,146.317185
+Uniting Church/Rowan St;Wangaratta;Ovens St / Rowan St, Wangaratta 3677;-36.353346,146.324751
+Caltex Service Station/Rowan St;Wangaratta;Ovens St / Rowan St, Wangaratta 3677;-36.353500,146.324596
+Scott St/Woolcock St;Warracknabeal;Scott St / Woolcock St, Warracknabeal 3393;-36.250908,142.395337
+Warragul Railway Station;Warragul;Alfred St / Queen St, Warragul 3820;-38.165227,145.933090
+Warragul Railway Station/Queen St;Warragul;Smith St / Queen St, Warragul 3820;-38.163837,145.931266
+Warrenheip Rd/Navigators Rd;Warrenheip;Warrenheip Rd / Navigators Rd, Warrenheip 3352;-37.584857,143.917432
+Warrnambool Railway Station;Warrnambool;Fairy St / Merri St, Warrnambool 3280;-38.385098,142.475528
+Sherwood Park Bus Stop/Aitken Dr;Warrnambool;Princes Hwy / Aitken Dr, Warrnambool 3280;-38.386418,142.540162
+Sherwood Park Railway Station;Warrnambool;Aitken Dr / Princes Hwy, Warrnambool 3280;-38.386390,142.540560
+Koroit St Interchange/Koroit St;Warrnambool;Liebig St / Koroit St, Warrnambool 3280;-38.383522,142.483190
+Warrnambool Station/Merri St;Warrnambool;Fairy St / Merri St, Warrnambool 3280;-38.385111,142.475692
+Hotel/Sunraysia Hwy;Watchem;Hoban St / Sunraysia Hwy, Watchem 3482;-36.147587,142.859096
+Deakin University/Alfred Deakin Dr;Waurn Ponds;Alfred Deakin Dr, Waurn Ponds 3216;-38.198535,144.300146
+Waygara Rd/Princes Hwy;Waygara;Waygara Rd / Princes Hwy, Waygara 3888;-37.754010,148.323040
+Jacka Park/Chapel St;Wedderburn;Calder Hwy / Chapel St, Wedderburn 3518;-36.418503,143.612961
+Gully Rd/Maldon - Newstead Rd;Welshmans Reef;Gully Rd / Maldon - Newstead Rd, Welshmans Reef 3462;-37.069370,144.045519
+Gully Rd/Maldon-Newstead Rd;Welshmans Reef;Gully Rd / Maldon-Newstead Rd, Welshmans Reef 3462;-37.069370,144.045519
+Post Office/South Gippsland Hwy;Welshpool;Woorarra Rd / South Gippsland Hwy, Welshpool 3966;-38.665453,146.436797
+Wendouree Railway Station;Wendouree;Gilles St / Learmonth Rd, Wendouree 3355;-37.540081,143.822055
+Wendouree Station/Learmonth Rd;Wendouree;Station St / Learmonth Rd, Wendouree 3355;-37.539431,143.819709
+Werribee Railway Station;Werribee;Manly St, Werribee 3030;-37.899380,144.661120
+North Melbourne Railway Station;West Melbourne;Dynon Rd / Railway Pl, West Melbourne 3003;-37.806309,144.941510
+Wodonga TAFE/87 McKoy St;West Wodonga;McKoy St, West Wodonga 3690;-36.109560,146.855420
+General Store/Glenelg Hwy;Westmere;Glenelg Hwy, Westmere 3351;-37.689148,142.967087
+Church St/Walnut St;Whittlesea;Church St / Walnut St, Whittlesea 3757;-37.511997,145.117710
+Walnut St/Church St;Whittlesea;Walnut St / Church St, Whittlesea 3757;-37.512460,145.118085
+CFA Station/Glenelg Hwy;Wickliffe;Glenelg Hwy, Wickliffe 3379;-37.690397,142.722938
+Wilkawatt North Rd/Mallee Hwy;Wilkawatt (SA);Wilkawatt North Rd / Mallee Hwy, Wilkawatt (SA) 0;-35.351754,140.363412
+Winchelsea Post Office/Princes Hwy;Winchelsea;Hesse St / Princes Hwy, Winchelsea 3241;-38.243357,143.988730
+Winchelsea Railway Station;Winchelsea;Barwon Park Rd / Armytage St, Winchelsea 3241;-38.240133,143.984137
+Winchelsea Railway Station;Winchelsea;, Winchelsea 3241;-38.240133,143.984137
+Wodonga Railway Station;Wodonga;Moloney Dr, Wodonga 3690;-36.105155,146.871194
+Wodonga CBD/Elgin Bvd;Wodonga;Hume St / Elgin Bvd, Wodonga 3690;-36.120041,146.885630
+Wonboyn Rd/Princes Hwy;Wonboyn (NSW);Wonboyn Rd / Princes Hwy, Wonboyn (NSW) 0;-37.228740,149.830940
+Bus Interchange/Biggs Dr;Wonthaggi;Murray St / Biggs Dr, Wonthaggi 3995;-38.603494,145.588210
+Algie Rd/Murray Valley Hwy;Wood Wood;Algie Rd / Murray Valley Hwy, Wood Wood 3596;-35.104433,143.345923
+Woodend Railway Station;Woodend;Calder Hwy / Urquhart St, Woodend 3442;-37.358803,144.525893
+Woodend Railway Station;Woodend;Corinella Rd, Woodend 3442;-37.359440,144.525560
+Woolshed Rd/Maroondah Hwy;Woodfield;Woolshed Rd / Maroondah Hwy, Woodfield 3715;-37.022253,145.806824
+Woolshed Lane/Maroondah Hwy;Woodfield;Woolshed Lane / Maroondah Hwy, Woodfield 3715;-37.022555,145.806700
+Booth Rd/Camp Rd;Woodvale;Booth Rd / Camp Rd, Woodvale 3556;-36.662393,144.223245
+General Store/Warrnambool-Caramut Rd;Woolsthorpe;Nicholson St / Warrnambool-Caramut Rd, Woolsthorpe 3276;-38.184432,142.432033
+BP Service Station/Hume Hwy;Woomargama (NSW);Hume Hwy, Woomargama (NSW) 2644;-35.832761,147.250286
+Proctor St/Sunraysia Hwy;Woomelang;Proctor St / Sunraysia Hwy, Woomelang 3485;-35.682470,142.664422
+Woomelang Railway Station/Sunraysia Hwy;Woomelang;Proctor St / Sunraysia Hwy, Woomelang 3485;-35.682557,142.664300
+Post Office Store/Goulburn Valley Hwy;Wunghnu;Walter St / Goulburn Valley Hwy, Wunghnu 3635;-36.153730,145.431783
+Walter St/Goulburn Valley Hwy;Wunghnu;Walter St / Goulburn Valley Hwy, Wunghnu 3635;-36.153893,145.431725
+Post Office/Calder Hwy;Wycheproof;O'Connor St / Calder Hwy, Wycheproof 3527;-36.076938,143.225767
+McRae Rd/Great Ocean Rd;Wye River;McRae Rd / Great Ocean Rd, Wye River 3221;-38.635355,143.891075
+Newborough TAFE/Monash Rd;Yallourn;Eastern Rd / Monash Rd, Yallourn 3825;-38.176068,146.307818
+Yambuk Hall/Princes Hwy;Yambuk;Princes Hwy, Yambuk 3285;-38.316348,142.067253
+Annesley St/High St;Yambuk;Annesley St / High St, Yambuk 3285;-38.315856,142.066862
+Wrights St/Maroondah Hwy;Yarck;Wrights St / Maroondah Hwy, Yarck 3719;-37.101188,145.617080
+Anzac Ave/Melba Hwy;Yarra Glen;Anzac Ave / Melba Hwy, Yarra Glen 3775;-37.657493,145.374423
+Herbert Rd/Melba Hwy;Yarra Glen;Herbert Rd / Melba Hwy, Yarra Glen 3775;-37.658194,145.374701
+Yarragon Railway Station;Yarragon;Campbell St / Princes Hwy, Yarragon 3823;-38.203347,146.062870
+Yarragon Railway Station;Yarragon;Princes Hwy, Yarragon 3823;-38.203155,146.063065
+Memorial Park/Grant St;Yarram;South Gippsland Hwy / Grant St, Yarram 3971;-38.564843,146.674758
+Belmore St/Orr St;Yarrawonga;Belmore St / Orr St, Yarrawonga 3730;-36.013070,146.004870
+Kokoda Rd/Murray Valley Hwy;Yarroweyah;Kokoda Rd / Murray Valley Hwy, Yarroweyah 3644;-35.925563,145.560165
+Polding St/Comur St;Yass (NSW);Polding St / Comur St, Yass (NSW) 2582;-34.845830,148.914440
+Tourist Information Centre/Comur St;Yass (NSW);Browne St / Comur St, Yass (NSW) 2582;-34.845830,148.914440
+east of Pechell St/High St;Yea;east of Pechell St / High St, Yea 3717;-37.211165,145.423983
+Yendon Rd/Harbours Rd;Yendon;Yendon Rd / Harbours Rd, Yendon 3352;-37.636600,143.972318
+Zeerust Rd/Barmah - Shepparton Rd;Zeerust;Zeerust Rd / Barmah - Shepparton Rd, Zeerust 3634;-36.275862,145.367566

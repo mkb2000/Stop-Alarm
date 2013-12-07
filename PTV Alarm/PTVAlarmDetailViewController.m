@@ -90,8 +90,12 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    
-    self.uiname.text=self.station.name;
+    if (self.station.type.intValue==Train) {
+        self.uiname.text=[self.station.name stringByAppendingString:@" Railway Station"];
+    }
+    else{
+        self.uiname.text=self.station.name;
+    }
     self.uiaddress.text=self.station.address;
     self.uiMapView.delegate=self;
     self.iconImgView.image=[UIImage imageNamed:[PTVAlarmDefine typeToImgFile:self.station.type.intValue]];
@@ -107,8 +111,8 @@
     [self.uiMapView addAnnotation:mapPin];
     MKCoordinateRegion region;
     MKCoordinateSpan span;
-    span.latitudeDelta = 0.01;
-    span.longitudeDelta = 0.01;
+    span.latitudeDelta = 0.005;
+    span.longitudeDelta = 0.005;
     region.span = span;
     region.center = coordinate;
     [self.uiMapView setRegion:region animated:NO];
