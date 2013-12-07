@@ -8,6 +8,7 @@
 
 #import "PTVAlarmAppDelegate.h"
 #import "Stations.h"
+#import "FileReader.h"
 
 @implementation PTVAlarmAppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
@@ -17,7 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    NSLog(@"lauched");
     
     if ([self stationIsEmpty]) {
         [self loadStations];
@@ -128,10 +128,12 @@
         NSFileManager *filem=[NSFileManager defaultManager];
         NSString *filepath=[[NSBundle mainBundle] pathForResource:filename ofType:@""];
         if ([filem fileExistsAtPath:filepath]) {
-            NSString *filestr=[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil];
-            NSArray *stations=[filestr componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-            for (NSString *station in stations) {
-                NSArray *parts=[station componentsSeparatedByString:@";"];
+            FileReader * reader=[[FileReader alloc] initWithFile:filepath];
+            NSString * line = nil;
+            int lnum=0;
+            while ((line = [reader nextLine])) {
+                lnum++;
+                NSArray *parts=[line componentsSeparatedByString:@";"];
                 Stations *station=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_STATION
                                                                 inManagedObjectContext:self.managedObjectContext];
                 station.name=parts[0];
@@ -143,6 +145,8 @@
                 station.longitude=cor[1];
                 station.type=[NSNumber numberWithInt:[PTVAlarmDefine filenameToStationType:filename]];
             }
+            reader=Nil;
+            NSLog(@"%d lines in file %@",lnum,filename);
         }
         else{
             NSLog(@"file:%@ not exit",filename);
@@ -151,6 +155,7 @@
     [self.managedObjectContext save:nil];
     NSLog(@"files loaded!");
 }
+
 
 - (NSArray *)activeAlarms{
     NSFetchRequest * fetch=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];

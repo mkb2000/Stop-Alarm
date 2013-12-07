@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *setAlarm;
 @property (strong) NSManagedObjectContext *managedObjectContext;
 @property (strong,nonatomic) NSArray * result;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImgView;
 @property (nonatomic) BOOL isOn;
 @end
 
@@ -72,7 +73,7 @@
     PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
     self.managedObjectContext=delegate.managedObjectContext;
     NSFetchRequest * request=[NSFetchRequest fetchRequestWithEntityName:ENTITY_STATION];
-    request.predicate=[NSPredicate predicateWithFormat:@"name=%@",self.station.name];
+    request.predicate=[NSPredicate predicateWithFormat:@"name=%@ AND address=%@",self.station.name,self.station.address];
     self.result=[self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
@@ -93,6 +94,7 @@
     self.uiname.text=self.station.name;
     self.uiaddress.text=self.station.address;
     self.uiMapView.delegate=self;
+    self.iconImgView.image=[UIImage imageNamed:[PTVAlarmDefine typeToImgFile:self.station.type.intValue]];
     
     CLLocationCoordinate2D coordinate;
     coordinate.latitude=self.station.latitude.doubleValue;
@@ -105,8 +107,8 @@
     [self.uiMapView addAnnotation:mapPin];
     MKCoordinateRegion region;
     MKCoordinateSpan span;
-    span.latitudeDelta = 0.003;
-    span.longitudeDelta = 0.003;
+    span.latitudeDelta = 0.01;
+    span.longitudeDelta = 0.01;
     region.span = span;
     region.center = coordinate;
     [self.uiMapView setRegion:region animated:NO];

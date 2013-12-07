@@ -11,9 +11,10 @@
 #define ENTITY_STATION @"Stations"
 #define OFFSTATE 0
 #define ONSTATE 1
-#define IMG_TRAIN @"TrainIcon30px.gif"
-#define IMG_TRAM @"TramIcon30px.gif"
-#define IMG_METROBUS @"BusIcon30px.gif"
+#define IMG_TRAIN @"train_metro_trans.png"
+#define IMG_TRAM @"tram_trans.png"
+#define IMG_METROBUS @"bus_trans.png"
+#define IMG_VLINE @"train_region_trans.png"
 #define FILE_TRAIN @"train.csv"
 #define FILE_VLINE @"vline.csv"
 #define FILE_TRAM @"tram.csv"
@@ -27,7 +28,7 @@ typedef  enum{
 
 @interface PTVAlarmDefine : NSObject
 @property NSURL * STATIONFILEURL;
-
++ (NSString *) typeToImgFile:(TransportType) type;
 + (PTVAlarmDefine *) globalVariables;
 + (TransportType) filenameToStationType:(NSString *) filename;
 @end

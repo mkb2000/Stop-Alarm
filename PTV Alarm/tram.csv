@@ -1,218 +1,1251 @@
-Werribee Tram Station;Werribee;Manly St, Werribee 3030;-37.899382,144.661116
-Montmorency Tram Station;Montmorency;Station Rd, Montmorency 3094;-37.715297,145.121511
-Gowrie Tram Station;Glenroy;Box Forest Rd / Sages Rd, Glenroy 3046;-37.700676,144.958877
-Jacana Tram Station;Glenroy;Daley St / Hartington St, Glenroy 3046;-37.695133,144.915855
-Glenroy Tram Station;Glenroy;Glenroy Rd / Hartington St, Glenroy 3046;-37.704534,144.917219
-Roxburgh Park Tram Station;Roxburgh Park;Brunton Pde, Roxburgh Park 3064;-37.638233,144.935407
-South Kensington Tram Station;Kensington;Childers St, Kensington 3031;-37.799533,144.925469
-Kensington Tram Station;Kensington;Macaulay Rd / Bellair St, Kensington 3031;-37.793777,144.930525
-Mitcham Tram Station;Mitcham;Mitcham Rd / Calcutta St, Mitcham 3132;-37.818013,145.191973
-Heatherdale Tram Station;Mitcham;Heatherdale Rd / Forster St, Mitcham 3132;-37.818896,145.212785
-Hughesdale Tram Station;Hughesdale;Poath Rd / Willesden Rd, Hughesdale 3166;-37.894877,145.077639
-Anstey Tram Station;Brunswick;Albion St / Orient Gr, Brunswick 3056;-37.761239,144.960686
-Brunswick Tram Station;Brunswick;Victoria Gr / Prentice St, Brunswick 3056;-37.767718,144.959591
-Jewell Tram Station;Brunswick;Union St / Watson St, Brunswick 3056;-37.774984,144.958715
-Thornbury Tram Station;Thornbury;Hutton St / Ethel St, Thornbury 3071;-37.755048,144.998576
-Diggers Rest Tram Station;Diggers Rest;Old Calder Hwy, Diggers Rest 3427;-37.627013,144.719918
-Royal Park Tram Station;Parkville;Poplar Rd, Parkville 3052;-37.781192,144.952299
-Cranbourne Tram Station;Cranbourne;Station St, Cranbourne 3977;-38.099540,145.280595
-Chelsea Tram Station;Chelsea;The Strand  / Nepean Hwy, Chelsea 3196;-38.051959,145.116036
-Carnegie Tram Station;Carnegie;Koornang Rd / Morton Ave, Carnegie 3163;-37.886237,145.058576
-Hartwell Tram Station;Camberwell;Tyrone St / Georgina Pde, Camberwell 3124;-37.843984,145.075561
-Willison Tram Station;Camberwell;Shalless Dr, Camberwell 3124;-37.835712,145.070298
-Riversdale Tram Station;Camberwell;Wandin Rd, Camberwell 3124;-37.831502,145.069648
-Camberwell Tram Station;Camberwell;Burke Rd / Cookson St, Camberwell 3124;-37.826564,145.058692
-East Camberwell Tram Station;Camberwell;Sefton Pl / Broadway , Camberwell 3124;-37.825892,145.068189
-Strathmore Tram Station;Essendon;Melfort Ave / Amelia Ave, Essendon 3040;-37.743593,144.927320
-Glenbervie Tram Station;Essendon;Glass St / Napier St, Essendon 3040;-37.747214,144.920944
-Essendon Tram Station;Essendon;Buckley St / Rose St, Essendon 3040;-37.756008,144.916198
-Wattle Glen Tram Station;Wattle Glen;Heidelberg-Kinglake Rd, Wattle Glen 3096;-37.663966,145.181619
-Mont Albert Tram Station;Mont Albert;Churchill St, Mont Albert 3127;-37.819427,145.105533
-Greensborough Tram Station;Greensborough;Poulter Ave, Greensborough 3088;-37.703950,145.108249
-Ferntree Gully Tram Station;Ferntree Gully;Forest Rd / Underwood Rd, Ferntree Gully 3156;-37.881697,145.295254
-Officer Tram Station;Officer;Station St, Officer 3809;-38.066142,145.410992
-Diamond Creek Tram Station;Diamond Creek;Station St, Diamond Creek 3089;-37.673293,145.158509
-Lynbrook Tram Station;Lynbrook;Aylmer Rd / Moreton Bay Bvd, Lynbrook 3975;-38.055031,145.248138
-Berwick Tram Station;Berwick;Enterprise Ave, Berwick 3806;-38.040410,145.345721
-Rushall Tram Station;Fitzroy North;Falconer St / Rushall Cres, Fitzroy North 3068;-37.783217,144.992403
-Watergardens Tram Station;Sydenham;Sydenham Rd, Sydenham 3037;-37.701128,144.774186
-Highett Tram Station;Highett;Train St / Tram Pde, Highett 3190;-37.948426,145.041872
-Victoria Park Tram Station;Abbotsford;Johnston St / Lulie St, Abbotsford 3067;-37.799155,144.994447
-Collingwood Tram Station;Abbotsford;Gipps St / Eddy Ct, Abbotsford 3067;-37.804523,144.993745
-Windsor Tram Station;Windsor;Chapel St / Peel St, Windsor 3181;-37.856051,144.992033
-Flemington Racecourse Tram Station;Flemington;Leonard Cres, Flemington 3031;-37.787199,144.907592
-Showgrounds Tram Station;Flemington;Leonard Cres, Flemington 3031;-37.783475,144.914258
-Newmarket Tram Station;Flemington;Racecourse Rd / Pin Oak Cres, Flemington 3031;-37.787326,144.928984
-Chatham Tram Station;Surrey Hills;Junction Rd / Stanley Tce, Surrey Hills 3127;-37.824304,145.088653
-Surrey Hills Tram Station;Surrey Hills;Union Rd / Bedford Ave, Surrey Hills 3127;-37.824144,145.098778
-Ringwood East Tram Station;Ringwood East;Stanley Ave / Tram Ave, Ringwood East 3135;-37.811968,145.250193
-Williamstown Tram Station;Williamstown;Morris St / Tram Cres, Williamstown 3016;-37.867754,144.905324
-Williamstown Beach Tram Station;Williamstown;Forster St / Tram Cres, Williamstown 3016;-37.863982,144.894487
-North Williamstown Tram Station;Williamstown;Ferguson St / Power St, Williamstown 3016;-37.857330,144.889067
-Prahran Tram Station;Prahran;Greville St / Porter St, Prahran 3181;-37.849516,144.989860
-Westall Tram Station;Clayton South;Rayhur St, Clayton South 3169;-37.938492,145.138834
-Yarraville Tram Station;Yarraville;Murray St / Birmingham St, Yarraville 3013;-37.815849,144.889934
-Clifton Hill Tram Station;Clifton Hill;Heidelberg Rd / John St, Clifton Hill 3068;-37.788654,144.995417
-Alamein Tram Station;Ashburton;Alamein Ave / Ashburn Gr, Ashburton 3147;-37.868317,145.079659
-Ashburton Tram Station;Ashburton;Fakenham Rd / Welfare Pde, Ashburton 3147;-37.861968,145.081341
-Glenferrie Tram Station;Hawthorn;Glenferrie Rd, Hawthorn 3122;-37.821466,145.036438
-Hawthorn Tram Station;Hawthorn;Burwood Rd / Evansdale Rd, Hawthorn 3122;-37.821824,145.022897
-Lalor Tram Station;Lalor;Paschke Cres / Station St, Lalor 3075;-37.665853,145.017195
-Sunbury Tram Station;Sunbury;Brook St, Sunbury 3429;-37.579092,144.727320
-Craigieburn Tram Station;Craigieburn;Potter St, Craigieburn 3064;-37.601813,144.943325
-Hoppers Crossing Tram Station;Hoppers Crossing;Old Geelong Rd / Morris Rd, Hoppers Crossing 3029;-37.883279,144.700960
-Rosanna Tram Station;Rosanna;Douglas St / Station Rd, Rosanna 3084;-37.742875,145.066140
-Bayswater Tram Station;Bayswater;Mountain Hwy / Station St, Bayswater 3153;-37.841728,145.268137
-Patterson Tram Station;Bentleigh;Patterson Rd / North Ave, Bentleigh 3204;-37.925146,145.035468
-Bentleigh Tram Station;Bentleigh;Centre Rd / Nicholson St, Bentleigh 3204;-37.917427,145.036991
-Nunawading Tram Station;Nunawading;Springvale Rd / Oval Way, Nunawading 3131;-37.820599,145.174890
-Eaglemont Tram Station;Eaglemont;Silverdale Rd, Eaglemont 3084;-37.763586,145.053946
-Laburnum Tram Station;Blackburn;Laburnum St / Thiele Ct, Blackburn 3130;-37.820777,145.140705
-Blackburn Tram Station;Blackburn;Station St / Tram Rd, Blackburn 3130;-37.820069,145.150014
-Darling Tram Station;Malvern East;Wynyeh St / Clynden Ave, Malvern East 3145;-37.868956,145.062946
-East Malvern Tram Station;Malvern East;Monash Fwy, Malvern East 3145;-37.876930,145.069397
-Holmesglen Tram Station;Malvern East;Warrigal Rd, Malvern East 3145;-37.874401,145.090657
-Broadmeadows Tram Station;Broadmeadows;Johnstone St / Pascoe Vale Rd, Broadmeadows 3047;-37.683051,144.919615
-Mentone Tram Station;Mentone;Balcombe Rd / Como Pde, Mentone 3194;-37.981865,145.065171
-Mordialloc Tram Station;Mordialloc;Bear St / Albert St, Mordialloc 3195;-38.006587,145.087656
-Kananook Tram Station;Seaford;McCulloch Ave / Wells Rd, Seaford 3198;-38.121740,145.135291
-Seaford Tram Station;Seaford;Station St / Tram Pde, Seaford 3198;-38.104017,145.128228
-Ormond Tram Station;Ormond;North Rd / Katandra Rd, Ormond 3204;-37.903211,145.039608
-Merinda Park Tram Station;Cranbourne North;Thompsons Rd, Cranbourne North 3977;-38.079003,145.263507
-Tyabb Tram Station;Tyabb;Mornington-Tyabb Rd / Tram Rd, Tyabb 3913;-38.259817,145.186402
-Baxter Tram Station;Baxter;Baxter-Tooradin Rd / Station Cres, Baxter 3911;-38.194047,145.160525
-Dandenong Tram Station;Dandenong;Foster St, Dandenong 3175;-37.989968,145.209728
-Ruthven Tram Station;Reservoir;Broadhurst Ave / High St, Reservoir 3073;-37.707899,145.009514
-Reservoir Tram Station;Reservoir;Broadway  / High St, Reservoir 3073;-37.716889,145.006993
-Regent Tram Station;Reservoir;Henry St / Robinson Rd, Reservoir 3073;-37.728400,145.002771
-Somerville Tram Station;Somerville;Eramosa Rd / Station St, Somerville 3912;-38.225341,145.176246
-Alphington Tram Station;Alphington;Miller St / Rowe St, Alphington 3078;-37.778396,145.031251
-Epping Tram Station;Epping;Davisson St / Cooper St, Epping 3076;-37.652388,145.030118
-Jolimont-MCG Tram Station;East Melbourne;Wellington Cres, East Melbourne 3002;-37.816530,144.984096
-Moonee Ponds Tram Station;Moonee Ponds;Holmes Rd / Norwood Cres, Moonee Ponds 3039;-37.765704,144.919158
-Fawkner Tram Station;Fawkner;Sydney Rd, Fawkner 3060;-37.714622,144.960549
-Ripponlea Tram Station;Ripponlea;Glen Eira Rd / Morres St, Ripponlea 3185;-37.875908,144.995234
-Watsonia Tram Station;Watsonia;Greensborough Rd, Watsonia 3087;-37.710954,145.083795
-Upwey Tram Station;Upwey;Darling Ave / Burwood Hwy, Upwey 3158;-37.903692,145.331335
-South Morang Tram Station;South Morang;McDonalds Rd, South Morang 3752;-37.649161,145.067038
-Westona Tram Station;Altona;Maidstone St / Harrington St, Altona 3018;-37.865165,144.813489
-Altona Tram Station;Altona;Pier St / Tram St, Altona 3018;-37.867151,144.829647
-Huntingdale Tram Station;Oakleigh;Huntingdale Rd / Haughton Rd, Oakleigh 3166;-37.911017,145.102364
-Oakleigh Tram Station;Oakleigh;Warrigal Rd / Haughton Rd, Oakleigh 3166;-37.900368,145.088313
-Fairfield Tram Station;Fairfield;Gillies St / Tram Pl, Fairfield 3078;-37.779174,145.016903
-East Richmond Tram Station;Richmond;Church St / Adolph St, Richmond 3121;-37.826403,144.997068
-Richmond Tram Station;Richmond;Punt Rd / Swan St, Richmond 3121;-37.824072,144.990161
-North Richmond Tram Station;Richmond;Victoria St / Regent St, Richmond 3121;-37.810396,144.992500
-West Richmond Tram Station;Richmond;Freeman St / Muir St, Richmond 3121;-37.814945,144.991418
-Murrumbeena Tram Station;Murrumbeena;Murrumbeena Rd / Tram Pde, Murrumbeena 3163;-37.890196,145.067378
-Edithvale Tram Station;Edithvale;Sinclair Ave / Nepean Hwy, Edithvale 3196;-38.038054,145.108539
-Tottenham Tram Station;West Footscray;Ashley St / Sunshine Rd, West Footscray 3012;-37.799255,144.862948
-West Footscray Tram Station;West Footscray;Geelong Rd / Sunshine Rd, West Footscray 3012;-37.801812,144.885327
-Heathmont Tram Station;Heathmont;Heathmont Rd / Canterbury Rd, Heathmont 3135;-37.828318,145.244553
-Flagstaff Tram Station;Melbourne City;William St / La Trobe St, Melbourne City 3000;-37.811978,144.955653
-Melbourne Central Tram Station;Melbourne City;La Trobe St, Melbourne City 3000;-37.809936,144.962599
-Parliament Tram Station;Melbourne City;Spring St, Melbourne City 3000;-37.811055,144.972907
-Flinders Street Tram Station;Melbourne City;Swanston St / Flinders St, Melbourne City 3000;-37.818308,144.966967
-Southern Cross Tram Station;Melbourne City;Collins St / Spencer St, Melbourne City 3000;-37.817933,144.951409
-Lilydale Tram Station;Lilydale;Maroondah Hwy, Lilydale 3140;-37.755516,145.347712
-Bittern Tram Station;Bittern;Peddle St / Frankston-Flinders Rd, Bittern 3918;-38.337390,145.178026
-Seaholme Tram Station;Seaholme;High St / Station St, Seaholme 3018;-37.867843,144.840957
-Armadale Tram Station;Armadale;High St / Cheel St, Armadale 3143;-37.856452,145.019328
-Toorak Tram Station;Armadale;Rose St / Beatty Ave, Armadale 3143;-37.850770,145.013907
-Parkdale Tram Station;Parkdale;Stewart Ave / Como Pde, Parkdale 3195;-37.993077,145.076330
-Sandown Park Tram Station;Springvale;Lightwood Rd, Springvale 3171;-37.956501,145.162823
-Springvale Tram Station;Springvale;Springvale Rd / Lightwood Rd, Springvale 3171;-37.949512,145.153451
-Brighton Beach Tram Station;Brighton;Menzies Ave / Station Walk, Brighton 3186;-37.926482,144.989157
-Middle Brighton Tram Station;Brighton;Black St / Tram Ave, Brighton 3186;-37.915135,144.996298
-North Brighton Tram Station;Brighton;Bay St / Warleigh Gr, Brighton 3186;-37.904883,145.002604
-Gardenvale Tram Station;Brighton;Martin St / Spink St, Brighton 3186;-37.896693,145.004165
-Jordanville Tram Station;Mount Waverley;Hillview Ave / Windsor Ave, Mount Waverley 3149;-37.873599,145.112089
-Mount Waverley Tram Station;Mount Waverley;Stephensons Rd / Miller Cres, Mount Waverley 3149;-37.875251,145.128057
-Middle Footscray Tram Station;Footscray;Victoria St / Buckley St, Footscray 3011;-37.802501,144.891474
-Footscray Tram Station;Footscray;Hopkins St / Irving St, Footscray 3011;-37.801085,144.903194
-Caulfield Tram Station;Caulfield East;Station St / Normanby Ave, Caulfield East 3145;-37.877457,145.042522
-Box Hill Tram Station;Box Hill;Station St / Bank St, Box Hill 3128;-37.819219,145.121427
-Canterbury Tram Station;Canterbury;Canterbury Rd, Canterbury 3126;-37.824489,145.081226
-Macleod Tram Station;Macleod;Birdwood Ave, Macleod 3085;-37.726010,145.069147
-Narre Warren Tram Station;Narre Warren;Webb St, Narre Warren 3805;-38.027809,145.303967
-Upfield Tram Station;Coolaroo;Barry Rd / Dunstan Pde, Coolaroo 3048;-37.666076,144.946745
-Coolaroo Tram Station;Coolaroo;Kalimna Cres, Coolaroo 3048;-37.661001,144.926053
-Hastings Tram Station;Hastings;Church St / Station St, Hastings 3915;-38.305660,145.185979
-Cheltenham Tram Station;Cheltenham;Charman Rd / Tram Rd, Cheltenham 3192;-37.966653,145.054557
-Thomastown Tram Station;Thomastown;Main St / High St, Thomastown 3074;-37.680335,145.014284
-Keon Park Tram Station;Thomastown;Keon Pde / High St, Thomastown 3074;-37.694867,145.011883
-Keilor Plains Tram Station;St Albans;Power St / East Esplanade , St Albans 3021;-37.729276,144.793733
-St Albans Tram Station;St Albans;Main Rd / St Albans Rd, St Albans 3021;-37.744859,144.800055
-Ginifer Tram Station;St Albans;St Albans Rd, St Albans 3021;-37.757509,144.809571
-Auburn Tram Station;Hawthorn East;Auburn Rd / Lilydale Gr, Hawthorn East 3123;-37.822398,145.045842
-Preston Tram Station;Preston;Murray Rd / St Georges Rd, Preston 3072;-37.738674,145.000527
-Bell Tram Station;Preston;Bell St / Garnet St, Preston 3072;-37.745566,145.000152
-Williams Landing Tram Station;Williams Landing;, Williams Landing 3027;-37.869868,144.747446
-Pakenham Tram Station;Pakenham;Henry Rd / Tram Ave, Pakenham 3810;-38.080612,145.486374
-Cardinia Road Tram Station;Pakenham;Cardinia Rd / Village Way, Pakenham 3810;-38.071288,145.437794
-Yarraman Tram Station;Noble Park;Cyril Gr / Tram Pde, Noble Park 3174;-37.978253,145.191597
-Noble Park Tram Station;Noble Park;Stuart St / Douglas St, Noble Park 3174;-37.967236,145.176936
-Croydon Tram Station;Croydon;Toorak Ave / Wicklow Ave, Croydon 3136;-37.795441,145.280594
-Leawarra Tram Station;Frankston;Lardner Rd / Bloom St, Frankston 3199;-38.152036,145.139535
-Frankston Tram Station;Frankston;Beach St / Fletcher Rd, Frankston 3199;-38.142987,145.126166
-Hawksburn Tram Station;South Yarra;Barnsbury Rd / Luxton Rd, South Yarra 3141;-37.844594,145.002137
-South Yarra Tram Station;South Yarra;Toorak Rd / Yarra St, South Yarra 3141;-37.838445,144.992341
-Carrum Tram Station;Carrum;Johnson Ave / Nepean Hwy, Carrum 3197;-38.074896,145.122414
-Balaclava Tram Station;Balaclava;Carlisle St / William Pl, Balaclava 3183;-37.869486,144.993514
-Kooyong Tram Station;Kooyong;Glenferrie Rd / Monaro Rd, Kooyong 3144;-37.839926,145.033550
-Aspendale Tram Station;Aspendale;Foster St / Nepean Hwy, Aspendale 3195;-38.027222,145.102151
-Westgarth Tram Station;Northcote;Westgarth St / South Cres, Northcote 3070;-37.780618,144.999231
-Dennis Tram Station;Northcote;Cain Ave, Northcote 3070;-37.779183,145.008240
-Croxton Tram Station;Northcote;Beaconsfield Pde / Stott St, Northcote 3070;-37.764098,144.997057
-Northcote Tram Station;Northcote;Turnbull Gr / Herbert St, Northcote 3070;-37.769865,144.995282
-Merri Tram Station;Northcote;Bridge St / Tram St, Northcote 3070;-37.777843,144.992976
-Belgrave Tram Station;Belgrave;Main St / Belgrave-Gembrook Rd, Belgrave 3160;-37.909099,145.355291
-Mooroolbark Tram Station;Mooroolbark;Manchester Rd / Brice Ave, Mooroolbark 3138;-37.784749,145.312404
-Spotswood Tram Station;Spotswood;Hope St, Spotswood 3015;-37.830635,144.885935
-Coburg Tram Station;Coburg;Bell St / Hudson St, Coburg 3058;-37.742341,144.963342
-Moreland Tram Station;Coburg;Moreland Rd / Station St, Coburg 3058;-37.754481,144.961823
-Pascoe Vale Tram Station;Pascoe Vale;Gaffney St / Burgundy St, Pascoe Vale 3044;-37.730754,144.928194
-Beaconsfield Tram Station;Beaconsfield;Soldiers Rd / Kenilworth Ave, Beaconsfield 3807;-38.050828,145.366069
-North Melbourne Tram Station;West Melbourne;Dynon Rd / Tram Pl, West Melbourne 3003;-37.806309,144.941509
-Heidelberg Tram Station;Heidelberg;Studley Rd, Heidelberg 3084;-37.757075,145.060690
-Tecoma Tram Station;Tecoma;Campbell St, Tecoma 3160;-37.908116,145.342999
-Seddon Tram Station;Seddon;Bellairs Ave, Seddon 3011;-37.809001,144.895668
-Sunshine Tram Station;Sunshine;Hampshire Rd / Station Pl, Sunshine 3020;-37.788535,144.832880
-Burnley Tram Station;Burnley;Burnley St / Madden Gr, Burnley 3121;-37.827558,145.007553
-Merlynston Tram Station;Coburg North;Plaisted St / Bain Ave, Coburg North 3058;-37.720937,144.961312
-Batman Tram Station;Coburg North;Gaffney St / McDonald St, Coburg North 3058;-37.733524,144.962837
-Clayton Tram Station;Clayton;Clayton Rd / Haughton Rd, Clayton 3168;-37.924683,145.120531
-Bonbeach Tram Station;Bonbeach;Harding Ave / Nepean Hwy, Bonbeach 3196;-38.062945,145.119682
-Tooronga Tram Station;Malvern;Tooronga Rd / Milton Pde, Malvern 3144;-37.849370,145.041734
-Malvern Tram Station;Malvern;Glenferrie Rd / Station Pl, Malvern 3144;-37.866250,145.029293
-Glenhuntly Tram Station;Glen Huntly;Glen Huntly Rd / Royal Ave, Glen Huntly 3163;-37.889717,145.042218
-Upper Ferntree Gully Tram Station;Upper Ferntree Gully;Tram Ave / Burwood Hwy, Upper Ferntree Gully 3156;-37.892673,145.307525
-Ringwood Tram Station;Ringwood;Wantirna Rd / Station St, Ringwood 3134;-37.815890,145.228970
-Heyington Tram Station;Toorak;Gawith Ct / Heyington Pl, Toorak 3142;-37.834670,145.022633
-Ascot Vale Tram Station;Ascot Vale;McCully St / The Crescent , Ascot Vale 3032;-37.775310,144.921825
-Sandringham Tram Station;Sandringham;Waltham St / Station St, Sandringham 3191;-37.950328,145.004566
-Oak Park Tram Station;Oak Park;Snell Gr / Waterloo Rd, Oak Park 3046;-37.717949,144.921515
-Boronia Tram Station;Boronia;Power Rd / Dorset Rd, Boronia 3155;-37.860453,145.284381
-Hurstbridge Tram Station;Hurstbridge;Heidelberg-Kinglake Rd, Hurstbridge 3099;-37.639402,145.192012
-Flemington Bridge Tram Station;North Melbourne;Racecourse Rd / Boundary Rd, North Melbourne 3051;-37.788137,144.939321
-Macaulay Tram Station;North Melbourne;Macaulay Rd, North Melbourne 3051;-37.794263,144.936170
-Hampton Tram Station;Hampton;Hampton St / Tram Cres, Hampton 3188;-37.937973,145.001466
-Glen Waverley Tram Station;Glen Waverley;Glendale St / Coleman Pde, Glen Waverley 3150;-37.879502,145.162063
-Syndal Tram Station;Glen Waverley;Fiander Ave / Coleman Pde, Glen Waverley 3150;-37.876228,145.149776
-McKinnon Tram Station;Mckinnon;McKinnon Rd / Glen Orme Ave, Mckinnon 3204;-37.910306,145.038302
-Albion Tram Station;Sunshine North;St Albans Rd, Sunshine North 3020;-37.777655,144.824709
-Darebin Tram Station;Ivanhoe;Merton St / Heidelberg Rd, Ivanhoe 3079;-37.774962,145.038476
-Ivanhoe Tram Station;Ivanhoe;Young St / Norman St, Ivanhoe 3079;-37.768898,145.045426
-Moorabbin Tram Station;Moorabbin;South Rd / Station St, Moorabbin 3189;-37.934349,145.036739
-Hallam Tram Station;Hallam;Hallam South Rd, Hallam 3803;-38.017743,145.269773
-Laverton Tram Station;Laverton;Grace St / Tram Ave, Laverton 3028;-37.863693,144.772615
-Aircraft Tram Station;Laverton;Aviation Rd / Tram Ave, Laverton 3028;-37.866602,144.760809
-Glen Iris Tram Station;Glen Iris;High St / Wills St, Glen Iris 3146;-37.859306,145.058223
-Burwood Tram Station;Glen Iris;Maverston St / Bardolph St, Glen Iris 3146;-37.851561,145.080508
-Gardiner Tram Station;Glen Iris;Burke Rd, Glen Iris 3146;-37.853283,145.051660
-Newport Tram Station;Newport;Mason St / Melbourne Rd, Newport 3015;-37.842714,144.883604
-Elsternwick Tram Station;Elsternwick;Glen Huntly Rd / Horne St, Elsternwick 3185;-37.884752,145.000902
-Stony Point Tram Station;Crib Point;Stony Point Rd, Crib Point 3919;-38.374238,145.221842
-Crib Point Tram Station;Crib Point;Point Rd / Stony Point Rd, Crib Point 3919;-38.366120,145.204047
-Morradoo Tram Station;Crib Point;Disney St / Campbell St, Crib Point 3919;-38.354035,145.189606
-Eltham Tram Station;Eltham;Pryor St / Main Rd, Eltham 3095;-37.713552,145.147827
+19-North Richmond Railway Station/Victoria St;Abbotsford;Regent St / Victoria St, Abbotsford 3067;-37.809657,144.992583
+20-Nicholson St/Victoria St;Abbotsford;Nicholson St / Victoria St, Abbotsford 3067;-37.809994,144.995790
+21-Church St/Victoria St;Abbotsford;Church St / Victoria St, Abbotsford 3067;-37.810494,145.000518
+23-Flockhart St/Victoria St;Abbotsford;Flockhart St / Victoria St, Abbotsford 3067;-37.811126,145.007030
+55-Cameron St/Matthews Ave;Airport West;Cameron St / Matthews Ave, Airport West 3042;-37.729960,144.890243
+56-Earl St/Matthews Ave;Airport West;Earl St / Matthews Ave, Airport West 3042;-37.727324,144.890672
+57-Hawker St/Matthews Ave;Airport West;Hawker St / Matthews Ave, Airport West 3042;-37.723067,144.891387
+58-Marshall Rd/Matthews Ave;Airport West;Marshall Rd / Matthews Ave, Airport West 3042;-37.718394,144.892082
+59-Airport West/Matthews Ave;Airport West;Dromana Ave / Matthews Ave, Airport West 3042;-37.713840,144.890560
+54-Fullarton Rd/Matthews Ave;Airport West;Fullarton Rd / Matthews Ave, Airport West 3042;-37.732375,144.889701
+131-Aughtie Dr/Albert Rd;Albert Park;Aughtie Dr / Albert Rd, Albert Park 3206;-37.840751,144.961044
+132-Kerferd Rd/Canterbury Rd;Albert Park;Kerferd Rd / Canterbury Rd, Albert Park 3206;-37.842597,144.959411
+132-Canterbury Rd/Albert Rd;Albert Park;Canterbury Rd / Albert Rd, Albert Park 3206;-37.842286,144.959519
+28-Montague St/Bridport St;Albert Park;Montague St / Bridport St, Albert Park 3206;-37.840730,144.955320
+29-Bridport St/Victoria Ave;Albert Park;Bridport St / Victoria Ave, Albert Park 3206;-37.841563,144.953338
+30-Richardson St/Victoria Ave;Albert Park;Richardson St / Victoria Ave, Albert Park 3206;-37.843940,144.951280
+31-Little Page St/Victoria Ave;Albert Park;Little Page St / Victoria Ave, Albert Park 3206;-37.845670,144.949830
+32-Beaconsfield Pde/Victoria Ave;Albert Park;Beaconsfield Pde / Victoria Ave, Albert Park 3206;-37.847200,144.948660
+28-Bridport St/Montague St;Albert Park;Bridport St / Montague St, Albert Park 3206;-37.840420,144.955720
+29-Merton St/Dundas Pl;Albert Park;Merton St / Dundas Pl, Albert Park 3206;-37.841252,144.953862
+31-Graham St/Victoria Ave;Albert Park;Graham St / Victoria Ave, Albert Park 3206;-37.845770,144.950020
+41-Armadale St/Wattletree Rd;Armadale;Armadale St / Wattletree Rd, Armadale 3143;-37.860940,145.017791
+42-Kooyong Rd/Wattletree Rd;Armadale;Kooyong Rd / Wattletree Rd, Armadale 3143;-37.861342,145.019899
+43-Egerton Rd/Wattletree Rd;Armadale;Egerton Rd / Wattletree Rd, Armadale 3143;-37.861698,145.022698
+44-Duncraig Ave/Wattletree Rd;Armadale;Duncraig Ave / Wattletree Rd, Armadale 3143;-37.862064,145.025472
+39-Auburn Gr/High St;Armadale;Auburn Gr / High St, Armadale 3143;-37.854869,145.015352
+40-Armadale Station/High St;Armadale;Osment St / High St, Armadale 3143;-37.855275,145.018408
+41-Kooyong Rd/High St;Armadale;Kooyong Rd / High St, Armadale 3143;-37.855586,145.020804
+42-Huntingtower Rd/High St;Armadale;Huntingtower Rd / High St, Armadale 3143;-37.855992,145.023829
+43-Mercer Rd/High St;Armadale;Mercer Rd / High St, Armadale 3143;-37.856286,145.026231
+40-Armadale Station/High St;Armadale;Northcote Rd / High St, Armadale 3143;-37.855122,145.018252
+38-Orrong Rd/High St;Armadale;Orrong Rd / High St, Armadale 3143;-37.854216,145.011454
+44-Bailey Ave/Dandenong Rd;Armadale;Bailey Ave / Dandenong Rd, Armadale 3143;-37.864620,145.023680
+43-Matlock Ct/Dandenong Rd;Armadale;Matlock Ct / Dandenong Rd, Armadale 3143;-37.863820,145.021910
+42-Kooyong Rd/Dandenong Rd;Armadale;Kooyong Rd / Dandenong Rd, Armadale 3143;-37.862840,145.019640
+41-Cantala Ave/Dandenong Rd;Armadale;Cantala Ave / Dandenong Rd, Armadale 3143;-37.861970,145.017640
+40-Wattletree Rd/Dandenong Rd;Armadale;Wattletree Rd / Dandenong Rd, Armadale 3143;-37.860807,145.014539
+39-Hampden Rd/Dandenong Rd;Armadale;Hampden Rd / Dandenong Rd, Armadale 3143;-37.860645,145.013436
+38-Orrong Rd/Dandenong Rd;Armadale;Orrong Rd / Dandenong Rd, Armadale 3143;-37.860171,145.010397
+43-Egerton Rd/Dandenong Rd;Armadale;Egerton Rd / Dandenong Rd, Armadale 3143;-37.863790,145.022050
+42-Lauriston Girls School/Malvern Rd;Armadale;Mercer Rd / Malvern Rd, Armadale 3143;-37.851190,145.026330
+41-Maribyrnong Park/Maribyrnong Rd;Ascot Vale;Woods St / Maribyrnong Rd, Ascot Vale 3032;-37.770083,144.902055
+36-St Leonards Rd/Union Rd;Ascot Vale;St Leonards Rd / Union Rd, Ascot Vale 3032;-37.773570,144.915940
+35-Bloomfield Rd/Union Rd;Ascot Vale;Bloomfield Rd / Union Rd, Ascot Vale 3032;-37.775890,144.915560
+34-Burrowes St/Union Rd;Ascot Vale;Burrowes St / Union Rd, Ascot Vale 3032;-37.778530,144.915180
+33-Melbourne Showgrounds/Union Rd;Ascot Vale;Epsom Rd / Union Rd, Ascot Vale 3032;-37.780450,144.914810
+32-Sandown Rd/Epsom Rd;Ascot Vale;Sandown Rd / Epsom Rd, Ascot Vale 3032;-37.782590,144.916710
+31-Racing Victoria/161 Epsom Rd;Ascot Vale;Epsom Rd, Ascot Vale 3032;-37.784020,144.918120
+30-Flemington Dr/Epsom Rd;Ascot Vale;Flemington Dr / Epsom Rd, Ascot Vale 3032;-37.785880,144.919930
+41-Maribyrnong Park/Maribyrnong Rd;Ascot Vale;Hurtle St / Maribyrnong Rd, Ascot Vale 3032;-37.770295,144.902570
+38-Ferguson St/Maribyrnong Rd;Ascot Vale;Ferguson St / Maribyrnong Rd, Ascot Vale 3032;-37.771416,144.912753
+40-Epsom Rd/Maribyrnong Rd;Ascot Vale;Epsom Rd / Maribyrnong Rd, Ascot Vale 3032;-37.770629,144.905675
+37-Maribyrnong Rd/Union Rd;Ascot Vale;Maribyrnong Rd / Union Rd, Ascot Vale 3032;-37.771870,144.916070
+35-Munro St/Union Rd;Ascot Vale;Munro St / Union Rd, Ascot Vale 3032;-37.776100,144.915390
+33-Melbourne Showgrounds/Epsom Rd;Ascot Vale;Union St / Epsom Rd, Ascot Vale 3032;-37.780680,144.914770
+27-Essendon Tram Depot/Mt Alexander Rd;Ascot Vale;Mt Alexander Rd, Ascot Vale 3032;-37.779399,144.931184
+28-Middle St/Mt Alexander Rd;Ascot Vale;Middle St / Mt Alexander Rd, Ascot Vale 3032;-37.777493,144.929830
+29-Warrick St/Mt Alexander Rd;Ascot Vale;Warrick St / Mt Alexander Rd, Ascot Vale 3032;-37.775543,144.928530
+30-Maribyrnong Rd/Mt Alexander Rd;Ascot Vale;Maribyrnong Rd / Mt Alexander Rd, Ascot Vale 3032;-37.773008,144.926954
+37-Chapel St/Carlisle St;Balaclava;Chapel St / Carlisle St, Balaclava 3183;-37.868449,144.990496
+36-St Kilda Town Hall/Carlisle St;Balaclava;Brighton Rd / Carlisle St, Balaclava 3183;-37.868227,144.988755
+38-Balaclava Station/Carlisle St;Balaclava;Nelson St / Carlisle St, Balaclava 3183;-37.868822,144.993369
+39-Orange Gr/Carlisle St;Balaclava;Orange Gr / Carlisle St, Balaclava 3183;-37.869243,144.996738
+40-Hotham St/Carlisle St;Balaclava;Hotham St / Carlisle St, Balaclava 3183;-37.869608,144.999630
+36-St Kilda Primary School/Brighton Rd;Balaclava;Mozart St / Brighton Rd, Balaclava 3183;-37.870110,144.988440
+37-Chapel St/Brighton Rd;Balaclava;Chapel St / Brighton Rd, Balaclava 3183;-37.871770,144.989490
+38-Brunning St/Brighton Rd;Balaclava;Brunning St / Brighton Rd, Balaclava 3183;-37.872800,144.990120
+39-Glen Eira Rd/Brighton Rd;Balaclava;Glen Eira Rd / Brighton Rd, Balaclava 3183;-37.876640,144.992550
+40-Scott St/Brighton Rd;Balaclava;Scott St / Brighton Rd, Balaclava 3183;-37.878890,144.993970
+41-Coleridge St/Brighton Rd;Balaclava;Coleridge St / Brighton Rd, Balaclava 3183;-37.880800,144.995160
+42-Hotham St/Brighton Rd;Balaclava;Hotham St / Brighton Rd, Balaclava 3183;-37.882960,144.996500
+43-Deepdene Shopping Centre/Whitehorse Rd;Balwyn;Barnsbury Rd / Whitehorse Rd, Balwyn 3103;-37.810922,145.064882
+44-Deepdene Park/Whitehorse Rd;Balwyn;Parkside Ave / Whitehorse Rd, Balwyn 3103;-37.811375,145.068669
+45-Hardwicke St/Whitehorse Rd;Balwyn;Hardwicke St / Whitehorse Rd, Balwyn 3103;-37.811748,145.071786
+46-Balwyn Cinema/Whitehorse Rd;Balwyn;Austin St / Whitehorse Rd, Balwyn 3103;-37.812240,145.075931
+47-Balwyn Rd/Whitehorse Rd;Balwyn;Balwyn Rd / Whitehorse Rd, Balwyn 3103;-37.812917,145.081526
+48-Balwyn Shopping Centre/Whitehorse Rd;Balwyn;Rochester Rd / Whitehorse Rd, Balwyn 3103;-37.813197,145.083793
+49-Northcote Ave/Whitehorse Rd;Balwyn;Northcote Ave / Whitehorse Rd, Balwyn 3103;-37.813693,145.087957
+69-Peverill St/Burke Rd;Balwyn;Peverill St / Burke Rd, Balwyn 3103;-37.814110,145.060070
+43-Deepdene Shopping Centre/Whitehorse Rd;Balwyn;Creswick St / Whitehorse Rd, Balwyn 3103;-37.810790,145.064724
+44-Deepdene Park/Whitehorse Rd;Balwyn;Leonard St / Whitehorse Rd, Balwyn 3103;-37.811241,145.068526
+48-Balwyn Shopping Centre/Whitehorse Rd;Balwyn;Yerrin St / Whitehorse Rd, Balwyn 3103;-37.813060,145.083619
+51-Narrak Rd/Whitehorse Rd;Balwyn;Narrak Rd / Whitehorse Rd, Balwyn 3103;-37.814405,145.094790
+53-Union Rd/Whitehorse Rd;Balwyn;Union Rd / Whitehorse Rd, Balwyn 3103;-37.814973,145.099281
+42-Burke Rd/Whitehorse Rd;Balwyn;Burke Rd / Whitehorse Rd, Balwyn 3103;-37.810441,145.060857
+45-Burke Rd/Doncaster Rd;Balwyn North;Burke Rd / Doncaster Rd, Balwyn North 3104;-37.793167,145.065211
+46-Wattle Ave/Doncaster Rd;Balwyn North;Wattle Ave / Doncaster Rd, Balwyn North 3104;-37.792851,145.067470
+47-North Balwyn Shopping Centre/Doncaster Rd;Balwyn North;Macedon Ave / Doncaster Rd, Balwyn North 3104;-37.792707,145.071435
+48-Sunburst Ave/Doncaster Rd;Balwyn North;Sunburst Ave / Doncaster Rd, Balwyn North 3104;-37.793216,145.074268
+49-Cityview Rd/Doncaster Rd;Balwyn North;Cityview Rd / Doncaster Rd, Balwyn North 3104;-37.793758,145.077462
+50-Hill Rd/Doncaster Rd;Balwyn North;Hill Rd / Doncaster Rd, Balwyn North 3104;-37.794258,145.081192
+51-Balwyn Rd/Doncaster Rd;Balwyn North;Balwyn Rd / Doncaster Rd, Balwyn North 3104;-37.794655,145.084536
+50-Dight Ave/Doncaster Rd;Balwyn North;Dight Ave / Doncaster Rd, Balwyn North 3104;-37.794373,145.080934
+49-Buchanan Ave/Doncaster Rd;Balwyn North;Buchanan Ave / Doncaster Rd, Balwyn North 3104;-37.793941,145.077723
+48-Osburn Ave/Doncaster Rd;Balwyn North;Osburn Ave / Doncaster Rd, Balwyn North 3104;-37.793414,145.074565
+47-North Balwyn Shopping Centre/Doncaster Rd;Balwyn North;Bulleen Rd / Doncaster Rd, Balwyn North 3104;-37.792729,145.070719
+44-Burke Rd/Doncaster Rd;Balwyn North;Burke Rd / Doncaster Rd, Balwyn North 3104;-37.793470,145.064270
+56-Elgar Rd/Whitehorse Rd;Box Hill;Elgar Rd / Whitehorse Rd, Box Hill 3128;-37.816925,145.115591
+57-Nelson Rd/Whitehorse Rd;Box Hill;Nelson Rd / Whitehorse Rd, Box Hill 3128;-37.817459,145.119866
+58-Box Hill Central/Whitehorse Rd;Box Hill;Bruce St / Whitehorse Rd, Box Hill 3128;-37.817879,145.122349
+68-East Brighton/Hawthorn Rd;Brighton East;Nepean Hwy / Hawthorn Rd, Brighton East 3187;-37.914270,145.016830
+67-Howell St/Hawthorn Rd;Brighton East;Howell St / Hawthorn Rd, Brighton East 3187;-37.911090,145.017390
+66-Union St/Hawthorn Rd;Brighton East;Union St / Hawthorn Rd, Brighton East 3187;-37.908730,145.017770
+65-Alexander St/Hawthorn Rd;Brighton East;Alexander St / Hawthorn Rd, Brighton East 3187;-37.906570,145.018140
+64-Taylor St/Hawthorn Rd;Brighton East;Taylor St / Hawthorn Rd, Brighton East 3187;-37.904090,145.018600
+63-North Rd/Hawthorn Rd;Brighton East;North Rd / Hawthorn Rd, Brighton East 3187;-37.901570,145.019070
+67-Rogers Ave/Hawthorn Rd;Brighton East;Rogers Ave / Hawthorn Rd, Brighton East 3187;-37.911080,145.017530
+65-Davey Ave/Hawthorn Rd;Brighton East;Davey Ave / Hawthorn Rd, Brighton East 3187;-37.906370,145.018330
+28-Moreland Rd/Sydney Rd;Brunswick;Moreland Rd / Sydney Rd, Brunswick 3056;-37.755637,144.964016
+27-Brunswick Tram Depot/Sydney Rd;Brunswick;Donald St / Sydney Rd, Brunswick 3056;-37.757812,144.963637
+26-Albion St/Sydney Rd;Brunswick;Albion St / Sydney Rd, Brunswick 3056;-37.760963,144.963091
+25-Stewart St/Sydney Rd;Brunswick;Stewart St / Sydney Rd, Brunswick 3056;-37.763233,144.962698
+24-Brunswick Baptist Church/Sydney Rd;Brunswick;Blyth St / Sydney Rd, Brunswick 3056;-37.765581,144.962304
+23-Victoria St/Sydney Rd;Brunswick;Victoria St / Sydney Rd, Brunswick 3056;-37.767142,144.962032
+22-Albert St/Sydney Rd;Brunswick;Albert St / Sydney Rd, Brunswick 3056;-37.768949,144.961719
+21-Brunswick Town Hall/Sydney Rd;Brunswick;Dawson St / Sydney Rd, Brunswick 3056;-37.771645,144.961264
+20-Barkly Square/115 Sydney Rd;Brunswick;Sydney Rd, Brunswick 3056;-37.774839,144.960738
+19-Brunswick Rd/Sydney Rd;Brunswick;Brunswick Rd / Sydney Rd, Brunswick 3056;-37.777294,144.960329
+24-Blyth St/Sydney Rd;Brunswick;Blyth St / Sydney Rd, Brunswick 3056;-37.765356,144.962514
+21-Glenlyon Rd/Sydney Rd;Brunswick;Glenlyon Rd / Sydney Rd, Brunswick 3056;-37.771370,144.961478
+32-Foden St/Dawson St;Brunswick;Foden St / Dawson St, Brunswick 3056;-37.769790,144.947380
+34-Smith St/Melville Rd;Brunswick;Smith St / Melville Rd, Brunswick 3056;-37.767310,144.943320
+33-South Daly St/Dawson St;Brunswick;South Daly St / Dawson St, Brunswick 3056;-37.769590,144.944420
+120-Brunswick Rd/Lygon St;Brunswick;Brunswick Rd / Lygon St, Brunswick 3056;-37.778453,144.970633
+129-Moreland Rd/Holmes St;Brunswick;Moreland Rd / Holmes St, Brunswick 3056;-37.756878,144.974757
+129-Holmes St/Moreland Rd;Brunswick;Holmes St / Moreland Rd, Brunswick 3056;-37.756568,144.974626
+20-Barkly Square/Sydney Rd;Brunswick;Weston St / Sydney Rd, Brunswick 3056;-37.774653,144.960933
+25-Albert St/Nicholson St;Brunswick East;Albert St / Nicholson St, Brunswick East 3057;-37.770420,144.979830
+26-Victoria St/Nicholson St;Brunswick East;Victoria St / Nicholson St, Brunswick East 3057;-37.768760,144.980090
+23-Miller St/Nicholson St;Brunswick East;Miller St / Nicholson St, Brunswick East 3057;-37.776370,144.978620
+24-Glenlyon Rd/Nicholson St;Brunswick East;Glenlyon Rd / Nicholson St, Brunswick East 3057;-37.773610,144.979080
+27-Blyth St/Nicholson St;Brunswick East;Blyth St / Nicholson St, Brunswick East 3057;-37.767470,144.980220
+121-Weston St/Lygon St;Brunswick East;Weston St / Lygon St, Brunswick East 3057;-37.775668,144.970972
+122-Glenlyon Rd/Lygon St;Brunswick East;Glenlyon Rd / Lygon St, Brunswick East 3057;-37.772740,144.971419
+123-Albert St/Lygon St;Brunswick East;Albert St / Lygon St, Brunswick East 3057;-37.769785,144.971949
+124-Victoria St/Lygon St;Brunswick East;Victoria St / Lygon St, Brunswick East 3057;-37.768204,144.972229
+125-Blyth St/Lygon St;Brunswick East;Blyth St / Lygon St, Brunswick East 3057;-37.766664,144.972508
+126-Stewart St/Lygon St;Brunswick East;Stewart St / Lygon St, Brunswick East 3057;-37.764429,144.972898
+127-Albion St/Lygon St;Brunswick East;Albion St / Lygon St, Brunswick East 3057;-37.762372,144.973269
+128-Mitchell St/Holmes St;Brunswick East;Mitchell St / Holmes St, Brunswick East 3057;-37.759389,144.974329
+127-Albion St/Holmes St;Brunswick East;Albion St / Holmes St, Brunswick East 3057;-37.761890,144.974063
+128-Donald St/Holmes St;Brunswick East;Donald St / Holmes St, Brunswick East 3057;-37.759265,144.974515
+29-Brunswick Rd/Grantham St;Brunswick West;Brunswick Rd / Grantham St, Brunswick West 3055;-37.775540,144.948920
+30-Union Square Shopping Centre/Grantham St;Brunswick West;Union St / Grantham St, Brunswick West 3055;-37.772370,144.949530
+31-Grantham St/Dawson St;Brunswick West;Grantham St / Dawson St, Brunswick West 3055;-37.770080,144.949760
+33-Daly St/Dawson St;Brunswick West;Daly St / Dawson St, Brunswick West 3055;-37.769400,144.944170
+35-Victoria St/Melville Rd;Brunswick West;Victoria St / Melville Rd, Brunswick West 3055;-37.764710,144.943890
+36-Hope St/Melville Rd;Brunswick West;Hope St / Melville Rd, Brunswick West 3055;-37.762040,144.944380
+37-Albion St/Melville Rd;Brunswick West;Albion St / Melville Rd, Brunswick West 3055;-37.758560,144.944990
+38-Jacobs Reserve/Melville Rd;Brunswick West;Culloden St / Melville Rd, Brunswick West 3055;-37.756620,144.945380
+39-Mattingley Cres/Melville Rd;Brunswick West;Mattingley Cres / Melville Rd, Brunswick West 3055;-37.754800,144.945710
+40-Moreland Rd/Melville Rd;Brunswick West;Moreland Rd / Melville Rd, Brunswick West 3055;-37.753160,144.945900
+31-Dawson St/Grantham St;Brunswick West;Dawson St / Grantham St, Brunswick West 3055;-37.770300,144.949740
+34-Smith St/Melville Rd;Brunswick West;Smith St / Melville Rd, Brunswick West 3055;-37.767610,144.943090
+39-McGregor Ave/Melville Rd;Brunswick West;McGregor Ave / Melville Rd, Brunswick West 3055;-37.754780,144.945550
+71-RMIT/Plenty Rd;Bundoora;McKimmies Rd / Plenty Rd, Bundoora 3083;-37.679110,145.069470
+70-Clements Dr/Plenty Rd;Bundoora;Clements Dr / Plenty Rd, Bundoora 3083;-37.681950,145.068910
+69-Taunton Dr/Plenty Rd;Bundoora;Taunton Dr / Plenty Rd, Bundoora 3083;-37.687880,145.066780
+68-Greenhills Rd/Plenty Rd;Bundoora;Greenhills Rd / Plenty Rd, Bundoora 3083;-37.691550,145.063240
+67-Bundoora Square SC/Plenty Rd;Bundoora;Daly Pl / Plenty Rd, Bundoora 3083;-37.695530,145.059660
+66-Settlement Rd/Plenty Rd;Bundoora;Settlement Rd / Plenty Rd, Bundoora 3083;-37.697960,145.058850
+65-Grimshaw St/Plenty Rd;Bundoora;Grimshaw St / Plenty Rd, Bundoora 3083;-37.700120,145.058180
+64-Mount Cooper Dr/Plenty Rd;Bundoora;Mount Cooper Dr / Plenty Rd, Bundoora 3083;-37.703560,145.056090
+63-Greenwood Dr/Plenty Rd;Bundoora;Greenwood Dr / Plenty Rd, Bundoora 3083;-37.707350,145.052240
+62-Metropolitan Fire Brigade/Plenty Rd;Bundoora;Plenty Rd, Bundoora 3083;-37.710480,145.048990
+61-Bundoora Park/Plenty Rd;Bundoora;Main Dr / Plenty Rd, Bundoora 3083;-37.712440,145.046430
+60-La Trobe University/Plenty Rd;Bundoora;Kingsbury Dr / Plenty Rd, Bundoora 3083;-37.716810,145.043050
+70-Janefield Dr/Plenty Rd;Bundoora;Janefield Dr / Plenty Rd, Bundoora 3083;-37.682720,145.068880
+13-Edinburgh St/Swan St;Burnley;Edinburgh St / Swan St, Burnley 3121;-37.826506,145.004899
+14-Burnley St/Swan St;Burnley;Burnley St / Swan St, Burnley 3121;-37.826788,145.007363
+15-Stawell St/Swan St;Burnley;Stawell St / Swan St, Burnley 3121;-37.827047,145.009790
+16-Park Gr/Swan St;Burnley;Park Gr / Swan St, Burnley 3121;-37.827262,145.011776
+17-Madden Gr/Swan St;Burnley;Madden Gr / Swan St, Burnley 3121;-37.827467,145.016510
+18-Eastern Dr/Swan St;Burnley;Eastern Dr / Swan St, Burnley 3121;-37.826557,145.021013
+58-Warrigal Rd/Burwood Hwy;Burwood;Warrigal Rd / Burwood Hwy, Burwood 3125;-37.850430,145.095880
+59-Somers St/Burwood Hwy;Burwood;Somers St / Burwood Hwy, Burwood 3125;-37.850660,145.099050
+59-Gilmour St/Burwood Hwy;Burwood;Gilmour St / Burwood Hwy, Burwood 3125;-37.850780,145.099040
+60-Roslyn St/Burwood Hwy;Burwood;Roslyn St / Burwood Hwy, Burwood 3125;-37.850440,145.102090
+60-Millicent St/Burwood Hwy;Burwood;Millicent St / Burwood Hwy, Burwood 3125;-37.850510,145.102160
+61-Presbyterian Ladies College/Burwood Hwy;Burwood;Burwood Hwy, Burwood 3125;-37.849970,145.105480
+61-Presbyterian Ladies College/Burwood Hwy;Burwood;Cromwell St / Burwood Hwy, Burwood 3125;-37.850040,145.105740
+62-Elgar Rd/Burwood Hwy;Burwood;Elgar Rd / Burwood Hwy, Burwood 3125;-37.849490,145.108820
+63-Deakin University/Burwood Hwy;Burwood;Gillard St / Burwood Hwy, Burwood 3125;-37.849990,145.115240
+64-Station St/Burwood Hwy;Burwood;Station St / Burwood Hwy, Burwood 3125;-37.850550,145.119330
+65-Starling St/Burwood Hwy;Burwood;Starling St / Burwood Hwy, Burwood 3125;-37.851250,145.126010
+66-Middleborough Rd/Burwood Hwy;Burwood;Middleborough Rd / Burwood Hwy, Burwood 3125;-37.852020,145.131840
+67-Old Burwood Rd/Burwood Hwy;Burwood East;Old Burwood Rd / Burwood Hwy, Burwood East 3151;-37.851450,145.138180
+68-Benwerrin Reserve/Burwood Hwy;Burwood East;Royton St / Burwood Hwy, Burwood East 3151;-37.851290,145.141880
+69-Keats St/Burwood Hwy;Burwood East;Keats St / Burwood Hwy, Burwood East 3151;-37.851850,145.146240
+69-Highview Gr/Burwood Hwy;Burwood East;Highview Gr / Burwood Hwy, Burwood East 3151;-37.851940,145.146340
+70-Blackburn Rd/Burwood Hwy;Burwood East;Blackburn Rd / Burwood Hwy, Burwood East 3151;-37.852624,145.151500
+71-Sevenoaks Rd/Burwood Hwy;Burwood East;Sevenoaks Rd / Burwood Hwy, Burwood East 3151;-37.853590,145.158560
+72-Lakeside Dr/Burwood Hwy;Burwood East;Lakeside Dr / Burwood Hwy, Burwood East 3151;-37.854497,145.166016
+73-Springvale Rd/Burwood Hwy;Burwood East;Springvale Rd / Burwood Hwy, Burwood East 3151;-37.854790,145.168160
+68-Mont Albert Rd/Burke Rd;Camberwell;Mont Albert Rd / Burke Rd, Camberwell 3124;-37.815780,145.059750
+66-Canterbury Rd/Burke Rd;Camberwell;Canterbury Rd / Burke Rd, Camberwell 3124;-37.821300,145.058710
+65-Victoria Rd/Burke Rd;Camberwell;Victoria Rd / Burke Rd, Camberwell 3124;-37.823430,145.058310
+64-Camberwell Station/Burke Rd;Camberwell;Cookson St / Burke Rd, Camberwell 3124;-37.825970,145.057830
+63-Prospect Hill Rd/Burke Rd;Camberwell;Prospect Hill Rd / Burke Rd, Camberwell 3124;-37.827970,145.057440
+61-Camberwell Junction/Burke Rd;Camberwell;Camberwell Rd / Burke Rd, Camberwell 3124;-37.831090,145.056840
+60-Reserve Rd/Burke Rd;Camberwell;Reserve Rd / Burke Rd, Camberwell 3124;-37.833890,145.056310
+59-Seymour Gr/Burke Rd;Camberwell;Seymour Gr / Burke Rd, Camberwell 3124;-37.835190,145.056070
+58-Currajong Ave/Burke Rd;Camberwell;Currajong Ave / Burke Rd, Camberwell 3124;-37.838090,145.055520
+57-Pine Ave/Burke Rd;Camberwell;Pine Ave / Burke Rd, Camberwell 3124;-37.840060,145.055140
+56-Anderson Rd/Burke Rd;Camberwell;Anderson Rd / Burke Rd, Camberwell 3124;-37.841590,145.054850
+55-Middle Rd/Burke Rd;Camberwell;Middle Rd / Burke Rd, Camberwell 3124;-37.843660,145.054450
+54-Toorak Rd/Burke Rd;Camberwell;Toorak Rd / Burke Rd, Camberwell 3124;-37.845610,145.054080
+52-Lockhart St/Riversdale Rd;Camberwell;Lockhart St / Riversdale Rd, Camberwell 3124;-37.834753,145.088135
+49-Glyndon Rd/Riversdale Rd;Camberwell;Glyndon Rd / Riversdale Rd, Camberwell 3124;-37.833905,145.079273
+48-Cooloongatta Rd/Riversdale Rd;Camberwell;Cooloongatta Rd / Riversdale Rd, Camberwell 3124;-37.833653,145.077099
+45-Wandin Rd/Riversdale Rd;Camberwell;Wandin Rd / Riversdale Rd, Camberwell 3124;-37.832658,145.068721
+44-Derby St/Riversdale Rd;Camberwell;Derby St / Riversdale Rd, Camberwell 3124;-37.832339,145.065888
+43-Trafalgar Rd/Riversdale Rd;Camberwell;Trafalgar Rd / Riversdale Rd, Camberwell 3124;-37.832061,145.063507
+42-Fermanagh Rd/Riversdale Rd;Camberwell;Fermanagh Rd / Riversdale Rd, Camberwell 3124;-37.831688,145.060200
+41-Camberwell Market/517 Riversdale Rd;Camberwell;Riversdale Rd, Camberwell 3124;-37.831409,145.057631
+40-Camberwell Junction/Riversdale Rd;Camberwell;Burke Rd / Riversdale Rd, Camberwell 3124;-37.831486,145.057145
+46-Spencer Rd/Riversdale Rd;Camberwell;Spencer Rd / Riversdale Rd, Camberwell 3124;-37.832940,145.069867
+47-Willow Gr/Riversdale Rd;Camberwell;Willow Gr / Riversdale Rd, Camberwell 3124;-37.833272,145.072670
+51-Highfield Rd/Riversdale Rd;Camberwell;Highfield Rd / Riversdale Rd, Camberwell 3124;-37.834537,145.085146
+53-Essex Rd/Riversdale Rd;Camberwell;Essex Rd / Riversdale Rd, Camberwell 3124;-37.835218,145.090965
+54-Through Rd/Riversdale Rd;Camberwell;Through Rd / Riversdale Rd, Camberwell 3124;-37.835535,145.093797
+41-265 Camberwell Rd;Camberwell;Camberwell Rd, Camberwell 3124;-37.832110,145.057750
+42-Camberwell Primary School/Camberwell Rd;Camberwell;Butler St / Camberwell Rd, Camberwell 3124;-37.832960,145.058740
+42-Camberwell Primary School/Camberwell Rd;Camberwell;Reserve Rd / Camberwell Rd, Camberwell 3124;-37.833340,145.058970
+43-Camberwell Civic Centre/Camberwell Rd;Camberwell;Avenue Rd / Camberwell Rd, Camberwell 3124;-37.834590,145.060630
+43-Camberwell Civic Centre/Camberwell Rd;Camberwell;Inglesby Rd / Camberwell Rd, Camberwell 3124;-37.834810,145.060710
+44-Trafalgar Rd/Camberwell Rd;Camberwell;Trafalgar Rd / Camberwell Rd, Camberwell 3124;-37.835920,145.062160
+45-Bowen St/Camberwell Rd;Camberwell;Bowen St / Camberwell Rd, Camberwell 3124;-37.837710,145.064200
+46-Christowel St/Camberwell Rd;Camberwell;Christowel St / Camberwell Rd, Camberwell 3124;-37.839400,145.066080
+46-Acheron Ave/Camberwell Rd;Camberwell;Acheron Ave / Camberwell Rd, Camberwell 3124;-37.839810,145.066300
+47-Maple Cres/Camberwell Rd;Camberwell;Maple Cres / Camberwell Rd, Camberwell 3124;-37.840810,145.067640
+47-Orange Gr/Camberwell Rd;Camberwell;Orange Gr / Camberwell Rd, Camberwell 3124;-37.841150,145.067810
+48-Orrong Cres/Camberwell Rd;Camberwell;Orrong Cres / Camberwell Rd, Camberwell 3124;-37.842120,145.069120
+48-Glen Iris Rd/Camberwell Rd;Camberwell;Glen Iris Rd / Camberwell Rd, Camberwell 3124;-37.842300,145.069120
+49-Tyrone St/Camberwell Rd;Camberwell;Tyrone St / Camberwell Rd, Camberwell 3124;-37.844140,145.071430
+49-Wilson Gr/Camberwell Rd;Camberwell;Wilson Gr / Camberwell Rd, Camberwell 3124;-37.844430,145.071520
+50-Fordham Gardens/Camberwell Rd;Camberwell;Smith Rd / Camberwell Rd, Camberwell 3124;-37.845910,145.073410
+50-Smith Rd/Camberwell Rd;Camberwell;Smith Rd / Camberwell Rd, Camberwell 3124;-37.845910,145.073200
+51-Toorak Rd/Camberwell Rd;Camberwell;Toorak Rd / Camberwell Rd, Camberwell 3124;-37.847830,145.075580
+52-Summerhill Rd/Toorak Rd;Camberwell;Summerhill Rd / Toorak Rd, Camberwell 3124;-37.848200,145.077080
+53-Highfield Rd/Toorak Rd;Camberwell;Highfield Rd / Toorak Rd, Camberwell 3124;-37.848740,145.081810
+53-Lithgow St/Toorak Rd;Camberwell;Lithgow St / Toorak Rd, Camberwell 3124;-37.848920,145.082300
+54-Oberwyl Rd/Toorak Rd;Camberwell;Oberwyl Rd / Toorak Rd, Camberwell 3124;-37.849040,145.084300
+54-Grandview Ave/Toorak Rd;Camberwell;Grandview Ave / Toorak Rd, Camberwell 3124;-37.849200,145.084590
+55-Through Rd/Toorak Rd;Camberwell;Through Rd / Toorak Rd, Camberwell 3124;-37.849320,145.086720
+55-Beryl St/Toorak Rd;Camberwell;Beryl St / Toorak Rd, Camberwell 3124;-37.849520,145.087260
+56-Barkly St/Toorak Rd;Camberwell;Barkly St / Toorak Rd, Camberwell 3124;-37.849660,145.089600
+56-Alfred Rd/Toorak Rd;Camberwell;Alfred Rd / Toorak Rd, Camberwell 3124;-37.849850,145.090060
+57-Fairview Ave/Toorak Rd;Camberwell;Fairview Ave / Toorak Rd, Camberwell 3124;-37.849980,145.092360
+57-Queens Pde/Toorak Rd;Camberwell;Queens Pde / Toorak Rd, Camberwell 3124;-37.850160,145.092730
+58-Warrigal Rd/Toorak Rd;Camberwell;Warrigal Rd / Toorak Rd, Camberwell 3124;-37.850330,145.095460
+40-Camberwell Junction/Camberwell Rd;Camberwell;Burke Rd / Camberwell Rd, Camberwell 3124;-37.831595,145.056912
+67-Camberwell Girls Grammar/Burke Rd;Canterbury;Torrington St / Burke Rd, Canterbury 3126;-37.818490,145.059210
+51-Highfield Rd/Riversdale Rd;Canterbury;Highfield Rd / Riversdale Rd, Canterbury 3126;-37.834371,145.084850
+50-Wattle Valley Rd/Riversdale Rd;Canterbury;Wattle Valley Rd / Riversdale Rd, Canterbury 3126;-37.834122,145.081200
+47-Willow Gr/Riversdale Rd;Canterbury;Willow Gr / Riversdale Rd, Canterbury 3126;-37.833106,145.072399
+46-Spencer Rd/Riversdale Rd;Canterbury;Spencer Rd / Riversdale Rd, Canterbury 3126;-37.832809,145.070018
+55-Union Rd/Riversdale Rd;Canterbury;Union Rd / Riversdale Rd, Canterbury 3126;-37.835763,145.095815
+14-Murchison St/Nicholson St;Carlton;Murchison St / Nicholson St, Carlton 3053;-37.800350,144.974440
+15-Elgin St/Nicholson St;Carlton;Elgin St / Nicholson St, Carlton 3053;-37.797540,144.974930
+16-Kay St/Nicholson St;Carlton;Kay St / Nicholson St, Carlton 3053;-37.795240,144.975320
+17-Princes St/Nicholson St;Carlton;Princes St / Nicholson St, Carlton 3053;-37.793210,144.975680
+10-Nicholson St/Victoria Pde;Carlton;Nicholson St / Victoria Pde, Carlton 3053;-37.807840,144.972837
+111-Swanston St/Elgin St;Carlton;Swanston St / Elgin St, Carlton 3053;-37.796857,144.965136
+112-Lygon St/Elgin St;Carlton;Lygon St / Elgin St, Carlton 3053;-37.797077,144.967193
+113-Lytton St/Lygon St;Carlton;Lytton St / Lygon St, Carlton 3053;-37.794131,144.968025
+112-Elgin St/Lygon St;Carlton;Elgin St / Lygon St, Carlton 3053;-37.796977,144.967633
+1-University of Melbourne/Swanston St;Carlton;Faraday St / Swanston St, Carlton 3053;-37.798185,144.964417
+3-Lincoln Square/Swanston St;Carlton;Pelham St / Swanston St, Carlton 3053;-37.802370,144.963693
+4-Queensberry St/Swanston St;Carlton;Queensberry St / Swanston St, Carlton 3053;-37.804986,144.963194
+18-Curtain St/Nicholson St;Carlton North;Curtain St / Nicholson St, Carlton North 3054;-37.789660,144.976330
+20-Richardson St/Nicholson St;Carlton North;Richardson St / Nicholson St, Carlton North 3054;-37.785250,144.977150
+21-Pigdon St/Nicholson St;Carlton North;Pigdon St / Nicholson St, Carlton North 3054;-37.782740,144.977620
+119-Park St/Lygon St;Carlton North;Park St / Lygon St, Carlton North 3054;-37.779418,144.970473
+114-Princes St/Lygon St;Carlton North;Princes St / Lygon St, Carlton North 3054;-37.792685,144.968271
+115-Newry St/Lygon St;Carlton North;Newry St / Lygon St, Carlton North 3054;-37.789577,144.968802
+116-Fenwick St/Lygon St;Carlton North;Fenwick St / Lygon St, Carlton North 3054;-37.787368,144.969181
+117-Richardson St/Lygon St;Carlton North;Richardson St / Lygon St, Carlton North 3054;-37.784034,144.969732
+118-Pigdon St/Lygon St;Carlton North;Pigdon St / Lygon St, Carlton North 3054;-37.781925,144.970072
+63-Maroona Rd/Glenhuntly Rd;Carnegie;Maroona Rd / Glenhuntly Rd, Carnegie 3163;-37.890140,145.047660
+64-Mernda Ave/Glenhuntly Rd;Carnegie;Mernda Ave / Glenhuntly Rd, Carnegie 3163;-37.890420,145.049900
+65-Mimosa Rd/Glenhuntly Rd;Carnegie;Mimosa Rd / Glenhuntly Rd, Carnegie 3163;-37.890710,145.052190
+66-Glenhuntly Rd/Truganini Rd;Carnegie;Glenhuntly Rd / Truganini Rd, Carnegie 3163;-37.891070,145.054050
+67-Centre Rd/Truganini Rd;Carnegie;Centre Rd / Truganini Rd, Carnegie 3163;-37.892700,145.054370
+68-Carnegie/Truganini Rd;Carnegie;Koornang Rd / Truganini Rd, Carnegie 3163;-37.893950,145.055930
+66-Truganini Rd/Glenhuntly Rd;Carnegie;Truganini Rd / Glenhuntly Rd, Carnegie 3163;-37.890780,145.054070
+50-Royal Pde/Glenhuntly Rd;Caulfield;Royal Pde / Glenhuntly Rd, Caulfield 3162;-37.886500,145.018260
+51-Hawthorn Rd/Glenhuntly Rd;Caulfield;Hawthorn Rd / Glenhuntly Rd, Caulfield 3162;-37.886980,145.022180
+52-Jasmine St/Glenhuntly Rd;Caulfield;Jasmine St / Glenhuntly Rd, Caulfield 3162;-37.887220,145.024140
+53-Glenhuntly Tram Depot/Glenhuntly Rd;Caulfield;Pearce St / Glenhuntly Rd, Caulfield 3162;-37.887610,145.027110
+54-Bambra Rd/Glenhuntly Rd;Caulfield;Bambra Rd / Glenhuntly Rd, Caulfield 3162;-37.887840,145.028900
+55-Fallon St/Glenhuntly Rd;Caulfield;Fallon St / Glenhuntly Rd, Caulfield 3162;-37.888110,145.030990
+56-Kean St/Glenhuntly Rd;Caulfield;Kean St / Glenhuntly Rd, Caulfield 3162;-37.888420,145.033430
+57-Laura St/Glenhuntly Rd;Caulfield;Laura St / Glenhuntly Rd, Caulfield 3162;-37.888670,145.035490
+58-Booran Rd/Glenhuntly Rd;Caulfield;Booran Rd / Glenhuntly Rd, Caulfield 3162;-37.888960,145.037810
+56-Lockhart St/Hawthorn Rd;Caulfield;Lockhart St / Hawthorn Rd, Caulfield 3162;-37.884580,145.022350
+55-Sylverly Gr/Hawthorn Rd;Caulfield;Sylverly Gr / Hawthorn Rd, Caulfield 3162;-37.882730,145.022710
+54-Glen Eira Rd/Hawthorn Rd;Caulfield;Glen Eira Rd / Hawthorn Rd, Caulfield 3162;-37.880130,145.023210
+57-Glenhuntly Rd/Hawthorn Rd;Caulfield;Glenhuntly Rd / Hawthorn Rd, Caulfield 3162;-37.886660,145.022100
+56-Briggs St/Hawthorn Rd;Caulfield;Briggs St / Hawthorn Rd, Caulfield 3162;-37.884870,145.022450
+53-Glenhuntly Tram Depot/Glenhuntly Rd;Caulfield;McGrath St / Glenhuntly Rd, Caulfield 3162;-37.887473,145.026805
+56-Kambrook Rd/Glenhuntly Rd;Caulfield;Kambrook Rd / Glenhuntly Rd, Caulfield 3162;-37.888250,145.033080
+59-Dandenong Rd/Waverley Rd;Caulfield East;Dandenong Rd / Waverley Rd, Caulfield East 3145;-37.875840,145.045070
+57-Caulfield Railway Station/Derby Rd;Caulfield East;Sir John Monash Dr / Derby Rd, Caulfield East 3145;-37.876400,145.041890
+56-Caulfield Racecourse/Normanby Rd;Caulfield East;Smith St / Normanby Rd, Caulfield East 3145;-37.875360,145.039100
+55-Balaclava Rd/Normanby Rd;Caulfield East;Balaclava Rd / Normanby Rd, Caulfield East 3145;-37.874490,145.038140
+54-Kambrook Rd/Balaclava Rd;Caulfield East;Kambrook Rd / Balaclava Rd, Caulfield East 3145;-37.874032,145.036125
+57-Caulfield Railway Station/Derby Rd;Caulfield East;Railway Ave / Derby Rd, Caulfield East 3145;-37.876420,145.041650
+57-Clarke Ave/Glenhuntly Rd;Caulfield East;Clarke Ave / Glenhuntly Rd, Caulfield East 3145;-37.888500,145.035110
+58-Booran Rd/Glenhuntly Rd;Caulfield East;Booran Rd / Glenhuntly Rd, Caulfield East 3145;-37.888790,145.037540
+62-Grange Rd/Glenhuntly Rd;Caulfield East;Grange Rd / Glenhuntly Rd, Caulfield East 3145;-37.889630,145.044590
+53-Crotonhurst Ave/Hawthorn Rd;Caulfield North;Crotonhurst Ave / Hawthorn Rd, Caulfield North 3161;-37.877490,145.023720
+52-Powderham Rd/Hawthorn Rd;Caulfield North;Powderham Rd / Hawthorn Rd, Caulfield North 3161;-37.875250,145.024150
+51-Balaclava Rd/Hawthorn Rd;Caulfield North;Balaclava Rd / Hawthorn Rd, Caulfield North 3161;-37.872890,145.024600
+50-Inkerman Rd/Hawthorn Rd;Caulfield North;Inkerman Rd / Hawthorn Rd, Caulfield North 3161;-37.869699,145.025186
+49-Wanda Rd/Hawthorn Rd;Caulfield North;Wanda Rd / Hawthorn Rd, Caulfield North 3161;-37.867993,145.025524
+48A-Dandenong Rd/Hawthorn Rd;Caulfield North;Dandenong Rd / Hawthorn Rd, Caulfield North 3161;-37.865990,145.025979
+48-Hawthorn Rd/Dandenong Rd;Caulfield North;Hawthorn Rd / Dandenong Rd, Caulfield North 3161;-37.865477,145.025815
+53-Caulfield Park/Balaclava Rd;Caulfield North;Redan Rd / Balaclava Rd, Caulfield North 3161;-37.873640,145.032040
+52-Caulfield Park Bowling Club/255 Balaclava Rd;Caulfield North;Balaclava Rd, Caulfield North 3161;-37.873140,145.028140
+51-Hawthorn Rd/Balaclava Rd;Caulfield North;Hawthorn Rd / Balaclava Rd, Caulfield North 3161;-37.872792,145.024948
+47-Caulfield Junior College/Balaclava Rd;Caulfield North;Elmhurst Rd / Balaclava Rd, Caulfield North 3161;-37.872147,145.021158
+41-Empress Rd/Balaclava Rd;Caulfield North;Empress Rd / Balaclava Rd, Caulfield North 3161;-37.869982,145.002581
+42-Sidwell Ave/Balaclava Rd;Caulfield North;Sidwell Ave / Balaclava Rd, Caulfield North 3161;-37.870339,145.005587
+43-Orrong Rd/Balaclava Rd;Caulfield North;Orrong Rd / Balaclava Rd, Caulfield North 3161;-37.870745,145.008792
+44-Ontario St/Balaclava Rd;Caulfield North;Ontario St / Balaclava Rd, Caulfield North 3161;-37.871189,145.012363
+45-Kent Gr/Balaclava Rd;Caulfield North;Kent Gr / Balaclava Rd, Caulfield North 3161;-37.871550,145.015116
+46-Kooyong Rd/Balaclava Rd;Caulfield North;Kooyong Rd / Balaclava Rd, Caulfield North 3161;-37.871891,145.017962
+47-Elmhurst Rd/Balaclava Rd;Caulfield North;Elmhurst Rd / Balaclava Rd, Caulfield North 3161;-37.872302,145.021179
+52-Caulfield Park Bowling Club/Balaclava Rd;Caulfield North;Holland Gr / Balaclava Rd, Caulfield North 3161;-37.873112,145.028542
+54-Kambrook Rd/Balaclava Rd;Caulfield North;Kambrook Rd / Balaclava Rd, Caulfield North 3161;-37.873990,145.035860
+55-Normanby Rd/Balaclava Rd;Caulfield North;Normanby Rd / Balaclava Rd, Caulfield North 3161;-37.874200,145.037790
+56-Caulfield Racecourse/Normanby Rd;Caulfield North;Smith St / Normanby Rd, Caulfield North 3161;-37.875488,145.039420
+58-Dandenong Rd/Derby Rd;Caulfield North;Dandenong Rd / Derby Rd, Caulfield North 3161;-37.875710,145.041870
+55-Sylverly Gr/Hawthorn Rd;Caulfield North;Sylverly Gr / Hawthorn Rd, Caulfield North 3161;-37.882450,145.022920
+54-Glen Eira Rd/Hawthorn Rd;Caulfield North;Glen Eira Rd / Hawthorn Rd, Caulfield North 3161;-37.879930,145.023400
+53-Northcote Ave/Hawthorn Rd;Caulfield North;Northcote Ave / Hawthorn Rd, Caulfield North 3161;-37.877210,145.023920
+52-Halstead St/Hawthorn Rd;Caulfield North;Halstead St / Hawthorn Rd, Caulfield North 3161;-37.874940,145.024360
+49-Arthur St/Hawthorn Rd;Caulfield North;Arthur St / Hawthorn Rd, Caulfield North 3161;-37.867730,145.025749
+41-Vadlure Ave/Balaclava Rd;Caulfield North;Vadlure Ave / Balaclava Rd, Caulfield North 3161;-37.869703,145.001579
+42-Allan Rd/Balaclava Rd;Caulfield North;Allan Rd / Balaclava Rd, Caulfield North 3161;-37.870179,145.005311
+44-Otira Rd/Balaclava Rd;Caulfield North;Otira Rd / Balaclava Rd, Caulfield North 3161;-37.871072,145.012393
+45-Lumeah Rd/Balaclava Rd;Caulfield North;Lumeah Rd / Balaclava Rd, Caulfield North 3161;-37.871355,145.014680
+62-Gardenvale Rd/Hawthorn Rd;Caulfield South;Gardenvale Rd / Hawthorn Rd, Caulfield South 3162;-37.899500,145.019530
+61-Raynes St/Hawthorn Rd;Caulfield South;Raynes St / Hawthorn Rd, Caulfield South 3162;-37.896700,145.020070
+60-Dover St/Hawthorn Rd;Caulfield South;Dover St / Hawthorn Rd, Caulfield South 3162;-37.895060,145.020370
+59-Princes Park/Hawthorn Rd;Caulfield South;Ellington St / Hawthorn Rd, Caulfield South 3162;-37.893130,145.020730
+58-Sycamore St/Hawthorn Rd;Caulfield South;Sycamore St / Hawthorn Rd, Caulfield South 3162;-37.889940,145.021330
+57-Glenhuntly Rd/Hawthorn Rd;Caulfield South;Glenhuntly Rd / Hawthorn Rd, Caulfield South 3162;-37.886990,145.021890
+61-Stone St/Hawthorn Rd;Caulfield South;Stone St / Hawthorn Rd, Caulfield South 3162;-37.896550,145.020250
+59-Princes Park/Hawthorn Rd;Caulfield South;Birch St / Hawthorn Rd, Caulfield South 3162;-37.893040,145.020900
+60-Glenhuntly Railway Station/Glenhuntly Rd;Caulfield South;Station Pl / Glenhuntly Rd, Caulfield South 3162;-37.889310,145.041820
+25-Clifton Hill Interchange/Queens Pde;Clifton Hill;Hoddle St / Queens Pde, Clifton Hill 3068;-37.785650,144.994520
+24-Michael St/Queens Pde;Clifton Hill;Michael St / Queens Pde, Clifton Hill 3068;-37.788360,144.991420
+23-Wellington St/Queens Pde;Clifton Hill;Wellington St / Queens Pde, Clifton Hill 3068;-37.789480,144.988750
+22-Smith St/Queens Pde;Clifton Hill;Smith St / Queens Pde, Clifton Hill 3068;-37.790510,144.986290
+21-Alexandra Pde/Smith St;Clifton Hill;Alexandra Pde / Smith St, Clifton Hill 3068;-37.793620,144.985280
+38-Renown St/Sydney Rd;Coburg;Renown St / Sydney Rd, Coburg 3058;-37.731620,144.964260
+37-Gaffney St/Sydney Rd;Coburg;Gaffney St / Sydney Rd, Coburg 3058;-37.734099,144.965318
+36-Rogers St/Sydney Rd;Coburg;Rogers St / Sydney Rd, Coburg 3058;-37.735840,144.966051
+35-O'Hea St/Sydney Rd;Coburg;O'Hea St / Sydney Rd, Coburg 3058;-37.737849,144.966909
+34-Bell St/Sydney Rd;Coburg;Bell St / Sydney Rd, Coburg 3058;-37.741474,144.966471
+33-Coburg Market/Sydney Rd;Coburg;Victoria St / Sydney Rd, Coburg 3058;-37.743257,144.966152
+32-Munro St/Sydney Rd;Coburg;Munro St / Sydney Rd, Coburg 3058;-37.745065,144.965834
+31-Reynard St/Sydney Rd;Coburg;Reynard St / Sydney Rd, Coburg 3058;-37.748736,144.965208
+30-The Avenue/Sydney Rd;Coburg;The Avenue  / Sydney Rd, Coburg 3058;-37.752071,144.964638
+35-St Pauls Catholic Church/Sydney Rd;Coburg;Champ St / Sydney Rd, Coburg 3058;-37.737506,144.966928
+32-Harding St/Sydney Rd;Coburg;Harding St / Sydney Rd, Coburg 3058;-37.744886,144.966060
+31-Edward St/Sydney Rd;Coburg;Edward St / Sydney Rd, Coburg 3058;-37.748477,144.965450
+29-Moore St/Sydney Rd;Coburg;Moore St / Sydney Rd, Coburg 3058;-37.753506,144.964551
+28-Moreland Rd/Sydney Rd;Coburg;Moreland Rd / Sydney Rd, Coburg 3058;-37.755308,144.964249
+130-Barrow St/Moreland Rd;Coburg;Barrow St / Moreland Rd, Coburg 3058;-37.756210,144.970157
+131-De Carle St/Moreland Rd;Coburg;De Carle St / Moreland Rd, Coburg 3058;-37.755809,144.966524
+132-Sydney Rd/Moreland Rd;Coburg;Sydney Rd / Moreland Rd, Coburg 3058;-37.755561,144.964279
+133-Cameron St/Moreland Rd;Coburg;Cameron St / Moreland Rd, Coburg 3058;-37.755264,144.962377
+130-The Avenue/Nicholson St;Coburg;The Avenue  / Nicholson St, Coburg 3058;-37.753570,144.975940
+131-Rennie St/Nicholson St;Coburg;Rennie St / Nicholson St, Coburg 3058;-37.751340,144.976510
+132-Crozier St/Nicholson St;Coburg;Crozier St / Nicholson St, Coburg 3058;-37.749420,144.976840
+133-Harding St/Nicholson St;Coburg;Harding St / Nicholson St, Coburg 3058;-37.746370,144.977310
+134-Merribell Ave/Nicholson St;Coburg;Merribell Ave / Nicholson St, Coburg 3058;-37.744360,144.977730
+129-Moreland Rd/Nicholson St;Coburg;Moreland Rd / Nicholson St, Coburg 3058;-37.756540,144.974980
+133-Moreland Rd/Cameron St;Coburg;Moreland Rd / Cameron St, Coburg 3058;-37.755295,144.962121
+135-Bell St/Nicholson St;Coburg;Bell St / Nicholson St, Coburg 3058;-37.742823,144.978225
+39-Ida St/Sydney Rd;Coburg North;Ida St / Sydney Rd, Coburg North 3058;-37.728865,144.963702
+39-Mercy College/Sydney Rd;Coburg North;Sydney Rd, Coburg North 3058;-37.730435,144.963752
+40-North Coburg Terminus/Sydney Rd;Coburg North;Bakers Rd / Sydney Rd, Coburg North 3058;-37.727583,144.963651
+38-Carr St/Sydney Rd;Coburg North;Carr St / Sydney Rd, Coburg North 3058;-37.732113,144.964627
+37-Gaffney St/Sydney Rd;Coburg North;Gaffney St / Sydney Rd, Coburg North 3058;-37.733859,144.965402
+20-Rose St/Smith St;Collingwood;Rose St / Smith St, Collingwood 3066;-37.796690,144.984590
+16-Peel St/Smith St;Collingwood;Peel St / Smith St, Collingwood 3066;-37.804860,144.983350
+16-Wellington St/Victoria Pde;Collingwood;Wellington St / Victoria Pde, Collingwood 3066;-37.809198,144.985492
+18-Hoddle St/Victoria Pde;Collingwood;Hoddle St / Victoria Pde, Collingwood 3066;-37.809733,144.990967
+55-Adelaide St/Church St;Cremorne;Adelaide St / Church St, Cremorne 3121;-37.828972,144.997269
+54-Balmain St/Church St;Cremorne;Balmain St / Church St, Cremorne 3121;-37.830478,144.996998
+8-Cremorne St/Swan St;Cremorne;Cremorne St / Swan St, Cremorne 3121;-37.824827,144.991007
+D10-NewQuay Prom/Docklands Dr;Docklands;NewQuay Prom / Docklands Dr, Docklands 3008;-37.813783,144.940512
+D11-Waterfront City/434 Docklands Dr;Docklands;Docklands Dr, Docklands 3008;-37.814995,144.937215
+D1-Etihad Stadium/La Trobe St;Docklands;La Trobe St, Docklands 3008;-37.814577,144.946406
+D2-Central Pier/Harbour Esp;Docklands;Latrobe St / Harbour Esp, Docklands 3008;-37.814412,144.945009
+D3-Bourke St/Harbour Esp;Docklands;Bourke St / Harbour Esp, Docklands 3008;-37.817726,144.946119
+D4-Docklands Park/Harbour Esp;Docklands;North Wharf Rd / Harbour Esp, Docklands 3008;-37.821349,144.947568
+D5-South Wharf/Wurundjeri Way;Docklands;Village Pl / Wurundjeri Way, Docklands 3008;-37.821803,144.951300
+D6-Flinders Street West/637 Flinders St;Docklands;Flinders St, Docklands 3008;-37.821438,144.953689
+D5-South Wharf/Wurundjeri Way;Docklands;Georgiana St / Wurundjeri Way, Docklands 3008;-37.822023,144.950852
+D14-Southern Cross Station/Collins St;Docklands;Spencer St / Collins St, Docklands 3008;-37.819655,144.952157
+D15-Batman's Hill/700 Collins St;Docklands;Collins St, Docklands 3008;-37.820050,144.950468
+D17-Merchant St/Collins St;Docklands;Merchant St / Collins St, Docklands 3008;-37.821530,144.945416
+D16-Harbour Esp/Collins St;Docklands;Harbour Esp / Collins St, Docklands 3008;-37.820791,144.947983
+10-Albert St/Nicholson St;East Melbourne;Albert St / Nicholson St, East Melbourne 3002;-37.809420,144.972900
+11-Victoria Pde/Nicholson St;East Melbourne;Victoria Pde / Nicholson St, East Melbourne 3002;-37.808308,144.973079
+12-St Vincents Plaza/Victoria Pde;East Melbourne;Brunswick St / Victoria Pde, East Melbourne 3002;-37.808277,144.976134
+11-Albert St/Gisborne St;East Melbourne;Albert St / Gisborne St, East Melbourne 3002;-37.809392,144.975732
+10-Parliament Railway Station/Macarthur St;East Melbourne;St Andrews Pl / Macarthur St, East Melbourne 3002;-37.812364,144.974437
+10-Nicholson St/Victoria Pde;East Melbourne;Nicholson St / Victoria Pde, East Melbourne 3002;-37.808019,144.973567
+9-Lansdowne St/Wellington Pde;East Melbourne;Lansdowne St / Wellington Pde, East Melbourne 3002;-37.815450,144.977160
+10-Jolimont Rd/Wellington Pde;East Melbourne;Jolimont Rd / Wellington Pde, East Melbourne 3002;-37.815748,144.979786
+11-Clarendon St/Wellington Pde;East Melbourne;Clarendon St / Wellington Pde, East Melbourne 3002;-37.816030,144.982400
+12-Powlett St/Wellington Pde;East Melbourne;Powlett St / Wellington Pde, East Melbourne 3002;-37.816328,144.985021
+13-Simpson St/Wellington Pde;East Melbourne;Simpson St / Wellington Pde, East Melbourne 3002;-37.816540,144.986980
+13-Lansdowne St/Victoria Pde;East Melbourne;Lansdowne St / Victoria Pde, East Melbourne 3002;-37.808547,144.978801
+15-Smith St/Victoria Pde;East Melbourne;Smith St / Victoria Pde, East Melbourne 3002;-37.808975,144.982691
+16-Wellington St/Victoria Pde;East Melbourne;Wellington St / Victoria Pde, East Melbourne 3002;-37.809291,144.985734
+43-Brighton Rd/Glenhuntly Rd;Elsternwick;Brighton Rd / Glenhuntly Rd, Elsternwick 3185;-37.883900,144.997580
+44-Elsternwick Railway Station/Glenhuntly Rd;Elsternwick;Gordon St / Glenhuntly Rd, Elsternwick 3185;-37.884310,145.000560
+45-Elsternwick Shopping Centre/Glenhuntly Rd;Elsternwick;Staniland Gr / Glenhuntly Rd, Elsternwick 3185;-37.884750,145.003950
+46-Orrong Rd/Glenhuntly Rd;Elsternwick;Orrong Rd / Glenhuntly Rd, Elsternwick 3185;-37.885050,145.006210
+47-Shoobra Rd/Glenhuntly Rd;Elsternwick;Shoobra Rd / Glenhuntly Rd, Elsternwick 3185;-37.885390,145.009110
+48-Parkside St/Glenhuntly Rd;Elsternwick;Parkside St / Glenhuntly Rd, Elsternwick 3185;-37.885760,145.012240
+49-Kooyong Rd/Glenhuntly Rd;Elsternwick;Kooyong Rd / Glenhuntly Rd, Elsternwick 3185;-37.886100,145.015090
+36-St Kilda Primary School/Brighton Rd;Elwood;Mozart St / Brighton Rd, Elwood 3184;-37.870120,144.988350
+38-Wimbledon Ave/Brighton Rd;Elwood;Wimbledon Ave / Brighton Rd, Elwood 3184;-37.872880,144.990080
+39-Glen Eira Rd/Brighton Rd;Elwood;Glen Eira Rd / Brighton Rd, Elwood 3184;-37.875960,144.992020
+40-Scott St/Brighton Rd;Elwood;Scott St / Brighton Rd, Elwood 3184;-37.878950,144.993890
+41-Coleridge St/Brighton Rd;Elwood;Coleridge St / Brighton Rd, Elwood 3184;-37.880840,144.995080
+38-Pascoe Vale Rd/Fletcher St;Essendon;Pascoe Vale Rd / Fletcher St, Essendon 3040;-37.755817,144.925929
+39-Hoddle St/Fletcher St;Essendon;Hoddle St / Fletcher St, Essendon 3040;-37.755467,144.922763
+40-Nicholson St/Fletcher St;Essendon;Nicholson St / Fletcher St, Essendon 3040;-37.755176,144.920205
+41-Fletcher St/Napier St;Essendon;Fletcher St / Napier St, Essendon 3040;-37.754926,144.917603
+42-Grice Cres/Mt Alexander Rd;Essendon;Grice Cres / Mt Alexander Rd, Essendon 3040;-37.752654,144.915880
+43-Brewster St/Mt Alexander Rd;Essendon;Brewster St / Mt Alexander Rd, Essendon 3040;-37.750301,144.914259
+44-Thorn St/Mt Alexander Rd;Essendon;Thorn St / Mt Alexander Rd, Essendon 3040;-37.748105,144.912749
+45-Glass St/Mt Alexander Rd;Essendon;Glass St / Mt Alexander Rd, Essendon 3040;-37.746487,144.911631
+47-Mt Alexander Rd/Keilor Rd;Essendon;Mt Alexander Rd / Keilor Rd, Essendon 3040;-37.743949,144.908946
+38-Fletcher St/Pascoe Vale Rd;Essendon;Fletcher St / Pascoe Vale Rd, Essendon 3040;-37.756110,144.926033
+42-Shamrock St/Mt Alexander Rd;Essendon;Shamrock St / Mt Alexander Rd, Essendon 3040;-37.752499,144.915644
+43-Thistle St/Mt Alexander Rd;Essendon;Thistle St / Mt Alexander Rd, Essendon 3040;-37.750590,144.914327
+45-Leake St/Mt Alexander Rd;Essendon;Leake St / Mt Alexander Rd, Essendon 3040;-37.746382,144.911458
+46-Lincoln Rd/Mt Alexander Rd;Essendon;Lincoln Rd / Mt Alexander Rd, Essendon 3040;-37.744772,144.910346
+48-Service St/Keilor Rd;Essendon;Service St / Keilor Rd, Essendon 3040;-37.742820,144.905696
+50-Cooper St/Keilor Rd;Essendon;Cooper St / Keilor Rd, Essendon 3040;-37.740205,144.899413
+51-Bradshaw St/Keilor Rd;Essendon;Bradshaw St / Keilor Rd, Essendon 3040;-37.738774,144.895921
+53A-Matthews Ave/Keilor Rd;Essendon;Matthews Ave / Keilor Rd, Essendon 3040;-37.736548,144.890167
+52-Hoffmans Rd/Keilor Rd;Essendon;Hoffmans Rd / Keilor Rd, Essendon 3040;-37.737479,144.892549
+37-Buckley St/Pascoe Vale Rd;Essendon;Buckley St / Pascoe Vale Rd, Essendon 3040;-37.758013,144.926499
+48-Service St/Keilor Rd;Essendon North;Service St / Keilor Rd, Essendon North 3041;-37.742687,144.905772
+49-Essendon North PS/Keilor Rd;Essendon North;Gillies St / Keilor Rd, Essendon North 3041;-37.741497,144.902879
+50-Cooper St/Keilor Rd;Essendon North;Cooper St / Keilor Rd, Essendon North 3041;-37.740029,144.899347
+49-Gillies St/Keilor Rd;Essendon North;Gillies St / Keilor Rd, Essendon North 3041;-37.741702,144.903022
+13-Gertrude St/Brunswick St;Fitzroy;Gertrude St / Brunswick St, Fitzroy 3065;-37.805852,144.977115
+14-Hanover St/Brunswick St;Fitzroy;Hanover St / Brunswick St, Fitzroy 3065;-37.802837,144.977615
+15-Bell St/Brunswick St;Fitzroy;Bell St / Brunswick St, Fitzroy 3065;-37.800441,144.978036
+16-Johnston St/Brunswick St;Fitzroy;Johnston St / Brunswick St, Fitzroy 3065;-37.798527,144.978369
+17-Leicester St/Brunswick St;Fitzroy;Leicester St / Brunswick St, Fitzroy 3065;-37.795627,144.978855
+18-Alexandra Pde/Brunswick St;Fitzroy;Alexandra Pde / Brunswick St, Fitzroy 3065;-37.793628,144.979186
+14-King William St/Brunswick St;Fitzroy;King William St / Brunswick St, Fitzroy 3065;-37.802705,144.977803
+15-St David St/Brunswick St;Fitzroy;St David St / Brunswick St, Fitzroy 3065;-37.800541,144.978183
+21-Alexandra Pde/Smith St;Fitzroy;Alexandra Pde / Smith St, Fitzroy 3065;-37.794160,144.985030
+19-Johnston St/Smith St;Fitzroy;Johnston St / Smith St, Fitzroy 3065;-37.799060,144.984190
+18-Hodgson St/Smith St;Fitzroy;Hodgson St / Smith St, Fitzroy 3065;-37.801610,144.983710
+17-Charles St/Smith St;Fitzroy;Charles St / Smith St, Fitzroy 3065;-37.803610,144.983380
+15-Smith St/Gertrude St;Fitzroy;Smith St / Gertrude St, Fitzroy 3065;-37.806280,144.982780
+14-Napier St/Gertrude St;Fitzroy;Napier St / Gertrude St, Fitzroy 3065;-37.805910,144.979290
+13-Brunswick St/Gertrude St;Fitzroy;Brunswick St / Gertrude St, Fitzroy 3065;-37.805680,144.977090
+13-Hanover St/Nicholson St;Fitzroy;Hanover St / Nicholson St, Fitzroy 3065;-37.802910,144.974080
+14-Bell St/Nicholson St;Fitzroy;Bell St / Nicholson St, Fitzroy 3065;-37.800360,144.974510
+15-Johnston St/Nicholson St;Fitzroy;Johnston St / Nicholson St, Fitzroy 3065;-37.798520,144.974830
+16-Rose St/Nicholson St;Fitzroy;Rose St / Nicholson St, Fitzroy 3065;-37.795250,144.975390
+20-Keele St/Smith St;Fitzroy;Keele St / Smith St, Fitzroy 3065;-37.796690,144.984750
+15-Gertrude St/Smith St;Fitzroy;Gertrude St / Smith St, Fitzroy 3065;-37.806240,144.983100
+22-Brunswick Rd/Nicholson St;Fitzroy;Brunswick Rd / Nicholson St, Fitzroy 3065;-37.779180,144.978220
+12-Melbourne Museum/Nicholson St;Fitzroy;Gertrude St / Nicholson St, Fitzroy 3065;-37.805970,144.973560
+11-Victoria Pde/Nicholson St;Fitzroy;Victoria Pde / Nicholson St, Fitzroy 3065;-37.807510,144.973310
+10-Albert St/Nicholson St;Fitzroy;Albert St / Nicholson St, Fitzroy 3065;-37.809050,144.973060
+12-St Vincents Plaza/Victoria Pde;Fitzroy;Victoria Pde, Fitzroy 3065;-37.808230,144.976455
+13-Lansdowne St/Victoria Pde;Fitzroy;Lansdowne St / Victoria Pde, Fitzroy 3065;-37.808435,144.978400
+15-Smith St/Victoria Pde;Fitzroy;Smith St / Victoria Pde, Fitzroy 3065;-37.808868,144.982445
+19-Newry St/Brunswick St;Fitzroy North;Newry St / Brunswick St, Fitzroy North 3068;-37.790801,144.979664
+20-Fitzroy Bowls Club/Brunswick St;Fitzroy North;Church St / Brunswick St, Fitzroy North 3068;-37.788299,144.980091
+21-Alfred Cres/St Georges Rd;Fitzroy North;Alfred Cres / St Georges Rd, Fitzroy North 3068;-37.785429,144.981909
+22-Scotchmer St/St Georges Rd;Fitzroy North;Scotchmer St / St Georges Rd, Fitzroy North 3068;-37.783414,144.983645
+23-Park St/St Georges Rd;Fitzroy North;Park St / St Georges Rd, Fitzroy North 3068;-37.781507,144.985279
+24-Holden St/St Georges Rd;Fitzroy North;Holden St / St Georges Rd, Fitzroy North 3068;-37.780067,144.986517
+25-Miller St/St Georges Rd;Fitzroy North;Miller St / St Georges Rd, Fitzroy North 3068;-37.778015,144.988298
+18-Alexandra Pde/Brunswick St;Fitzroy North;Alexandra Pde / Brunswick St, Fitzroy North 3068;-37.792931,144.979458
+17-Alexandra Pde/Nicholson St;Fitzroy North;Alexandra Pde / Nicholson St, Fitzroy North 3068;-37.792760,144.975810
+18-Freeman St/Nicholson St;Fitzroy North;Freeman St / Nicholson St, Fitzroy North 3068;-37.789670,144.976400
+19-Tempany St/Nicholson St;Fitzroy North;Tempany St / Nicholson St, Fitzroy North 3068;-37.787320,144.976840
+20-Reid St/Nicholson St;Fitzroy North;Reid St / Nicholson St, Fitzroy North 3068;-37.785050,144.977270
+21-Scotchmer St/Nicholson St;Fitzroy North;Scotchmer St / Nicholson St, Fitzroy North 3068;-37.782520,144.977720
+22-Holden St/Nicholson St;Fitzroy North;Holden St / Nicholson St, Fitzroy North 3068;-37.778960,144.978390
+23-Miller St/Nicholson St;Fitzroy North;Miller St / Nicholson St, Fitzroy North 3068;-37.776080,144.978860
+24-Glenlyon Rd/Nicholson St;Fitzroy North;Glenlyon Rd / Nicholson St, Fitzroy North 3068;-37.773380,144.979310
+24-Gold St/Queens Pde;Fitzroy North;Gold St / Queens Pde, Fitzroy North 3068;-37.788940,144.990260
+29-Flemington Racecourse/Racecourse Rd;Flemington;Ascot Vale Rd / Racecourse Rd, Flemington 3031;-37.787390,144.922010
+28-Smithfield Rd/Racecourse Rd;Flemington;Smithfield Rd / Racecourse Rd, Flemington 3031;-37.787630,144.924950
+26-Newmarket Plaza/Racecourse Rd;Flemington;Pin Oak Cres / Racecourse Rd, Flemington 3031;-37.787970,144.928150
+25-Wellington St/Racecourse Rd;Flemington;Wellington St / Racecourse Rd, Flemington 3031;-37.788270,144.931250
+24-Victoria St/Racecourse Rd;Flemington;Victoria St / Racecourse Rd, Flemington 3031;-37.788440,144.933490
+23-Stubbs St/Racecourse Rd;Flemington;Stubbs St / Racecourse Rd, Flemington 3031;-37.788770,144.936580
+31-Racing Victoria/400 Epsom Rd;Flemington;Epsom Rd, Flemington 3031;-37.784390,144.918250
+30-Flemington Dr/Epsom Rd;Flemington;Flemington Dr / Epsom Rd, Flemington 3031;-37.785420,144.919220
+29-Flemington Racecourse/Racecourse Rd;Flemington;Epsom Rd / Racecourse Rd, Flemington 3031;-37.787460,144.921850
+23-Flemington Community Centre/Mt Alexander Rd;Flemington;Mt Alexander Rd, Flemington 3031;-37.785812,144.939112
+24-Mooltan St/Mt Alexander Rd;Flemington;Mooltan St / Mt Alexander Rd, Flemington 3031;-37.783935,144.936999
+25-Debney Park Secondary Coll/Mt Alexander Rd;Flemington;Buckland St / Mt Alexander Rd, Flemington 3031;-37.782441,144.933936
+26-Wellington St/Mt Alexander Rd;Flemington;Wellington St / Mt Alexander Rd, Flemington 3031;-37.781117,144.932628
+57-Titch St/Gordon St;Footscray;Titch St / Gordon St, Footscray 3011;-37.788644,144.889925
+58-Ballarat Rd/Gordon St;Footscray;Ballarat Rd / Gordon St, Footscray 3011;-37.791282,144.889652
+59-Droop St/Ballarat Rd;Footscray;Droop St / Ballarat Rd, Footscray 3011;-37.792585,144.893570
+60-Tiernan St/Droop St;Footscray;Tiernan St / Droop St, Footscray 3011;-37.794889,144.895516
+61-Geelong Rd/Droop St;Footscray;Geelong Rd / Droop St, Footscray 3011;-37.796796,144.897126
+62-Nicholson St/Hopkins St;Footscray;Nicholson St / Hopkins St, Footscray 3011;-37.799844,144.899732
+63-Hopkins St/Leeds St;Footscray;Hopkins St / Leeds St, Footscray 3011;-37.800083,144.901057
+64-Footscray Station/Leeds St;Footscray;Irving St / Leeds St, Footscray 3011;-37.801287,144.900944
+62-Nicholson St/Droop St;Footscray;Nicholson St / Droop St, Footscray 3011;-37.799422,144.899524
+63-Leeds St/Hopkins St;Footscray;Leeds St / Hopkins St, Footscray 3011;-37.799855,144.900912
+60-Glenhuntly Shopping Centre/Glenhuntly Rd;Glen Huntly;James St / Glenhuntly Rd, Glen Huntly 3163;-37.889390,145.041260
+61-Glenhuntly Railway Station/Glenhuntly Rd;Glen Huntly;Royal Ave / Glenhuntly Rd, Glen Huntly 3163;-37.889560,145.042840
+62-Grange Rd/Glenhuntly Rd;Glen Huntly;Grange Rd / Glenhuntly Rd, Glen Huntly 3163;-37.889830,145.044990
+48-Tooronga Rd/High St;Glen Iris;Tooronga Rd / High St, Glen Iris 3146;-37.858274,145.041356
+49-Harold Holt Swim Centre/High St;Glen Iris;Leopold St / High St, Glen Iris 3146;-37.858669,145.044703
+50-Belmont Ave/High St;Glen Iris;Belmont Ave / High St, Glen Iris 3146;-37.859106,145.048410
+51-Burke Rd/High St;Glen Iris;Burke Rd / High St, Glen Iris 3146;-37.859483,145.051501
+52-Boyanda Rd/High St;Glen Iris;Boyanda Rd / High St, Glen Iris 3146;-37.859780,145.054184
+53-Glen Iris/High St;Glen Iris;Malvern Rd / High St, Glen Iris 3146;-37.860042,145.056584
+50-Erica Ave/High St;Glen Iris;Erica Ave / High St, Glen Iris 3146;-37.858943,145.048258
+49-Harold Holt Swim Centre/High St;Glen Iris;Vincent St / High St, Glen Iris 3146;-37.858457,145.044194
+53-Howitt St/Burke Rd;Glen Iris;Howitt St / Burke Rd, Glen Iris 3146;-37.847880,145.053630
+52-Bickleigh St/Burke Rd;Glen Iris;Bickleigh St / Burke Rd, Glen Iris 3146;-37.849880,145.053220
+51-Gardiner Station/Burke Rd;Glen Iris;Wills St / Burke Rd, Glen Iris 3146;-37.853300,145.052708
+51A-Malvern Rd/Burke Rd;Glen Iris;Malvern Rd / Burke Rd, Glen Iris 3146;-37.854500,145.052267
+50-Glenarm Rd/Malvern Rd;Glen Iris;Glenarm Rd / Malvern Rd, Glen Iris 3146;-37.854420,145.051300
+49-Belmont Ave/Malvern Rd;Glen Iris;Belmont Ave / Malvern Rd, Glen Iris 3146;-37.854050,145.048420
+48-Edgar St/Malvern Rd;Glen Iris;Edgar St / Malvern Rd, Glen Iris 3146;-37.853730,145.045830
+47-Tooronga Rd/Malvern Rd;Glen Iris;Tooronga Rd / Malvern Rd, Glen Iris 3146;-37.853310,145.042270
+24-Grattan St/Church St;Hawthorn;Grattan St / Church St, Hawthorn 3122;-37.817879,145.018648
+25-Brook St/Church St;Hawthorn;Brook St / Church St, Hawthorn 3122;-37.815918,145.020606
+26-Barkers Rd/Church St;Hawthorn;Barkers Rd / Church St, Hawthorn 3122;-37.813273,145.023280
+24-Hill St/Church St;Hawthorn;Hill St / Church St, Hawthorn 3122;-37.817974,145.018755
+29-Power St/Riversdale Rd;Hawthorn;Power St / Riversdale Rd, Hawthorn 3122;-37.827559,145.025583
+30-Through St/Riversdale Rd;Hawthorn;Through St / Riversdale Rd, Hawthorn 3122;-37.828208,145.029064
+31-Fordholm Rd/Riversdale Rd;Hawthorn;Fordholm Rd / Riversdale Rd, Hawthorn 3122;-37.828508,145.031632
+32-Glenferrie Rd/Riversdale Rd;Hawthorn;Glenferrie Rd / Riversdale Rd, Hawthorn 3122;-37.828838,145.034472
+33-Berkeley St/Riversdale Rd;Hawthorn;Berkeley St / Riversdale Rd, Hawthorn 3122;-37.829160,145.037260
+26-Harrison Cres/Barkers Rd;Hawthorn;Harrison Cres / Barkers Rd, Hawthorn 3122;-37.812159,145.016010
+35-Robinson Rd/Riversdale Rd;Hawthorn;Robinson Rd / Riversdale Rd, Hawthorn 3122;-37.829539,145.041552
+34-Kooyongkoot Rd/Riversdale Rd;Hawthorn;Kooyongkoot Rd / Riversdale Rd, Hawthorn 3122;-37.829180,145.038470
+19-Morang Rd/Wallen Rd;Hawthorn;Morang Rd / Wallen Rd, Hawthorn 3122;-37.826657,145.023545
+27-Findon St/Barkers Rd;Hawthorn;Findon St / Barkers Rd, Hawthorn 3122;-37.812848,145.020723
+28-Church St/Barkers Rd;Hawthorn;Church St / Barkers Rd, Hawthorn 3122;-37.813044,145.022265
+67-Gardiner Rd/Glenferrie Rd;Hawthorn;Gardiner Rd / Glenferrie Rd, Hawthorn 3122;-37.835449,145.033095
+68-Callantina Rd/Glenferrie Rd;Hawthorn;Callantina Rd / Glenferrie Rd, Hawthorn 3122;-37.833224,145.033499
+69-South St/Glenferrie Rd;Hawthorn;South St / Glenferrie Rd, Hawthorn 3122;-37.831111,145.033880
+70-Riversdale Rd/Glenferrie Rd;Hawthorn;Riversdale Rd / Glenferrie Rd, Hawthorn 3122;-37.828633,145.034325
+71-Urquhart St/Glenferrie Rd;Hawthorn;Urquhart St / Glenferrie Rd, Hawthorn 3122;-37.825960,145.034809
+72-Manningtree Rd/Glenferrie Rd;Hawthorn;Manningtree Rd / Glenferrie Rd, Hawthorn 3122;-37.824017,145.035169
+72-Oxley Rd/Glenferrie Rd;Hawthorn;Oxley Rd / Glenferrie Rd, Hawthorn 3122;-37.824134,145.035011
+73-Burwood Rd/Glenferrie Rd;Hawthorn;Burwood Rd / Glenferrie Rd, Hawthorn 3122;-37.822492,145.035451
+74-Glenferrie Railway Station/Glenferrie Rd;Hawthorn;Grace St / Glenferrie Rd, Hawthorn 3122;-37.820535,145.035671
+74-Glenferrie Station/Glenferrie Rd;Hawthorn;Wakefield St / Glenferrie Rd, Hawthorn 3122;-37.821274,145.035701
+75-Chrystobel Cres/Glenferrie Rd;Hawthorn;Chrystobel Cres / Glenferrie Rd, Hawthorn 3122;-37.818605,145.036178
+75-Liddiard St/Glenferrie Rd;Hawthorn;Liddiard St / Glenferrie Rd, Hawthorn 3122;-37.818858,145.035992
+76-Johnson St/Glenferrie Rd;Hawthorn;Johnson St / Glenferrie Rd, Hawthorn 3122;-37.816817,145.036506
+77-Barkers Rd/Glenferrie Rd;Hawthorn;Barkers Rd / Glenferrie Rd, Hawthorn 3122;-37.814570,145.036935
+78-Fitzwilliam St/Glenferrie Rd;Hawthorn;Fitzwilliam St / Glenferrie Rd, Hawthorn 3122;-37.812054,145.037402
+79-Wellington St/Glenferrie Rd;Hawthorn;Wellington St / Glenferrie Rd, Hawthorn 3122;-37.809899,145.037820
+25-St James Park/Burwood Rd;Hawthorn;Yarra St / Burwood Rd, Hawthorn 3122;-37.820880,145.021030
+26-Hawthorn Railway Station/Burwood Rd;Hawthorn;Morang Rd / Burwood Rd, Hawthorn 3122;-37.821450,145.024820
+26-Hawthorn Railway Station/Burwood Rd;Hawthorn;Elgin St / Burwood Rd, Hawthorn 3122;-37.821290,145.024580
+27-Burwood Rd/Power St;Hawthorn;Burwood Rd / Power St, Hawthorn 3122;-37.821750,145.026280
+27-Power St/Burwood Rd;Hawthorn;Power St / Burwood Rd, Hawthorn 3122;-37.821470,145.026280
+28-Wattle Rd/Power St;Hawthorn;Wattle Rd / Power St, Hawthorn 3122;-37.824780,145.025870
+29-Riversdale Rd/Power St;Hawthorn;Riversdale Rd / Power St, Hawthorn 3122;-37.827140,145.025400
+23-Hawthorn Bridge/Church St;Hawthorn;Burwood Rd / Church St, Hawthorn 3122;-37.819806,145.016677
+23-Hawthorn Bridge/Bridge Rd;Hawthorn;Burwood Rd / Bridge Rd, Hawthorn 3122;-37.819922,145.016661
+51-Gardiner Railway Station/Burke Rd;Hawthorn East;King St / Burke Rd, Hawthorn East 3123;-37.853890,145.052450
+52-Harris Ave/Burke Rd;Hawthorn East;Harris Ave / Burke Rd, Hawthorn East 3123;-37.849780,145.053060
+53-Faircroft Ave/Burke Rd;Hawthorn East;Faircroft Ave / Burke Rd, Hawthorn East 3123;-37.848170,145.053390
+54-Toorak Rd/Burke Rd;Hawthorn East;Toorak Rd / Burke Rd, Hawthorn East 3123;-37.845800,145.053880
+55-Middle Rd/Burke Rd;Hawthorn East;Middle Rd / Burke Rd, Hawthorn East 3123;-37.843810,145.054260
+56-Anderson Rd/Burke Rd;Hawthorn East;Anderson Rd / Burke Rd, Hawthorn East 3123;-37.841860,145.054630
+57-Pine Ave/Burke Rd;Hawthorn East;Pine Ave / Burke Rd, Hawthorn East 3123;-37.840260,145.054940
+58-Leura Gr/Burke Rd;Hawthorn East;Leura Gr / Burke Rd, Hawthorn East 3123;-37.838170,145.055350
+59-Pleasant Rd/Burke Rd;Hawthorn East;Pleasant Rd / Burke Rd, Hawthorn East 3123;-37.835410,145.055860
+60-Campbell Rd/Burke Rd;Hawthorn East;Campbell Rd / Burke Rd, Hawthorn East 3123;-37.833720,145.056180
+61-Camberwell Junction/Burke Rd;Hawthorn East;Riversdale Rd / Burke Rd, Hawthorn East 3123;-37.831600,145.056580
+62-Camberwell Shopping Centre/755 Burke Rd;Hawthorn East;Burke Rd, Hawthorn East 3123;-37.830200,145.056820
+63-Prospect Hill Rd/Burke Rd;Hawthorn East;Prospect Hill Rd / Burke Rd, Hawthorn East 3123;-37.828220,145.057220
+64-Camberwell Station/Burke Rd;Hawthorn East;Burwood Ave / Burke Rd, Hawthorn East 3123;-37.826050,145.057630
+65-Victoria Rd/Burke Rd;Hawthorn East;Victoria Rd / Burke Rd, Hawthorn East 3123;-37.823580,145.058130
+66-Rathmines Rd/Burke Rd;Hawthorn East;Rathmines Rd / Burke Rd, Hawthorn East 3123;-37.821480,145.058500
+67-Camberwell Girls Grammar/Burke Rd;Hawthorn East;Torrington St / Burke Rd, Hawthorn East 3123;-37.818590,145.059050
+40-Camberwell Junction/Riversdale Rd;Hawthorn East;Burke Rd / Riversdale Rd, Hawthorn East 3123;-37.831269,145.056430
+39-Camberwell Tram Depot/Riversdale Rd;Hawthorn East;Russell St / Riversdale Rd, Hawthorn East 3123;-37.831024,145.054312
+38-Hastings Rd/Riversdale Rd;Hawthorn East;Hastings Rd / Riversdale Rd, Hawthorn East 3123;-37.830690,145.051339
+37-Tooronga Rd/Riversdale Rd;Hawthorn East;Tooronga Rd / Riversdale Rd, Hawthorn East 3123;-37.830260,145.047640
+36-Auburn Rd/Riversdale Rd;Hawthorn East;Auburn Rd / Riversdale Rd, Hawthorn East 3123;-37.829773,145.043503
+39-Camberwell Tram Depot/Riversdale Rd;Hawthorn East;Wills Ave / Riversdale Rd, Hawthorn East 3123;-37.831217,145.054787
+26-Newmarket Plaza/Racecourse Rd;Kensington;Bellair St / Racecourse Rd, Kensington 3031;-37.788070,144.928390
+24-Collett St/Racecourse Rd;Kensington;Collett St / Racecourse Rd, Kensington 3031;-37.788510,144.933520
+34-Pakington St/High St;Kew;Pakington St / High St, Kew 3101;-37.805621,145.033843
+35-Cobden St/High St;Kew;Cobden St / High St, Kew 3101;-37.805094,145.035307
+36-Parkhill Rd/High St;Kew;Parkhill Rd / High St, Kew 3101;-37.803490,145.039758
+37-Kew Cemetery/High St;Kew;Hummingbird Lane / High St, Kew 3101;-37.802472,145.042566
+38-Victoria Park/High St;Kew;Belford Rd / High St, Kew 3101;-37.801255,145.045977
+39-Harp Rd/High St;Kew;Harp Rd / High St, Kew 3101;-37.799429,145.050345
+44-Burke Rd/High St;Kew;Burke Rd / High St, Kew 3101;-37.793530,145.063661
+36-Gladstone St/High St;Kew;Gladstone St / High St, Kew 3101;-37.803519,145.040031
+35-Charles St/High St;Kew;Charles St / High St, Kew 3101;-37.804909,145.036144
+34-Union St/High St;Kew;Union St / High St, Kew 3101;-37.805638,145.034169
+33-Kew Shopping Centre/High St;Kew;Cotham Rd / High St, Kew 3101;-37.806675,145.031306
+68-Mont Albert Rd/Burke Rd;Kew;Mont Albert Rd / Burke Rd, Kew 3101;-37.815990,145.059540
+69-Sackville St/Burke Rd;Kew;Sackville St / Burke Rd, Kew 3101;-37.814140,145.059910
+70-Cotham Rd/Burke Rd;Kew;Cotham Rd / Burke Rd, Kew 3101;-37.810870,145.060600
+27-Findon Cres/Barkers Rd;Kew;Findon Cres / Barkers Rd, Kew 3101;-37.812713,145.020623
+28-Kew Tram Depot/60 Barkers Rd;Kew;Barkers Rd, Kew 3101;-37.812879,145.021977
+29-High St/Barkers Rd;Kew;High St / Barkers Rd, Kew 3101;-37.813027,145.023177
+31-Stevenson St/High St;Kew;Stevenson St / High St, Kew 3101;-37.810231,145.026159
+32-Kew Junction/High St;Kew;Studley Park Rd / High St, Kew 3101;-37.807605,145.028628
+34-QPO/Cotham Rd;Kew;Queen St / Cotham Rd, Kew 3101;-37.806891,145.031653
+35-Charles St/Cotham Rd;Kew;Charles St / Cotham Rd, Kew 3101;-37.807311,145.035302
+36-Glenferrie Rd/Cotham Rd;Kew;Glenferrie Rd / Cotham Rd, Kew 3101;-37.807621,145.037912
+37-Belmont Ave/Cotham Rd;Kew;Belmont Ave / Cotham Rd, Kew 3101;-37.808123,145.042314
+38-Marshall Ave/Cotham Rd;Kew;Marshall Ave / Cotham Rd, Kew 3101;-37.808532,145.045839
+39-Thomas St/Cotham Rd;Kew;Thomas St / Cotham Rd, Kew 3101;-37.808940,145.049274
+40-St Georges Hospital/Cotham Rd;Kew;Normanby Rd / Cotham Rd, Kew 3101;-37.809378,145.052913
+41-Kew Traffic School/Cotham Rd;Kew;Mont Victor Rd / Cotham Rd, Kew 3101;-37.809930,145.057672
+42-Burke Rd/Cotham Rd;Kew;Burke Rd / Cotham Rd, Kew 3101;-37.810278,145.060493
+29-Barkers Rd/High St;Kew;Barkers Rd / High St, Kew 3101;-37.812967,145.023775
+32-Kew Junction/High St;Kew;Denmark St / High St, Kew 3101;-37.807434,145.029145
+34-QPO/Cotham Rd;Kew;High St / Cotham Rd, Kew 3101;-37.806988,145.031299
+40-St Georges Hospital/Cotham Rd;Kew;John St / Cotham Rd, Kew 3101;-37.809527,145.053053
+41-Kew Traffic School/Cotham Rd;Kew;Grange Rd / Cotham Rd, Kew 3101;-37.810095,145.057874
+80-Cotham Rd/Glenferrie Rd;Kew;Cotham Rd / Glenferrie Rd, Kew 3101;-37.807920,145.038110
+70-1219 Burke Rd;Kew;Burke Rd, Kew 3101;-37.810870,145.060600
+40-Harp Village/High St;Kew East;Westbrook St / High St, Kew East 3102;-37.798632,145.052023
+41-Clyde St/High St;Kew East;Clyde St / High St, Kew East 3102;-37.797437,145.054788
+42-Irymple Ave/High St;Kew East;Irymple Ave / High St, Kew East 3102;-37.796393,145.057154
+43-Kew High School/High St;Kew East;Bennett Pde / High St, Kew East 3102;-37.794637,145.061153
+42-Woodlands Ave/High St;Kew East;Woodlands Ave / High St, Kew East 3102;-37.796323,145.057672
+41-Station St/High St;Kew East;Station St / High St, Kew East 3102;-37.797969,145.053922
+39-Harp Rd/High St;Kew East;Harp Rd / High St, Kew East 3102;-37.799567,145.050271
+38-Victoria Park/High St;Kew East;Belford Rd / High St, Kew East 3102;-37.801314,145.046176
+59-Preston Cemetery/Plenty Rd;Kingsbury;Bradshaw St / Plenty Rd, Kingsbury 3083;-37.718980,145.039630
+58-Browning St/Plenty Rd;Kingsbury;Browning St / Plenty Rd, Kingsbury 3083;-37.719970,145.036950
+63-Toorak Rd/Glenferrie Rd;Kooyong;Toorak Rd / Glenferrie Rd, Kooyong 3144;-37.843972,145.031434
+64-Mernda Rd/Glenferrie Rd;Kooyong;Mernda Rd / Glenferrie Rd, Kooyong 3144;-37.842474,145.031705
+65-Kooyong Railway Station/Glenferrie Rd;Kooyong;Talbot Cres / Glenferrie Rd, Kooyong 3144;-37.839311,145.032348
+66-Vision Australia/454 Glenferrie Rd;Kooyong;Glenferrie Rd, Kooyong 3144;-37.838546,145.032402
+51-Williamson Rd/Rosamond Rd;Maidstone;Williamson Rd / Rosamond Rd, Maidstone 3012;-37.775843,144.885616
+45-Glenferrie Rd/Wattletree Rd;Malvern;Glenferrie Rd / Wattletree Rd, Malvern 3144;-37.862457,145.028510
+46-Nicholls St/Wattletree Rd;Malvern;Nicholls St / Wattletree Rd, Malvern 3144;-37.862829,145.031391
+47-Cabrini Hospital/Wattletree Rd;Malvern;Coonil Cres / Wattletree Rd, Malvern 3144;-37.863152,145.033855
+48-Dixon St/Wattletree Rd;Malvern;Dixon St / Wattletree Rd, Malvern 3144;-37.863573,145.037087
+46-Soudan St/Wattletree Rd;Malvern;Soudan St / Wattletree Rd, Malvern 3144;-37.862657,145.030955
+44-Glenferrie Rd/High St;Malvern;Glenferrie Rd / High St, Malvern 3144;-37.856705,145.029499
+45-De La Salle College/High St;Malvern;Northbrook Ave / High St, Malvern 3144;-37.857158,145.032888
+46-Fraser St/High St;Malvern;Fraser St / High St, Malvern 3144;-37.857554,145.035798
+47-Dixon St/High St;Malvern;Dixon St / High St, Malvern 3144;-37.857822,145.038012
+44-Plant St/Malvern Rd;Malvern;Plant St / Malvern Rd, Malvern 3144;-37.851900,145.032500
+45-Elizabeth St/Malvern Rd;Malvern;Elizabeth St / Malvern Rd, Malvern 3144;-37.852270,145.035340
+46-Meredith St/Malvern Rd;Malvern;Meredith St / Malvern Rd, Malvern 3144;-37.852780,145.039230
+47-Tooronga Rd/Malvern Rd;Malvern;Tooronga Rd / Malvern Rd, Malvern 3144;-37.853130,145.041990
+48-Edgar St/Malvern Rd;Malvern;Edgar St / Malvern Rd, Malvern 3144;-37.853560,145.045560
+49-Kenilworth Gr/Malvern Rd;Malvern;Kenilworth Gr / Malvern Rd, Malvern 3144;-37.853900,145.048320
+50-Glenarm Rd/Malvern Rd;Malvern;Glenarm Rd / Malvern Rd, Malvern 3144;-37.854320,145.051490
+46-Shaftesbury Ave/Malvern Rd;Malvern;Shaftesbury Ave / Malvern Rd, Malvern 3144;-37.852860,145.038820
+43-Glenferrie Rd/Malvern Rd;Malvern;Glenferrie Rd / Malvern Rd, Malvern 3144;-37.851720,145.030200
+41-Murray St/Malvern Rd;Malvern;Murray St / Malvern Rd, Malvern 3144;-37.850880,145.023920
+48-Hawthorn Rd/Dandenong Rd;Malvern;Hawthorn Rd / Dandenong Rd, Malvern 3144;-37.865812,145.026465
+52-Glenferrie Rd/Dandenong Rd;Malvern;Glenferrie Rd / Dandenong Rd, Malvern 3144;-37.866055,145.027813
+52-Dandenong Rd/Glenferrie Rd;Malvern;Dandenong Rd / Glenferrie Rd, Malvern 3144;-37.866122,145.027429
+53-Malvern Railway Station/Glenferrie Rd;Malvern;Como St / Glenferrie Rd, Malvern 3144;-37.864320,145.028093
+53-Malvern Railway Station/Glenferrie Rd;Malvern;Evandale Rd / Glenferrie Rd, Malvern 3144;-37.865297,145.027785
+54-Wattletree Rd/Glenferrie Rd;Malvern;Wattletree Rd / Glenferrie Rd, Malvern 3144;-37.862194,145.028454
+55-Llaneast St/Glenferrie Rd;Malvern;Llaneast St / Glenferrie Rd, Malvern 3144;-37.861068,145.028632
+55-Edsall St/Glenferrie Rd;Malvern;Edsall St / Glenferrie Rd, Malvern 3144;-37.861214,145.028459
+56-Coldblo Rd/Glenferrie Rd;Malvern;Coldblo Rd / Glenferrie Rd, Malvern 3144;-37.858848,145.029008
+56-Valetta St/Glenferrie Rd;Malvern;Valetta St / Glenferrie Rd, Malvern 3144;-37.859034,145.028823
+57-High St/Glenferrie Rd;Malvern;High St / Glenferrie Rd, Malvern 3144;-37.856500,145.029394
+58-Bell St/Glenferrie Rd;Malvern;Bell St / Glenferrie Rd, Malvern 3144;-37.854095,145.029754
+58-Sorrett Ave/Glenferrie Rd;Malvern;Sorrett Ave / Glenferrie Rd, Malvern 3144;-37.854078,145.029608
+59-Malvern Rd/Glenferrie Rd;Malvern;Malvern Rd / Glenferrie Rd, Malvern 3144;-37.851550,145.030146
+60-Stonnington Pl/Glenferrie Rd;Malvern;Stonnington Pl / Glenferrie Rd, Malvern 3144;-37.849673,145.030503
+61-Moorakyne Ave/Glenferrie Rd;Malvern;Moorakyne Ave / Glenferrie Rd, Malvern 3144;-37.847732,145.030876
+62-Mayfield Ave/Glenferrie Rd;Malvern;Mayfield Ave / Glenferrie Rd, Malvern 3144;-37.845365,145.031323
+63-Toorak Rd/Glenferrie Rd;Malvern;Toorak Rd / Glenferrie Rd, Malvern 3144;-37.843644,145.031654
+49-Tooronga Rd/Wattletree Rd;Malvern East;Tooronga Rd / Wattletree Rd, Malvern East 3145;-37.863986,145.040280
+50-Vincent St/Wattletree Rd;Malvern East;Vincent St / Wattletree Rd, Malvern East 3145;-37.864388,145.043710
+51-Erica Ave/Wattletree Rd;Malvern East;Erica Ave / Wattletree Rd, Malvern East 3145;-37.864783,145.046997
+52-Burke Rd/Wattletree Rd;Malvern East;Burke Rd / Wattletree Rd, Malvern East 3145;-37.865076,145.050069
+51-Nott St/Wattletree Rd;Malvern East;Nott St / Wattletree Rd, Malvern East 3145;-37.864616,145.046571
+50-Anderson St/Wattletree Rd;Malvern East;Anderson St / Wattletree Rd, Malvern East 3145;-37.864230,145.043379
+64-East Malvern/Waverley Rd;Malvern East;Darling Rd / Waverley Rd, Malvern East 3145;-37.877380,145.058885
+63-Hughes St/Waverley Rd;Malvern East;Hughes St / Waverley Rd, Malvern East 3145;-37.877100,145.056910
+62-Macgregor St/Waverley Rd;Malvern East;Macgregor St / Waverley Rd, Malvern East 3145;-37.876870,145.055000
+61-Tennyson St/Waverley Rd;Malvern East;Tennyson St / Waverley Rd, Malvern East 3145;-37.876380,145.051080
+60-Burke Rd/Waverley Rd;Malvern East;Burke Rd / Waverley Rd, Malvern East 3145;-37.876050,145.048330
+59-Dandenong Rd/Waverley Rd;Malvern East;Dandenong Rd / Waverley Rd, Malvern East 3145;-37.875760,145.044950
+62-The Avenue/Waverley Rd;Malvern East;The Avenue  / Waverley Rd, Malvern East 3145;-37.876700,145.054690
+63-Oak Gr/Waverley Rd;Malvern East;Oak Gr / Waverley Rd, Malvern East 3145;-37.876920,145.056550
+42-Clyde St/Raleigh Rd;Maribyrnong;Clyde St / Raleigh Rd, Maribyrnong 3032;-37.769700,144.898846
+43-Van Ness Ave/Raleigh Rd;Maribyrnong;Van Ness Ave / Raleigh Rd, Maribyrnong 3032;-37.769320,144.895676
+44-Barb St/Raleigh Rd;Maribyrnong;Barb St / Raleigh Rd, Maribyrnong 3032;-37.768895,144.891980
+45-Randall St/Raleigh Rd;Maribyrnong;Randall St / Raleigh Rd, Maribyrnong 3032;-37.768631,144.888937
+46-Rosamond Rd/Raleigh Rd;Maribyrnong;Rosamond Rd / Raleigh Rd, Maribyrnong 3032;-37.768884,144.886727
+48-Raleigh Rd/Wests Rd;Maribyrnong;Raleigh Rd / Wests Rd, Maribyrnong 3032;-37.769641,144.882816
+49-Highpoint Shopping Centre/Wests Rd;Maribyrnong;Waterford Ave / Wests Rd, Maribyrnong 3032;-37.773252,144.882153
+50-Wests Rd/Williamson Rd;Maribyrnong;Wests Rd / Williamson Rd, Maribyrnong 3032;-37.775210,144.882146
+52-Rosamond Rd/River St;Maribyrnong;Rosamond Rd / River St, Maribyrnong 3032;-37.779303,144.885443
+53-Maribyrnong College/River St;Maribyrnong;Rowe St / River St, Maribyrnong 3032;-37.779636,144.888256
+54-Gordon St/River St;Maribyrnong;Gordon St / River St, Maribyrnong 3032;-37.780020,144.891243
+55-Lyric St/River St;Maribyrnong;Lyric St / River St, Maribyrnong 3032;-37.782238,144.891154
+56-Edgewater Square/Gordon St;Maribyrnong;Edgewater Bvd / Gordon St, Maribyrnong 3032;-37.784943,144.890622
+49-Central Park Ave/Cordite Ave;Maribyrnong;Central Park Ave / Cordite Ave, Maribyrnong 3032;-37.768850,144.877830
+44-Warrs Rd/Raleigh Rd;Maribyrnong;Warrs Rd / Raleigh Rd, Maribyrnong 3032;-37.769053,144.892182
+45-Maribyrnong Community Centre/Raleigh Rd;Maribyrnong;Randall St / Raleigh Rd, Maribyrnong 3032;-37.768744,144.889550
+48-Wests Rd/Raleigh Rd;Maribyrnong;Wests Rd / Raleigh Rd, Maribyrnong 3032;-37.769400,144.883319
+50-Williamson Rd/Wests Rd;Maribyrnong;Williamson Rd / Wests Rd, Maribyrnong 3032;-37.774932,144.881995
+52-River St/Rosamond Rd;Maribyrnong;River St / Rosamond Rd, Maribyrnong 3032;-37.778817,144.885152
+55-Lyric St/Gordon St;Maribyrnong;Lyric St / Gordon St, Maribyrnong 3032;-37.781946,144.891364
+48-Wests Rd/Cordite Ave;Maribyrnong;Wests Rd / Cordite Ave, Maribyrnong 3032;-37.769367,144.882517
+7-Russell St/Bourke St;Melbourne City;Russell St / Bourke St, Melbourne City 3000;-37.812780,144.968340
+6-Swanston St/Bourke St;Melbourne City;Swanston St / Bourke St, Melbourne City 3000;-37.813520,144.965930
+5-Elizabeth St/Bourke St;Melbourne City;Elizabeth St / Bourke St, Melbourne City 3000;-37.814270,144.963390
+4-Queen St/Bourke St;Melbourne City;Queen St / Bourke St, Melbourne City 3000;-37.814940,144.960930
+3-William St/Bourke St;Melbourne City;William St / Bourke St, Melbourne City 3000;-37.815640,144.958480
+1-Spencer St/Bourke St;Melbourne City;Spencer St / Bourke St, Melbourne City 3000;-37.817060,144.953510
+1-Flinders Street Railway Station/Elizabeth St;Melbourne City;Flinders St / Elizabeth St, Melbourne City 3000;-37.818039,144.964895
+2-Collins St/Elizabeth St;Melbourne City;Collins St / Elizabeth St, Melbourne City 3000;-37.816063,144.963836
+3-Bourke Street Mall/Elizabeth St;Melbourne City;Bourke St / Elizabeth St, Melbourne City 3000;-37.814020,144.962914
+5-Melbourne Central Station/Elizabeth St;Melbourne City;La Trobe St / Elizabeth St, Melbourne City 3000;-37.810563,144.961433
+7-Queen Victoria Market/Elizabeth St;Melbourne City;Victoria St / Elizabeth St, Melbourne City 3000;-37.806650,144.959627
+8-Peel St/Victoria St;Melbourne City;Peel St / Victoria St, Melbourne City 3000;-37.805980,144.956253
+9-William St/Victoria St;Melbourne City;William St / Victoria St, Melbourne City 3000;-37.805690,144.953910
+10-Chetwynd St/Victoria St;Melbourne City;Chetwynd St / Victoria St, Melbourne City 3000;-37.805520,144.952390
+11-Errol St/Victoria St;Melbourne City;Errol St / Victoria St, Melbourne City 3000;-37.805190,144.949420
+9-Howard St/Victoria St;Melbourne City;Howard St / Victoria St, Melbourne City 3000;-37.805560,144.953500
+9-Haymarket/Elizabeth St;Melbourne City;Haymarket  / Elizabeth St, Melbourne City 3000;-37.801949,144.957468
+10-Royal Melbourne Hospital/Royal Pde;Melbourne City;Grattan St / Royal Pde, Melbourne City 3000;-37.799900,144.957440
+9-Haymarket Walk/Elizabeth St;Melbourne City;Haymarket Walk / Elizabeth St, Melbourne City 3000;-37.802136,144.957747
+9-Spring St/Bourke St;Melbourne City;Spring St / Bourke St, Melbourne City 3000;-37.811540,144.972580
+8-Parliament/Collins St;Melbourne City;Spring St / Collins St, Melbourne City 3000;-37.813554,144.973369
+6-Melbourne Town Hall/Collins St;Melbourne City;Swanston St / Collins St, Melbourne City 3000;-37.815691,144.966127
+5-Elizabeth St/Collins St;Melbourne City;Elizabeth St / Collins St, Melbourne City 3000;-37.816344,144.963855
+3-William St/Collins St;Melbourne City;William St / Collins St, Melbourne City 3000;-37.817610,144.959346
+2-King St/Collins St;Melbourne City;King St / Collins St, Melbourne City 3000;-37.818330,144.956868
+1-Spencer St/Collins St;Melbourne City;Spencer St / Collins St, Melbourne City 3000;-37.818882,144.954999
+4-Queen St/Collins St;Melbourne City;Queen St / Collins St, Melbourne City 3000;-37.816940,144.961350
+9-La Trobe St/Victoria St;Melbourne City;La Trobe St / Victoria St, Melbourne City 3000;-37.807603,144.970939
+8-Exhibition St/La Trobe St;Melbourne City;Exhibition St / La Trobe St, Melbourne City 3000;-37.808102,144.969031
+7-Russell St/La Trobe St;Melbourne City;Russell St / La Trobe St, Melbourne City 3000;-37.808825,144.966563
+6-Swanston St/La Trobe St;Melbourne City;Swanston St / La Trobe St, Melbourne City 3000;-37.809548,144.964084
+5-Elizabeth St/La Trobe St;Melbourne City;Elizabeth St / La Trobe St, Melbourne City 3000;-37.810291,144.961590
+4-Queen St/La Trobe St;Melbourne City;Queen St / La Trobe St, Melbourne City 3000;-37.811003,144.959117
+3-William St/La Trobe St;Melbourne City;William St / La Trobe St, Melbourne City 3000;-37.811711,144.956713
+2-King St/La Trobe St;Melbourne City;King St / La Trobe St, Melbourne City 3000;-37.812448,144.954134
+1-Spencer St/La Trobe St;Melbourne City;Spencer St / La Trobe St, Melbourne City 3000;-37.813148,144.951683
+119-Spencer St/La Trobe St;Melbourne City;Spencer St / La Trobe St, Melbourne City 3000;-37.813187,144.951148
+9-Victoria St/La Trobe St;Melbourne City;Victoria St / La Trobe St, Melbourne City 3000;-37.807669,144.970323
+3-Market St/Flinders St;Melbourne City;Market St / Flinders St, Melbourne City 3000;-37.819195,144.961325
+4-Elizabeth St/Flinders St;Melbourne City;Elizabeth St / Flinders St, Melbourne City 3000;-37.818207,144.964731
+5-Swanston St/Flinders St;Melbourne City;Swanston St / Flinders St, Melbourne City 3000;-37.817530,144.967030
+6-Russell St/Flinders St;Melbourne City;Russell St / Flinders St, Melbourne City 3000;-37.816550,144.970430
+8-Spring St/Flinders St;Melbourne City;Spring St / Flinders St, Melbourne City 3000;-37.815320,144.974610
+14-Punt Rd/Wellington Pde;Melbourne City;Punt Rd / Wellington Pde, Melbourne City 3000;-37.817390,144.989680
+9-Lansdowne St/Wellington Pde;Melbourne City;Lansdowne St / Wellington Pde, Melbourne City 3000;-37.815470,144.976660
+7-Flinders St/Batman Ave;Melbourne City;Flinders St / Batman Ave, Melbourne City 3000;-37.816503,144.972768
+7B-Rod Laver Arena/Melbourne Park;Melbourne City;Melbourne Park , Melbourne City 3000;-37.819591,144.979127
+7C-MCG - Hisense Arena/Melbourne Park;Melbourne City;Melbourne Park , Melbourne City 3000;-37.822435,144.983643
+7D-AAMI Park/Melbourne Park;Melbourne City;Swan St / Melbourne Park , Melbourne City 3000;-37.824136,144.986853
+7B-Rod Laver Arena/Melbourne Park;Melbourne City;Melbourne Park, Melbourne City 3000;-37.819346,144.978424
+7-Exhibition St/Flinders St;Melbourne City;Exhibition St / Flinders St, Melbourne City 3000;-37.816214,144.971815
+124-Batman Park/Spencer St;Melbourne City;Spencer St, Melbourne City 3000;-37.821920,144.955410
+122-Southern Cross Railway Station/Spencer St;Melbourne City;Collins St / Spencer St, Melbourne City 3000;-37.818805,144.953967
+120-Lonsdale St/Spencer St;Melbourne City;Lonsdale St / Spencer St, Melbourne City 3000;-37.815310,144.952380
+119-La Trobe St/Spencer St;Melbourne City;La Trobe St / Spencer St, Melbourne City 3000;-37.813404,144.951504
+121-Bourke St/Spencer St;Melbourne City;Bourke St / Spencer St, Melbourne City 3000;-37.816900,144.953210
+123-Flinders St/Spencer St;Melbourne City;Flinders St / Spencer St, Melbourne City 3000;-37.820783,144.954995
+5-Bourke St/William St;Melbourne City;Bourke St / William St, Melbourne City 3000;-37.815870,144.958250
+6-Lonsdale St/William St;Melbourne City;Lonsdale St / William St, Melbourne City 3000;-37.813900,144.957370
+7-Flagstaff Railway Station/William St;Melbourne City;Latrobe St / William St, Melbourne City 3000;-37.812010,144.956510
+8-Franklin St/William St;Melbourne City;Franklin St / William St, Melbourne City 3000;-37.809740,144.955460
+8-Franklin St/Peel St;Melbourne City;Franklin St / Peel St, Melbourne City 3000;-37.809430,144.955470
+4-Collins St/William St;Melbourne City;Collins St / William St, Melbourne City 3000;-37.817460,144.959090
+3-Flinders Lane/William St;Melbourne City;Flinders Lane / William St, Melbourne City 3000;-37.818440,144.959540
+2-Market St/Flinders Lane;Melbourne City;Market St / Flinders Lane, Melbourne City 3000;-37.818270,144.960390
+1-Flinders St/Queens Bridge St;Melbourne City;Flinders St / Queens Bridge St, Melbourne City 3000;-37.819517,144.961243
+119-St Kilda Rd/Park St;Melbourne City;St Kilda Rd / Park St, Melbourne City 3000;-37.832350,144.971440
+2-Flinders Lane/Market St;Melbourne City;Flinders Lane / Market St, Melbourne City 3000;-37.818540,144.960700
+3-William St/Flinders Lane;Melbourne City;William St / Flinders Lane, Melbourne City 3000;-37.818640,144.959770
+21-Dallas Brooks Dr/Domain Rd;Melbourne City;Dallas Brooks Dr / Domain Rd, Melbourne City 3000;-37.833161,144.974630
+22-Melbourne Grammar/Domain Rd;Melbourne City;Domain Rd, Melbourne City 3000;-37.833571,144.977707
+23-Hope St/Domain Rd;Melbourne City;Hope St / Domain Rd, Melbourne City 3000;-37.833792,144.979516
+24-Birdwood Ave/Domain Rd;Melbourne City;Birdwood Ave / Domain Rd, Melbourne City 3000;-37.834067,144.982352
+7-RMIT University/Swanston St;Melbourne City;Franklin St / Swanston St, Melbourne City 3000;-37.807148,144.962876
+8-Melbourne Central Station/Swanston St;Melbourne City;La Trobe St / Swanston St, Melbourne City 3000;-37.809886,144.964149
+10-Bourke Street Mall/Swanston St;Melbourne City;Bourke St / Swanston St, Melbourne City 3000;-37.813295,144.965637
+11-City Square/Swanston St;Melbourne City;Collins St / Swanston St, Melbourne City 3000;-37.816022,144.966794
+13-Flinders Street Railway Station/Swanston St;Melbourne City;Flinders St / Swanston St, Melbourne City 3000;-37.818520,144.967992
+19-Shrine of Remembrance/St Kilda Rd;Melbourne City;Dorcas St / St Kilda Rd, Melbourne City 3000;-37.830486,144.971405
+20-Domain Interchange/St Kilda Rd;Melbourne City;Domain Rd / St Kilda Rd, Melbourne City 3000;-37.832618,144.972145
+22-Toorak Rd/St Kilda Rd;Melbourne City;Toorak Rd / St Kilda Rd, Melbourne City 3000;-37.837153,144.975836
+23-Slater St/St Kilda Rd;Melbourne City;Slater St / St Kilda Rd, Melbourne City 3000;-37.838855,144.976568
+27-Lorne St/St Kilda Rd;Melbourne City;Lorne St / St Kilda Rd, Melbourne City 3000;-37.849916,144.980544
+26-Beatrice St/St Kilda Rd;Melbourne City;Beatrice St / St Kilda Rd, Melbourne City 3000;-37.847552,144.979718
+25-Commercial Rd/St Kilda Rd;Melbourne City;Commercial Rd / St Kilda Rd, Melbourne City 3000;-37.844524,144.978632
+24-Leopold St/St Kilda Rd;Melbourne City;Leopold St / St Kilda Rd, Melbourne City 3000;-37.841156,144.977407
+23-Arthur St/St Kilda Rd;Melbourne City;Arthur St / St Kilda Rd, Melbourne City 3000;-37.839296,144.976612
+21-Bowen Cres/St Kilda Rd;Melbourne City;Bowen Cres / St Kilda Rd, Melbourne City 3000;-37.834005,144.973907
+20-Domain Interchange/St Kilda Rd;Melbourne City;Albert Rd / St Kilda Rd, Melbourne City 3000;-37.832678,144.972063
+0-Collins St/Spring St;Melbourne City;Collins St / Spring St, Melbourne City 3000;-37.813496,144.974005
+0-Bourke St/Spring St;Melbourne City;Bourke St / Spring St, Melbourne City 3000;-37.811545,144.973100
+1-Spencer St/Flinders St;Melbourne City;Spencer St / Flinders St, Melbourne City 3000;-37.820890,144.955615
+2-Melbourne Aquarium/Flinders St;Melbourne City;King St / Flinders St, Melbourne City 3000;-37.820344,144.957708
+7-101 Collins St;Melbourne City;Collins St, Melbourne City 3000;-37.814265,144.970408
+7A-William Barak Bridge/Melbourne Park;Melbourne City;Batman Ave / Melbourne Park , Melbourne City 3000;-37.818166,144.976205
+7A-William Barak Bridge/Melbourne Park;Melbourne City;Batman Ave / Melbourne Park, Melbourne City 3000;-37.818325,144.975829
+20-St Kilda Rd/Domain Rd;Melbourne City;St Kilda Rd / Domain Rd, Melbourne City 3000;-37.832955,144.973033
+133-Canterbury Rd/Mills St;Middle Park;Canterbury Rd / Mills St, Middle Park 3206;-37.844070,144.960134
+134-Carter St/Mills St;Middle Park;Carter St / Mills St, Middle Park 3206;-37.845611,144.958922
+135-Richardson St/Mills St;Middle Park;Richardson St / Mills St, Middle Park 3206;-37.847409,144.957404
+136-Mills St/Danks St;Middle Park;Mills St / Danks St, Middle Park 3206;-37.849740,144.956080
+137-Harold St/Danks St;Middle Park;Harold St / Danks St, Middle Park 3206;-37.851362,144.959213
+139-Langridge St/Patterson St;Middle Park;Langridge St / Patterson St, Middle Park 3206;-37.854784,144.965591
+138-Armstrong St/Danks St;Middle Park;Armstrong St / Danks St, Middle Park 3206;-37.853071,144.962447
+136-Danks St/Mills St;Middle Park;Danks St / Mills St, Middle Park 3206;-37.849322,144.956072
+140-Fraser St/Patterson St;Middle Park;Fraser St / Patterson St, Middle Park 3206;-37.855430,144.967124
+129-Melbourne Sports and Aquatic Centre/Light Rail;Middle Park;Wright St / Light Rail , Middle Park 3206;-37.845270,144.961670
+130-Middle Park Station/Light Rail;Middle Park;Light Rail , Middle Park 3206;-37.849790,144.965830
+131-Fraser St/Light Rail;Middle Park;Fraser St / Light Rail , Middle Park 3206;-37.853730,144.971020
+51-Grovedale Rd/Whitehorse Rd;Mont Albert;Grovedale Rd / Whitehorse Rd, Mont Albert 3127;-37.814564,145.095175
+54-Inglisby Rd/Whitehorse Rd;Mont Albert;Inglisby Rd / Whitehorse Rd, Mont Albert 3127;-37.815421,145.103111
+55-Hood St/Whitehorse Rd;Mont Albert;Hood St / Whitehorse Rd, Mont Albert 3127;-37.816188,145.109459
+40-Epsom Rd/Maribyrnong Rd;Moonee Ponds;Epsom Rd / Maribyrnong Rd, Moonee Ponds 3039;-37.770432,144.905120
+39-Bowen St/Maribyrnong Rd;Moonee Ponds;Bowen St / Maribyrnong Rd, Moonee Ponds 3039;-37.770865,144.909005
+38-Hotham St/Maribyrnong Rd;Moonee Ponds;Hotham St / Maribyrnong Rd, Moonee Ponds 3039;-37.771235,144.912329
+37-Union Rd/Maribyrnong Rd;Moonee Ponds;Union Rd / Maribyrnong Rd, Moonee Ponds 3039;-37.771671,144.916190
+36-86 Maribyrnong Rd;Moonee Ponds;Maribyrnong Rd, Moonee Ponds 3039;-37.771895,144.918291
+35-Moore St/Maribyrnong Rd;Moonee Ponds;Moore St / Maribyrnong Rd, Moonee Ponds 3039;-37.772208,144.921133
+34-Ascot Vale Rd/Maribyrnong Rd;Moonee Ponds;Ascot Vale Rd / Maribyrnong Rd, Moonee Ponds 3039;-37.772473,144.923701
+33-Chaucer St/Ascot Vale Rd;Moonee Ponds;Chaucer St / Ascot Vale Rd, Moonee Ponds 3039;-37.770054,144.924284
+32-Moonee Ponds/Ascot Vale Rd;Moonee Ponds;Mt Alexander Rd / Ascot Vale Rd, Moonee Ponds 3039;-37.767605,144.924827
+34-Maribyrnong Rd/Ascot Vale Rd;Moonee Ponds;Maribyrnong Rd / Ascot Vale Rd, Moonee Ponds 3039;-37.772456,144.924028
+36-77 Maribyrnong Rd;Moonee Ponds;Maribyrnong Rd, Moonee Ponds 3039;-37.772025,144.918255
+30-Ormond Rd/Mt Alexander Rd;Moonee Ponds;Ormond Rd / Mt Alexander Rd, Moonee Ponds 3039;-37.772430,144.926913
+31-Montgomery St/Mt Alexander Rd;Moonee Ponds;Montgomery St / Mt Alexander Rd, Moonee Ponds 3039;-37.770602,144.926231
+33-Moonee Ponds Junction/Pascoe Vale Rd;Moonee Ponds;Mt Alexander Rd / Pascoe Vale Rd, Moonee Ponds 3039;-37.766663,144.925051
+34-Moonee Valley Civic Centre/Pascoe Vale Rd;Moonee Ponds;Kellaway Ave / Pascoe Vale Rd, Moonee Ponds 3039;-37.764420,144.925400
+35-Queens Park/Pascoe Vale Rd;Moonee Ponds;Wilson St / Pascoe Vale Rd, Moonee Ponds 3039;-37.762546,144.925783
+36-Salisbury St/Pascoe Vale Rd;Moonee Ponds;Salisbury St / Pascoe Vale Rd, Moonee Ponds 3039;-37.759741,144.926283
+32-Ascot Vale Rd/Mt Alexander Rd;Moonee Ponds;Ascot Vale Rd / Mt Alexander Rd, Moonee Ponds 3039;-37.767735,144.924960
+33-Moonee Ponds Junction/Pascoe Vale Rd;Moonee Ponds;Pascoe Vale Rd, Moonee Ponds 3039;-37.766620,144.924834
+36-Murray St/Pascoe Vale Rd;Moonee Ponds;Murray St / Pascoe Vale Rd, Moonee Ponds 3039;-37.759861,144.926078
+37-Buckley St/Pascoe Vale Rd;Moonee Ponds;Buckley St / Pascoe Vale Rd, Moonee Ponds 3039;-37.758251,144.926352
+53-Keilor Rd/Matthews Ave;Niddrie;Keilor Rd / Matthews Ave, Niddrie 3042;-37.735967,144.889341
+54-Fullarton Rd/Matthews Ave;Niddrie;Fullarton Rd / Matthews Ave, Niddrie 3042;-37.732357,144.889836
+52-Treadwell Rd/Keilor Rd;Niddrie;Treadwell Rd / Keilor Rd, Niddrie 3042;-37.737155,144.892303
+11-Victoria St/Errol St;North Melbourne;Victoria St / Errol St, North Melbourne 3051;-37.804960,144.949340
+22-Boundary Rd/Racecourse Rd;North Melbourne;Boundary Rd / Racecourse Rd, North Melbourne 3051;-37.789130,144.939850
+20-Melrose St/Flemington Rd;North Melbourne;Melrose St / Flemington Rd, North Melbourne 3051;-37.790417,144.943510
+19-Abbotsford St Interchange/Abbotsford St;North Melbourne;Brougham St / Abbotsford St, North Melbourne 3051;-37.794110,144.947100
+18-Chapman St/Abbotsford St;North Melbourne;Chapman St / Abbotsford St, North Melbourne 3051;-37.794960,144.946950
+17-Molesworth St/Abbotsford St;North Melbourne;Molesworth St / Abbotsford St, North Melbourne 3051;-37.796310,144.946710
+16-Haines St/Abbotsford St;North Melbourne;Haines St / Abbotsford St, North Melbourne 3051;-37.798280,144.946360
+15-Arden St/Abbotsford St;North Melbourne;Arden St / Abbotsford St, North Melbourne 3051;-37.800360,144.945990
+14-Queensberry St/Abbotsford St;North Melbourne;Queensberry St / Abbotsford St, North Melbourne 3051;-37.802390,144.945630
+9-Queen Victoria Market/49 Peel St;North Melbourne;Peel St, North Melbourne 3051;-37.807100,144.955860
+19-Abbotsford St Interchange/Abbotsford St;North Melbourne;Flemington Rd / Abbotsford St, North Melbourne 3051;-37.793730,144.947160
+18-Erskine St/Abbotsford St;North Melbourne;Erskine St / Abbotsford St, North Melbourne 3051;-37.795250,144.946800
+17-Canning St/Abbotsford St;North Melbourne;Canning St / Abbotsford St, North Melbourne 3051;-37.796720,144.946540
+14-Abbotsford St/Queensberry St;North Melbourne;Abbotsford St / Queensberry St, North Melbourne 3051;-37.802660,144.945800
+13-Curzon St/Queensberry St;North Melbourne;Curzon St / Queensberry St, North Melbourne 3051;-37.802830,144.947950
+12-North Melbourne Town Hall/Queensberry St;North Melbourne;Errol St / Queensberry St, North Melbourne 3051;-37.802990,144.949400
+19-Royal Childrens Hospital/Flemington Rd;North Melbourne;Abbotsford St / Flemington Rd, North Melbourne 3051;-37.793927,144.947922
+21-Racecourse Rd/Flemington Rd;North Melbourne;Racecourse Rd / Flemington Rd, North Melbourne 3051;-37.789233,144.942043
+22-Boundary Rd/Flemington Rd;North Melbourne;Boundary Rd / Flemington Rd, North Melbourne 3051;-37.788408,144.941015
+12-North Melbourne Town Hall/Errol St;North Melbourne;Queensberry St / Errol St, North Melbourne 3051;-37.803220,144.949530
+14-Royal Melbourne Hospital/Flemington Rd;North Melbourne;Wreckyn St / Flemington Rd, North Melbourne 3051;-37.799823,144.955202
+16-Harker St/Flemington Rd;North Melbourne;Harker St / Flemington Rd, North Melbourne 3051;-37.796761,144.951362
+15-Murphy St/Flemington Rd;North Melbourne;Murphy St / Flemington Rd, North Melbourne 3051;-37.797589,144.952392
+15-Park Dr/Flemington Rd;North Melbourne;Park Dr / Flemington Rd, North Melbourne 3051;-37.797536,144.952453
+12-Flemington Rd/Peel St;North Melbourne;Flemington Rd / Peel St, North Melbourne 3051;-37.801380,144.956703
+11-Queensberry St/Peel St;North Melbourne;Queensberry St / Peel St, North Melbourne 3051;-37.803623,144.956438
+26-Clarke St/St Georges Rd;Northcote;Clarke St / St Georges Rd, Northcote 3070;-37.775927,144.989756
+27-Westbourne Gr/St Georges Rd;Northcote;Westbourne Gr / St Georges Rd, Northcote 3070;-37.773737,144.990190
+28-Sumner Ave/St Georges Rd;Northcote;Sumner Ave / St Georges Rd, Northcote 3070;-37.771570,144.990636
+29-Arthurton Rd/St Georges Rd;Northcote;Arthurton Rd / St Georges Rd, Northcote 3070;-37.768553,144.991241
+30-Gladstone Ave/St Georges Rd;Northcote;Gladstone Ave / St Georges Rd, Northcote 3070;-37.765266,144.991914
+31-Bird Ave/St Georges Rd;Northcote;Bird Ave / St Georges Rd, Northcote 3070;-37.762126,144.992514
+31-Gadd St/St Georges Rd;Northcote;Gadd St / St Georges Rd, Northcote 3070;-37.762691,144.992728
+35-Dennis St/High St;Northcote;Dennis St / High St, Northcote 3070;-37.765660,144.999290
+34-Bent St/High St;Northcote;Bent St / High St, Northcote 3070;-37.767700,144.999120
+33-Arthurton Rd/High St;Northcote;Arthurton Rd / High St, Northcote 3070;-37.769410,144.998900
+32-Mitchell St/High St;Northcote;Mitchell St / High St, Northcote 3070;-37.771265,144.998620
+31-Northcote Town Hall/High St;Northcote;Westbourne Gr / High St, Northcote 3070;-37.774710,144.997840
+30-Clarke St/High St;Northcote;Clarke St / High St, Northcote 3070;-37.777230,144.997400
+27-Westgarth St/High St;Northcote;Westgarth St / High St, Northcote 3070;-37.780471,144.996775
+26-Walker St/High St;Northcote;Walker St / High St, Northcote 3070;-37.783520,144.996180
+34-McCutcheon St/High St;Northcote;McCutcheon St / High St, Northcote 3070;-37.767470,144.999280
+33-Separation St/High St;Northcote;Separation St / High St, Northcote 3070;-37.769260,144.999120
+18-Princes Park/Royal Pde;Parkville;Park St / Royal Pde, Parkville 3052;-37.779381,144.959938
+17-Ievers St/Royal Pde;Parkville;Ievers St / Royal Pde, Parkville 3052;-37.781890,144.959644
+16-Visy Park/Royal Pde;Parkville;Walker St / Royal Pde, Parkville 3052;-37.784859,144.959270
+15-Leonard St/Royal Pde;Parkville;Leonard St / Royal Pde, Parkville 3052;-37.787929,144.958890
+14-Macarthur Rd/Royal Pde;Parkville;Macarthur Rd / Royal Pde, Parkville 3052;-37.790014,144.958615
+13-Gatehouse St/Royal Pde;Parkville;Gatehouse St / Royal Pde, Parkville 3052;-37.792677,144.958314
+12-Morrah St/Royal Pde;Parkville;Morrah St / Royal Pde, Parkville 3052;-37.795658,144.957946
+11-University of Melbourne/Royal Pde;Parkville;Royal Pde, Parkville 3052;-37.798271,144.957651
+16-Walker St/Royal Pde;Parkville;Walker St / Royal Pde, Parkville 3052;-37.784587,144.959507
+14-Cemetery Road West/Royal Pde;Parkville;Cemetery Road West  / Royal Pde, Parkville 3052;-37.789717,144.958877
+10-Royal Melbourne Hospital/Royal Pde;Parkville;Grattan St / Royal Pde, Parkville 3052;-37.799584,144.957666
+21-Abbotsford St Interchange/Royal Park;Parkville;Flemington Rd / Royal Park , Parkville 3052;-37.793380,144.947690
+22-Royal Park/Royal Park;Parkville;Royal Park , Parkville 3052;-37.791380,144.949400
+23-Macarthur Rd/Royal Park;Parkville;Macarthur Rd / Royal Park , Parkville 3052;-37.788110,144.949770
+24-State Netball Hockey Centre/Royal Park;Parkville;Royal Park , Parkville 3052;-37.784090,144.948730
+25-Melbourne Zoo/Royal Park;Parkville;Royal Park , Parkville 3052;-37.782420,144.949390
+26-Royal Park Station/Royal Park;Parkville;Poplar Rd / Royal Park , Parkville 3052;-37.780750,144.951360
+28-Park St/Royal Park;Parkville;Park St / Royal Park , Parkville 3052;-37.777245,144.949965
+29-Brunswick Rd/Royal Park;Parkville;Brunswick Rd / Royal Park , Parkville 3052;-37.775810,144.948750
+13-Royal Pde/Flemington Rd;Parkville;Royal Pde / Flemington Rd, Parkville 3052;-37.800953,144.956714
+14-Royal Melbourne Hospital/Flemington Rd;Parkville;Grattan St / Flemington Rd, Parkville 3052;-37.799475,144.954891
+16-Gatehouse St/Flemington Rd;Parkville;Gatehouse St / Flemington Rd, Parkville 3052;-37.796423,144.951055
+41-Lever St/Melville Rd;Pascoe Vale South;Lever St / Melville Rd, Pascoe Vale South 3044;-37.749320,144.946550
+42-Reynard St/Melville Rd;Pascoe Vale South;Reynard St / Melville Rd, Pascoe Vale South 3044;-37.746400,144.944560
+43-Princes Tce/Melville Rd;Pascoe Vale South;Princes Tce / Melville Rd, Pascoe Vale South 3044;-37.743930,144.945000
+44-Brearley Pde/Melville Rd;Pascoe Vale South;Brearley Pde / Melville Rd, Pascoe Vale South 3044;-37.741590,144.945400
+45-Bell St/Melville Rd;Pascoe Vale South;Bell St / Melville Rd, Pascoe Vale South 3044;-37.739410,144.945593
+41-Woodlands Ave/Melville Rd;Pascoe Vale South;Woodlands Ave / Melville Rd, Pascoe Vale South 3044;-37.749510,144.946350
+44A-213 Melville Rd;Pascoe Vale South;Melville Rd, Pascoe Vale South 3044;-37.740173,144.945455
+127-North Port Station/Light Rail;Port Melbourne;Raglan St / Light Rail , Port Melbourne 3207;-37.833217,144.943510
+128-Graham St/Light Rail;Port Melbourne;Graham St / Light Rail , Port Melbourne 3207;-37.837079,144.937226
+129-Beacon Cove/Light Rail;Port Melbourne;Waterfront Pl / Light Rail , Port Melbourne 3207;-37.840762,144.932881
+28-Punt Rd/High St;Prahran;Punt Rd / High St, Prahran 3181;-37.850758,144.984373
+29-Perth St/High St;Prahran;Perth St / High St, Prahran 3181;-37.851211,144.987928
+30-Porter St/High St;Prahran;Porter St / High St, Prahran 3181;-37.851388,144.989302
+31-Chapel St/High St;Prahran;Chapel St / High St, Prahran 3181;-37.851948,144.993535
+32-Bangs St/High St;Prahran;Bangs St / High St, Prahran 3181;-37.852353,144.996531
+33-The Avenue/High St;Prahran;The Avenue  / High St, Prahran 3181;-37.852622,144.998606
+34-Lewisham Rd/High St;Prahran;Lewisham Rd / High St, Prahran 3181;-37.852831,145.000108
+35-Williams Rd/High St;Prahran;Williams Rd / High St, Prahran 3181;-37.853169,145.002620
+36-Chatsworth Rd/High St;Prahran;Chatsworth Rd / High St, Prahran 3181;-37.853762,145.006876
+37-Airlie Ave/High St;Prahran;Airlie Ave / High St, Prahran 3181;-37.853995,145.008687
+38-Orrong Rd/High St;Prahran;Orrong Rd / High St, Prahran 3181;-37.854385,145.011708
+36-Park Rd/High St;Prahran;Park Rd / High St, Prahran 3181;-37.853555,145.006276
+32-Hornby St/High St;Prahran;Hornby St / High St, Prahran 3181;-37.852199,144.996436
+37-Lansdowne Rd/Dandenong Rd;Prahran;Lansdowne Rd / Dandenong Rd, Prahran 3181;-37.859750,145.007335
+36-Alexandra St/Dandenong Rd;Prahran;Alexandra St / Dandenong Rd, Prahran 3181;-37.859364,145.004397
+35-Hotham St/Dandenong Rd;Prahran;Hotham St / Dandenong Rd, Prahran 3181;-37.858934,145.001184
+47-Commercial Rd/Chapel St;Prahran;Commercial Rd / Chapel St, Prahran 3181;-37.846973,144.994031
+46-Chatham St/Chapel St;Prahran;Chatham St / Chapel St, Prahran 3181;-37.849082,144.993710
+45-High St/Chapel St;Prahran;High St / Chapel St, Prahran 3181;-37.851957,144.993280
+38-Orrong Rd/Dandenong Rd;Prahran;Orrong Rd / Dandenong Rd, Prahran 3181;-37.860305,145.010683
+44-Duke St/Chapel St;Prahran;Duke St / Chapel St, Prahran 3181;-37.853990,144.993044
+43-Windsor Railway Station/Chapel St;Prahran;Albert St / Chapel St, Prahran 3181;-37.856129,144.992652
+42-Dandenong Rd/Chapel St;Prahran;Dandenong Rd / Chapel St, Prahran 3181;-37.857476,144.992393
+32-Bendigo St/Malvern Rd;Prahran;Bendigo St / Malvern Rd, Prahran 3181;-37.847450,144.998040
+31-Chapel St/Malvern Rd;Prahran;Chapel St / Malvern Rd, Prahran 3181;-37.846940,144.994280
+30-Prahran Market/Commercial Rd;Prahran;Izett St / Commercial Rd, Prahran 3181;-37.846710,144.992430
+29-Porter St/Commercial Rd;Prahran;Porter St / Commercial Rd, Prahran 3181;-37.846510,144.990710
+28-Braille Library/Commercial Rd;Prahran;Tyrone St / Commercial Rd, Prahran 3181;-37.846070,144.987560
+27-Punt Rd/Commercial Rd;Prahran;Punt Rd / Commercial Rd, Prahran 3181;-37.845770,144.985160
+26-Alfred Hospital/Commercial Rd;Prahran;Commercial Rd, Prahran 3181;-37.845360,144.982310
+34-Miller St/St Georges Rd;Preston;Miller St / St Georges Rd, Preston 3072;-37.752035,144.994888
+37-Miller St/Gilbert Rd;Preston;Miller St / Gilbert Rd, Preston 3072;-37.750680,144.987983
+38-Oakover Rd/Gilbert Rd;Preston;Oakover Rd / Gilbert Rd, Preston 3072;-37.748413,144.988350
+39-Latona Ave/Gilbert Rd;Preston;Latona Ave / Gilbert Rd, Preston 3072;-37.745635,144.988805
+40-Bell St/Gilbert Rd;Preston;Bell St / Gilbert Rd, Preston 3072;-37.744087,144.989056
+41-Bruce St/Gilbert Rd;Preston;Bruce St / Gilbert Rd, Preston 3072;-37.741312,144.989495
+42-Cramer St/Gilbert Rd;Preston;Cramer St / Gilbert Rd, Preston 3072;-37.739099,144.989836
+43-Murray Rd/Gilbert Rd;Preston;Murray Rd / Gilbert Rd, Preston 3072;-37.736716,144.990216
+44-Cooper St/Gilbert Rd;Preston;Cooper St / Gilbert Rd, Preston 3072;-37.734540,144.990587
+45-Jacka St/Gilbert Rd;Preston;Jacka St / Gilbert Rd, Preston 3072;-37.732991,144.990851
+46-McNamara St/Gilbert Rd;Preston;McNamara St / Gilbert Rd, Preston 3072;-37.730363,144.991295
+52-Tyler St/Plenty Rd;Preston;Tyler St / Plenty Rd, Preston 3072;-37.731260,145.014420
+51-Wood St/Plenty Rd;Preston;Wood St / Plenty Rd, Preston 3072;-37.734470,145.013570
+50-Sylvester Gr/Plenty Rd;Preston;Sylvester Gr / Plenty Rd, Preston 3072;-37.736840,145.012420
+49-Murray Rd/Plenty Rd;Preston;Murray Rd / Plenty Rd, Preston 3072;-37.738890,145.011370
+48-Gower St/Plenty Rd;Preston;Gower St / Plenty Rd, Preston 3072;-37.741150,145.009590
+47-David St/Plenty Rd;Preston;David St / Plenty Rd, Preston 3072;-37.743210,145.007960
+46-East Preston Tram Depot/Plenty Rd;Preston;Livingstone Pde / Plenty Rd, Preston 3072;-37.744890,145.006650
+45-Bell St/Plenty Rd;Preston;Bell St / Plenty Rd, Preston 3072;-37.745720,145.006020
+44-Seymour St/Plenty Rd;Preston;Seymour St / Plenty Rd, Preston 3072;-37.747060,145.005120
+43-Raglan St/Plenty Rd;Preston;Raglan St / Plenty Rd, Preston 3072;-37.749180,145.003700
+36-Devon St/Miller St;Preston;Devon St / Miller St, Preston 3072;-37.751266,144.990945
+35-St Georges Rd/Miller St;Preston;St Georges Rd / Miller St, Preston 3072;-37.751643,144.994792
+47-West Preston/Gilbert Rd;Preston;Regent St / Gilbert Rd, Preston 3072;-37.729183,144.991589
+44-Osborne Gr/Plenty Rd;Preston;Osborne Gr / Plenty Rd, Preston 3072;-37.746880,145.005420
+42-Dundas St/Plenty Rd;Preston;Dundas St / Plenty Rd, Preston 3072;-37.751980,145.002000
+57-Reservoir District Secondary College/Plenty Rd;Reservoir;Gremel Rd / Plenty Rd, Reservoir 3073;-37.722690,145.030070
+56-Loddon Ave/Plenty Rd;Reservoir;Loddon Ave / Plenty Rd, Reservoir 3073;-37.723990,145.027850
+55-Boldrewood Pde/Plenty Rd;Reservoir;Boldrewood Pde / Plenty Rd, Reservoir 3073;-37.725280,145.023400
+54-Chaleyer St/Plenty Rd;Reservoir;Chaleyer St / Plenty Rd, Reservoir 3073;-37.727330,145.020010
+53-Ethel Gr/Plenty Rd;Reservoir;Ethel Gr / Plenty Rd, Reservoir 3073;-37.729130,145.017210
+55-Albert St/Plenty Rd;Reservoir;Albert St / Plenty Rd, Reservoir 3073;-37.725570,145.022810
+54-McColl St/Plenty Rd;Reservoir;McColl St / Plenty Rd, Reservoir 3073;-37.727710,145.019670
+14-Punt Rd/Bridge Rd;Richmond;Punt Rd / Bridge Rd, Richmond 3121;-37.817530,144.990213
+7E-Punt Rd/Swan St;Richmond;Punt Rd / Swan St, Richmond 3121;-37.824526,144.988453
+65-Victoria St/Church St;Richmond;Victoria St / Church St, Richmond 3121;-37.810724,145.000627
+64-Elizabeth St/Church St;Richmond;Elizabeth St / Church St, Richmond 3121;-37.812604,145.000199
+63-Tweedie Pl/Church St;Richmond;Tweedie Pl / Church St, Richmond 3121;-37.814317,144.999884
+62-Highett St/Church St;Richmond;Highett St / Church St, Richmond 3121;-37.815958,144.999575
+61-Bridge Rd/Church St;Richmond;Bridge Rd / Church St, Richmond 3121;-37.818725,144.999082
+60-Abinger St/Church St;Richmond;Abinger St / Church St, Richmond 3121;-37.820303,144.998811
+59-St Ignatius Church/Church St;Richmond;Brougham St / Church St, Richmond 3121;-37.821842,144.998542
+58-Gipps St/Church St;Richmond;Gipps St / Church St, Richmond 3121;-37.824056,144.998160
+57-Swan St/Church St;Richmond;Swan St / Church St, Richmond 3121;-37.825783,144.997816
+53-Howard St/Church St;Richmond;Howard St / Church St, Richmond 3121;-37.832765,144.996629
+64-Baker St/Church St;Richmond;Baker St / Church St, Richmond 3121;-37.812251,145.000429
+63-Kent St/Church St;Richmond;Kent St / Church St, Richmond 3121;-37.814328,145.000042
+56-East Richmond Railway Station/Church St;Richmond;Lesney St / Church St, Richmond 3121;-37.826615,144.997795
+55-Gibbons St/Church St;Richmond;Gibbons St / Church St, Richmond 3121;-37.828768,144.997451
+54-Cotter St/Church St;Richmond;Cotter St / Church St, Richmond 3121;-37.830371,144.997183
+8-Cremorne St/Swan St;Richmond;Cremorne St / Swan St, Richmond 3121;-37.824908,144.990636
+9-Lennox St/Swan St;Richmond;Lennox St / Swan St, Richmond 3121;-37.825239,144.993487
+10-Swan Street Shopping Centre/Swan St;Richmond;Waverley St / Swan St, Richmond 3121;-37.825539,144.996106
+11-Church St/Swan St;Richmond;Church St / Swan St, Richmond 3121;-37.825758,144.998093
+12-Coppin St/Swan St;Richmond;Coppin St / Swan St, Richmond 3121;-37.826262,145.002576
+22-McKay St/Victoria St;Richmond;McKay St / Victoria St, Richmond 3121;-37.810827,145.004044
+24-Burnley St/Victoria St;Richmond;Burnley St / Victoria St, Richmond 3121;-37.811358,145.010390
+25-River Bvd/Victoria St;Richmond;River Bvd / Victoria St, Richmond 3121;-37.811761,145.013246
+17-Madden Gr/Swan St;Richmond;Madden Gr / Swan St, Richmond 3121;-37.827283,145.016701
+15-Stawell St/Swan St;Richmond;Stawell St / Swan St, Richmond 3121;-37.826904,145.009603
+14-Burnley St/Swan St;Richmond;Burnley St / Swan St, Richmond 3121;-37.826595,145.006927
+13-Edinburgh St/Swan St;Richmond;Edinburgh St / Swan St, Richmond 3121;-37.826393,145.005108
+10-Swan Street Shopping Centre/Swan St;Richmond;Clifton St / Swan St, Richmond 3121;-37.825380,144.995904
+15-Epworth Hospital/Bridge Rd;Richmond;Normanby Pl / Bridge Rd, Richmond 3121;-37.817750,144.992400
+17-Bosisto St/Bridge Rd;Richmond;Bosisto St / Bridge Rd, Richmond 3121;-37.818250,144.996860
+18-Church St/Bridge Rd;Richmond;Church St / Bridge Rd, Richmond 3121;-37.818490,144.998730
+19-Richmond Town Hall/Bridge Rd;Richmond;Gleadell St / Bridge Rd, Richmond 3121;-37.818750,145.001374
+20-Coppin St/Bridge Rd;Richmond;Coppin St / Bridge Rd, Richmond 3121;-37.818980,145.003570
+21-Burnley St/Bridge Rd;Richmond;Burnley St / Bridge Rd, Richmond 3121;-37.819539,145.008874
+22-Yarra Bvd/Bridge Rd;Richmond;Yarra Bvd / Bridge Rd, Richmond 3121;-37.820100,145.014050
+19-Richmond Town Hall/Bridge Rd;Richmond;Hosie St / Bridge Rd, Richmond 3121;-37.818810,145.001370
+17-Waltham St/Bridge Rd;Richmond;Waltham St / Bridge Rd, Richmond 3121;-37.818439,144.997215
+18-Hoddle St/Victoria St;Richmond;Hoddle St / Victoria St, Richmond 3121;-37.809768,144.991080
+19-North Richmond Railway Station/Victoria St;Richmond;Jonas St / Victoria St, Richmond 3121;-37.809840,144.992903
+20-Lennox St/Victoria St;Richmond;Lennox St / Victoria St, Richmond 3121;-37.810162,144.996126
+15-Epworth Hospital/Bridge Rd;Richmond;Verity St / Bridge Rd, Richmond 3121;-37.817870,144.992380
+23-Leslie St/Victoria St;Richmond;Leslie St / Victoria St, Richmond 3121;-37.811312,145.007619
+21-Church St/Victoria St;Richmond;Church St / Victoria St, Richmond 3121;-37.810651,145.000800
+128-Dorcas St/Clarendon St;South Melbourne;Dorcas St / Clarendon St, South Melbourne 3205;-37.833156,144.960538
+129-Park St/Clarendon St;South Melbourne;Park St / Clarendon St, South Melbourne 3205;-37.835433,144.961591
+127-York St/Clarendon St;South Melbourne;York St / Clarendon St, South Melbourne 3205;-37.830983,144.959527
+126-City Rd/Clarendon St;South Melbourne;City Rd / Clarendon St, South Melbourne 3205;-37.827308,144.957918
+130a-Raglan St/Clarendon St;South Melbourne;Raglan St / Clarendon St, South Melbourne 3205;-37.837610,144.962584
+130-Clarendon St/Albert Rd;South Melbourne;Clarendon St / Albert Rd, South Melbourne 3205;-37.839329,144.963211
+130-Albert Rd/Clarendon St;South Melbourne;Albert Rd / Clarendon St, South Melbourne 3205;-37.838985,144.963387
+Stop 125a - Southbank depot/Normanby Rd;South Melbourne;Normanby Rd, South Melbourne 3205;-37.827450,144.953984
+115-York St/Kings Way;South Melbourne;York St / Kings Way, South Melbourne 3205;-37.829610,144.964070
+118-Park St/Kings Way;South Melbourne;Park St / Kings Way, South Melbourne 3205;-37.833240,144.967640
+118-Kings Way/Park St;South Melbourne;Kings Way / Park St, South Melbourne 3205;-37.833360,144.968160
+21-Hanna Lane/Sturt St;South Melbourne;Hanna Lane / Sturt St, South Melbourne 3205;-37.831050,144.964940
+22-Dorcas St/Eastern Rd;South Melbourne;Dorcas St / Eastern Rd, South Melbourne 3205;-37.832220,144.964990
+23-Moray St/Park St;South Melbourne;Moray St / Park St, South Melbourne 3205;-37.834470,144.963850
+24-Clarendon St/Park St;South Melbourne;Clarendon St / Park St, South Melbourne 3205;-37.835205,144.961306
+25-Cecil St/Park St;South Melbourne;Cecil St / Park St, South Melbourne 3205;-37.835910,144.958880
+26-Ferrars St/Park St;South Melbourne;Ferrars St / Park St, South Melbourne 3205;-37.836630,144.956400
+27-Park St/Montague St;South Melbourne;Park St / Montague St, South Melbourne 3205;-37.837520,144.954180
+27-Montague St/Park St;South Melbourne;Montague St / Park St, South Melbourne 3205;-37.837330,144.954460
+125A-Southbank Tram Depot/Light Rail;South Melbourne;Clarendon St / Light Rail , South Melbourne 3205;-37.827450,144.953984
+126-Montague St/Light Rail;South Melbourne;Montague St / Light Rail , South Melbourne 3205;-37.830240,144.948473
+21-Bowen Lane/St Kilda Rd;South Melbourne;Bowen Lane / St Kilda Rd, South Melbourne 3205;-37.834102,144.973907
+24-Armadale St/St Kilda Rd;South Melbourne;Armadale St / St Kilda Rd, South Melbourne 3205;-37.841537,144.977431
+25-Commercial Rd/St Kilda Rd;South Melbourne;Commercial Rd / St Kilda Rd, South Melbourne 3205;-37.845033,144.978717
+26-Moubray St/St Kilda Rd;South Melbourne;Moubray St / St Kilda Rd, South Melbourne 3205;-37.847895,144.979760
+27-High St/St Kilda Rd;South Melbourne;High St / St Kilda Rd, South Melbourne 3205;-37.849867,144.980558
+125A-Southbank Tram Depot/Light Rail;South Melbourne;Light Rail , South Melbourne 3205;-37.827694,144.953713
+126-City Rd/Light Rail;South Melbourne;City Rd / Light Rail , South Melbourne 3205;-37.830140,144.954480
+127-South Melbourne Station/Light Rail;South Melbourne;York St / Light Rail , South Melbourne 3205;-37.833070,144.955460
+128-Albert Park Station/Light Rail;South Melbourne;Bridport St / Light Rail , South Melbourne 3205;-37.840390,144.958840
+52-Alexandra Ave/Chapel St;South Yarra;Alexandra Ave / Chapel St, South Yarra 3141;-37.834725,144.996446
+51-Malcolm St/Chapel St;South Yarra;Malcolm St / Chapel St, South Yarra 3141;-37.836375,144.996167
+50-Toorak Rd/Chapel St;South Yarra;Toorak Rd / Chapel St, South Yarra 3141;-37.839644,144.995501
+49-Arthur St/Chapel St;South Yarra;Arthur St / Chapel St, South Yarra 3141;-37.841973,144.995051
+48-Cliff St/Chapel St;South Yarra;Cliff St / Chapel St, South Yarra 3141;-37.843832,144.994654
+24-Domain Rd/Park St;South Yarra;Domain Rd / Park St, South Yarra 3141;-37.834340,144.982420
+25-Randall Pl/Park St;South Yarra;Randall Pl / Park St, South Yarra 3141;-37.835966,144.982067
+26-Park St/Toorak Rd;South Yarra;Park St / Toorak Rd, South Yarra 3141;-37.837846,144.982096
+27-Walsh St/Toorak Rd;South Yarra;Walsh St / Toorak Rd, South Yarra 3141;-37.838153,144.984456
+28-Punt Rd/Toorak Rd;South Yarra;Punt Rd / Toorak Rd, South Yarra 3141;-37.838406,144.986755
+29-Myrtle St/Toorak Rd;South Yarra;Myrtle St / Toorak Rd, South Yarra 3141;-37.838786,144.989504
+30-South Yarra Railway Station/Toorak Rd;South Yarra;Toorak Rd, South Yarra 3141;-37.839127,144.992170
+31-Chapel St/Toorak Rd;South Yarra;Chapel St / Toorak Rd, South Yarra 3141;-37.839582,144.995826
+32-Surrey Rd/Toorak Rd;South Yarra;Surrey Rd / Toorak Rd, South Yarra 3141;-37.839927,144.998666
+33-Como Ave/Toorak Rd;South Yarra;Como Ave / Toorak Rd, South Yarra 3141;-37.840368,145.002337
+26-Alfred Hospital/Commercial Rd;South Yarra;Commercial Rd, South Yarra 3141;-37.845306,144.982318
+27-Punt Rd/Commercial Rd;South Yarra;Punt Rd / Commercial Rd, South Yarra 3141;-37.845620,144.984840
+28-Braille Library/Commercial Rd;South Yarra;Margaret St / Commercial Rd, South Yarra 3141;-37.845900,144.987410
+29-Porter St/Commercial Rd;South Yarra;Porter St / Commercial Rd, South Yarra 3141;-37.846320,144.990600
+30-Prahran Market/Commercial Rd;South Yarra;Izett St / Commercial Rd, South Yarra 3141;-37.846540,144.992300
+31-Chapel St/Commercial Rd;South Yarra;Chapel St / Commercial Rd, South Yarra 3141;-37.846760,144.994020
+32-Surrey Rd/Malvern Rd;South Yarra;Surrey Rd / Malvern Rd, South Yarra 3141;-37.847290,144.997810
+33-Francis St/Malvern Rd;South Yarra;Francis St / Malvern Rd, South Yarra 3141;-37.847630,145.000330
+34-Williams Rd/Malvern Rd;South Yarra;Williams Rd / Malvern Rd, South Yarra 3141;-37.848020,145.003050
+52-Alexandra Ave/Church St;South Yarra;Alexandra Ave / Church St, South Yarra 3141;-37.834742,144.996655
+49-Palermo St/Chapel St;South Yarra;Palermo St / Chapel St, South Yarra 3141;-37.841936,144.995208
+48-Wilson St/Chapel St;South Yarra;Wilson St / Chapel St, South Yarra 3141;-37.843635,144.994894
+47-Malvern Rd/Chapel St;South Yarra;Malvern Rd / Chapel St, South Yarra 3141;-37.846697,144.994258
+33-Hobson St/Malvern Rd;South Yarra;Hobson St / Malvern Rd, South Yarra 3141;-37.847880,145.001160
+26-Toorak Rd/Park St;South Yarra;Toorak Rd / Park St, South Yarra 3141;-37.837551,144.981940
+30-South Yarra Railway Station/Toorak Rd;South Yarra;Yarra St / Toorak Rd, South Yarra 3141;-37.838984,144.992091
+32-Tivoli Rd/Toorak Rd;South Yarra;Tivoli Rd / Toorak Rd, South Yarra 3141;-37.839771,144.998490
+34-Williams Rd/Toorak Rd;South Yarra;Williams Rd / Toorak Rd, South Yarra 3141;-37.840514,145.004586
+D6-Victoria Police Centre/637 Flinders St;Southbank;Flinders St, Southbank 3006;-37.821724,144.953213
+125-Clarendon St/Normanby Rd;Southbank;Clarendon St / Normanby Rd, Southbank 3006;-37.825600,144.956680
+124A-Casino/MCEC/Clarendon St;Southbank;Clarendon St, Southbank 3006;-37.823290,144.956060
+124B-Whiteman St/Clarendon St;Southbank;Whiteman St / Clarendon St, Southbank 3006;-37.824930,144.956920
+112-Casino East/Queens Bridge St;Southbank;Queens Bridge St, Southbank 3006;-37.821820,144.961310
+113-City Rd/Queens Bridge St;Southbank;City Rd / Queens Bridge St, Southbank 3006;-37.825453,144.960225
+116-Sturt St/Kings Way;Southbank;Sturt St / Kings Way, Southbank 3006;-37.830540,144.965000
+20-Kings Way/Sturt St;Southbank;Kings Way / Sturt St, Southbank 3006;-37.830140,144.965310
+19-Miles St/Sturt St;Southbank;Miles St / Sturt St, Southbank 3006;-37.828430,144.965760
+18-Grant St/Sturt St;Southbank;Grant St / Sturt St, Southbank 3006;-37.825780,144.966630
+17-Southbank Bvd/Sturt St;Southbank;Southbank Bvd / Sturt St, Southbank 3006;-37.823527,144.967200
+16-St Kilda Rd/Southbank Bvd;Southbank;St Kilda Rd / Southbank Bvd, Southbank 3006;-37.823402,144.969783
+17-Sturt St/Southbank Bvd;Southbank;Sturt St / Southbank Bvd, Southbank 3006;-37.823620,144.967740
+114-City Rd/Kings Way;Southbank;City Rd / Kings Way, Southbank 3006;-37.826160,144.960530
+112A-Power St/Queens Bridge St;Southbank;Power St / Queens Bridge St, Southbank 3006;-37.823501,144.960694
+125-Port Junction/79 Whiteman St;Southbank;Whiteman St, Southbank 3006;-37.826414,144.955880
+14-Arts Centre/St Kilda Rd;Southbank;City Rd / St Kilda Rd, Southbank 3006;-37.820783,144.969030
+17-Grant St/St Kilda Rd;Southbank;Grant St / St Kilda Rd, Southbank 3006;-37.824766,144.970855
+18-Coventry St/St Kilda Rd;Southbank;Coventry St / St Kilda Rd, Southbank 3006;-37.828265,144.971427
+16-Southbank Bvd/St Kilda Rd;Southbank;Southbank Bvd / St Kilda Rd, Southbank 3006;-37.823529,144.970178
+125-Whiteman St/Clarendon St;Southbank;Whiteman St / Clarendon St, Southbank 3006;-37.825561,144.957105
+143-Fitzroy St/Park St;St Kilda;Fitzroy St / Park St, St Kilda 3182;-37.860935,144.974325
+41-St Michaels Grammar School/Chapel St;St Kilda;Redan St / Chapel St, St Kilda 3182;-37.859528,144.991869
+37-Carlisle St/Chapel St;St Kilda;Carlisle St / Chapel St, St Kilda 3182;-37.868490,144.990261
+36-Brighton Rd/Chapel St;St Kilda;Brighton Rd / Chapel St, St Kilda 3182;-37.871089,144.989774
+35-St Kilda Rd/Carlisle St;St Kilda;St Kilda Rd / Carlisle St, St Kilda 3182;-37.867963,144.986577
+34-Greeves St/Carlisle St;St Kilda;Greeves St / Carlisle St, St Kilda 3182;-37.867590,144.983964
+33-Barkly St/Carlisle St;St Kilda;Barkly St / Carlisle St, St Kilda 3182;-37.867117,144.981162
+36-St Kilda Town Hall/Carlisle St;St Kilda;Carlisle St, St Kilda 3182;-37.868093,144.988679
+35-Brighton Rd/Carlisle St;St Kilda;Brighton Rd / Carlisle St, St Kilda 3182;-37.868122,144.987699
+34-Mitchell St/Carlisle St;St Kilda;Mitchell St / Carlisle St, St Kilda 3182;-37.867476,144.984009
+32-Havelock St/Carlisle St;St Kilda;Havelock St / Carlisle St, St Kilda 3182;-37.867040,144.978580
+29-Union St/St Kilda Rd;St Kilda;Union St / St Kilda Rd, St Kilda 3182;-37.853121,144.981756
+30-St Kilda Junction/St Kilda Rd;St Kilda;Queens Way / St Kilda Rd, St Kilda 3182;-37.855028,144.982324
+31-Queens Way/Queens Way;St Kilda;Upton Rd / Queens Way, St Kilda 3182;-37.856140,144.987413
+35-Carlisle St/St Kilda Rd;St Kilda;Carlisle St / St Kilda Rd, St Kilda 3182;-37.867730,144.986960
+34-Inkerman St/St Kilda    Rd;St Kilda;Inkerman St / St Kilda Rd, St Kilda 3182;-37.864430,144.985680
+34-Inkerman St/St Kilda Rd;St Kilda;Inkerman St / St Kilda Rd, St Kilda 3182;-37.864770,144.985680
+33-Argyle St/St Kilda Rd;St Kilda;Argyle St / St Kilda Rd, St Kilda 3182;-37.862320,144.984860
+32-Alma Rd/St Kilda Rd;St Kilda;Alma Rd / St Kilda Rd, St Kilda 3182;-37.860310,144.984300
+31-Barkly St/St Kilda Rd;St Kilda;Barkly St / St Kilda Rd, St Kilda 3182;-37.857930,144.983280
+132-St Kilda Station/Light Rail;St Kilda;Light Rail , St Kilda 3182;-37.859304,144.977507
+133-Canterbury Rd/Fitzroy St;St Kilda;Canterbury Rd / Fitzroy St, St Kilda 3182;-37.860180,144.976770
+134-Park St/Fitzroy St;St Kilda;Park St / Fitzroy St, St Kilda 3182;-37.861132,144.975165
+135-Acland St/Fitzroy St;St Kilda;Acland St / Fitzroy St, St Kilda 3182;-37.862050,144.973410
+135-Jacka Bvd/Fitzroy St;St Kilda;Jacka Bvd / Fitzroy St, St Kilda 3182;-37.862410,144.973010
+136-The Esplanade;St Kilda;The Esplanade , St Kilda 3182;-37.865253,144.973515
+138-Luna Park/The Esplanade;St Kilda;Carlisle St / The Esplanade , St Kilda 3182;-37.866986,144.976970
+139-Belford St/Acland St;St Kilda;Belford St / Acland St, St Kilda 3182;-37.868350,144.979480
+140-Barkly St/Acland St;St Kilda;Barkly St / Acland St, St Kilda 3182;-37.869300,144.980350
+37-Chapel St/Carlisle St;St Kilda;Chapel St / Carlisle St, St Kilda 3182;-37.868276,144.990140
+39-Carlisle Ave/Carlisle St;St Kilda;Carlisle Ave / Carlisle St, St Kilda 3182;-37.869069,144.996509
+131-St Kilda Rd/Fitzroy St;St Kilda;St Kilda Rd / Fitzroy St, St Kilda 3182;-37.856990,144.982065
+132-Princes St/Fitzroy St;St Kilda;Princes St / Fitzroy St, St Kilda 3182;-37.857953,144.980605
+28-Raleigh St/St Kilda Rd;St Kilda;Raleigh St / St Kilda Rd, St Kilda 3182;-37.851592,144.981105
+42-Hotham St/Brighton Rd;St Kilda East;Hotham St / Brighton Rd, St Kilda East 3183;-37.882860,144.996340
+34-Westbury St/Dandenong Rd;St Kilda East;Westbury St / Dandenong Rd, St Kilda East 3183;-37.858416,144.997365
+42-Dandenong Rd/Chapel St;St Kilda East;Dandenong Rd / Chapel St, St Kilda East 3183;-37.858047,144.992218
+40-Alma Rd/Chapel St;St Kilda East;Alma Rd / Chapel St, St Kilda East 3183;-37.861580,144.991506
+39-Argyle St/Chapel St;St Kilda East;Argyle St / Chapel St, St Kilda East 3183;-37.863390,144.991183
+38-Inkerman St/Chapel St;St Kilda East;Inkerman St / Chapel St, St Kilda East 3183;-37.865442,144.990821
+37-Lansdowne Rd/Dandenong Rd;St Kilda East;Lansdowne Rd / Dandenong Rd, St Kilda East 3183;-37.859829,145.007232
+36-Closeburn Ave/Dandenong Rd;St Kilda East;Closeburn Ave / Dandenong Rd, St Kilda East 3183;-37.859412,145.004211
+35-Williams Rd/Dandenong Rd;St Kilda East;Williams Rd / Dandenong Rd, St Kilda East 3183;-37.859046,145.001512
+41-St Michaels Grammar School/Chapel St;St Kilda East;Cintra Ave / Chapel St, St Kilda East 3183;-37.859381,144.992084
+40-Hotham St/Balaclava Rd;St Kilda East;Hotham St / Balaclava Rd, St Kilda East 3183;-37.869421,144.999335
+142-Mary St/Park St;St Kilda West;Mary St / Park St, St Kilda West 3182;-37.859792,144.973195
+141-Deakin St/Park St;St Kilda West;Deakin St / Park St, St Kilda West 3182;-37.857475,144.970746
+140-Fraser St/Park St;St Kilda West;Fraser St / Park St, St Kilda West 3182;-37.855760,144.967424
+141-Cowderoy St/Park St;St Kilda West;Cowderoy St / Park St, St Kilda West 3182;-37.857209,144.970551
+50-Wharton St/Whitehorse Rd;Surrey Hills;Wharton St / Whitehorse Rd, Surrey Hills 3127;-37.814107,145.091381
+61-Elgar Rd/Riversdale Rd;Surrey Hills;Elgar Rd / Riversdale Rd, Surrey Hills 3127;-37.837643,145.110636
+60-Ferndale St/Riversdale Rd;Surrey Hills;Ferndale St / Riversdale Rd, Surrey Hills 3127;-37.837087,145.106662
+59-Alandale St/Riversdale Rd;Surrey Hills;Alandale St / Riversdale Rd, Surrey Hills 3127;-37.836856,145.104641
+58-Wattle Park/1013 Riversdale Rd;Surrey Hills;Riversdale Rd, Surrey Hills 3127;-37.836534,145.102188
+57-Glendale St/Riversdale Rd;Surrey Hills;Glendale St / Riversdale Rd, Surrey Hills 3127;-37.836201,145.100307
+56-Warrigal Rd/Riversdale Rd;Surrey Hills;Warrigal Rd / Riversdale Rd, Surrey Hills 3127;-37.835901,145.098104
+55-Union Rd/Riversdale Rd;Surrey Hills;Union Rd / Riversdale Rd, Surrey Hills 3127;-37.835600,145.095336
+54-Through Rd/Riversdale Rd;Surrey Hills;Through Rd / Riversdale Rd, Surrey Hills 3127;-37.835324,145.093075
+53-Essex Rd/Riversdale Rd;Surrey Hills;Essex Rd / Riversdale Rd, Surrey Hills 3127;-37.835085,145.090948
+53-Union Rd/Whitehorse Rd;Surrey Hills;Union Rd / Whitehorse Rd, Surrey Hills 3127;-37.815108,145.099522
+32-Normanby Ave/St Georges Rd;Thornbury;Normanby Ave / St Georges Rd, Thornbury 3071;-37.758908,144.993163
+33-Hutton St/St Georges Rd;Thornbury;Hutton St / St Georges Rd, Thornbury 3071;-37.755348,144.993877
+36-Bracken Ave/Miller St;Thornbury;Bracken Ave / Miller St, Thornbury 3071;-37.751441,144.991319
+42-Miller St/High St;Thornbury;Miller St / High St, Thornbury 3071;-37.752380,145.001580
+41-Blythe St/High St;Thornbury;Blythe St / High St, Thornbury 3071;-37.754360,145.001230
+40-Mansfield St/High St;Thornbury;Mansfield St / High St, Thornbury 3071;-37.756720,145.000830
+39-Ballantyne St/High St;Thornbury;Ballantyne St / High St, Thornbury 3071;-37.758450,145.000530
+37-Woolton Ave/High St;Thornbury;Woolton Ave / High St, Thornbury 3071;-37.761530,145.000040
+36-Darebin Rd/High St;Thornbury;Darebin Rd / High St, Thornbury 3071;-37.763330,144.999690
+41-Collins St/High St;Thornbury;Collins St / High St, Thornbury 3071;-37.754550,145.001370
+39-Gooch St/High St;Thornbury;Gooch St / High St, Thornbury 3071;-37.758360,145.000740
+38-Clarendon St/High St;Thornbury;Clarendon St / High St, Thornbury 3071;-37.759443,145.000445
+38-Normanby Ave/High St;Thornbury;Normanby Ave / High St, Thornbury 3071;-37.759707,145.000032
+34-Williams Rd/Toorak Rd;Toorak;Williams Rd / Toorak Rd, Toorak 3142;-37.840726,145.005355
+35-Mathoura Rd/Toorak Rd;Toorak;Mathoura Rd / Toorak Rd, Toorak 3142;-37.841096,145.008452
+36-Canterbury Rd/Toorak Rd;Toorak;Canterbury Rd / Toorak Rd, Toorak 3142;-37.841385,145.010893
+37-Orrong Rd/Toorak Rd;Toorak;Orrong Rd / Toorak Rd, Toorak 3142;-37.841765,145.014117
+38-Woorigoleen Rd/Toorak Rd;Toorak;Woorigoleen Rd / Toorak Rd, Toorak 3142;-37.842168,145.017588
+39-Irving Rd/Toorak Rd;Toorak;Irving Rd / Toorak Rd, Toorak 3142;-37.842465,145.020086
+40-Kooyong Rd/Toorak Rd;Toorak;Kooyong Rd / Toorak Rd, Toorak 3142;-37.842841,145.023070
+41-Macquarie Rd/Toorak Rd;Toorak;Macquarie Rd / Toorak Rd, Toorak 3142;-37.843228,145.026247
+42-Hopetoun Rd/Toorak Rd;Toorak;Hopetoun Rd / Toorak Rd, Toorak 3142;-37.843593,145.029343
+43-Glenferrie Rd/Toorak Rd;Toorak;Glenferrie Rd / Toorak Rd, Toorak 3142;-37.843796,145.031168
+35-Mathoura Rd/Malvern Rd;Toorak;Mathoura Rd / Malvern Rd, Toorak 3142;-37.848480,145.006680
+36-A'Beckett St/Malvern Rd;Toorak;A'Beckett St / Malvern Rd, Toorak 3142;-37.848930,145.010050
+37-Orrong Rd/Malvern Rd;Toorak;Orrong Rd / Malvern Rd, Toorak 3142;-37.849190,145.012080
+38-Clendon Rd/Malvern Rd;Toorak;Clendon Rd / Malvern Rd, Toorak 3142;-37.849620,145.015360
+39-Irving Rd/Malvern Rd;Toorak;Irving Rd / Malvern Rd, Toorak 3142;-37.850050,145.018610
+40-Kooyong Rd/Malvern Rd;Toorak;Kooyong Rd / Malvern Rd, Toorak 3142;-37.850410,145.021330
+41-Albany Rd/Malvern Rd;Toorak;Albany Rd / Malvern Rd, Toorak 3142;-37.850760,145.023960
+42-Lauriston Girls School/Malvern Rd;Toorak;Denham Pl / Malvern Rd, Toorak 3142;-37.851070,145.026230
+43-Glenferrie Rd/Malvern Rd;Toorak;Glenferrie Rd / Malvern Rd, Toorak 3142;-37.851503,145.029877
+39-Densham Rd/Malvern Rd;Toorak;Densham Rd / Malvern Rd, Toorak 3142;-37.850160,145.018430
+36-Canterbury Rd/Malvern Rd;Toorak;Canterbury Rd / Malvern Rd, Toorak 3142;-37.848950,145.009320
+35-Lorne Rd/Malvern Rd;Toorak;Lorne Rd / Malvern Rd, Toorak 3142;-37.848590,145.006490
+34-Williams Rd/Malvern Rd;Toorak;Williams Rd / Malvern Rd, Toorak 3142;-37.848190,145.003410
+36-Grange Rd/Toorak Rd;Toorak;Grange Rd / Toorak Rd, Toorak 3142;-37.841232,145.010583
+41-Moonga Rd/Toorak Rd;Toorak;Moonga Rd / Toorak Rd, Toorak 3142;-37.843168,145.026694
+42-Power Ave/Toorak Rd;Toorak;Power Ave / Toorak Rd, Toorak 3142;-37.843434,145.028929
+64-Power St/Glenferrie Rd;Toorak;Power St / Glenferrie Rd, Toorak 3142;-37.841838,145.031972
+65-Warra St/Glenferrie Rd;Toorak;Warra St / Glenferrie Rd, Toorak 3142;-37.839947,145.032233
+66-Kooyong Tennis Centre/Glenferrie Rd;Toorak;Glenferrie Rd, Toorak 3142;-37.838284,145.032590
+25-Debney Park Sec. College/Mt Alexander Rd;Travancore;Buckland St / Mt Alexander Rd, Travancore 3032;-37.782566,144.933867
+73-Springvale Rd/Burwood Hwy;Vermont South;Springvale Rd / Burwood Hwy, Vermont South 3133;-37.854920,145.170270
+74-Stanley Rd/Burwood Hwy;Vermont South;Stanley Rd / Burwood Hwy, Vermont South 3133;-37.855540,145.174970
+75-Hanover Rd/Burwood Hwy;Vermont South;Hanover Rd / Burwood Hwy, Vermont South 3133;-37.856464,145.182086
+10-Victoria St/Peel St;West Melbourne;Victoria St / Peel St, West Melbourne 3003;-37.806027,144.955895
+30-Latrobe St/High St;Windsor;Latrobe St / High St, Windsor 3181;-37.851319,144.989727
+29-Perth St/High St;Windsor;Perth St / High St, Windsor 3181;-37.851053,144.987726
+28-Punt Rd/High St;Windsor;Punt Rd / High St, Windsor 3181;-37.850563,144.984044
+33-Hornby St/Dandenong Rd;Windsor;Hornby St / Dandenong Rd, Windsor 3181;-37.858205,144.995766
+32-Chapel St/Dandenong Rd;Windsor;Chapel St / Dandenong Rd, Windsor 3181;-37.857513,144.992074
+44-Duke St/Chapel St;Windsor;Duke St / Chapel St, Windsor 3181;-37.854100,144.992830
+43-Windsor Railway Station/Chapel St;Windsor;Albert St / Chapel St, Windsor 3181;-37.856242,144.992447
+34-The Avenue/Dandenong Rd;Windsor;The Avenue  / Dandenong Rd, Windsor 3181;-37.858507,144.997425
+31-Queens Way/Queens Way;Windsor;Upton Rd / Queens Way, Windsor 3181;-37.856249,144.987494

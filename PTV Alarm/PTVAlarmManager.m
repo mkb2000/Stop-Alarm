@@ -7,7 +7,7 @@
 //
 //  Manage alive alarms. Alert when destination is arrived.
 
-//TODO: 1. background run. 2. when there are mutile active alarms, save power model. 3. show move and destination on map view.
+//TODO: 1.support ios6 2.when signal is unavailable.
 
 #import "PTVAlarmManager.h"
 #import <MapKit/MapKit.h>
@@ -65,6 +65,7 @@
     
     //add the destination to monitored regions.
     if ([self.activeAlarms count]>0) {
+        
         [self.delayDict setObject:[NSNumber numberWithInt:0] forKey:alarm.toWhich.name];
         
         CLLocationCoordinate2D centre;

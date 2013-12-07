@@ -27,13 +27,13 @@
     self.firstShow=TRUE;
     self.mapView.delegate=self;
     self.mapView.showsUserLocation=YES;
-
+    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     //init CLLocationManager
     self.cllmng=[[CLLocationManager alloc]init];
     self.cllmng.delegate=self;
-    self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
-    self.cllmng.distanceFilter=30;
+    self.cllmng.desiredAccuracy=kCLLocationAccuracyHundredMeters;
+    self.cllmng.distanceFilter=50;
     [self.cllmng startUpdatingLocation];
     
     [self putDestinationsOnMap];
@@ -57,7 +57,7 @@
         self.firstShow=false;
         [self setMapViewVisiblePortion:self.lastLocation];
     }
-        NSLog(@"veiw will load!!!");
+//        NSLog(@"veiw will load!!!");
 }
 //- (void)viewWillDisappear:(BOOL)animated{
 //    NSLog(@"veiw unload!!!");

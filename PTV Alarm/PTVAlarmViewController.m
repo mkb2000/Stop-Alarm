@@ -52,6 +52,10 @@
         stationController.imgname=IMG_METROBUS;
         stationController.stationType=Bus;
     }
+    if ([segue.identifier isEqualToString:@"vlinesegue"]) {
+        stationController.imgname=IMG_VLINE;
+        stationController.stationType=Vline;
+    }
 }
 
 @end

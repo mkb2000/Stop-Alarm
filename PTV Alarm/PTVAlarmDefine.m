@@ -40,4 +40,26 @@
     return Train;
 }
 
++ (NSString *) typeToImgFile:(TransportType) type{
+    NSString *imgstr;
+    switch (type) {
+        case Tram:
+            imgstr=IMG_TRAM;
+            break;
+        case Train:
+            imgstr=IMG_TRAIN;
+            break;
+        case Bus:
+            imgstr=IMG_METROBUS;
+            break;
+        case Vline:
+            imgstr=IMG_VLINE;
+            break;
+        default:
+            imgstr=IMG_TRAM;
+            break;
+    }
+    return imgstr;
+}
+
 @end

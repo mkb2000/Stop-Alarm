@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GLd-Ak-Son">
-                            <rect key="frame" x="0.0" y="261" width="320" height="224"/>
+                            <rect key="frame" x="0.0" y="305" width="320" height="224"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -51,14 +51,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Train stops" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nNI-MR-NYT">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="73" y="0.0" width="212" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="TrainIcon30px.gif" id="rgl-sC-UVx">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="train_metro_trans.png" id="rgl-sC-UVx">
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -76,14 +76,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Tram stops" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ubj-dy-xF1">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="73" y="0.0" width="212" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="TramIcon30px.gif" id="4ia-ad-IFD">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tram_trans.png" id="4ia-ad-IFD">
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -100,20 +100,44 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Bus stops" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29V-5e-Be9">
-                                                    <rect key="frame" x="60" y="0.0" width="225" height="43"/>
+                                                    <rect key="frame" x="73" y="0.0" width="212" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="BusIcon30px.gif" id="N0N-jN-cTU">
-                                                    <rect key="frame" x="15" y="6" width="30" height="30"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bus_trans.png" id="N0N-jN-cTU">
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="XSP-zY-AUM" kind="push" identifier="bussegue" id="APt-Jq-aIk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="GeU-7Y-IbF" imageView="Z0c-Mf-R41" style="IBUITableViewCellStyleDefault" id="4UE-h9-k7s">
+                                        <rect key="frame" x="0.0" y="251" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4UE-h9-k7s" id="8kn-sJ-5Xj">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Vline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GeU-7Y-IbF">
+                                                    <rect key="frame" x="73" y="0.0" width="212" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="train_region_trans.png" id="Z0c-Mf-R41">
+                                                    <rect key="frame" x="15" y="0.0" width="43" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="XSP-zY-AUM" kind="push" identifier="vlinesegue" id="J0E-T5-4fn"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -193,53 +217,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRK-ay-621">
-                                <rect key="frame" x="0.0" y="64" width="320" height="308"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRK-ay-621">
+                                <rect key="frame" x="0.0" y="64" width="320" height="286"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLQ-l0-uK4">
-                                <rect key="frame" x="20" y="405" width="280" height="29"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLQ-l0-uK4">
+                                <rect key="frame" x="95" y="394" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station Address" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="FeD-bd-R8r">
-                                <rect key="frame" x="20" y="440" width="300" height="44"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Station Address" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="FeD-bd-R8r">
+                                <rect key="frame" x="20" y="418" width="157" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="aco-Tg-XyR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elr-ga-oXQ">
-                                <rect key="frame" x="251" y="405" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elr-ga-oXQ">
+                                <rect key="frame" x="251" y="431" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchAction:" destination="5o8-Hj-Zy9" eventType="valueChanged" id="89u-6n-a2B"/>
                                 </connections>
                             </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ip-0U-Gwz">
+                                <rect key="frame" x="20" y="364" width="59" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="lRK-ay-621" firstAttribute="leading" secondItem="a0l-o0-pv2" secondAttribute="leading" id="4Gy-0B-Tsy"/>
-                            <constraint firstAttribute="trailing" secondItem="cLQ-l0-uK4" secondAttribute="trailing" constant="20" symbolic="YES" id="8IA-zw-VWd"/>
-                            <constraint firstItem="FeD-bd-R8r" firstAttribute="leading" secondItem="cLQ-l0-uK4" secondAttribute="leading" id="Dtg-2R-pGa"/>
-                            <constraint firstItem="lRK-ay-621" firstAttribute="centerX" secondItem="cLQ-l0-uK4" secondAttribute="centerX" id="M17-rX-qZD"/>
-                            <constraint firstItem="LcF-mL-0e0" firstAttribute="top" secondItem="FeD-bd-R8r" secondAttribute="bottom" constant="35" id="NR6-I1-FEG"/>
-                            <constraint firstItem="cLQ-l0-uK4" firstAttribute="top" secondItem="lRK-ay-621" secondAttribute="bottom" constant="33" id="O55-Lj-58W"/>
-                            <constraint firstItem="FeD-bd-R8r" firstAttribute="top" secondItem="cLQ-l0-uK4" secondAttribute="bottom" constant="6" id="QrW-Mf-d4p"/>
-                            <constraint firstItem="cLQ-l0-uK4" firstAttribute="leading" secondItem="a0l-o0-pv2" secondAttribute="leading" constant="20" symbolic="YES" id="YbL-8L-XZQ"/>
-                            <constraint firstItem="lRK-ay-621" firstAttribute="top" secondItem="5g3-vD-Q2w" secondAttribute="bottom" id="dzX-hl-u5M"/>
-                            <constraint firstItem="cLQ-l0-uK4" firstAttribute="trailing" secondItem="elr-ga-oXQ" secondAttribute="trailing" id="fp6-Ym-616"/>
-                            <constraint firstItem="FeD-bd-R8r" firstAttribute="top" secondItem="elr-ga-oXQ" secondAttribute="bottom" constant="4" id="g8V-uI-1Iw"/>
-                            <constraint firstItem="lRK-ay-621" firstAttribute="trailing" secondItem="FeD-bd-R8r" secondAttribute="trailing" id="iaD-oB-b3f"/>
-                            <constraint firstItem="cLQ-l0-uK4" firstAttribute="top" secondItem="elr-ga-oXQ" secondAttribute="top" id="p6V-mT-UAh"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zbq-vC-BSP"/>
                     <connections>
+                        <outlet property="iconImgView" destination="0Ip-0U-Gwz" id="NUd-RT-b8Y"/>
                         <outlet property="setAlarm" destination="elr-ga-oXQ" id="C7i-JO-IYd"/>
                         <outlet property="uiMapView" destination="lRK-ay-621" id="nDv-3I-SuS"/>
                         <outlet property="uiaddress" destination="FeD-bd-R8r" id="BF3-sx-Xoi"/>
@@ -248,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gb1-nn-jHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="-3774"/>
+            <point key="canvasLocation" x="1811" y="-3778"/>
         </scene>
         <!--Navigation Controller - Station-->
         <scene sceneID="awX-en-p1v">
@@ -423,12 +434,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BusIcon30px.gif" width="30" height="30"/>
-        <image name="TrainIcon30px.gif" width="30" height="30"/>
-        <image name="TramIcon30px.gif" width="30" height="30"/>
+        <image name="bus_trans.png" width="300" height="300"/>
         <image name="clock.png" width="24" height="24"/>
         <image name="location2.png" width="24" height="24"/>
         <image name="magnifying-glass.png" width="24" height="24"/>
+        <image name="train_metro_trans.png" width="300" height="300"/>
+        <image name="train_region_trans.png" width="300" height="300"/>
+        <image name="tram_trans.png" width="300" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -437,6 +449,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Dh8-oi-Ros"/>
-        <segue reference="lcE-lr-r3b"/>
+        <segue reference="J0E-T5-4fn"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -121,24 +121,8 @@
     cell.alarm=event;
     cell.mainlabel.text=event.toWhich.name;
     cell.sublabel.text=event.toWhich.address;
-    NSString *imgstr;
     int etype=event.toWhich.type.intValue;
-    switch (etype) {
-        case Tram:
-            imgstr=IMG_TRAM;
-            break;
-        case Train:
-            imgstr=IMG_TRAIN;
-            break;
-        case Bus:
-            imgstr=IMG_METROBUS;
-            break;
-            
-        default:
-            imgstr=IMG_TRAM;
-            break;
-    }
-    cell.img.image=[UIImage imageNamed:imgstr];
+    cell.img.image=[UIImage imageNamed:[PTVAlarmDefine typeToImgFile:etype]];
     cell.img.contentMode = UIViewContentModeScaleAspectFit;
     cell.uiswitch.on=[event.state boolValue];
 }
