@@ -42,6 +42,7 @@
 		A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C7184AF39200B7D2EB /* PTVAlarmManager.m */; };
 		A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5610F184B3B9900B7D2EB /* Alarms.m */; };
 		A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56112184B3B9A00B7D2EB /* Stations.m */; };
+		A9E14E9C18545B5000724A54 /* Alien.caf in Resources */ = {isa = PBXBuildFile; fileRef = A9E14E9B18545B5000724A54 /* Alien.caf */; };
 		A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F579A6184701BE0065553F /* alarms.xcdatamodeld */; };
 		A9F579C5184739850065553F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F579C4184739850065553F /* CoreData.framework */; };
 		A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F579C7184748B60065553F /* PTVAlarmDefine.m */; };
@@ -123,6 +124,7 @@
 		A9A5610F184B3B9900B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
 		A9A56111184B3B9A00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
 		A9A56112184B3B9A00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
+		A9E14E9B18545B5000724A54 /* Alien.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alien.caf; sourceTree = "<group>"; };
 		A9F579A7184701BE0065553F /* alarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = alarms.xcdatamodel; sourceTree = "<group>"; };
 		A9F579C4184739850065553F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A9F579C6184748B60065553F /* PTVAlarmDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmDefine.h; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */,
 				A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */,
 				A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */,
+				A9E14E9B18545B5000724A54 /* Alien.caf */,
 				A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */,
 				A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */,
 				A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */,
@@ -398,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FF1EB41851E1DB00EB787A /* train_region_trans.png in Resources */,
+				A9E14E9C18545B5000724A54 /* Alien.caf in Resources */,
 				A939217A184CA27400B5E967 /* weribee.gpx in Resources */,
 				A939217C184CAFED00B5E967 /* laverton.gpx in Resources */,
 				A9F579E2184886470065553F /* clock.png in Resources */,

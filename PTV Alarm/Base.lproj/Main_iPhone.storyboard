@@ -33,13 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GLd-Ak-Son">
-                            <rect key="frame" x="0.0" y="305" width="320" height="224"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
                         <sections>
                             <tableViewSection headerTitle="Select types" id="yzL-lr-ceD">
                                 <cells>
@@ -149,9 +142,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select by station" id="kiE-a3-SHu"/>
-                    <connections>
-                        <outlet property="textfield" destination="GLd-Ak-Son" id="A9u-Dl-o73"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CoJ-o5-xa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
