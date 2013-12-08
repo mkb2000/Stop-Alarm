@@ -11,7 +11,6 @@
 #import "PTVAlarmMapAnnotation.h"
 
 @interface PTVAlarmMapViewController ()
-@property (strong,nonatomic) CLLocationManager * cllmng;
 @property (strong,nonatomic) NSArray * activeAlarms;
 @property BOOL firstShow;
 @property (strong,nonatomic) CLLocation * lastLocation;
@@ -30,17 +29,17 @@
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
     //init CLLocationManager
-    self.cllmng=[[CLLocationManager alloc]init];
-    self.cllmng.delegate=self;
-    self.cllmng.desiredAccuracy=kCLLocationAccuracyHundredMeters;
-    self.cllmng.distanceFilter=50;
-    [self.cllmng startUpdatingLocation];
+    //    self.cllmng=[[CLLocationManager alloc]init];
+    //    self.cllmng.delegate=self;
+    //    self.cllmng.desiredAccuracy=kCLLocationAccuracyHundredMeters;
+    //    self.cllmng.distanceFilter=50;
+    //    [self.cllmng startUpdatingLocation];
     
     [self putDestinationsOnMap];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(putDestinationsOnMap) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationDidBecomeActiveNotification object:nil];
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForeground) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)enterBackground{
@@ -48,7 +47,7 @@
 }
 
 - (void)enterForeground{
-
+    
 }
 
 //triggered when change of alarm
@@ -57,11 +56,12 @@
         self.firstShow=false;
         [self setMapViewVisiblePortion:self.lastLocation];
     }
-//        NSLog(@"veiw will load!!!");
+    NSLog(@"veiw will load!!! with firstshow? %d, %@",self.firstShow,self.lastLocation);
+    //        NSLog(@"veiw will load!!!");
 }
 //- (void)viewWillDisappear:(BOOL)animated{
 //    NSLog(@"veiw unload!!!");
-//    
+//
 //}
 
 - (void) putDestinationsOnMap{
@@ -70,28 +70,26 @@
     [self.mapView removeOverlays:self.mapView.overlays];
     
     PTVAlarmAppDelegate * appdelegate=[[UIApplication sharedApplication] delegate];
+    self.lastLocation=appdelegate.ptvalarmmanager.lastLocation;
     self.activeAlarms=[[appdelegate activeAlarms] copy];
-    if ([self.activeAlarms count]) {
-        for (Alarms * a in self.activeAlarms) {
-            PTVAlarmMapAnnotation * mapPin=[[PTVAlarmMapAnnotation alloc] init];
-            mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
-            mapPin.name=a.toWhich.name;
-            mapPin.address=a.toWhich.address;
-            [self.mapView addAnnotation:mapPin];
-            
-            //for test
-            CLLocationCoordinate2D centre;
-            centre.latitude=a.toWhich.latitude.doubleValue;
-            centre.longitude=a.toWhich.longitude.doubleValue;
-            MKCircle * region=[MKCircle circleWithCenterCoordinate:centre radius:ALARM_DISTANCE];
-            [self.mapView addOverlay:region];
-        }
-    }
-    else{
-        [self.cllmng stopUpdatingLocation];
+    for (Alarms * a in self.activeAlarms) {
+        //pin
+        PTVAlarmMapAnnotation * mapPin=[[PTVAlarmMapAnnotation alloc] init];
+        mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
+        mapPin.name=a.toWhich.name;
+        mapPin.address=a.toWhich.address;
+        [self.mapView addAnnotation:mapPin];
+        
+        //alert region
+        CLLocationCoordinate2D centre;
+        centre.latitude=a.toWhich.latitude.doubleValue;
+        centre.longitude=a.toWhich.longitude.doubleValue;
+        MKCircle * region=[MKCircle circleWithCenterCoordinate:centre radius:ALARM_DISTANCE];
+        [self.mapView addOverlay:region];
     }
 }
 
+//Make the destination and user location visible in the map view.
 - (void)setMapViewVisiblePortion:(CLLocation *) currentLoci{
     MKCoordinateRegion r;
     MKCoordinateSpan span;
@@ -102,6 +100,7 @@
     c.longitude=currentLoci.coordinate.longitude;
     c.latitude=currentLoci.coordinate.latitude;
     r.center = c;
+    
     if ([self.activeAlarms count]&&currentLoci) {
         //find the nearest active destination, calculate the span to show both of desti and current location on map.
         Alarms * showThisAlarm;
@@ -109,7 +108,7 @@
         CLLocationDistance distance=0;
         
         for (Alarms * a in self.activeAlarms) {
-            NSLog(@"%@",a.toWhich.name);
+            //            NSLog(@"%@",a.toWhich.name);
             CLLocation * toLoci=[[CLLocation alloc] initWithLatitude:a.toWhich.latitude.doubleValue longitude:a.toWhich.longitude.doubleValue];
             if (previous==-1) {
                 previous=[currentLoci distanceFromLocation:toLoci];
@@ -122,13 +121,13 @@
                 previous=distance;
             }
         }
-        //TODO. use some formula to calculate the center and radius. This seems works ok...
+        //TODO. use some formula to calculate the center and radius. This seems work ok...
         double cenlati=(currentLoci.coordinate.latitude+showThisAlarm.toWhich.latitude.doubleValue)/2;
         double cenlongi=(currentLoci.coordinate.longitude+showThisAlarm.toWhich.longitude.doubleValue)/2;
         double lenth=distance*1.5>400?distance*1.5:600;
         
         if (lenth<50000) {
-
+            
             MKCoordinateRegion region=MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(cenlati, cenlongi), lenth,lenth);
             [self.mapView setRegion:region animated:YES];
         }
@@ -142,17 +141,7 @@
         //if no active alarm.
         [self.mapView setRegion:r animated:YES];
     }
-
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
-    CLLocation * currentLoci=[locations lastObject];
-    self.lastLocation=currentLoci;
-    if (self.firstShow&&self.lastLocation) {
-        self.firstShow=false;
-        [self setMapViewVisiblePortion:self.lastLocation];
-    }
-    NSLog(@"loci changed!");
+    
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay

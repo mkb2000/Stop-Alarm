@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PTVAlarmMapViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate>
+@interface PTVAlarmMapViewController : UIViewController <MKMapViewDelegate>
 @property (nonatomic,strong) IBOutlet MKMapView *mapView;
 @end

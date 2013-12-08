@@ -41,12 +41,12 @@
     [self fetchResult];
     
     if (self.setAlarm.on) {
-        if (![CLLocationManager locationServicesEnabled]|| [CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
-            PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
-            [PTVAlarmDefine alertOfLocationServiceUnavailable:delegate.ptvalarmmanager];
-            self.setAlarm.on=false;
-        }
-        else{
+//        if (![CLLocationManager locationServicesEnabled]|| [CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
+//            PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
+//            [PTVAlarmDefine alertOfLocationServiceUnavailable:delegate.ptvalarmmanager];
+//            self.setAlarm.on=false;
+//        }
+//        else{
             //add this station to Alarms view. If existed, turn on this alarm.
             if (((Stations *)self.result[0]).alarm) {
                 ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:ONSTATE];
@@ -62,7 +62,7 @@
             else{
                 NSLog(@"Fail to add alarm");
             }
-        }
+//        }
     }
     else{
         if ([self.result count]==0) {}

@@ -3,3 +3,5 @@ app icon and startup background.
 //alert if location service is unable.
 show nearby stations. select it to show detail.
 out of signal.
+support ios 6.
+alert sound.

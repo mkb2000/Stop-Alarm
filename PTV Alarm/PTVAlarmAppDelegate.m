@@ -52,6 +52,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    self.ptvalarmmanager.backgroundMode=false;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -162,7 +163,7 @@
     fetch.predicate=predicate;
     NSArray * result;
     result=[self.managedObjectContext executeFetchRequest:fetch error:nil];
-    NSLog(@"active alarm amount: %d", (int)[result count]);
+    NSLog(@"qactive alarm amount: %d", (int)[result count]);
     return result;
 }
 

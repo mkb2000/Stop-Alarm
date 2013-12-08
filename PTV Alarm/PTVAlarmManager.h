@@ -18,10 +18,13 @@
 @interface PTVAlarmManager : NSObject <CLLocationManagerDelegate>
 
 @property (weak,nonatomic) PTVAlarmViewController * delegate;//for test
+@property BOOL backgroundMode;
+@property (strong,nonatomic) CLLocation * lastLocation;
 
 //-(void) addAlarm:(Alarms *) newAlarm;
 //-(void) removeAlarm:(Alarms *) alarm;
 //- (PTVAlarmManager *) initWithAlarms:(NSArray *) activealarms;
 -(void) activeAlarmsChange:(NSArray *) activealarms;
+
 
 @end
