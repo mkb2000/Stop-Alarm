@@ -12,69 +12,85 @@
 
 @interface PTVAlarmMapViewController ()
 @property (strong,nonatomic) NSArray * activeAlarms;
-@property BOOL firstShow;
 @property (strong,nonatomic) CLLocation * lastLocation;
+@property (strong,nonatomic) NSMutableDictionary * annotationDic;
+@property (strong,nonatomic) PTVAlarmAppDelegate * appdelegate;
+@property (nonatomic) BOOL activeView;
 @end
 
 @implementation PTVAlarmMapViewController
+
+- (NSMutableDictionary *)annotationDic{
+    if (!_annotationDic) {
+        _annotationDic=[NSMutableDictionary dictionary];
+    }
+    return _annotationDic;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@"view load!!");
     
-    self.firstShow=TRUE;
+    self.appdelegate=[[UIApplication sharedApplication] delegate];
+    self.lastLocation=self.appdelegate.ptvalarmmanager.lastLocation;
+
     self.mapView.delegate=self;
     self.mapView.showsUserLocation=YES;
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
+    self.activeView=false;
     [self activeAlarmsDidChange];
-    [self putDestinationsOnMap];
+    self.activeView=true;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsDidChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
 
 //triggered when change of alarm
 - (void)viewWillAppear:(BOOL)animated{
-    if (self.firstShow) {
-        [self putDestinationsOnMap];
-        self.firstShow=false;
-        if (self.lastLocation) {
-            [self setMapViewVisiblePortion:self.lastLocation];
-        }
-    }
-    NSLog(@"veiw will load!!! with firstshow? %d, %@",self.firstShow,self.lastLocation);
-    //        NSLog(@"veiw will load!!!");
+    self.activeView=true;
+    NSLog(@"veiw will load!!!");
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.activeView=false;
+    NSLog(@"veiw will disappear!!!");
 }
 
 - (void) activeAlarmsDidChange{
-    self.firstShow=TRUE;
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    [self.mapView removeOverlays:self.mapView.overlays];
+    NSMutableSet *old=[NSMutableSet setWithArray:self.activeAlarms];
+    NSMutableSet *new=[NSMutableSet setWithArray:[[self.appdelegate activeAlarms] copy] ];
+    NSMutableSet *difference;
     
-    PTVAlarmAppDelegate * appdelegate=[[UIApplication sharedApplication] delegate];
-    self.lastLocation=appdelegate.ptvalarmmanager.lastLocation;
-    self.activeAlarms=[[appdelegate activeAlarms] copy];
-}
-
-- (void) putDestinationsOnMap{
-
-    for (Alarms * a in self.activeAlarms) {
-        //pin
-        PTVAlarmMapAnnotation * mapPin=[[PTVAlarmMapAnnotation alloc] init];
-        mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
-        mapPin.name=a.toWhich.name;
-        mapPin.address=a.toWhich.address;
-        [self.mapView addAnnotation:mapPin];
-        
-        //alert region overlay
-        CLLocationCoordinate2D centre;
-        centre.latitude=a.toWhich.latitude.doubleValue;
-        centre.longitude=a.toWhich.longitude.doubleValue;
-        MKCircle * region=[MKCircle circleWithCenterCoordinate:centre radius:ALARM_DISTANCE];
-        [self.mapView addOverlay:region];
+    if ([old count]>[new count]) {
+        //remove active alarm action
+        difference=[NSMutableSet setWithSet:old];
+        [difference minusSet:new];
+        for (Alarms *dif in difference) {
+        [self.mapView removeAnnotation:[self.annotationDic objectForKey:dif.toWhich.address]];
+        [self.annotationDic removeObjectForKey:dif.toWhich.address];
+        }
     }
+    else{
+        //add new alarm action
+        difference=[NSMutableSet setWithSet:new];
+        [difference minusSet:old];
+        for (Alarms *a in difference) {
+            PTVAlarmMapAnnotation * mapPin=[[PTVAlarmMapAnnotation alloc] init];
+            mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
+            mapPin.name=a.toWhich.name;
+            mapPin.address=a.toWhich.address;
+            [self.mapView addAnnotation:mapPin];
+            [self.annotationDic setObject:mapPin forKey:mapPin.address];
+        }
+    }
+    self.activeAlarms=[[self.appdelegate activeAlarms] copy];
+    if (self.lastLocation&&!self.activeView) {
+        [self setMapViewVisiblePortion:self.lastLocation];
+    }
+
 }
+
 
 //Make the destination and user location visible in the map view.
 - (void)setMapViewVisiblePortion:(CLLocation *) currentLoci{
@@ -121,11 +137,6 @@
             [self.mapView setRegion:r animated:YES];
         }
     }
-//    else{
-//        //if no active alarm.
-//        [self.mapView setRegion:r animated:YES];
-//    }
-    
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
