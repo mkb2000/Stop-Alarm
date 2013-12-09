@@ -66,4 +66,21 @@
     [alertview show];
 }
 
++ (int)alertDistanceForType:(TransportType)type{
+    switch (type) {
+        case Bus:
+            return ALARM_DISTANCE_BUS;
+            break;
+        case Train:
+            return ALARM_DISTANCE_TRAIN;
+            break;
+        case Tram:
+            return ALARM_DISTANCE_TRAM;
+            break;
+        default:
+            return ALARM_DISTANCE;
+            break;
+    }
+}
+
 @end

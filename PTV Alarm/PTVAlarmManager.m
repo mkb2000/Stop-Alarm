@@ -18,6 +18,7 @@
 @property (nonatomic,strong)UILocalNotification* alarm;
 @property (nonatomic) BOOL alertShowed;
 @property CLAuthorizationStatus authState;
+@property (nonatomic) BOOL highAccuracyMode;
 @end
 
 @implementation PTVAlarmManager
@@ -27,8 +28,8 @@
     if (!_cllmng) {
         self.cllmng=[[CLLocationManager alloc]init];
         self.cllmng.delegate=self;
-        self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
-        self.cllmng.distanceFilter=20;
+        //        self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+        //        self.cllmng.distanceFilter=20;
     }
     return  _cllmng;
 }
@@ -86,8 +87,11 @@
         else{
             self.alertShowed=false;
             self.activeAlarms=[NSMutableSet setWithArray:activealarms];
-            [self.cllmng startUpdatingLocation];
-            //        [self startLowAccuracy];
+            //            for (Alarms * alarm in self.activeAlarms) {
+            //                    [self addMonitoredRegion:alarm];
+            //            }
+            //            [self.cllmng startUpdatingLocation];
+            [self startLowAccuracyMode];
         }
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -102,7 +106,7 @@
 
 -(void) enterBackground{
     self.backgroundMode=true;
-    [self stopLocationService];
+    //    [self stopLocationService];
 }
 
 -(void) addMonitoredRegion:(Alarms *) alarm{
@@ -110,7 +114,7 @@
     centre.latitude=alarm.toWhich.latitude.doubleValue;
     centre.longitude=alarm.toWhich.longitude.doubleValue;
     
-    CLLocationDegrees radius = ALARM_DISTANCE;
+    CLLocationDegrees radius = 2000;//ALARM_DISTANCE;
     radius=radius>self.cllmng.maximumRegionMonitoringDistance?self.cllmng.maximumRegionMonitoringDistance:radius;
     
     // Create the geographic region to be monitored.
@@ -122,14 +126,17 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
-    
-    for (Alarms * a in self.activeAlarms) {
-        if ([a.toWhich.address isEqualToString:region.identifier]) {
-            [self closeEnoughToTarget:a];
-        }
-        
-        [self updateInfo:@"Enter region!"];
+    if (self.backgroundMode) {
+        [self startHighAccuracyMode];
     }
+    NSLog(@"enter region!");
+    //    for (Alarms * a in self.activeAlarms) {
+    //        if ([a.toWhich.address isEqualToString:region.identifier]) {
+    //            [self closeEnoughToTarget:a];
+    //        }
+    //
+    //        [self updateInfo:@"Enter region!"];
+    //    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
@@ -148,8 +155,12 @@
 
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+//    if (self.backgroundMode) {
+//        [self startHighAccuracyMode];
+//    }
     CLLocation* location = [locations lastObject];
     self.lastLocation=location;
+    NSLog(@"%@ %@",self.highAccuracyMode?@"high mode":@"low mode",location);
     NSDate* eventDate = location.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     if (abs(howRecent) < 15.0) {
@@ -157,14 +168,12 @@
         for (Alarms * alarm in self.activeAlarms) {
             CLLocation *targetLocation=[[CLLocation alloc] initWithLatitude:alarm.toWhich.latitude.doubleValue longitude:alarm.toWhich.longitude.doubleValue];
             CLLocationDistance distance=[targetLocation distanceFromLocation:location];
-            if (distance<ALARM_DISTANCE) {
+            int alarm_distance=[PTVAlarmDefine alertDistanceForType:alarm.toWhich.type.intValue];
+            if (distance<alarm_distance) {
                 [self closeEnoughToTarget:alarm];
             }
-            else{
-                [self addMonitoredRegion:alarm];
-            }
         }
-        [self stopLocationService];
+        //        [self stopLocationService];
         NSLog(@"%@",location);
     }
 }
@@ -190,7 +199,7 @@
 
 - (void) updateInfo:(NSString *) msg{
     NSLog(@"%@",msg);
-//    [self.delegate updateTextField:msg];
+    //    [self.delegate updateTextField:msg];
 }
 
 
@@ -209,6 +218,27 @@
     [self.cllmng stopUpdatingLocation];
     [self.cllmng stopMonitoringSignificantLocationChanges];
     NSLog(@"stop location service");
+}
+
+- (void) startLowAccuracyMode{
+        self.highAccuracyMode=false;
+        //    [self.cllmng stopUpdatingLocation];
+        //    [self.cllmng startMonitoringSignificantLocationChanges];
+        self.cllmng.desiredAccuracy=kCLLocationAccuracyHundredMeters;
+        self.cllmng.distanceFilter=200;
+        [self.cllmng startUpdatingLocation];
+        NSLog(@"start low mode");
+}
+
+-(void) startHighAccuracyMode{
+    if (!self.highAccuracyMode) {
+        self.highAccuracyMode=true;
+        //    [self.cllmng stopMonitoringSignificantLocationChanges];
+        self.cllmng.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
+        self.cllmng.distanceFilter=50;
+        [self.cllmng startUpdatingLocation];
+        NSLog(@"start high mode");
+    }
 }
 
 @end

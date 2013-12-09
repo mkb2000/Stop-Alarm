@@ -20,6 +20,9 @@
 #define FILE_TRAM @"tram.csv"
 #define FILE_BUS @"bus.csv"
 #define ALARM_DISTANCE 300 //When this far away, may triger the alarm.
+#define ALARM_DISTANCE_BUS 200
+#define ALARM_DISTANCE_TRAIN 400
+#define ALARM_DISTANCE_TRAM 200
 #define DELAY_TIMES 1 //Triger the alarm only when this many times of location updates within ALARM_DISTANCE.
 
 typedef  enum{
@@ -32,4 +35,5 @@ typedef  enum{
 + (PTVAlarmDefine *) globalVariables;
 + (TransportType) filenameToStationType:(NSString *) filename;
 + (void) alertOfLocationServiceUnavailable:(id) delegate;
++ (int) alertDistanceForType:(TransportType) type;
 @end
