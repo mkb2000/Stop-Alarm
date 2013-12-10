@@ -16,6 +16,8 @@
 @property (strong,nonatomic) NSMutableDictionary * annotationDic;
 @property (strong,nonatomic) PTVAlarmAppDelegate * appdelegate;
 @property (nonatomic) BOOL activeView;
+@property (strong,nonatomic) Alarms * lastArrived;
+@property (strong,nonatomic) PTVAlarmMapAnnotation * lastArrivedAnno;
 @end
 
 @implementation PTVAlarmMapViewController
@@ -34,7 +36,7 @@
     
     self.appdelegate=[[UIApplication sharedApplication] delegate];
     self.lastLocation=self.appdelegate.ptvalarmmanager.lastLocation;
-
+    
     self.mapView.delegate=self;
     self.mapView.showsUserLocation=YES;
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
@@ -46,7 +48,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsDidChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 }
 
-//triggered when change of alarm
+
 - (void)viewWillAppear:(BOOL)animated{
     self.activeView=true;
     NSLog(@"veiw will load!!!");
@@ -67,8 +69,8 @@
         difference=[NSMutableSet setWithSet:old];
         [difference minusSet:new];
         for (Alarms *dif in difference) {
-        [self.mapView removeAnnotation:[self.annotationDic objectForKey:dif.toWhich.address]];
-        [self.annotationDic removeObjectForKey:dif.toWhich.address];
+            [self.mapView removeAnnotation:[self.annotationDic objectForKey:dif.toWhich.address]];
+            [self.annotationDic removeObjectForKey:dif.toWhich.address];
         }
     }
     else{
@@ -84,11 +86,29 @@
             [self.annotationDic setObject:mapPin forKey:mapPin.address];
         }
     }
+    
+    //remove or add the last arrived destination.
+    if (self.appdelegate.ptvalarmmanager.lastArrived) {
+        self.lastArrived=self.appdelegate.ptvalarmmanager.lastArrived;
+        PTVAlarmMapAnnotation *lastArrivedAnnotation=[[PTVAlarmMapAnnotation alloc]init];
+        lastArrivedAnnotation.theCoordinate=CLLocationCoordinate2DMake(self.lastArrived.toWhich.latitude.doubleValue, self.lastArrived.toWhich.longitude.doubleValue);
+        lastArrivedAnnotation.name=self.lastArrived.toWhich.name;
+        lastArrivedAnnotation.address=self.lastArrived.toWhich.address;
+        [self.mapView addAnnotation:lastArrivedAnnotation];
+        self.appdelegate.ptvalarmmanager.lastArrived=nil;
+        self.lastArrivedAnno=lastArrivedAnnotation;
+    }
+    else{
+        if (self.lastArrivedAnno) {
+            [self.mapView removeAnnotation:self.lastArrivedAnno];
+            self.lastArrivedAnno=nil;
+        }
+    }
+    
     self.activeAlarms=[[self.appdelegate activeAlarms] copy];
     if (self.lastLocation&&!self.activeView) {
         [self setMapViewVisiblePortion:self.lastLocation];
     }
-
 }
 
 

@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Kangbo Mo. All rights reserved.
 //
 //  Manage alive alarms. Alert when destination is arrived.
+//  The change of active alarms is broadcast using notification, which is also adopt in other uiview.
+//  There are three approach to assay the arrival of a destination:
+//  1. use geoFencing. Set a region and use [CLLocationManager startMonitoringForRegion:] to monitor this region. When user enter this region, a short period of running from background is garranteed. Use this feature to give an alert.
+//  2. use [CLLocationManger startUpdatingLocation] to continuously update user location, calculate the distance between current location and destinations. Give an alert when distance is less than a threshold. The app has to be grant the right to run background. The update of location is continous, thus cost much power. However, as test on train, device often became unable to deliver user location timely, and cause the alert fail.
+//  3. startMonitoringSignificantLocationChanges/geofencing + startUpdatingLocation. Use the first two low power method to monitor a region. If user enter this region, start high accuracy monitor.
+//  The accuracy of this app is largely depended on timely dilivery of user location by the device.
 
 
 #import "PTVAlarmManager.h"
@@ -181,6 +187,7 @@
 -(void) closeEnoughToTarget:(Alarms *) destination{
     [self stopLocationService];
     //alert when arrival
+    self.lastArrived=destination;
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive&&!self.alertShowed) {
         self.alertShowed=true;
         UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:[@"Arrival" stringByAppendingString:destination.toWhich.name] message:@"Your destination is around the corner!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -214,6 +221,7 @@
     }
     NSLog(@"destory cllmng");
 }
+
 - (void) stopLocationService{
     [self.cllmng stopUpdatingLocation];
     [self.cllmng stopMonitoringSignificantLocationChanges];

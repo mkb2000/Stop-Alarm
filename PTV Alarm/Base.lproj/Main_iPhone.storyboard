@@ -155,9 +155,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="HDM-Z6-nMV">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="XSP-zY-AUM" id="tur-Kr-MuA"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stationCell" textLabel="cgb-WD-1lG" detailTextLabel="Mqv-Lv-wQ1" style="IBUITableViewCellStyleSubtitle" id="J4X-8U-rzM">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J4X-8U-rzM" id="twx-XU-Jdd">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -190,8 +198,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select by station" id="ggX-Ax-5gp"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Sfd-Bh-bkh" id="pTy-MC-Ta2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QW8-XH-HgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Sfd-Bh-bkh">
+                    <connections>
+                        <outlet property="delegate" destination="XSP-zY-AUM" id="c2N-Ni-Zz3"/>
+                        <outlet property="searchBar" destination="HDM-Z6-nMV" id="OS3-Zx-QTo"/>
+                        <outlet property="searchContentsController" destination="XSP-zY-AUM" id="MyY-ra-QFL"/>
+                        <outlet property="searchResultsDataSource" destination="XSP-zY-AUM" id="HL2-A2-YQe"/>
+                        <outlet property="searchResultsDelegate" destination="XSP-zY-AUM" id="IrD-07-3Rg"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1593" y="-4552"/>
         </scene>
@@ -464,7 +484,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Dh8-oi-Ros"/>
         <segue reference="J0E-T5-4fn"/>
+        <segue reference="c13-iO-rHB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *uiaddress;
 @property (weak, nonatomic) IBOutlet MKMapView *uiMapView;
 @property (weak, nonatomic) IBOutlet UISwitch *setAlarm;
-@property (strong) NSManagedObjectContext *managedObjectContext;
+@property (strong,nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong,nonatomic) NSArray * result;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImgView;
 @property (nonatomic) BOOL isOn;
@@ -41,12 +41,6 @@
     [self fetchResult];
     
     if (self.setAlarm.on) {
-//        if (![CLLocationManager locationServicesEnabled]|| [CLLocationManager authorizationStatus]==kCLAuthorizationStatusDenied) {
-//            PTVAlarmAppDelegate * delegate=[[UIApplication sharedApplication] delegate];
-//            [PTVAlarmDefine alertOfLocationServiceUnavailable:delegate.ptvalarmmanager];
-//            self.setAlarm.on=false;
-//        }
-//        else{
             //add this station to Alarms view. If existed, turn on this alarm.
             if (((Stations *)self.result[0]).alarm) {
                 ((Stations *)self.result[0]).alarm.state=[NSNumber numberWithInt:ONSTATE];
@@ -62,7 +56,6 @@
             else{
                 NSLog(@"Fail to add alarm");
             }
-//        }
     }
     else{
         if ([self.result count]==0) {}

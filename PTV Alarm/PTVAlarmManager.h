@@ -20,10 +20,8 @@
 //@property (weak,nonatomic) PTVAlarmViewController * delegate;//for test
 @property BOOL backgroundMode;
 @property (strong,nonatomic) CLLocation * lastLocation;
+@property (strong,nonatomic) Alarms * lastArrived;
 
-//-(void) addAlarm:(Alarms *) newAlarm;
-//-(void) removeAlarm:(Alarms *) alarm;
-//- (PTVAlarmManager *) initWithAlarms:(NSArray *) activealarms;
 -(void) activeAlarmsChange:(NSArray *) activealarms;
 
 

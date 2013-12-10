@@ -138,7 +138,7 @@
                 Stations *station=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_STATION
                                                                 inManagedObjectContext:self.managedObjectContext];
                 station.name=parts[0];
-                station.initial=[station.name substringToIndex:1];
+                station.initial=[[ NSString stringWithString:[station.name substringToIndex:1] ]uppercaseString];
                 station.suburb=parts[1];
                 station.address=parts[2];
                 NSArray * cor=[parts[3] componentsSeparatedByString:@","];
