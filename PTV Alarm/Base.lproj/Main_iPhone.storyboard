@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-610" y="-4258"/>
         </scene>
-        <!--Alarm View Controller - Select by station-->
+        <!--Alarm View Controller - Find a stop-->
         <scene sceneID="Hhe-5o-0Lz">
             <objects>
                 <tableViewController id="fvH-hV-dcQ" customClass="PTVAlarmViewController" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Select types" id="yzL-lr-ceD">
+                            <tableViewSection headerTitle="Types" id="yzL-lr-ceD">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nNI-MR-NYT" imageView="rgl-sC-UVx" style="IBUITableViewCellStyleDefault" id="a6n-oR-SR4">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -141,13 +141,15 @@
                             <outlet property="delegate" destination="fvH-hV-dcQ" id="acq-0y-B75"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select by station" id="kiE-a3-SHu"/>
+                    <navigationItem key="navigationItem" title="Find a stop" id="kiE-a3-SHu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="abJ-iC-wkY"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CoJ-o5-xa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1019" y="-4552"/>
         </scene>
-        <!--Alarm Station View Controller - Select by station-->
+        <!--Alarm Station View Controller - Find a stop-->
         <scene sceneID="Bf8-KS-CjW">
             <objects>
                 <tableViewController id="XSP-zY-AUM" customClass="PTVAlarmStationViewController" sceneMemberID="viewController">
@@ -164,7 +166,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stationCell" textLabel="cgb-WD-1lG" detailTextLabel="Mqv-Lv-wQ1" style="IBUITableViewCellStyleSubtitle" id="J4X-8U-rzM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stationCell" textLabel="cgb-WD-1lG" detailTextLabel="DJE-42-Lo1" style="IBUITableViewCellStyleSubtitle" id="J4X-8U-rzM">
                                 <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J4X-8U-rzM" id="twx-XU-Jdd">
@@ -178,7 +180,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mqv-Lv-wQ1">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DJE-42-Lo1">
                                             <rect key="frame" x="15" y="25" width="43" height="15"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -197,7 +199,9 @@
                             <outlet property="delegate" destination="XSP-zY-AUM" id="r8T-Vk-4XZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select by station" id="ggX-Ax-5gp"/>
+                    <navigationItem key="navigationItem" title="Find a stop" id="ggX-Ax-5gp">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="znW-IX-B7t"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Sfd-Bh-bkh" id="pTy-MC-Ta2"/>
                     </connections>
@@ -215,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="1593" y="-4552"/>
         </scene>
-        <!--Alarm Detail View Controller-->
+        <!--Alarm Detail View Controller - Stop detail-->
         <scene sceneID="Epk-Jv-6L5">
             <objects>
                 <viewController id="5o8-Hj-Zy9" customClass="PTVAlarmDetailViewController" sceneMemberID="viewController">
@@ -284,7 +288,7 @@
                             <constraint firstItem="lRK-ay-621" firstAttribute="top" secondItem="5g3-vD-Q2w" secondAttribute="bottom" id="zNG-Bt-FSJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zbq-vC-BSP"/>
+                    <navigationItem key="navigationItem" title="Stop detail" id="zbq-vC-BSP"/>
                     <connections>
                         <outlet property="iconImgView" destination="0Ip-0U-Gwz" id="NUd-RT-b8Y"/>
                         <outlet property="setAlarm" destination="elr-ga-oXQ" id="C7i-JO-IYd"/>

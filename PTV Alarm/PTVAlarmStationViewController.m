@@ -124,8 +124,19 @@
     Stations * stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text=stationInfo.name;
     cell.detailTextLabel.text=stationInfo.suburb;
+    if (stationInfo.type.intValue!=Train) {
+        cell.textLabel.font=[cell.textLabel.font fontWithSize:15];
+    }
     
     UIImage * img=[UIImage imageNamed:self.imgname];
+    
+//    CGSize itemSize = CGSizeMake(40, 40);
+//    UIGraphicsBeginImageContext(itemSize);
+//    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+//    [img drawInRect:imageRect];
+//    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+
     cell.imageView.image=img;
 }
 

@@ -42,6 +42,11 @@
 		A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C7184AF39200B7D2EB /* PTVAlarmManager.m */; };
 		A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5610F184B3B9900B7D2EB /* Alarms.m */; };
 		A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56112184B3B9A00B7D2EB /* Stations.m */; };
+		A9C67FAB18593C4B00E3F45D /* iconVline.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAA18593C4A00E3F45D /* iconVline.png */; };
+		A9C67FAD1859407700E3F45D /* iconTram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAC1859407700E3F45D /* iconTram@2x.png */; };
+		A9C67FB11859433400E3F45D /* iconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAE1859433400E3F45D /* iconBus@2x.png */; };
+		A9C67FB21859433400E3F45D /* iconTrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAF1859433400E3F45D /* iconTrain@2x.png */; };
+		A9C67FB31859433400E3F45D /* iconVline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FB01859433400E3F45D /* iconVline@2x.png */; };
 		A9E14E9C18545B5000724A54 /* Alien.caf in Resources */ = {isa = PBXBuildFile; fileRef = A9E14E9B18545B5000724A54 /* Alien.caf */; };
 		A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F579A6184701BE0065553F /* alarms.xcdatamodeld */; };
 		A9F579C5184739850065553F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F579C4184739850065553F /* CoreData.framework */; };
@@ -58,7 +63,6 @@
 		A9FF1EB51851E1DB00EB787A /* tram_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EB11851E1DB00EB787A /* tram_trans.png */; };
 		A9FF1EBB1851E41100EB787A /* iconTram.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EB61851E41100EB787A /* iconTram.png */; };
 		A9FF1EBC1851E41100EB787A /* logo-regional-coach.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EB71851E41100EB787A /* logo-regional-coach.gif */; };
-		A9FF1EBD1851E41100EB787A /* logo-regional-train.gif in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EB81851E41100EB787A /* logo-regional-train.gif */; };
 		A9FF1EBE1851E41100EB787A /* iconTrain.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EB91851E41100EB787A /* iconTrain.png */; };
 		A9FF1EBF1851E41100EB787A /* iconBus.png in Resources */ = {isa = PBXBuildFile; fileRef = A9FF1EBA1851E41100EB787A /* iconBus.png */; };
 /* End PBXBuildFile section */
@@ -124,6 +128,11 @@
 		A9A5610F184B3B9900B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
 		A9A56111184B3B9A00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
 		A9A56112184B3B9A00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
+		A9C67FAA18593C4A00E3F45D /* iconVline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconVline.png; sourceTree = "<group>"; };
+		A9C67FAC1859407700E3F45D /* iconTram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTram@2x.png"; sourceTree = "<group>"; };
+		A9C67FAE1859433400E3F45D /* iconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBus@2x.png"; sourceTree = "<group>"; };
+		A9C67FAF1859433400E3F45D /* iconTrain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTrain@2x.png"; sourceTree = "<group>"; };
+		A9C67FB01859433400E3F45D /* iconVline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVline@2x.png"; sourceTree = "<group>"; };
 		A9E14E9B18545B5000724A54 /* Alien.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alien.caf; sourceTree = "<group>"; };
 		A9F579A7184701BE0065553F /* alarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = alarms.xcdatamodel; sourceTree = "<group>"; };
 		A9F579C4184739850065553F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -141,7 +150,6 @@
 		A9FF1EB11851E1DB00EB787A /* tram_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tram_trans.png; sourceTree = "<group>"; };
 		A9FF1EB61851E41100EB787A /* iconTram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTram.png; sourceTree = "<group>"; };
 		A9FF1EB71851E41100EB787A /* logo-regional-coach.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-regional-coach.gif"; sourceTree = "<group>"; };
-		A9FF1EB81851E41100EB787A /* logo-regional-train.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "logo-regional-train.gif"; sourceTree = "<group>"; };
 		A9FF1EB91851E41100EB787A /* iconTrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTrain.png; sourceTree = "<group>"; };
 		A9FF1EBA1851E41100EB787A /* iconBus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconBus.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,11 +186,15 @@
 				A9F579DC184886350065553F /* magnifying-glass.png */,
 				A9F579E0184886470065553F /* clock.png */,
 				A9F579E41848867A0065553F /* location2.png */,
+				A9C67FAC1859407700E3F45D /* iconTram@2x.png */,
 				A9F579E51848867A0065553F /* location2@2x.png */,
 				A9FF1EB61851E41100EB787A /* iconTram.png */,
+				A9C67FAE1859433400E3F45D /* iconBus@2x.png */,
+				A9C67FAF1859433400E3F45D /* iconTrain@2x.png */,
+				A9C67FB01859433400E3F45D /* iconVline@2x.png */,
 				A9FF1EB71851E41100EB787A /* logo-regional-coach.gif */,
-				A9FF1EB81851E41100EB787A /* logo-regional-train.gif */,
 				A9FF1EB91851E41100EB787A /* iconTrain.png */,
+				A9C67FAA18593C4A00E3F45D /* iconVline.png */,
 				A9FF1EBA1851E41100EB787A /* iconBus.png */,
 				A9F579E1184886470065553F /* clock@2x.png */,
 				A9FF1EAE1851E1DB00EB787A /* bus_trans.png */,
@@ -406,6 +418,7 @@
 				A939217C184CAFED00B5E967 /* laverton.gpx in Resources */,
 				A9F579E2184886470065553F /* clock.png in Resources */,
 				A9FF1EBF1851E41100EB787A /* iconBus.png in Resources */,
+				A9C67FB11859433400E3F45D /* iconBus@2x.png in Resources */,
 				A9FF1EB21851E1DB00EB787A /* bus_trans.png in Resources */,
 				A92F299F185213260020673C /* tram.csv in Resources */,
 				A9FF1EBC1851E41100EB787A /* logo-regional-coach.gif in Resources */,
@@ -413,18 +426,21 @@
 				A9961DFD1835D54C00AAF1A9 /* Images.xcassets in Resources */,
 				A9FF1EB31851E1DB00EB787A /* train_metro_trans.png in Resources */,
 				A9079FFB18388EF800D8267D /* train.csv in Resources */,
+				A9C67FB31859433400E3F45D /* iconVline@2x.png in Resources */,
+				A9C67FAB18593C4B00E3F45D /* iconVline.png in Resources */,
 				A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */,
 				A92F29A0185213260020673C /* vline.csv in Resources */,
 				A9F579E71848867A0065553F /* location2@2x.png in Resources */,
 				A9961DF51835D54C00AAF1A9 /* Main_iPhone.storyboard in Resources */,
 				A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */,
+				A9C67FB21859433400E3F45D /* iconTrain@2x.png in Resources */,
 				A9FF1EBE1851E41100EB787A /* iconTrain.png in Resources */,
-				A9FF1EBD1851E41100EB787A /* logo-regional-train.gif in Resources */,
 				A9F579E3184886470065553F /* clock@2x.png in Resources */,
 				A9F579DF184886350065553F /* magnifying-glass@2x.png in Resources */,
 				A9FF1EB51851E1DB00EB787A /* tram_trans.png in Resources */,
 				A94E91A51852CF4F00409D18 /* todoList in Resources */,
 				A9F579DE184886350065553F /* magnifying-glass.png in Resources */,
+				A9C67FAD1859407700E3F45D /* iconTram@2x.png in Resources */,
 				A9961DEC1835D54C00AAF1A9 /* InfoPlist.strings in Resources */,
 				A92F299E185213260020673C /* bus.csv in Resources */,
 				A9FF1EBB1851E41100EB787A /* iconTram.png in Resources */,

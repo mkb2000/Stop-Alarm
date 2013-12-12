@@ -36,19 +36,19 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     PTVAlarmStationViewController *stationController=segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"trainsegue"]) {
-        stationController.imgname=IMG_TRAIN;
+        stationController.imgname=ICON_TRAIN;
         stationController.stationType=Train;
     }
     if ([segue.identifier isEqualToString:@"tramsegue"]) {
-        stationController.imgname=IMG_TRAM;
+        stationController.imgname=ICON_TRAM;
         stationController.stationType=Tram;
     }
     if ([segue.identifier isEqualToString:@"bussegue"]) {
-        stationController.imgname=IMG_METROBUS;
+        stationController.imgname=ICON_METROBUS;
         stationController.stationType=Bus;
     }
     if ([segue.identifier isEqualToString:@"vlinesegue"]) {
-        stationController.imgname=IMG_VLINE;
+        stationController.imgname=ICON_VLINE;
         stationController.stationType=Vline;
     }
 }

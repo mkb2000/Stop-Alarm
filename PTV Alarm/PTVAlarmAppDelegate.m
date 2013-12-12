@@ -135,6 +135,9 @@
             while ((line = [reader nextLine])) {
                 lnum++;
                 NSArray *parts=[line componentsSeparatedByString:@";"];
+                if ([parts count]!=4) {
+                    [NSException raise:@"Error in stop files" format:@"file: %@; stop name: %@; line: %d", filename,parts[0],lnum];
+                }
                 Stations *station=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_STATION
                                                                 inManagedObjectContext:self.managedObjectContext];
                 station.name=parts[0];
