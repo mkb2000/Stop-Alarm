@@ -13,6 +13,9 @@
 		A92F29A0185213260020673C /* vline.csv in Resources */ = {isa = PBXBuildFile; fileRef = A92F299D185213260020673C /* vline.csv */; };
 		A92F29A6185296150020673C /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F29A5185296150020673C /* FileReader.m */; };
 		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
+		A930B17818597ABC00084A38 /* App Icon [Squared] in Resources */ = {isa = PBXBuildFile; fileRef = A930B17718597ABC00084A38 /* App Icon [Squared] */; };
+		A930B18C18598C2B00084A38 /* melbourne.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A930B18B18598C2B00084A38 /* melbourne.gpx */; };
+		A930B18E1859C49300084A38 /* screenshot in Resources */ = {isa = PBXBuildFile; fileRef = A930B18D1859C49300084A38 /* screenshot */; };
 		A939217A184CA27400B5E967 /* weribee.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392179184CA27400B5E967 /* weribee.gpx */; };
 		A939217C184CAFED00B5E967 /* laverton.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217B184CAFED00B5E967 /* laverton.gpx */; };
 		A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */; };
@@ -86,6 +89,9 @@
 		A92F29A5185296150020673C /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
 		A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapAnnotation.m; sourceTree = "<group>"; };
+		A930B17718597ABC00084A38 /* App Icon [Squared] */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "App Icon [Squared]"; sourceTree = "<group>"; };
+		A930B18B18598C2B00084A38 /* melbourne.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = melbourne.gpx; path = ../melbourne.gpx; sourceTree = "<group>"; };
+		A930B18D1859C49300084A38 /* screenshot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshot; sourceTree = "<group>"; };
 		A9392179184CA27400B5E967 /* weribee.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = weribee.gpx; path = ../weribee.gpx; sourceTree = "<group>"; };
 		A939217B184CAFED00B5E967 /* laverton.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = laverton.gpx; path = ../laverton.gpx; sourceTree = "<group>"; };
 		A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "swhereTwerribee-2.gpx"; path = "../swhereTwerribee-2.gpx"; sourceTree = "<group>"; };
@@ -270,7 +276,10 @@
 		A9961DE81835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A930B18D1859C49300084A38 /* screenshot */,
+				A930B17718597ABC00084A38 /* App Icon [Squared] */,
 				A9392179184CA27400B5E967 /* weribee.gpx */,
+				A930B18B18598C2B00084A38 /* melbourne.gpx */,
 				A939217B184CAFED00B5E967 /* laverton.gpx */,
 				A9392181184D916200B5E967 /* bikehike_course.gpx */,
 				A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */,
@@ -412,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A930B18E1859C49300084A38 /* screenshot in Resources */,
 				A9FF1EB41851E1DB00EB787A /* train_region_trans.png in Resources */,
 				A9E14E9C18545B5000724A54 /* Alien.caf in Resources */,
 				A939217A184CA27400B5E967 /* weribee.gpx in Resources */,
@@ -435,6 +445,7 @@
 				A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */,
 				A9C67FB21859433400E3F45D /* iconTrain@2x.png in Resources */,
 				A9FF1EBE1851E41100EB787A /* iconTrain.png in Resources */,
+				A930B18C18598C2B00084A38 /* melbourne.gpx in Resources */,
 				A9F579E3184886470065553F /* clock@2x.png in Resources */,
 				A9F579DF184886350065553F /* magnifying-glass@2x.png in Resources */,
 				A9FF1EB51851E1DB00EB787A /* tram_trans.png in Resources */,
@@ -445,6 +456,7 @@
 				A92F299E185213260020673C /* bus.csv in Resources */,
 				A9FF1EBB1851E41100EB787A /* iconTram.png in Resources */,
 				A9F579E61848867A0065553F /* location2.png in Resources */,
+				A930B17818597ABC00084A38 /* App Icon [Squared] in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,14 +626,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "28A19622-A5F1-4DEB-BE72-31484537F47B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -632,14 +644,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
 				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "28A19622-A5F1-4DEB-BE72-31484537F47B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

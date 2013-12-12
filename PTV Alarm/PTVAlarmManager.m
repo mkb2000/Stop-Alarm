@@ -190,7 +190,7 @@
     self.lastArrived=destination;
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive&&!self.alertShowed) {
         self.alertShowed=true;
-        UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:[@"Arrival" stringByAppendingString:destination.toWhich.name] message:@"Your destination is around the corner!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView * alertview=[[UIAlertView alloc] initWithTitle:[@"Arrival " stringByAppendingString:destination.toWhich.name] message:@"Your destination is around the corner!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertview show];
     }
     else{

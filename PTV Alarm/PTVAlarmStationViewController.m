@@ -125,7 +125,7 @@
     cell.textLabel.text=stationInfo.name;
     cell.detailTextLabel.text=stationInfo.suburb;
     if (stationInfo.type.intValue!=Train) {
-        cell.textLabel.font=[cell.textLabel.font fontWithSize:15];
+        cell.textLabel.font=[cell.textLabel.font fontWithSize:16];
     }
     
     UIImage * img=[UIImage imageNamed:self.imgname];

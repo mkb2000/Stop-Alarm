@@ -22,9 +22,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void) updateTextField:(NSString *)str{
-    str=[str stringByAppendingString:@"\n"];
-}
 
 - (void)didReceiveMemoryWarning
 {

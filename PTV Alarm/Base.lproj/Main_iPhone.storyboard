@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="1593" y="-4552"/>
         </scene>
-        <!--Alarm Detail View Controller - Stop detail-->
+        <!--Alarm Detail View Controller - Switch to set alarm-->
         <scene sceneID="Epk-Jv-6L5">
             <objects>
                 <viewController id="5o8-Hj-Zy9" customClass="PTVAlarmDetailViewController" sceneMemberID="viewController">
@@ -288,7 +288,7 @@
                             <constraint firstItem="lRK-ay-621" firstAttribute="top" secondItem="5g3-vD-Q2w" secondAttribute="bottom" id="zNG-Bt-FSJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stop detail" id="zbq-vC-BSP"/>
+                    <navigationItem key="navigationItem" title="Switch to set alarm" id="zbq-vC-BSP"/>
                     <connections>
                         <outlet property="iconImgView" destination="0Ip-0U-Gwz" id="NUd-RT-b8Y"/>
                         <outlet property="setAlarm" destination="elr-ga-oXQ" id="C7i-JO-IYd"/>
