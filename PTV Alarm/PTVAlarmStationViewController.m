@@ -8,12 +8,16 @@
 
 #import "PTVAlarmStationViewController.h"
 #import "PTVAlarmDetailViewController.h"
+#import "PTVAlarmAppDelegate.h"
+#import "Stations.h"
 
 @interface PTVAlarmStationViewController ()
-@property (strong,nonatomic) NSMutableDictionary *stationdic; //stationName : stationInfo
-@property (strong,nonatomic) NSMutableDictionary *alphaToStations;// 'alpha': list of stations whose name started with 'alpha'
-@property (strong,atomic) NSArray * sortedAlpha;
-@property (strong,atomic) NSArray * sortedkeysINstationdic;
+
+@property (nonatomic) NSFetchedResultsController* fetchedResultsController;
+//@property (nonatomic)NSManagedObjectContext * managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *searchFetchedResultsController;
+@property (nonatomic,strong)PTVAlarmAppDelegate * appdelegate;
+@property (nonatomic) BOOL searching;
 @end
 
 @implementation PTVAlarmStationViewController
@@ -27,107 +31,21 @@
     return self;
 }
 
-
-- (NSComparisonResult) singleAlphaCompare:(id) obj1 with: (id) obj2{
-    if ([obj1[0] isEqual:@""]) {
-        return (NSComparisonResult)NSOrderedAscending;
-    }
-    else if([obj2[0] isEqual:@""]) {
-        return (NSComparisonResult)NSOrderedDescending;
-    }
-    else{
-        char a=[(NSString *)((NSArray *) obj1[0]) characterAtIndex:0];
-        char b=[(NSString *)((NSArray *) obj2[0]) characterAtIndex:0];
-        if (a>b) {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        
-        if (a<b) {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        return (NSComparisonResult)NSOrderedSame;
-    }}
-
-//
-- (void)initDataWithFile{
-    NSString * fpath=self.filename;
-    self.stationdic=[[NSMutableDictionary alloc] init];
-    self.alphaToStations=[[NSMutableDictionary alloc] init];
-    NSFileManager *filem=[NSFileManager defaultManager];
-    
-    //read file into dictionaries.
-    NSString *filepath=[[NSBundle mainBundle] pathForResource:fpath ofType:@""];
-    if ([filem fileExistsAtPath:filepath]) {
-        NSString *filestr=[NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:nil];
-        NSArray *stations=[filestr componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-        for (NSString *station in stations) {
-            NSArray *parts=[station componentsSeparatedByString:@";"];
-            self.stationdic[parts[0]]=parts;
-        }
-        self.sortedkeysINstationdic=[self.stationdic keysSortedByValueUsingComparator:^(id obj1, id obj2) {
-            if ([obj1[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            }
-            else if([obj2[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            else{
-                char a=[(NSString *)((NSArray *) obj1[0]) characterAtIndex:0];
-                char b=[(NSString *)((NSArray *) obj2[0]) characterAtIndex:0];
-                if (a>b) {
-                    return (NSComparisonResult)NSOrderedDescending;
-                }
-                
-                if (a<b) {
-                    return (NSComparisonResult)NSOrderedAscending;
-                }
-                return (NSComparisonResult)NSOrderedSame;
-            }}];
-        
-        char f='A';
-        NSMutableArray *tma=[[NSMutableArray alloc] init];
-        for (NSString *k in self.sortedkeysINstationdic) {
-            if ([k isEqual:@""]) {
-                continue;
-            }
-            if ([k characterAtIndex:0]!=f) {
-                [self.alphaToStations setObject:tma forKey:[NSString stringWithFormat:@"%c",f]];
-                tma=[[NSMutableArray alloc]init];
-                f=[k characterAtIndex:0];
-            }
-            [tma addObject:self.stationdic[k]];
-        }
-        
-        self.sortedAlpha=[self.alphaToStations keysSortedByValueUsingComparator:^(id obj1, id obj2) {
-            if ([obj1[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedAscending;
-            }
-            else if([obj2[0] isEqual:@""]) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-            else{
-                char a=[(NSString *)((NSArray *) obj1[0][0]) characterAtIndex:0];
-                char b=[(NSString *)((NSArray *) obj2[0][0]) characterAtIndex:0];
-                if (a>b) {
-                    return (NSComparisonResult)NSOrderedDescending;
-                }
-                
-                if (a<b) {
-                    return (NSComparisonResult)NSOrderedAscending;
-                }
-                return (NSComparisonResult)NSOrderedSame;
-            }}];
-    }
-    else{
-        NSLog(@"file doesn't exist!");
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.appdelegate=[[UIApplication sharedApplication] delegate];
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+         */
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
     
-    [self initDataWithFile];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -137,95 +55,129 @@
 
 - (void)didReceiveMemoryWarning
 {
+    self.fetchedResultsController=nil;
+    self.searchFetchedResultsController=nil;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil)
+    {
+        return _fetchedResultsController;
+    }
+    
+    /*
+     Set up the fetched results controller.
+     */
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    fetchRequest.predicate=[NSPredicate predicateWithFormat:@"type=%d",self.stationType];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_STATION
+                                              inManagedObjectContext:self.appdelegate.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Sort using * property.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *initDescriptor=[[NSSortDescriptor alloc] initWithKey:@"initial" ascending:YES];
+    [fetchRequest setSortDescriptors:@[sortDescriptor, initDescriptor]];
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                    managedObjectContext:self.appdelegate.managedObjectContext
+                                                                      sectionNameKeyPath:@"initial"
+                                                                               cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.alphaToStations count];
+    NSInteger n=[[[self fetchedResultsControllerForTableView:tableView] sections] count];
+    return n;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.alphaToStations[self.sortedAlpha[section]] count];
+    NSInteger numberOfRows = 0;
+    NSFetchedResultsController *fetchController = [self fetchedResultsControllerForTableView:tableView];
+    NSArray *sections = fetchController.sections;
+    if(sections.count > 0)
+    {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
+        numberOfRows = [sectionInfo numberOfObjects];
+    }
+    
+    return numberOfRows;
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+//    
+//	return [sectionInfo numberOfObjects];
 }
 
-- (NSArray *)statioAtRow:(NSInteger) row andSection:(NSInteger) section{
-    NSArray *re=self.alphaToStations[self.sortedAlpha[section]][row];
-    return re;
+- (void)fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    // configure cell
+    Stations * stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text=stationInfo.name;
+    cell.detailTextLabel.text=stationInfo.suburb;
+    if (stationInfo.type.intValue!=Train) {
+        cell.textLabel.font=[cell.textLabel.font fontWithSize:16];
+    }
+    
+    UIImage * img=[UIImage imageNamed:self.imgname];
+    
+//    CGSize itemSize = CGSizeMake(40, 40);
+//    UIGraphicsBeginImageContext(itemSize);
+//    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+//    [img drawInRect:imageRect];
+//    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+
+    cell.imageView.image=img;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"stationCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    NSArray * stationInfo=[self statioAtRow:indexPath.row andSection:indexPath.section];
-    cell.textLabel.text=stationInfo[0];
-    cell.detailTextLabel.text=stationInfo[1];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    UIImage * img=[UIImage imageNamed:self.imgname];
-    cell.imageView.image=img;
-    //    NSLog(@"%d,%d",indexPath.row,indexPath.section);
-    
-    //    cell.textLabel.text=
-    // Configure the cell...
+    [self fetchedResultsController:[self fetchedResultsControllerForTableView:tableView] configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
-// For sidebar navigation
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSFetchedResultsController * frc=[self fetchedResultsControllerForTableView:tableView ];
+    if ([[frc sections] count] > 0) {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [[frc sections] objectAtIndex:section];
+        return [sectionInfo name];
+    } else
+        return nil;
+}
+
+ //For sidebar navigation
 - (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView{
-    return self.sortedAlpha;
+    if (tableView!=self.searchDisplayController.searchResultsTableView) {
+        return [self.fetchedResultsController sectionIndexTitles];
+    }
+    return nil;
 }
 // For sidebar navigation
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
-    return [self.sortedAlpha indexOfObject:title];
+    if (tableView!=self.searchDisplayController.searchResultsTableView) {
+         return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+    }
+    return  0;
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Navigation
 
@@ -234,20 +186,98 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    //    NSArray * x=[self.tableView indexPathsForSelectedRows];
+    UITableView *tableview=self.searching? self.searchDisplayController.searchResultsTableView:self.tableView;
+    
     if ([[segue identifier] isEqualToString:@"stationDetail"]) {
-        NSIndexPath * index=[self.tableView indexPathsForSelectedRows][0];
-        NSArray * selectedStation=[self statioAtRow:index.row andSection:index.section];
+        NSIndexPath * index=[tableview indexPathsForSelectedRows][0];
         PTVAlarmDetailViewController * dvController=[segue destinationViewController];
-        dvController.stationName=selectedStation[0];
-        dvController.suburb=selectedStation[1];
-        dvController.address=selectedStation[2];
-        NSArray * cor=[selectedStation[3] componentsSeparatedByString:@","];
-        dvController.latitude=cor[0];
-        dvController.longitude=cor[1];
+        Stations * station=[[self fetchedResultsControllerForTableView:tableview] objectAtIndexPath:index];
+        dvController.station=station;
         
     }
 }
 
+#pragma mark - search bar content
+- (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView
+{
+    return tableView == self.tableView ? self.fetchedResultsController : self.searchFetchedResultsController;
+}
+
+- (NSFetchedResultsController *)searchFetchedResultsController
+{
+    if (!_searchFetchedResultsController) {
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        fetchRequest.predicate=[NSPredicate predicateWithFormat:@"type=%d AND (name CONTAINS[cd] %@ or address CONTAINS[cd] %@)",self.stationType,self.searchDisplayController.searchBar.text,self.searchDisplayController.searchBar.text];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_STATION
+                                                  inManagedObjectContext:self.appdelegate.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        [fetchRequest setFetchBatchSize:20];
+        
+        // Sort using * property.
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSSortDescriptor *initDescriptor=[[NSSortDescriptor alloc] initWithKey:@"initial" ascending:YES];
+        [fetchRequest setSortDescriptors:@[sortDescriptor, initDescriptor]];
+        _searchFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                        managedObjectContext:self.appdelegate.managedObjectContext
+                                                                          sectionNameKeyPath:@"initial"
+                                                                                   cacheName:nil];
+        _searchFetchedResultsController.delegate = self;
+        NSError *error;
+        if (![_searchFetchedResultsController performFetch:&error]) {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        self.searching=true;
+    }
+
+    return _searchFetchedResultsController;
+}
+
+#pragma mark -
+#pragma mark Search Bar
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
+    self.searching=false;
+}
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller willUnloadSearchResultsTableView:(UITableView *)tableView;
+{
+    // search is done so get rid of the search FRC and reclaim memory
+    self.searchFetchedResultsController.delegate = nil;
+    self.searchFetchedResultsController = nil;
+    self.searching=false;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text]
+                               scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+#pragma mark Content Filtering
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSInteger)scope
+{
+    // update the filter, in this case just blow away the FRC and let lazy evaluation create another with the relevant search info
+    self.searchFetchedResultsController.delegate = nil;
+    self.searchFetchedResultsController = nil;
+    // if you care about the scope save off the index to be used by the serchFetchedResultsController
+    //self.savedScopeButtonIndex = scope;
+}
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTVAlarmFavoriteViewController : UIViewController
+@interface PTVAlarmAlarmsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
 
 @end

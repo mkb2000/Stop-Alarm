@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PTVAlarmStationViewController : UITableViewController
+@interface PTVAlarmStationViewController : UITableViewController <NSFetchedResultsControllerDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
 @property (strong,nonatomic) NSString * imgname;
-@property (strong,nonatomic) NSString * filename;
+@property TransportType stationType;
 @end
