@@ -59,6 +59,7 @@
     NSLog(@"veiw will disappear!!!");
 }
 
+// when alarm state changes, remove/add station annotation from map view.
 - (void) activeAlarmsDidChange{
     NSMutableSet *old=[NSMutableSet setWithArray:self.activeAlarms];
     NSMutableSet *new=[NSMutableSet setWithArray:[[self.appdelegate activeAlarms] copy] ];
@@ -112,7 +113,7 @@
 }
 
 
-//Make the destination and user location visible in the map view.
+//Scale the map view to make the destination and user location visible in the map view.
 - (void)setMapViewVisiblePortion:(CLLocation *) currentLoci{
     if ([self.activeAlarms count]&&currentLoci) {
         //find the nearest active destination, calculate the span to show both of desti and current location on map.
@@ -159,6 +160,7 @@
     }
 }
 
+// make a circle overlay. Not used
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
     if ([overlay isKindOfClass:[MKCircle class]])

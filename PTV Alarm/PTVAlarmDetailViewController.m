@@ -25,6 +25,7 @@
 
 @implementation PTVAlarmDetailViewController
 
+// is the alarm of this station ON?
 - (BOOL)isOn{
     [self fetchResult];
     if (!self.result||[self.result count]==0||!((Stations *)self.result[0]).alarm) {
@@ -64,7 +65,7 @@
         }
         //turn off this alarm.
     }
-    [self.managedObjectContext save:nil];
+//    [self.managedObjectContext save:nil];
     
 }
 

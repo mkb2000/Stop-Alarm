@@ -164,6 +164,7 @@
         return nil;
 }
 
+#pragma mark - side bar navigation
  //For sidebar navigation
 - (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView{
     if (tableView!=self.searchDisplayController.searchResultsTableView) {

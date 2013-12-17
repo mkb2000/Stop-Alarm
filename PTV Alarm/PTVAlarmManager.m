@@ -115,35 +115,35 @@
     //    [self stopLocationService];
 }
 
--(void) addMonitoredRegion:(Alarms *) alarm{
-    CLLocationCoordinate2D centre;
-    centre.latitude=alarm.toWhich.latitude.doubleValue;
-    centre.longitude=alarm.toWhich.longitude.doubleValue;
-    
-    CLLocationDegrees radius = 2000;//ALARM_DISTANCE;
-    radius=radius>self.cllmng.maximumRegionMonitoringDistance?self.cllmng.maximumRegionMonitoringDistance:radius;
-    
-    // Create the geographic region to be monitored.
-    CLRegion *geoRegion = [[CLRegion alloc] initCircularRegionWithCenter:centre radius:radius identifier:alarm.toWhich.address];
-    
-    [self.cllmng startMonitoringForRegion:geoRegion];
-    //    [self.cllmng requestStateForRegion:geoRegion];
-    
-}
+//-(void) addMonitoredRegion:(Alarms *) alarm{
+//    CLLocationCoordinate2D centre;
+//    centre.latitude=alarm.toWhich.latitude.doubleValue;
+//    centre.longitude=alarm.toWhich.longitude.doubleValue;
+//    
+//    CLLocationDegrees radius = 2000;//ALARM_DISTANCE;
+//    radius=radius>self.cllmng.maximumRegionMonitoringDistance?self.cllmng.maximumRegionMonitoringDistance:radius;
+//    
+//    // Create the geographic region to be monitored.
+//    CLRegion *geoRegion = [[CLRegion alloc] initCircularRegionWithCenter:centre radius:radius identifier:alarm.toWhich.address];
+//    
+//    [self.cllmng startMonitoringForRegion:geoRegion];
+//    //    [self.cllmng requestStateForRegion:geoRegion];
+//    
+//}
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
-    if (self.backgroundMode) {
-        [self startHighAccuracyMode];
-    }
-    NSLog(@"enter region!");
-    //    for (Alarms * a in self.activeAlarms) {
-    //        if ([a.toWhich.address isEqualToString:region.identifier]) {
-    //            [self closeEnoughToTarget:a];
-    //        }
-    //
-    //        [self updateInfo:@"Enter region!"];
-    //    }
-}
+//- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+//    if (self.backgroundMode) {
+//        [self startHighAccuracyMode];
+//    }
+//    NSLog(@"enter region!");
+//    //    for (Alarms * a in self.activeAlarms) {
+//    //        if ([a.toWhich.address isEqualToString:region.identifier]) {
+//    //            [self closeEnoughToTarget:a];
+//    //        }
+//    //
+//    //        [self updateInfo:@"Enter region!"];
+//    //    }
+//}
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     [self updateInfo:[NSString stringWithFormat:@"change authorization called  %d",status]];

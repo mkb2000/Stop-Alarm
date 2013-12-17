@@ -34,10 +34,13 @@ typedef  enum{
 } TransportType;
 
 @interface PTVAlarmDefine : NSObject
+
 @property NSURL * STATIONFILEURL;
+
 + (NSString *) typeToImgFile:(TransportType) type;
 + (PTVAlarmDefine *) globalVariables;
 + (TransportType) filenameToStationType:(NSString *) filename;
 + (void) alertOfLocationServiceUnavailable:(id) delegate;
 + (int) alertDistanceForType:(TransportType) type;
+
 @end

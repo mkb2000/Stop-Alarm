@@ -19,11 +19,13 @@
 {
     // Override point for customization after application launch.
     
+    //if core data is empty, read station info from files and store to core data.
     if ([self stationIsEmpty]) {
         [self loadStations];
     }
     self.ptvalarmmanager=[[PTVAlarmManager alloc] init];
     [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
+    //Any change to alarm state will be observed.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
 //    [self activeAlarms];
     return YES;
@@ -109,7 +111,7 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
-#pragma mark - initialize stations from files
+#pragma mark - initialize core data of stations from files
 - (BOOL) stationIsEmpty{
     if ([[self fetchStation] count]==0) {
         return true;
@@ -122,6 +124,7 @@
     return [self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
+//read files and put entries into core data
 - (void) loadStations{
     NSArray * files=@[FILE_TRAIN,FILE_TRAM,FILE_BUS,FILE_VLINE];
     
@@ -160,6 +163,7 @@
     NSLog(@"files loaded!");
 }
 
+// return the alarms that currently ON.
 - (NSArray *)activeAlarms{
     NSFetchRequest * fetch=[NSFetchRequest fetchRequestWithEntityName:ENTITY_ALARM];
     NSPredicate *predicate=[NSPredicate predicateWithFormat:@"state=1"];
@@ -170,6 +174,7 @@
     return result;
 }
 
+// called via Notification whenever alarm state changes.
 - (void) activeAlarmsChange{
     [self.managedObjectContext save:nil];
     [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
