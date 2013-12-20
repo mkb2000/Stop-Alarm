@@ -89,6 +89,10 @@
     }
     
     //remove or add the last arrived destination.
+    if (self.lastArrivedAnno) {
+        [self.mapView removeAnnotation:self.lastArrivedAnno];
+        self.lastArrivedAnno=nil;
+    }
     if (self.appdelegate.ptvalarmmanager.lastArrived) {
         self.lastArrived=self.appdelegate.ptvalarmmanager.lastArrived;
         PTVAlarmMapAnnotation *lastArrivedAnnotation=[[PTVAlarmMapAnnotation alloc]init];
@@ -98,12 +102,6 @@
         [self.mapView addAnnotation:lastArrivedAnnotation];
         self.appdelegate.ptvalarmmanager.lastArrived=nil;
         self.lastArrivedAnno=lastArrivedAnnotation;
-    }
-    else{
-        if (self.lastArrivedAnno) {
-            [self.mapView removeAnnotation:self.lastArrivedAnno];
-            self.lastArrivedAnno=nil;
-        }
     }
     
     self.activeAlarms=[[self.appdelegate activeAlarms] copy];

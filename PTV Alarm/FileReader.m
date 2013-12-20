@@ -59,8 +59,9 @@
         return nil;
     }
     
+    //continue to read blocks until finding '\n' in it, or reach the end of file.
     do {
-        isEnd=[self readNextBlock:self.buf atLength:BLOCK_SIZE bufLength:self.buflength];
+        isEnd=[self readNextBlock:self.buf withLength:BLOCK_SIZE bufLength:self.buflength];
         temp=[[NSString alloc] initWithData:self.buf encoding:NSMacOSRomanStringEncoding];
     } while (!temp||([temp rangeOfString:@"\n"].location==NSNotFound&&!isEnd));
     
@@ -86,7 +87,7 @@
 
 
 
--(int) readNextBlock:(NSData *) buf atLength:(NSInteger)readlength bufLength:(NSNumber *) buflength{
+-(int) readNextBlock:(NSData *) buf withLength:(NSInteger)readlength bufLength:(NSNumber *) buflength{
     
     NSData *data=[self.filehandle readDataOfLength:readlength];
     [self.buf appendData:data];
