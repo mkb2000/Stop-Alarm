@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
                BuildableName = "PTV Alarm.app"
-               BlueprintName = "PTV Alarm"
-               ReferencedContainer = "container:PTV Alarm.xcodeproj">
+               BlueprintName = "Stop Alarm"
+               ReferencedContainer = "container:Stop Alarm.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9961E011835D54C00AAF1A9"
                BuildableName = "PTV AlarmTests.xctest"
-               BlueprintName = "PTV AlarmTests"
-               ReferencedContainer = "container:PTV Alarm.xcodeproj">
+               BlueprintName = "Stop AlarmTests"
+               ReferencedContainer = "container:Stop Alarm.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
             BuildableName = "PTV Alarm.app"
-            BlueprintName = "PTV Alarm"
-            ReferencedContainer = "container:PTV Alarm.xcodeproj">
+            BlueprintName = "Stop Alarm"
+            ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
             BuildableName = "PTV Alarm.app"
-            BlueprintName = "PTV Alarm"
-            ReferencedContainer = "container:PTV Alarm.xcodeproj">
+            BlueprintName = "Stop Alarm"
+            ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,8 +85,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
             BuildableName = "PTV Alarm.app"
-            BlueprintName = "PTV Alarm"
-            ReferencedContainer = "container:PTV Alarm.xcodeproj">
+            BlueprintName = "Stop Alarm"
+            ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

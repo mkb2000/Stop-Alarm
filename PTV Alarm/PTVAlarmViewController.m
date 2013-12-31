@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"train_metro_trans.png"]];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

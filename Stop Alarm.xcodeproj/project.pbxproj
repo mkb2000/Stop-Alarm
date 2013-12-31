@@ -14,7 +14,6 @@
 		A92F29A6185296150020673C /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F29A5185296150020673C /* FileReader.m */; };
 		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
 		A930B17818597ABC00084A38 /* App Icon [Squared] in Resources */ = {isa = PBXBuildFile; fileRef = A930B17718597ABC00084A38 /* App Icon [Squared] */; };
-		A930B18C18598C2B00084A38 /* melbourne.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A930B18B18598C2B00084A38 /* melbourne.gpx */; };
 		A930B18E1859C49300084A38 /* screenshot in Resources */ = {isa = PBXBuildFile; fileRef = A930B18D1859C49300084A38 /* screenshot */; };
 		A939217A184CA27400B5E967 /* weribee.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392179184CA27400B5E967 /* weribee.gpx */; };
 		A939217C184CAFED00B5E967 /* laverton.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217B184CAFED00B5E967 /* laverton.gpx */; };
@@ -90,7 +89,6 @@
 		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
 		A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapAnnotation.m; sourceTree = "<group>"; };
 		A930B17718597ABC00084A38 /* App Icon [Squared] */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "App Icon [Squared]"; sourceTree = "<group>"; };
-		A930B18B18598C2B00084A38 /* melbourne.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = melbourne.gpx; path = ../melbourne.gpx; sourceTree = "<group>"; };
 		A930B18D1859C49300084A38 /* screenshot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshot; sourceTree = "<group>"; };
 		A9392179184CA27400B5E967 /* weribee.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = weribee.gpx; path = ../weribee.gpx; sourceTree = "<group>"; };
 		A939217B184CAFED00B5E967 /* laverton.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = laverton.gpx; path = ../laverton.gpx; sourceTree = "<group>"; };
@@ -105,14 +103,14 @@
 		A9502EA31841E69400AE8F07 /* PTVAlarmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmDetailViewController.m; sourceTree = "<group>"; };
 		A95311F61849D9B3007FBD89 /* PTVAlarmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmTableViewCell.h; sourceTree = "<group>"; };
 		A95311F71849D9B3007FBD89 /* PTVAlarmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmTableViewCell.m; sourceTree = "<group>"; };
-		A9961DDE1835D54C00AAF1A9 /* PTV Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PTV Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9961DDE1835D54C00AAF1A9 /* Stop Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stop Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9961DE11835D54C00AAF1A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9961DE31835D54C00AAF1A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A9961DE51835D54C00AAF1A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A9961DE91835D54C00AAF1A9 /* PTV Alarm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTV Alarm-Info.plist"; sourceTree = "<group>"; };
+		A9961DE91835D54C00AAF1A9 /* Stop Alarm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stop Alarm-Info.plist"; sourceTree = "<group>"; };
 		A9961DEB1835D54C00AAF1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9961DED1835D54C00AAF1A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9961DEF1835D54C00AAF1A9 /* PTV Alarm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PTV Alarm-Prefix.pch"; sourceTree = "<group>"; };
+		A9961DEF1835D54C00AAF1A9 /* Stop Alarm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stop Alarm-Prefix.pch"; sourceTree = "<group>"; };
 		A9961DF01835D54C00AAF1A9 /* PTVAlarmAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTVAlarmAppDelegate.h; sourceTree = "<group>"; };
 		A9961DF11835D54C00AAF1A9 /* PTVAlarmAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmAppDelegate.m; sourceTree = "<group>"; };
 		A9961DF41835D54C00AAF1A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -120,9 +118,9 @@
 		A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTVAlarmViewController.h; sourceTree = "<group>"; };
 		A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmViewController.m; sourceTree = "<group>"; };
 		A9961DFC1835D54C00AAF1A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A9961E021835D54C00AAF1A9 /* PTV AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PTV AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9961E021835D54C00AAF1A9 /* Stop AlarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stop AlarmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9961E031835D54C00AAF1A9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A9961E0B1835D54C00AAF1A9 /* PTV AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTV AlarmTests-Info.plist"; sourceTree = "<group>"; };
+		A9961E0B1835D54C00AAF1A9 /* Stop AlarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stop AlarmTests-Info.plist"; sourceTree = "<group>"; };
 		A9961E0D1835D54C00AAF1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9961E0F1835D54C00AAF1A9 /* PTV_AlarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTV_AlarmTests.m; sourceTree = "<group>"; };
 		A9961E191835DA0100AAF1A9 /* PTVAlarmMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapViewController.h; sourceTree = "<group>"; };
@@ -225,8 +223,8 @@
 		A9961DDF1835D54C00AAF1A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9961DDE1835D54C00AAF1A9 /* PTV Alarm.app */,
-				A9961E021835D54C00AAF1A9 /* PTV AlarmTests.xctest */,
+				A9961DDE1835D54C00AAF1A9 /* Stop Alarm.app */,
+				A9961E021835D54C00AAF1A9 /* Stop AlarmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,7 +254,6 @@
 				A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */,
 				A9961DF91835D54C00AAF1A9 /* PTVAlarmViewController.h */,
 				A9961DFA1835D54C00AAF1A9 /* PTVAlarmViewController.m */,
-				A9E14E9B18545B5000724A54 /* Alien.caf */,
 				A946CD4318363782003EE075 /* PTVAlarmAlarmsViewController.h */,
 				A946CD4418363782003EE075 /* PTVAlarmAlarmsViewController.m */,
 				A946CD4618363B65003EE075 /* PTVAlarmStationViewController.h */,
@@ -279,7 +276,6 @@
 				A930B18D1859C49300084A38 /* screenshot */,
 				A930B17718597ABC00084A38 /* App Icon [Squared] */,
 				A9392179184CA27400B5E967 /* weribee.gpx */,
-				A930B18B18598C2B00084A38 /* melbourne.gpx */,
 				A939217B184CAFED00B5E967 /* laverton.gpx */,
 				A9392181184D916200B5E967 /* bikehike_course.gpx */,
 				A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */,
@@ -288,14 +284,15 @@
 				A92F299C185213260020673C /* tram.csv */,
 				A92F299D185213260020673C /* vline.csv */,
 				A946CD4A183644A1003EE075 /* image */,
-				A9961DE91835D54C00AAF1A9 /* PTV Alarm-Info.plist */,
+				A9961DE91835D54C00AAF1A9 /* Stop Alarm-Info.plist */,
 				A9961DEA1835D54C00AAF1A9 /* InfoPlist.strings */,
 				A9961DFC1835D54C00AAF1A9 /* Images.xcassets */,
 				A9961DED1835D54C00AAF1A9 /* main.m */,
-				A9961DEF1835D54C00AAF1A9 /* PTV Alarm-Prefix.pch */,
+				A9961DEF1835D54C00AAF1A9 /* Stop Alarm-Prefix.pch */,
 				A92F29A4185296150020673C /* FileReader.h */,
 				A92F29A5185296150020673C /* FileReader.m */,
 				A94E91A41852CF4F00409D18 /* todoList */,
+				A9E14E9B18545B5000724A54 /* Alien.caf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -312,7 +309,7 @@
 		A9961E0A1835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A9961E0B1835D54C00AAF1A9 /* PTV AlarmTests-Info.plist */,
+				A9961E0B1835D54C00AAF1A9 /* Stop AlarmTests-Info.plist */,
 				A9961E0C1835D54C00AAF1A9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -344,9 +341,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9961DDD1835D54C00AAF1A9 /* PTV Alarm */ = {
+		A9961DDD1835D54C00AAF1A9 /* Stop Alarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9961E131835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "PTV Alarm" */;
+			buildConfigurationList = A9961E131835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "Stop Alarm" */;
 			buildPhases = (
 				A9961DDA1835D54C00AAF1A9 /* Sources */,
 				A9961DDB1835D54C00AAF1A9 /* Frameworks */,
@@ -356,14 +353,14 @@
 			);
 			dependencies = (
 			);
-			name = "PTV Alarm";
+			name = "Stop Alarm";
 			productName = "PTV Alarm";
-			productReference = A9961DDE1835D54C00AAF1A9 /* PTV Alarm.app */;
+			productReference = A9961DDE1835D54C00AAF1A9 /* Stop Alarm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A9961E011835D54C00AAF1A9 /* PTV AlarmTests */ = {
+		A9961E011835D54C00AAF1A9 /* Stop AlarmTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9961E161835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "PTV AlarmTests" */;
+			buildConfigurationList = A9961E161835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "Stop AlarmTests" */;
 			buildPhases = (
 				A9961DFE1835D54C00AAF1A9 /* Sources */,
 				A9961DFF1835D54C00AAF1A9 /* Frameworks */,
@@ -374,9 +371,9 @@
 			dependencies = (
 				A9961E081835D54C00AAF1A9 /* PBXTargetDependency */,
 			);
-			name = "PTV AlarmTests";
+			name = "Stop AlarmTests";
 			productName = "PTV AlarmTests";
-			productReference = A9961E021835D54C00AAF1A9 /* PTV AlarmTests.xctest */;
+			productReference = A9961E021835D54C00AAF1A9 /* Stop AlarmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -397,7 +394,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9961DD91835D54C00AAF1A9 /* Build configuration list for PBXProject "PTV Alarm" */;
+			buildConfigurationList = A9961DD91835D54C00AAF1A9 /* Build configuration list for PBXProject "Stop Alarm" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -410,8 +407,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9961DDD1835D54C00AAF1A9 /* PTV Alarm */,
-				A9961E011835D54C00AAF1A9 /* PTV AlarmTests */,
+				A9961DDD1835D54C00AAF1A9 /* Stop Alarm */,
+				A9961E011835D54C00AAF1A9 /* Stop AlarmTests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +442,6 @@
 				A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */,
 				A9C67FB21859433400E3F45D /* iconTrain@2x.png in Resources */,
 				A9FF1EBE1851E41100EB787A /* iconTrain.png in Resources */,
-				A930B18C18598C2B00084A38 /* melbourne.gpx in Resources */,
 				A9F579E3184886470065553F /* clock@2x.png in Resources */,
 				A9F579DF184886350065553F /* magnifying-glass@2x.png in Resources */,
 				A9FF1EB51851E1DB00EB787A /* tram_trans.png in Resources */,
@@ -506,7 +502,7 @@
 /* Begin PBXTargetDependency section */
 		A9961E081835D54C00AAF1A9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A9961DDD1835D54C00AAF1A9 /* PTV Alarm */;
+			target = A9961DDD1835D54C00AAF1A9 /* Stop Alarm */;
 			targetProxy = A9961E071835D54C00AAF1A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -629,10 +625,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
-				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
+				GCC_PREFIX_HEADER = "PTV Alarm/Stop Alarm-Prefix.pch";
+				INFOPLIST_FILE = "PTV Alarm/Stop Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Stop Alarm";
 				PROVISIONING_PROFILE = "28A19622-A5F1-4DEB-BE72-31484537F47B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -647,10 +643,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kangbo Mo (LA9E7925BX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
-				INFOPLIST_FILE = "PTV Alarm/PTV Alarm-Info.plist";
+				GCC_PREFIX_HEADER = "PTV Alarm/Stop Alarm-Prefix.pch";
+				INFOPLIST_FILE = "PTV Alarm/Stop Alarm-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Stop Alarm";
 				PROVISIONING_PROFILE = "28A19622-A5F1-4DEB-BE72-31484537F47B";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -673,8 +669,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "PTV AlarmTests/PTV AlarmTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PTV AlarmTests/Stop AlarmTests-Info.plist";
+				PRODUCT_NAME = "Stop AlarmTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -692,8 +688,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PTV Alarm/PTV Alarm-Prefix.pch";
-				INFOPLIST_FILE = "PTV AlarmTests/PTV AlarmTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "PTV AlarmTests/Stop AlarmTests-Info.plist";
+				PRODUCT_NAME = "Stop AlarmTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -702,7 +698,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9961DD91835D54C00AAF1A9 /* Build configuration list for PBXProject "PTV Alarm" */ = {
+		A9961DD91835D54C00AAF1A9 /* Build configuration list for PBXProject "Stop Alarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9961E111835D54C00AAF1A9 /* Debug */,
@@ -711,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9961E131835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "PTV Alarm" */ = {
+		A9961E131835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "Stop Alarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9961E141835D54C00AAF1A9 /* Debug */,
@@ -720,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9961E161835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "PTV AlarmTests" */ = {
+		A9961E161835D54C00AAF1A9 /* Build configuration list for PBXNativeTarget "Stop AlarmTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9961E171835D54C00AAF1A9 /* Debug */,
