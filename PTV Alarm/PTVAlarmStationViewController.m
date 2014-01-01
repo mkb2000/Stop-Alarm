@@ -13,14 +13,37 @@
 
 @interface PTVAlarmStationViewController ()
 
-@property (nonatomic) NSFetchedResultsController* fetchedResultsController;
-//@property (nonatomic)NSManagedObjectContext * managedObjectContext;
-@property (nonatomic, strong) NSFetchedResultsController *searchFetchedResultsController;
+@property (nonatomic, copy) dispatch_queue_t queue;
+@property (nonatomic,strong) NSFetchedResultsController* fetchedResultsController;
 @property (nonatomic,strong)PTVAlarmAppDelegate * appdelegate;
 @property (nonatomic) BOOL searching;
+@property (nonatomic,strong) NSArray * cacheArray;
+@property (nonatomic,strong) NSMutableArray * actionbuck;
+@property (nonatomic) BOOL doing;
 @end
 
 @implementation PTVAlarmStationViewController
+
+- (BOOL) doing{
+    if (!_doing) {
+        _doing=false;
+    }
+    return _doing;
+}
+
+- (NSMutableArray *) actionbuck{
+    if (!_actionbuck) {
+        _actionbuck=[NSMutableArray array];
+    }
+    return _actionbuck;
+}
+
+-(dispatch_queue_t) queue{
+    if (!_queue) {
+        _queue = dispatch_queue_create("com.ptvalarm.searchFilter", DISPATCH_QUEUE_SERIAL);
+    }
+    return _queue;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,7 +68,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -56,7 +78,7 @@
 - (void)didReceiveMemoryWarning
 {
     self.fetchedResultsController=nil;
-    self.searchFetchedResultsController=nil;
+    //    self.searchFetchedResultsController=nil;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -78,7 +100,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_STATION
                                               inManagedObjectContext:self.appdelegate.managedObjectContext];
     [fetchRequest setEntity:entity];
-    [fetchRequest setFetchBatchSize:20];
+    [fetchRequest setFetchBatchSize:0];
     
     // Sort using * property.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
@@ -87,25 +109,33 @@
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.appdelegate.managedObjectContext
                                                                       sectionNameKeyPath:@"initial"
-                                                                               cacheName:nil];
+                                                                               cacheName:[NSString stringWithFormat:@"fetchResultCache%d",self.stationType]];
     _fetchedResultsController.delegate = self;
+    
     
     return _fetchedResultsController;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if (self.searching) {
+        return 1;
+    }
     // Return the number of sections.
-    NSInteger n=[[[self fetchedResultsControllerForTableView:tableView] sections] count];
+    NSInteger n=[[self.fetchedResultsController sections] count];
     return n;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
+    if (self.searching) {
+        return  [self.cacheArray count];
+    }
+    
     // Return the number of rows in the section.
     NSInteger numberOfRows = 0;
-    NSFetchedResultsController *fetchController = [self fetchedResultsControllerForTableView:tableView];
-    NSArray *sections = fetchController.sections;
+    NSArray *sections = self.fetchedResultsController.sections;
     if(sections.count > 0)
     {
         id <NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
@@ -113,15 +143,20 @@
     }
     
     return numberOfRows;
-//    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-//    
-//	return [sectionInfo numberOfObjects];
 }
 
 - (void)fetchedResultsController:(NSFetchedResultsController *)fetchedResultsController configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
+    Stations * stationInfo;
+    if (self.searching) {
+        stationInfo=[self.cacheArray objectAtIndex:indexPath.row];
+    }
+    else{
+        stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
+    }
+    
     // configure cell
-    Stations * stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
+    //    Stations * stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text=stationInfo.name;
     cell.detailTextLabel.text=stationInfo.suburb;
     if (stationInfo.type.intValue!=Train) {
@@ -130,13 +165,13 @@
     
     UIImage * img=[UIImage imageNamed:self.imgname];
     
-//    CGSize itemSize = CGSizeMake(40, 40);
-//    UIGraphicsBeginImageContext(itemSize);
-//    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-//    [img drawInRect:imageRect];
-//    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-
+    //    CGSize itemSize = CGSizeMake(40, 40);
+    //    UIGraphicsBeginImageContext(itemSize);
+    //    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    //    [img drawInRect:imageRect];
+    //    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    //    UIGraphicsEndImageContext();
+    
     cell.imageView.image=img;
 }
 
@@ -150,13 +185,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    [self fetchedResultsController:[self fetchedResultsControllerForTableView:tableView] configureCell:cell atIndexPath:indexPath];
+    [self fetchedResultsController:self.fetchedResultsController configureCell:cell atIndexPath:indexPath];
     
     return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSFetchedResultsController * frc=[self fetchedResultsControllerForTableView:tableView ];
+    if (self.searching) {
+        return Nil;
+    }
+    NSFetchedResultsController * frc=self.fetchedResultsController;
     if ([[frc sections] count] > 0) {
         id <NSFetchedResultsSectionInfo> sectionInfo = [[frc sections] objectAtIndex:section];
         return [sectionInfo name];
@@ -165,7 +203,7 @@
 }
 
 #pragma mark - side bar navigation
- //For sidebar navigation
+//For sidebar navigation
 - (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView{
     if (tableView!=self.searchDisplayController.searchResultsTableView) {
         return [self.fetchedResultsController sectionIndexTitles];
@@ -175,7 +213,7 @@
 // For sidebar navigation
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
     if (tableView!=self.searchDisplayController.searchResultsTableView) {
-         return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+        return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
     }
     return  0;
 }
@@ -192,93 +230,83 @@
     if ([[segue identifier] isEqualToString:@"stationDetail"]) {
         NSIndexPath * index=[tableview indexPathsForSelectedRows][0];
         PTVAlarmDetailViewController * dvController=[segue destinationViewController];
-        Stations * station=[[self fetchedResultsControllerForTableView:tableview] objectAtIndexPath:index];
-        dvController.station=station;
-        
-    }
-}
-
-#pragma mark - search bar content
-- (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView
-{
-    return tableView == self.tableView ? self.fetchedResultsController : self.searchFetchedResultsController;
-}
-
-- (NSFetchedResultsController *)searchFetchedResultsController
-{
-    if (!_searchFetchedResultsController) {
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        fetchRequest.predicate=[NSPredicate predicateWithFormat:@"type=%d AND (name CONTAINS[cd] %@ or address CONTAINS[cd] %@)",self.stationType,self.searchDisplayController.searchBar.text,self.searchDisplayController.searchBar.text];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:ENTITY_STATION
-                                                  inManagedObjectContext:self.appdelegate.managedObjectContext];
-        [fetchRequest setEntity:entity];
-        [fetchRequest setFetchBatchSize:20];
-        
-        // Sort using * property.
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-        NSSortDescriptor *initDescriptor=[[NSSortDescriptor alloc] initWithKey:@"initial" ascending:YES];
-        [fetchRequest setSortDescriptors:@[sortDescriptor, initDescriptor]];
-        _searchFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                        managedObjectContext:self.appdelegate.managedObjectContext
-                                                                          sectionNameKeyPath:@"initial"
-                                                                                   cacheName:nil];
-        _searchFetchedResultsController.delegate = self;
-        NSError *error;
-        if (![_searchFetchedResultsController performFetch:&error]) {
-            /*
-             Replace this implementation with code to handle the error appropriately.
-             
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-             */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+        Stations * station;
+        if (self.searching) {
+            station=[self.cacheArray objectAtIndex:index.row];
         }
-        self.searching=true;
+        else{
+            station=[self.fetchedResultsController objectAtIndexPath:index];
+        }
+        dvController.station=station;
     }
-
-    return _searchFetchedResultsController;
 }
+
 
 #pragma mark -
 #pragma mark Search Bar
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
     self.searching=false;
+    [self.tableView reloadData];
 }
-
-- (void)searchDisplayController:(UISearchDisplayController *)controller willUnloadSearchResultsTableView:(UITableView *)tableView;
-{
-    // search is done so get rid of the search FRC and reclaim memory
-    self.searchFetchedResultsController.delegate = nil;
-    self.searchFetchedResultsController = nil;
-    self.searching=false;
+- (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
+    self.searching=true;
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    [self filterContentForSearchText:searchString
-                               scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
+    
+    [self filterContentForSearchText:searchString scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
     
     // Return YES to cause the search result table view to be reloaded.
-    return YES;
+    return NO;
 }
 
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
-{
-    [self filterContentForSearchText:[self.searchDisplayController.searchBar text]
-                               scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
-    
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-#pragma mark Content Filtering
+#pragma mark Content fetching
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSInteger)scope
 {
-    // update the filter, in this case just blow away the FRC and let lazy evaluation create another with the relevant search info
-    self.searchFetchedResultsController.delegate = nil;
-    self.searchFetchedResultsController = nil;
-    // if you care about the scope save off the index to be used by the serchFetchedResultsController
-    //self.savedScopeButtonIndex = scope;
+    NSString * st=[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    [self.actionbuck addObject:st];
+    if (!self.doing) {
+        [self executeAction];
+    }
+    else{
+        if ([self.actionbuck count]>1) {
+            self.actionbuck=[NSMutableArray arrayWithObject:[self.actionbuck lastObject]];
+        }
+    }
+    
+}
+
+- (void) executeAction{
+    self.doing=true;
+    NSString * str=[self.actionbuck objectAtIndex:0];
+    if (str) {
+        [self.actionbuck removeObjectAtIndex:0];
+    }
+    NSPredicate * searchPred=[NSPredicate predicateWithFormat:@"(name CONTAINS[cd] %@) OR (address CONTAINS[cd] %@)",str,str];
+    NSArray *fetchedobj=self.fetchedResultsController.fetchedObjects;
+    dispatch_async(self.queue, ^{
+        self.cacheArray=[fetchedobj filteredArrayUsingPredicate:searchPred];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self nextAction];
+            [self.searchDisplayController.searchResultsTableView reloadData];//if reloadData performs slowly, and cacheArray's content has been changed, it is possible to cause err.
+        });
+    });
+}
+- (void) nextAction{
+    int l=[self.actionbuck count];
+    switch (l) {
+        case 0:
+            self.doing=false;
+            break;
+        case 1:
+            [self executeAction];
+            break;
+        default:
+            self.actionbuck=[NSMutableArray arrayWithObject:[self.actionbuck lastObject]];
+            [self executeAction];
+            break;
+    }
 }
 
 @end

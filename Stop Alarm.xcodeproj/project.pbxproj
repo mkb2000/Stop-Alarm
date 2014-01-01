@@ -13,8 +13,6 @@
 		A92F29A0185213260020673C /* vline.csv in Resources */ = {isa = PBXBuildFile; fileRef = A92F299D185213260020673C /* vline.csv */; };
 		A92F29A6185296150020673C /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F29A5185296150020673C /* FileReader.m */; };
 		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
-		A930B17818597ABC00084A38 /* App Icon [Squared] in Resources */ = {isa = PBXBuildFile; fileRef = A930B17718597ABC00084A38 /* App Icon [Squared] */; };
-		A930B18E1859C49300084A38 /* screenshot in Resources */ = {isa = PBXBuildFile; fileRef = A930B18D1859C49300084A38 /* screenshot */; };
 		A939217A184CA27400B5E967 /* weribee.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392179184CA27400B5E967 /* weribee.gpx */; };
 		A939217C184CAFED00B5E967 /* laverton.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217B184CAFED00B5E967 /* laverton.gpx */; };
 		A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */; };
@@ -44,6 +42,11 @@
 		A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C7184AF39200B7D2EB /* PTVAlarmManager.m */; };
 		A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5610F184B3B9900B7D2EB /* Alarms.m */; };
 		A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56112184B3B9A00B7D2EB /* Stations.m */; };
+		A9B4C2431873D0C300702A1B /* TBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2421873D0C300702A1B /* TBQuadTree.m */; };
+		A9B4C2461873D0E600702A1B /* TBCoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2451873D0E600702A1B /* TBCoordinateQuadTree.m */; };
+		A9B4C24B1873D29A00702A1B /* TBClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2481873D29A00702A1B /* TBClusterAnnotation.m */; };
+		A9B4C24C1873D29A00702A1B /* TBClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C24A1873D29A00702A1B /* TBClusterAnnotationView.m */; };
+		A9B4C24E1873D31500702A1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B4C24D1873D31500702A1B /* CoreLocation.framework */; };
 		A9C67FAB18593C4B00E3F45D /* iconVline.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAA18593C4A00E3F45D /* iconVline.png */; };
 		A9C67FAD1859407700E3F45D /* iconTram@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAC1859407700E3F45D /* iconTram@2x.png */; };
 		A9C67FB11859433400E3F45D /* iconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAE1859433400E3F45D /* iconBus@2x.png */; };
@@ -88,8 +91,6 @@
 		A92F29A5185296150020673C /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
 		A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmMapAnnotation.m; sourceTree = "<group>"; };
-		A930B17718597ABC00084A38 /* App Icon [Squared] */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "App Icon [Squared]"; sourceTree = "<group>"; };
-		A930B18D1859C49300084A38 /* screenshot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screenshot; sourceTree = "<group>"; };
 		A9392179184CA27400B5E967 /* weribee.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = weribee.gpx; path = ../weribee.gpx; sourceTree = "<group>"; };
 		A939217B184CAFED00B5E967 /* laverton.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = laverton.gpx; path = ../laverton.gpx; sourceTree = "<group>"; };
 		A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "swhereTwerribee-2.gpx"; path = "../swhereTwerribee-2.gpx"; sourceTree = "<group>"; };
@@ -132,6 +133,15 @@
 		A9A5610F184B3B9900B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
 		A9A56111184B3B9A00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
 		A9A56112184B3B9A00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
+		A9B4C2411873D0C300702A1B /* TBQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBQuadTree.h; sourceTree = "<group>"; };
+		A9B4C2421873D0C300702A1B /* TBQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBQuadTree.m; sourceTree = "<group>"; };
+		A9B4C2441873D0E600702A1B /* TBCoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCoordinateQuadTree.h; sourceTree = "<group>"; };
+		A9B4C2451873D0E600702A1B /* TBCoordinateQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCoordinateQuadTree.m; sourceTree = "<group>"; };
+		A9B4C2471873D29A00702A1B /* TBClusterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotation.h; sourceTree = "<group>"; };
+		A9B4C2481873D29A00702A1B /* TBClusterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotation.m; sourceTree = "<group>"; };
+		A9B4C2491873D29A00702A1B /* TBClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBClusterAnnotationView.h; sourceTree = "<group>"; };
+		A9B4C24A1873D29A00702A1B /* TBClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBClusterAnnotationView.m; sourceTree = "<group>"; };
+		A9B4C24D1873D31500702A1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9C67FAA18593C4A00E3F45D /* iconVline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconVline.png; sourceTree = "<group>"; };
 		A9C67FAC1859407700E3F45D /* iconTram@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTram@2x.png"; sourceTree = "<group>"; };
 		A9C67FAE1859433400E3F45D /* iconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBus@2x.png"; sourceTree = "<group>"; };
@@ -163,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B4C24E1873D31500702A1B /* CoreLocation.framework in Frameworks */,
 				A9F579C5184739850065553F /* CoreData.framework in Frameworks */,
 				A9961E631835EBF100AAF1A9 /* MapKit.framework in Frameworks */,
 				A9961DE41835D54C00AAF1A9 /* CoreGraphics.framework in Frameworks */,
@@ -232,6 +243,7 @@
 		A9961DE01835D54C00AAF1A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9B4C24D1873D31500702A1B /* CoreLocation.framework */,
 				A9F579C4184739850065553F /* CoreData.framework */,
 				A9961E621835EBF100AAF1A9 /* MapKit.framework */,
 				A9961DE11835D54C00AAF1A9 /* Foundation.framework */,
@@ -273,24 +285,24 @@
 		A9961DE81835D54C00AAF1A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A930B18D1859C49300084A38 /* screenshot */,
-				A930B17718597ABC00084A38 /* App Icon [Squared] */,
-				A9392179184CA27400B5E967 /* weribee.gpx */,
-				A939217B184CAFED00B5E967 /* laverton.gpx */,
-				A9392181184D916200B5E967 /* bikehike_course.gpx */,
-				A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */,
-				A9079FFA18388EF800D8267D /* train.csv */,
-				A92F299B185213260020673C /* bus.csv */,
-				A92F299C185213260020673C /* tram.csv */,
-				A92F299D185213260020673C /* vline.csv */,
+				A9B4C2411873D0C300702A1B /* TBQuadTree.h */,
+				A9B4C2421873D0C300702A1B /* TBQuadTree.m */,
+				A9B4C2441873D0E600702A1B /* TBCoordinateQuadTree.h */,
+				A9B4C2451873D0E600702A1B /* TBCoordinateQuadTree.m */,
+				A9B4C2471873D29A00702A1B /* TBClusterAnnotation.h */,
+				A9B4C2481873D29A00702A1B /* TBClusterAnnotation.m */,
+				A9B4C2491873D29A00702A1B /* TBClusterAnnotationView.h */,
+				A9B4C24A1873D29A00702A1B /* TBClusterAnnotationView.m */,
+				A92F29A4185296150020673C /* FileReader.h */,
+				A92F29A5185296150020673C /* FileReader.m */,
+				A9B4C23F1873D06700702A1B /* for_test */,
+				A9B4C23E1873D04F00702A1B /* raw_data */,
 				A946CD4A183644A1003EE075 /* image */,
 				A9961DE91835D54C00AAF1A9 /* Stop Alarm-Info.plist */,
 				A9961DEA1835D54C00AAF1A9 /* InfoPlist.strings */,
 				A9961DFC1835D54C00AAF1A9 /* Images.xcassets */,
 				A9961DED1835D54C00AAF1A9 /* main.m */,
 				A9961DEF1835D54C00AAF1A9 /* Stop Alarm-Prefix.pch */,
-				A92F29A4185296150020673C /* FileReader.h */,
-				A92F29A5185296150020673C /* FileReader.m */,
 				A94E91A41852CF4F00409D18 /* todoList */,
 				A9E14E9B18545B5000724A54 /* Alien.caf */,
 			);
@@ -324,6 +336,28 @@
 				A95311F71849D9B3007FBD89 /* PTVAlarmTableViewCell.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		A9B4C23E1873D04F00702A1B /* raw_data */ = {
+			isa = PBXGroup;
+			children = (
+				A9079FFA18388EF800D8267D /* train.csv */,
+				A92F299B185213260020673C /* bus.csv */,
+				A92F299C185213260020673C /* tram.csv */,
+				A92F299D185213260020673C /* vline.csv */,
+			);
+			name = raw_data;
+			sourceTree = "<group>";
+		};
+		A9B4C23F1873D06700702A1B /* for_test */ = {
+			isa = PBXGroup;
+			children = (
+				A9392179184CA27400B5E967 /* weribee.gpx */,
+				A939217B184CAFED00B5E967 /* laverton.gpx */,
+				A9392181184D916200B5E967 /* bikehike_course.gpx */,
+				A939217F184CB6A200B5E967 /* swhereTwerribee-2.gpx */,
+			);
+			name = for_test;
 			sourceTree = "<group>";
 		};
 		A9F579C9184874400065553F /* CoreData */ = {
@@ -418,7 +452,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A930B18E1859C49300084A38 /* screenshot in Resources */,
 				A9FF1EB41851E1DB00EB787A /* train_region_trans.png in Resources */,
 				A9E14E9C18545B5000724A54 /* Alien.caf in Resources */,
 				A939217A184CA27400B5E967 /* weribee.gpx in Resources */,
@@ -452,7 +485,6 @@
 				A92F299E185213260020673C /* bus.csv in Resources */,
 				A9FF1EBB1851E41100EB787A /* iconTram.png in Resources */,
 				A9F579E61848867A0065553F /* location2.png in Resources */,
-				A930B17818597ABC00084A38 /* App Icon [Squared] in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,9 +508,12 @@
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
 				A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */,
 				A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */,
+				A9B4C24B1873D29A00702A1B /* TBClusterAnnotation.m in Sources */,
 				A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */,
+				A9B4C24C1873D29A00702A1B /* TBClusterAnnotationView.m in Sources */,
 				A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */,
 				A95311F81849D9B3007FBD89 /* PTVAlarmTableViewCell.m in Sources */,
+				A9B4C2431873D0C300702A1B /* TBQuadTree.m in Sources */,
 				A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */,
 				A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */,
 				A92F29A6185296150020673C /* FileReader.m in Sources */,
@@ -486,6 +521,7 @@
 				A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */,
 				A9961DF21835D54C00AAF1A9 /* PTVAlarmAppDelegate.m in Sources */,
 				A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */,
+				A9B4C2461873D0E600702A1B /* TBCoordinateQuadTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

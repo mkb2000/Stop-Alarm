@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
-               BuildableName = "PTV Alarm.app"
+               BuildableName = "Stop Alarm.app"
                BlueprintName = "Stop Alarm"
                ReferencedContainer = "container:Stop Alarm.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9961E011835D54C00AAF1A9"
-               BuildableName = "PTV AlarmTests.xctest"
+               BuildableName = "Stop AlarmTests.xctest"
                BlueprintName = "Stop AlarmTests"
                ReferencedContainer = "container:Stop Alarm.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
-            BuildableName = "PTV Alarm.app"
+            BuildableName = "Stop Alarm.app"
             BlueprintName = "Stop Alarm"
             ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
-            BuildableName = "PTV Alarm.app"
+            BuildableName = "Stop Alarm.app"
             BlueprintName = "Stop Alarm"
             ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9961DDD1835D54C00AAF1A9"
-            BuildableName = "PTV Alarm.app"
+            BuildableName = "Stop Alarm.app"
             BlueprintName = "Stop Alarm"
             ReferencedContainer = "container:Stop Alarm.xcodeproj">
          </BuildableReference>

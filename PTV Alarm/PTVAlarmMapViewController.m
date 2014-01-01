@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"view load!!");
+    NSLog(@"map view load!!");
     
     self.appdelegate=[[UIApplication sharedApplication] delegate];
     self.lastLocation=self.appdelegate.ptvalarmmanager.lastLocation;

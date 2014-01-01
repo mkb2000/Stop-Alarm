@@ -12,9 +12,9 @@
 @interface PTVAlarmAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator ;
+@property (atomic, readonly,strong) NSManagedObjectModel *managedObjectModel;
+@property (atomic, readonly,strong) NSManagedObjectContext *managedObjectContext;
+@property (atomic, readonly,strong) NSPersistentStoreCoordinator *persistentStoreCoordinator ;
 @property (strong,nonatomic) PTVAlarmManager * ptvalarmmanager;
 
 - (NSArray *) activeAlarms;
