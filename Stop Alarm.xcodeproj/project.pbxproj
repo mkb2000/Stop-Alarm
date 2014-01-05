@@ -296,7 +296,7 @@
 				A92F29A4185296150020673C /* FileReader.h */,
 				A92F29A5185296150020673C /* FileReader.m */,
 				A9B4C23F1873D06700702A1B /* for_test */,
-				A9B4C23E1873D04F00702A1B /* raw_data */,
+				A9B4C23E1873D04F00702A1B /* data */,
 				A946CD4A183644A1003EE075 /* image */,
 				A9961DE91835D54C00AAF1A9 /* Stop Alarm-Info.plist */,
 				A9961DEA1835D54C00AAF1A9 /* InfoPlist.strings */,
@@ -338,7 +338,7 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		A9B4C23E1873D04F00702A1B /* raw_data */ = {
+		A9B4C23E1873D04F00702A1B /* data */ = {
 			isa = PBXGroup;
 			children = (
 				A9079FFA18388EF800D8267D /* train.csv */,
@@ -346,7 +346,7 @@
 				A92F299C185213260020673C /* tram.csv */,
 				A92F299D185213260020673C /* vline.csv */,
 			);
-			name = raw_data;
+			name = data;
 			sourceTree = "<group>";
 		};
 		A9B4C23F1873D06700702A1B /* for_test */ = {

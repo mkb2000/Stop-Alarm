@@ -289,12 +289,13 @@
         self.cacheArray=[fetchedobj filteredArrayUsingPredicate:searchPred];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self nextAction];
-            [self.searchDisplayController.searchResultsTableView reloadData];//if reloadData performs slowly, and cacheArray's content has been changed, it is possible to cause err.
+            [self.searchDisplayController.searchResultsTableView reloadData];
+            //if reloadData performs slowly, and meanwhile cacheArray's content been changed, it is possible to cause err.
         });
     });
 }
 - (void) nextAction{
-    int l=[self.actionbuck count];
+    NSUInteger l=[self.actionbuck count];
     switch (l) {
         case 0:
             self.doing=false;

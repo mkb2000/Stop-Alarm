@@ -28,6 +28,7 @@
 #define ALARM_DISTANCE_TRAIN 400
 #define ALARM_DISTANCE_TRAM 200
 #define DELAY_TIMES 1 //Triger the alarm only when this many times of location updates within ALARM_DISTANCE.
+#define IS_DEBUG 1
 
 typedef  enum{
     Train=0,Bus=1,Tram=2,Vline=3

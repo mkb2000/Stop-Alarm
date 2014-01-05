@@ -352,7 +352,7 @@
             </objects>
             <point key="canvasLocation" x="353" y="-4552"/>
         </scene>
-        <!--Alarm Map View Controller - Active Alarm-->
+        <!--Alarm Map View Controller - Stops and Active Alarm-->
         <scene sceneID="KYc-ZN-iJb">
             <objects>
                 <viewController id="wgO-OQ-s1t" customClass="PTVAlarmMapViewController" sceneMemberID="viewController">
@@ -368,18 +368,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VH7-3Z-keh">
+                                <rect key="frame" x="43" y="473" width="234" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="Train"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentValueChange:" destination="wgO-OQ-s1t" eventType="valueChanged" id="r5a-Qg-yp8"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pNd-Ar-yFe" firstAttribute="top" secondItem="wB0-Dy-VQQ" secondAttribute="bottom" id="1C3-Qm-wPF"/>
                             <constraint firstItem="wB0-Dy-VQQ" firstAttribute="leading" secondItem="rw2-ct-ZTb" secondAttribute="leading" id="639-za-3f8"/>
                             <constraint firstItem="wB0-Dy-VQQ" firstAttribute="top" secondItem="rw2-ct-ZTb" secondAttribute="top" id="Ylu-X4-wpP"/>
+                            <constraint firstItem="pNd-Ar-yFe" firstAttribute="top" secondItem="VH7-3Z-keh" secondAttribute="bottom" constant="18" id="gi0-Ja-30u"/>
+                            <constraint firstItem="VH7-3Z-keh" firstAttribute="centerX" secondItem="wB0-Dy-VQQ" secondAttribute="centerX" id="juO-m1-Urh"/>
                             <constraint firstAttribute="trailing" secondItem="wB0-Dy-VQQ" secondAttribute="trailing" id="xhh-Wh-4Ig"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Active Alarm" id="Srw-xG-Syi"/>
+                    <navigationItem key="navigationItem" title="Stops and Active Alarm" id="Srw-xG-Syi"/>
                     <connections>
                         <outlet property="mapView" destination="wB0-Dy-VQQ" id="JK4-Td-9Xf"/>
+                        <outlet property="segementedControl" destination="VH7-3Z-keh" id="Zfc-5f-ahL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQx-ZP-rr5" userLabel="First Responder" sceneMemberID="firstResponder"/>

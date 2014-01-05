@@ -5,6 +5,7 @@
 //  Created by Kangbo Mo on 7/12/2013.
 //  Copyright (c) 2013 Kangbo Mo. All rights reserved.
 //
+//  Read a file line by line.
 
 #import "FileReader.h"
 #define BLOCK_SIZE 1024
@@ -40,6 +41,7 @@
     return self;
 }
 
+//return nil if reaching the end of file. Use while(l=nextLine()) to check and get next line.
 - (NSString *) nextLine{
     //    int cc=[self.filehandle offsetInFile];
     
@@ -82,6 +84,7 @@
     
     nextline=[self.bufline objectAtIndex:0];
     [self.bufline removeObjectAtIndex:0];
+    
     return  nextline;
 }
 

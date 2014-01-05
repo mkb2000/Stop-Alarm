@@ -13,9 +13,9 @@
 @interface TBCoordinateQuadTree : NSObject
 
 @property (assign, nonatomic) TBQuadTreeNode* root;
-@property (strong, nonatomic) MKMapView *mapView;
+//@property (strong, nonatomic) MKMapView *mapView;
 
-- (void)buildTree;
+- (void)buildTreeWithFile:(NSString *) filename;
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale;
 
 @end
