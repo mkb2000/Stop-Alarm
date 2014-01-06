@@ -59,9 +59,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    NSLog(@"enter terminate model");
+    if (IS_DEBUG) {
+        NSLog(@"enter terminate model");
+    }
     [self.managedObjectContext save:Nil];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) applicationDidReceiveMemoryWarning:(UIApplication *)application{
+    
 }
 
 #pragma mark - Core data preparations

@@ -17,7 +17,7 @@
 @property (nonatomic,strong) NSFetchedResultsController* fetchedResultsController;
 @property (nonatomic,strong)PTVAlarmAppDelegate * appdelegate;
 @property (nonatomic) BOOL searching;
-@property (nonatomic,strong) NSArray * cacheArray;
+@property (nonatomic,strong) NSArray * searchResultArray;
 @property (nonatomic,strong) NSMutableArray * actionbuck;
 @property (nonatomic) BOOL doing;
 @end
@@ -102,7 +102,6 @@
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:0];
     
-    // Sort using * property.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSSortDescriptor *initDescriptor=[[NSSortDescriptor alloc] initWithKey:@"initial" ascending:YES];
     [fetchRequest setSortDescriptors:@[sortDescriptor, initDescriptor]];
@@ -130,7 +129,7 @@
 {
     
     if (self.searching) {
-        return  [self.cacheArray count];
+        return  [self.searchResultArray count];
     }
     
     // Return the number of rows in the section.
@@ -149,7 +148,7 @@
 {
     Stations * stationInfo;
     if (self.searching) {
-        stationInfo=[self.cacheArray objectAtIndex:indexPath.row];
+        stationInfo=[self.searchResultArray objectAtIndex:indexPath.row];
     }
     else{
         stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
@@ -232,7 +231,7 @@
         PTVAlarmDetailViewController * dvController=[segue destinationViewController];
         Stations * station;
         if (self.searching) {
-            station=[self.cacheArray objectAtIndex:index.row];
+            station=[self.searchResultArray objectAtIndex:index.row];
         }
         else{
             station=[self.fetchedResultsController objectAtIndexPath:index];
@@ -245,16 +244,23 @@
 #pragma mark -
 #pragma mark Search Bar
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
+    if (IS_DEBUG) {
+        NSLog(@"finish searching");
+    }
     self.searching=false;
     [self.tableView reloadData];
+    self.searchResultArray=nil;
+    //    self.queue=Nil;
 }
 - (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
     self.searching=true;
+    if (IS_DEBUG) {
+        NSLog(@"will begin search");
+    }
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    
     [self filterContentForSearchText:searchString scope:[self.searchDisplayController.searchBar selectedScopeButtonIndex]];
     
     // Return YES to cause the search result table view to be reloaded.
@@ -262,6 +268,10 @@
 }
 
 #pragma mark Content fetching
+/**
+ During typing, a new searching action may called before the previous finish. Thus, put all actions in a bucket,
+ only execute the last action in the bucket.
+ */
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSInteger)scope
 {
     NSString * st=[searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -274,7 +284,6 @@
             self.actionbuck=[NSMutableArray arrayWithObject:[self.actionbuck lastObject]];
         }
     }
-    
 }
 
 - (void) executeAction{
@@ -285,11 +294,14 @@
     }
     NSPredicate * searchPred=[NSPredicate predicateWithFormat:@"(name CONTAINS[cd] %@) OR (address CONTAINS[cd] %@)",str,str];
     NSArray *fetchedobj=self.fetchedResultsController.fetchedObjects;
-    dispatch_async(self.queue, ^{
-        self.cacheArray=[fetchedobj filteredArrayUsingPredicate:searchPred];
+    dispatch_queue_t q= dispatch_queue_create("com.ptvalarm.searchFilter", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(q, ^{
+        self.searchResultArray=[fetchedobj filteredArrayUsingPredicate:searchPred];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self nextAction];
-            [self.searchDisplayController.searchResultsTableView reloadData];
+//            @synchronized(fetchedobj){
+                [self.searchDisplayController.searchResultsTableView reloadData];
+                [self nextAction];
+//            }
             //if reloadData performs slowly, and meanwhile cacheArray's content been changed, it is possible to cause err.
         });
     });

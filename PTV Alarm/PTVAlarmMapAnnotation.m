@@ -27,7 +27,16 @@
 - (CLLocationCoordinate2D)coordinate {
     return _theCoordinate;
 }
+- (NSUInteger)hash
+{
+    NSString *toHash = [NSString stringWithFormat:@"%@%@%.5F%.5F",self.title,self.subtitle, self.coordinate.latitude, self.coordinate.longitude];
+    return [toHash hash];
+}
 
+- (BOOL)isEqual:(id)object
+{
+    return [self hash] == [object hash];
+}
 
 
 @end

@@ -34,6 +34,7 @@ typedef  enum{
     Train=0,Bus=1,Tram=2,Vline=3
 } TransportType;
 
+
 @interface PTVAlarmDefine : NSObject
 
 @property NSURL * STATIONFILEURL;

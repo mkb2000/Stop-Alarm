@@ -18,14 +18,16 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segementedControl;
 
 @property (strong,nonatomic) NSArray * activeAlarms;
-@property (strong,nonatomic) CLLocation * lastLocation;
+@property (strong,nonatomic) CLLocation * lastUserLocation;
 @property (strong,nonatomic) NSMutableDictionary * annotationDic;
 @property (strong,nonatomic) PTVAlarmAppDelegate * appdelegate;
-@property (nonatomic) BOOL activeView;
+@property (nonatomic) BOOL isActiveView;
 @property (strong,nonatomic) Alarms * lastArrived;
 @property (strong,nonatomic) PTVAlarmMapAnnotation * lastArrivedAnno;
-
+@property (strong,nonatomic) NSArray * stationAnnotations;
 @property (strong, nonatomic) TBCoordinateQuadTree *coordinateQuadTree;
+
+
 @end
 
 @implementation PTVAlarmMapViewController
@@ -45,9 +47,12 @@
     }
     
     self.appdelegate=[[UIApplication sharedApplication] delegate];
-    self.lastLocation=self.appdelegate.ptvalarmmanager.lastLocation;
+    self.lastUserLocation=self.appdelegate.ptvalarmmanager.lastLocation;
     
-    
+    self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
+    [[NSOperationQueue new] addOperationWithBlock:^{
+        [self.coordinateQuadTree buildTreeWithFile:@"bus.csv"];//this takes a while to execute, so do it here.
+    }];
     //    self.coordinateQuadTree.mapView = self.mapView;
     //    [self.coordinateQuadTree buildTree];
     
@@ -58,20 +63,19 @@
     self.mapView.delegate=self;
     [self.mapView setVisibleMapRect:MKMapRectMake(241657535.9625825, 163847807.9538832, 1310719.946412265, 1863679.845351934)];
     self.mapView.showsUserLocation=YES;
-    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    //    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
-    self.activeView=false;
+    self.isActiveView=false;
     [self activeAlarmsDidChange];
-    self.activeView=true;
+    self.isActiveView=true;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsDidChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
     
     
 }
 
-
 - (void)viewWillAppear:(BOOL)animated{
-    self.activeView=true;
+    self.isActiveView=true;
     if (IS_DEBUG) {
         NSLog(@"veiw will load!!!");
     }
@@ -79,7 +83,7 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    self.activeView=false;
+    self.isActiveView=false;
     if (IS_DEBUG) {
         NSLog(@"veiw will disappear!!!");
     }
@@ -96,8 +100,20 @@
         difference=[NSMutableSet setWithSet:old];
         [difference minusSet:new];
         for (Alarms *dif in difference) {
+            PTVAlarmMapAnnotation *alarmAnnotation=[self.annotationDic objectForKey:dif.toWhich.address];
             [self.mapView removeAnnotation:[self.annotationDic objectForKey:dif.toWhich.address]];
             [self.annotationDic removeObjectForKey:dif.toWhich.address];
+            TBClusterAnnotation *stationAnnotation=[[TBClusterAnnotation alloc] init];
+            stationAnnotation.title=alarmAnnotation.title;
+            stationAnnotation.subtitle=alarmAnnotation.subtitle;
+            stationAnnotation.coordinate=alarmAnnotation.coordinate;
+            
+            NSMutableSet *currAnno=[NSMutableSet setWithArray:self.stationAnnotations];
+            if ([currAnno containsObject:stationAnnotation]) {
+                [self.mapView addAnnotation:stationAnnotation];
+                NSLog(@"aaaa");
+            }
+            
         }
     }
     else{
@@ -109,8 +125,20 @@
             mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
             mapPin.name=a.toWhich.name;
             mapPin.address=a.toWhich.address;
-            [self.mapView addAnnotation:mapPin];
+//            NSMutableSet *currAnno=[NSMutableSet setWithArray:self.mapView.annotations];
+//            TBClusterAnnotation *stationAnnotation=[[TBClusterAnnotation alloc] init];
+//            stationAnnotation.title=mapPin.title;
+//            stationAnnotation.subtitle=mapPin.subtitle;
+//            stationAnnotation.coordinate=mapPin.coordinate;
+//            [self.mapView removeAnnotation:stationAnnotation];
+            for (id<MKAnnotation> anno in self.mapView.annotations) {
+                if ([anno isEqual:mapPin]) {
+                    [self.mapView removeAnnotation:anno];
+                }
+            }
             [self.annotationDic setObject:mapPin forKey:mapPin.address];
+            [self.mapView addAnnotation:mapPin];
+
         }
     }
     
@@ -131,8 +159,9 @@
     }
     
     self.activeAlarms=[[self.appdelegate activeAlarms] copy];
-    if (self.lastLocation&&!self.activeView) {
-        [self setMapViewVisiblePortion:self.lastLocation];
+    //reset the visiable rect of map view when userlocation is available and turn on/off an alarm.
+    if (self.lastUserLocation&&!self.isActiveView) {
+        [self setMapViewVisiblePortion:self.lastUserLocation];
     }
 }
 
@@ -221,7 +250,12 @@
 {
     NSMutableSet *before = [NSMutableSet setWithArray:self.mapView.annotations];
     [before removeObject:[self.mapView userLocation]];
-    NSSet *after = [NSSet setWithArray:annotations];
+
+    
+    NSMutableSet *after = [NSMutableSet setWithArray:annotations];
+    for (NSString * key in [self.annotationDic allKeys]) {
+        [after addObject:[self.annotationDic objectForKey:key] ];
+    }
     
     NSMutableSet *toKeep = [NSMutableSet setWithSet:before];
     [toKeep intersectSet:after];
@@ -246,7 +280,7 @@
         [[NSOperationQueue new] addOperationWithBlock:^{
             double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
             NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
-            
+            self.stationAnnotations=annotations;
             [self updateMapViewAnnotationsWithAnnotations:annotations];
         }];
     }
@@ -270,18 +304,32 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    static NSString *const TBAnnotatioViewReuseID = @"TBAnnotatioViewReuseID";
-    
-    MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TBAnnotatioViewReuseID];
-    
-    if (!annotationView) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:TBAnnotatioViewReuseID];
+    if ([annotation isKindOfClass:[MKUserLocation class]]){
+        return nil;
     }
+    static NSString *const TBAnnotatioViewReuseID = @"TBAnnotatioViewReuseID";
+    static NSString *const AlaramAnnotationViewReuseID=@"AlaramAnnotationReuseID";
     
-    annotationView.canShowCallout = YES;
-    //    annotationView.count = [(TBClusterAnnotation *)annotation count];
-    
-    return annotationView;
+    if ([annotation isKindOfClass:[PTVAlarmMapAnnotation class]]) {
+        MKPinAnnotationView *annotationView= (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AlaramAnnotationViewReuseID];
+        if (!annotationView) {
+            annotationView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AlaramAnnotationViewReuseID];
+        }
+        [annotationView setPinColor:MKPinAnnotationColorPurple];
+        annotationView.canShowCallout=YES;
+        return annotationView;
+    }
+    else{
+        MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TBAnnotatioViewReuseID];
+        
+        if (!annotationView) {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:TBAnnotatioViewReuseID];
+        }
+        
+        annotationView.canShowCallout = YES;
+        //    annotationView.count = [(TBClusterAnnotation *)annotation count];
+        return annotationView;
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
@@ -298,36 +346,46 @@
         NSLog(@"selected at %ld",(long)self.segementedControl.selectedSegmentIndex);
     }
     if ([sender isKindOfClass:[UISegmentedControl class]]) {
-        switch (self.segementedControl.selectedSegmentIndex) {
-            case 0:
-                if (self.coordinateQuadTree) {
-                    self.coordinateQuadTree=NULL;
-                }
-                break;
-            case 1:
-                self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
-                [self.coordinateQuadTree buildTreeWithFile:@"train.csv"];
-                break;
-            case 2:
-                self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
-                [self.coordinateQuadTree buildTreeWithFile:@"bus.csv"];
-                break;
-            case 3:
-                self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
-                [self.coordinateQuadTree buildTreeWithFile:@"tram.csv"];
-                break;
-            case 4:
-                self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
-                [self.coordinateQuadTree buildTreeWithFile:@"vline.csv"];
-                break;
-                
-            default:
-                break;
-        }
-        [self mapView:self.mapView regionDidChangeAnimated:NO];
+        [[NSOperationQueue new] addOperationWithBlock:^{
+            [self doSegmentValueChange:(int)self.segementedControl.selectedSegmentIndex];
+        }];
     }
 }
 
+- (void) doSegmentValueChange:(int) index{
+    switch (index) {
+        case 0:
+        {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                NSMutableArray *before = [NSMutableArray arrayWithArray:self.mapView.annotations];
+                [before removeObject:[self.mapView userLocation]];
+                for (NSString * key in [self.annotationDic allKeys]) {
+                    [before removeObject:[self.annotationDic objectForKey:key] ];
+                }
+
+                [self.mapView removeAnnotations:before ];
+                self.stationAnnotations=Nil;
+            }];
+        }
+            break;
+        case 1:
+            [self.coordinateQuadTree buildTreeWithFile:@"train.csv"];
+            break;
+        case 2:
+            [self.coordinateQuadTree buildTreeWithFile:@"bus.csv"];
+            break;
+        case 3:
+            [self.coordinateQuadTree buildTreeWithFile:@"tram.csv"];
+            break;
+        case 4:
+            [self.coordinateQuadTree buildTreeWithFile:@"vline.csv"];
+            break;
+            
+        default:
+            break;
+    }
+    [self mapView:self.mapView regionDidChangeAnimated:NO];
+}
 
 
 @end

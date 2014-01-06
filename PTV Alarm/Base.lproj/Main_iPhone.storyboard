@@ -369,7 +369,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VH7-3Z-keh">
-                                <rect key="frame" x="43" y="473" width="234" height="29"/>
+                                <rect key="frame" x="43" y="452" width="234" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="None"/>
@@ -386,10 +386,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pNd-Ar-yFe" firstAttribute="top" secondItem="wB0-Dy-VQQ" secondAttribute="bottom" id="1C3-Qm-wPF"/>
+                            <constraint firstItem="VH7-3Z-keh" firstAttribute="centerX" secondItem="wB0-Dy-VQQ" secondAttribute="centerX" id="5nf-xW-vST"/>
                             <constraint firstItem="wB0-Dy-VQQ" firstAttribute="leading" secondItem="rw2-ct-ZTb" secondAttribute="leading" id="639-za-3f8"/>
                             <constraint firstItem="wB0-Dy-VQQ" firstAttribute="top" secondItem="rw2-ct-ZTb" secondAttribute="top" id="Ylu-X4-wpP"/>
-                            <constraint firstItem="pNd-Ar-yFe" firstAttribute="top" secondItem="VH7-3Z-keh" secondAttribute="bottom" constant="18" id="gi0-Ja-30u"/>
-                            <constraint firstItem="VH7-3Z-keh" firstAttribute="centerX" secondItem="wB0-Dy-VQQ" secondAttribute="centerX" id="juO-m1-Urh"/>
+                            <constraint firstItem="pNd-Ar-yFe" firstAttribute="top" secondItem="VH7-3Z-keh" secondAttribute="bottom" constant="39" id="i0u-0J-e2C"/>
                             <constraint firstAttribute="trailing" secondItem="wB0-Dy-VQQ" secondAttribute="trailing" id="xhh-Wh-4Ig"/>
                         </constraints>
                     </view>

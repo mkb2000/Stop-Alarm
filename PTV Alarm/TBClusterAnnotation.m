@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         _coordinate = coordinate;
-        _title = [NSString stringWithFormat:@"%ld stops in this area", count];
+        _title = [NSString stringWithFormat:@"%ld stops in this area", (long)count];
         _subtitle=[NSString stringWithFormat:@"zoom in to view more stops in this area"];
         _count = count;
     }
@@ -24,7 +24,7 @@
 
 - (NSUInteger)hash
 {
-    NSString *toHash = [NSString stringWithFormat:@"%@%@%.5F%.5F",self.title,self.subtitle, self.coordinate.latitude, self.coordinate.longitude];
+    NSString *toHash = [NSString stringWithFormat:@"%@%@%.5F%.5F", self.title,self.subtitle, self.coordinate.latitude, self.coordinate.longitude];
     return [toHash hash];
 }
 
