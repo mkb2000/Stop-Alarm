@@ -16,7 +16,7 @@
     if (self) {
         _coordinate = coordinate;
         _title = [NSString stringWithFormat:@"%ld stops in this area", (long)count];
-        _subtitle=[NSString stringWithFormat:@"zoom in to view more stops in this area"];
+        _subtitle=[NSString stringWithFormat:@"zoom in to view more stops"];
         _count = count;
     }
     return self;

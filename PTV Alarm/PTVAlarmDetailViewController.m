@@ -37,7 +37,6 @@
     return _isOn;
 }
 
-
 - (IBAction)switchAction:(UISwitch *)sender{
     [self fetchResult];
     

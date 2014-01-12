@@ -16,6 +16,7 @@
 //@property (strong, nonatomic) MKMapView *mapView;
 
 - (void)buildTreeWithFile:(NSString *) filename;
+- (void)prepareTreeWithFile:(NSString *) filename;
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale;
-
+- (void)clearCache;
 @end

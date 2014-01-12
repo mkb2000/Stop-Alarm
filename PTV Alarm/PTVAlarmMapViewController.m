@@ -9,6 +9,7 @@
 #import "PTVAlarmMapViewController.h"
 #import "PTVAlarmAppDelegate.h"
 #import "PTVAlarmMapAnnotation.h"
+#import "PTVAlarmDetailViewController.h"
 
 #import "TBCoordinateQuadTree.h"
 #import "TBClusterAnnotationView.h"
@@ -16,27 +17,50 @@
 
 @interface PTVAlarmMapViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segementedControl;
-
 @property (strong,nonatomic) NSArray * activeAlarms;
 @property (strong,nonatomic) CLLocation * lastUserLocation;
-@property (strong,nonatomic) NSMutableDictionary * annotationDic;
+@property (strong,nonatomic) NSMutableDictionary * activeAlarmAnnotationDict;
 @property (strong,nonatomic) PTVAlarmAppDelegate * appdelegate;
 @property (nonatomic) BOOL isActiveView;
 @property (strong,nonatomic) Alarms * lastArrived;
-@property (strong,nonatomic) PTVAlarmMapAnnotation * lastArrivedAnno;
+@property (strong,nonatomic) PTVAlarmMapAnnotation * lastArrivedAnno;//this annotation on mapview is red if there was a pin at its position. The updateMapViewAnnotationsWithAnnotations: treats the two classes equally, so retains the previous one.
 @property (strong,nonatomic) NSArray * stationAnnotations;
 @property (strong, nonatomic) TBCoordinateQuadTree *coordinateQuadTree;
-
+@property (strong,nonatomic) id<MKAnnotation> selectedAnnotation;
+@property (strong,nonatomic) NSMutableArray * permanentAnnotations; //Annotations won't change during scaling. active alarm, lastArrived, selected annotation
+@property (strong,nonatomic) NSOperationQueue * opQueue;
 
 @end
 
 @implementation PTVAlarmMapViewController
 
-- (NSMutableDictionary *)annotationDic{
-    if (!_annotationDic) {
-        _annotationDic=[NSMutableDictionary dictionary];
+- (NSOperationQueue *) opQueue{
+    if (!_opQueue) {
+        _opQueue=[[NSOperationQueue alloc] init];
+        _opQueue.maxConcurrentOperationCount=1;
     }
-    return _annotationDic;
+    return _opQueue;
+}
+
+- (NSMutableArray *) permanentAnnotations{
+    _permanentAnnotations=[NSMutableArray array];
+    for (NSString * key in [self.activeAlarmAnnotationDict allKeys]) {
+        [_permanentAnnotations addObject:[self.activeAlarmAnnotationDict objectForKey:key] ];
+    }
+    if (self.lastArrivedAnno) {
+        [_permanentAnnotations addObject:self.lastArrivedAnno];
+    }
+    if (self.selectedAnnotation) {
+        [_permanentAnnotations addObject:self.selectedAnnotation];
+    }
+    return _permanentAnnotations;
+}
+
+- (NSMutableDictionary *)activeAlarmAnnotationDict{
+    if (!_activeAlarmAnnotationDict) {
+        _activeAlarmAnnotationDict=[NSMutableDictionary dictionary];
+    }
+    return _activeAlarmAnnotationDict;
 }
 
 - (void)viewDidLoad
@@ -50,18 +74,18 @@
     self.lastUserLocation=self.appdelegate.ptvalarmmanager.lastLocation;
     
     self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
-    [[NSOperationQueue new] addOperationWithBlock:^{
-        [self.coordinateQuadTree buildTreeWithFile:@"bus.csv"];//this takes a while to execute, so do it here.
+    [self.opQueue addOperationWithBlock:^{
+        [self.coordinateQuadTree prepareTreeWithFile:@"bus.csv"];//this takes a while to execute, so do it here.
     }];
-    //    self.coordinateQuadTree.mapView = self.mapView;
-    //    [self.coordinateQuadTree buildTree];
     
+    [self.segementedControl setTitle:@"None" forSegmentAtIndex:0];
+    [self.segementedControl setTitle:@"Train" forSegmentAtIndex:1];
     [self.segementedControl setTitle:@"Bus" forSegmentAtIndex:2];//:@"Bus" atIndex:2 animated:NO];
     [self.segementedControl setTitle:@"Tram" forSegmentAtIndex:3];//insertSegmentWithTitle:@"Tram" atIndex:3 animated:NO];
     [self.segementedControl setTitle:@"Vline" forSegmentAtIndex:4];//insertSegmentWithTitle:@"Vline" atIndex:4 animated:NO];
     
     self.mapView.delegate=self;
-    [self.mapView setVisibleMapRect:MKMapRectMake(241657535.9625825, 163847807.9538832, 1310719.946412265, 1863679.845351934)];
+    [self.mapView setVisibleMapRect:MKMapRectMake(241657535.9625825, 163847807.9538832, 1310719.946412265, 1863679.845351934)];// victoria
     self.mapView.showsUserLocation=YES;
     //    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
@@ -70,8 +94,7 @@
     self.isActiveView=true;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsDidChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
-    
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterBackground) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -79,7 +102,6 @@
     if (IS_DEBUG) {
         NSLog(@"veiw will load!!!");
     }
-    
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -89,7 +111,25 @@
     }
 }
 
-// when alarm state changes, remove/add station annotation from map view.
+- (void) didReceiveMemoryWarning{
+    if (IS_DEBUG) {
+        NSLog(@"memory alarm in mapviewcontroller");
+    }
+    [self.coordinateQuadTree clearCache];
+    [super didReceiveMemoryWarning];
+}
+
+
+// invoked by notification when app wakes from background model.
+- (void) appEnterBackground{
+    //remove the last arrived destination.
+    if (self.lastArrivedAnno) {
+        [self.mapView removeAnnotation:self.lastArrivedAnno];
+        self.lastArrivedAnno=nil;
+    }
+}
+
+// invoked by notification when alarm state changes, remove/add station annotation from map view.
 - (void) activeAlarmsDidChange{
     NSMutableSet *old=[NSMutableSet setWithArray:self.activeAlarms];
     NSMutableSet *new=[NSMutableSet setWithArray:[[self.appdelegate activeAlarms] copy] ];
@@ -100,20 +140,19 @@
         difference=[NSMutableSet setWithSet:old];
         [difference minusSet:new];
         for (Alarms *dif in difference) {
-            PTVAlarmMapAnnotation *alarmAnnotation=[self.annotationDic objectForKey:dif.toWhich.address];
-            [self.mapView removeAnnotation:[self.annotationDic objectForKey:dif.toWhich.address]];
-            [self.annotationDic removeObjectForKey:dif.toWhich.address];
+            PTVAlarmMapAnnotation *alarmAnnotation=[self.activeAlarmAnnotationDict objectForKey:dif.toWhich.address];
+            [self.mapView removeAnnotation:[self.activeAlarmAnnotationDict objectForKey:dif.toWhich.address]];
+            [self.activeAlarmAnnotationDict removeObjectForKey:dif.toWhich.address];
+            
+            //change the annotation color to normal one.
             TBClusterAnnotation *stationAnnotation=[[TBClusterAnnotation alloc] init];
             stationAnnotation.title=alarmAnnotation.title;
             stationAnnotation.subtitle=alarmAnnotation.subtitle;
             stationAnnotation.coordinate=alarmAnnotation.coordinate;
-            
             NSMutableSet *currAnno=[NSMutableSet setWithArray:self.stationAnnotations];
             if ([currAnno containsObject:stationAnnotation]) {
                 [self.mapView addAnnotation:stationAnnotation];
-                NSLog(@"aaaa");
             }
-            
         }
     }
     else{
@@ -125,20 +164,14 @@
             mapPin.theCoordinate=CLLocationCoordinate2DMake(a.toWhich.latitude.doubleValue, a.toWhich.longitude.doubleValue);
             mapPin.name=a.toWhich.name;
             mapPin.address=a.toWhich.address;
-//            NSMutableSet *currAnno=[NSMutableSet setWithArray:self.mapView.annotations];
-//            TBClusterAnnotation *stationAnnotation=[[TBClusterAnnotation alloc] init];
-//            stationAnnotation.title=mapPin.title;
-//            stationAnnotation.subtitle=mapPin.subtitle;
-//            stationAnnotation.coordinate=mapPin.coordinate;
-//            [self.mapView removeAnnotation:stationAnnotation];
             for (id<MKAnnotation> anno in self.mapView.annotations) {
                 if ([anno isEqual:mapPin]) {
                     [self.mapView removeAnnotation:anno];
                 }
             }
-            [self.annotationDic setObject:mapPin forKey:mapPin.address];
+            [self.activeAlarmAnnotationDict setObject:mapPin forKey:mapPin.address];
             [self.mapView addAnnotation:mapPin];
-
+            
         }
     }
     
@@ -199,34 +232,26 @@
         }
         else{
             //if the current location is too too far away.
-            MKCoordinateRegion r;
-            MKCoordinateSpan span;
-            span.latitudeDelta = 1;
-            span.longitudeDelta = 1;
-            r.span = span;
-            CLLocationCoordinate2D c;
-            c.longitude=currentLoci.coordinate.longitude;
-            c.latitude=currentLoci.coordinate.latitude;
-            r.center = c;
-            [self.mapView setRegion:r animated:YES];
+            [self.mapView setVisibleMapRect:MKMapRectMake(241657535.9625825, 163847807.9538832, 1310719.946412265, 1863679.845351934)];// victoria
         }
     }
 }
 
-// make a circle overlay. Not used
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
-{
-    if ([overlay isKindOfClass:[MKCircle class]])
-    {
-        MKCircleView*    aView = [[MKCircleView alloc] initWithCircle:(MKCircle *)overlay ];
-        aView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.2];
-        aView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.7];
-        aView.lineWidth = 3;
-        return aView;
-    }
-    return nil;
-}
-
+/*
+ // make a circle overlay. Not used
+ - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+ {
+ if ([overlay isKindOfClass:[MKCircle class]])
+ {
+ MKCircleView*    aView = [[MKCircleView alloc] initWithCircle:(MKCircle *)overlay ];
+ aView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.2];
+ aView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.7];
+ aView.lineWidth = 3;
+ return aView;
+ }
+ return nil;
+ }
+ */
 
 #pragma mark - station annotations
 - (void)addBounceAnnimationToView:(UIView *)view
@@ -250,13 +275,17 @@
 {
     NSMutableSet *before = [NSMutableSet setWithArray:self.mapView.annotations];
     [before removeObject:[self.mapView userLocation]];
-
+    
     
     NSMutableSet *after = [NSMutableSet setWithArray:annotations];
-    for (NSString * key in [self.annotationDic allKeys]) {
-        [after addObject:[self.annotationDic objectForKey:key] ];
-    }
-    
+    [after addObjectsFromArray:self.permanentAnnotations];
+    //    for (NSString * key in [self.activeAlarmAnnotationDict allKeys]) {
+    //        [after addObject:[self.activeAlarmAnnotationDict objectForKey:key] ];
+    //    }
+    //    if (self.lastArrivedAnno) {
+    //        [after addObject:self.lastArrivedAnno];
+    //    }
+    //
     NSMutableSet *toKeep = [NSMutableSet setWithSet:before];
     [toKeep intersectSet:after];
     
@@ -274,33 +303,30 @@
 
 #pragma mark - MKMapViewDelegate
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    if (self.segementedControl.selectedSegmentIndex!=0) {
-        [[NSOperationQueue new] addOperationWithBlock:^{
-            double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
-            NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
-            self.stationAnnotations=annotations;
-            [self updateMapViewAnnotationsWithAnnotations:annotations];
-        }];
+- (void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+    //do not remove the annoation if the selected annoation is a single station.
+    if ([view.annotation isKindOfClass:[TBClusterAnnotation class]]&&((TBClusterAnnotation *)view.annotation).count==1) {
+        self.selectedAnnotation=view.annotation;
+    }
+    if ([view.annotation isKindOfClass:[PTVAlarmMapAnnotation class]]) {
+        self.selectedAnnotation=view.annotation;
     }
 }
 
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-//{
-//    static NSString *const TBAnnotatioViewReuseID = @"TBAnnotatioViewReuseID";
-//
-//    TBClusterAnnotationView *annotationView = (TBClusterAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TBAnnotatioViewReuseID];
-//
-//    if (!annotationView) {
-//        annotationView = [[TBClusterAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:TBAnnotatioViewReuseID];
-//    }
-//
-//    annotationView.canShowCallout = YES;
-//    annotationView.count = [(TBClusterAnnotation *)annotation count];
-//
-//    return annotationView;
-//}
+- (void) mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view{
+    self.selectedAnnotation=nil;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    [[NSOperationQueue new] addOperationWithBlock:^{
+        double scale = self.mapView.bounds.size.width / self.mapView.visibleMapRect.size.width;
+        NSArray *annotations = [self.coordinateQuadTree clusteredAnnotationsWithinMapRect:mapView.visibleMapRect withZoomScale:scale];
+        self.stationAnnotations=annotations;
+        [self updateMapViewAnnotationsWithAnnotations:annotations];
+    }];
+}
+
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
@@ -314,6 +340,7 @@
         MKPinAnnotationView *annotationView= (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AlaramAnnotationViewReuseID];
         if (!annotationView) {
             annotationView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AlaramAnnotationViewReuseID];
+            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         }
         [annotationView setPinColor:MKPinAnnotationColorPurple];
         annotationView.canShowCallout=YES;
@@ -325,9 +352,13 @@
         if (!annotationView) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:TBAnnotatioViewReuseID];
         }
-        
+        if (((TBClusterAnnotation *)annotation).count==1) {
+            annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        }
+        else{
+            annotationView.rightCalloutAccessoryView=nil;
+        }
         annotationView.canShowCallout = YES;
-        //    annotationView.count = [(TBClusterAnnotation *)annotation count];
         return annotationView;
     }
 }
@@ -339,6 +370,7 @@
     }
 }
 
+
 #pragma mark - segmented control
 
 - (IBAction)segmentValueChange:(id)sender {
@@ -346,27 +378,17 @@
         NSLog(@"selected at %ld",(long)self.segementedControl.selectedSegmentIndex);
     }
     if ([sender isKindOfClass:[UISegmentedControl class]]) {
-        [[NSOperationQueue new] addOperationWithBlock:^{
+        [self.opQueue addOperationWithBlock:^{
             [self doSegmentValueChange:(int)self.segementedControl.selectedSegmentIndex];
         }];
     }
 }
 
 - (void) doSegmentValueChange:(int) index{
+    //segment index and its related file.
     switch (index) {
         case 0:
-        {
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                NSMutableArray *before = [NSMutableArray arrayWithArray:self.mapView.annotations];
-                [before removeObject:[self.mapView userLocation]];
-                for (NSString * key in [self.annotationDic allKeys]) {
-                    [before removeObject:[self.annotationDic objectForKey:key] ];
-                }
-
-                [self.mapView removeAnnotations:before ];
-                self.stationAnnotations=Nil;
-            }];
-        }
+            [self.coordinateQuadTree buildTreeWithFile:@""];
             break;
         case 1:
             [self.coordinateQuadTree buildTreeWithFile:@"train.csv"];
@@ -380,12 +402,31 @@
         case 4:
             [self.coordinateQuadTree buildTreeWithFile:@"vline.csv"];
             break;
-            
         default:
             break;
     }
     [self mapView:self.mapView regionDidChangeAnimated:NO];
 }
 
+#pragma mark - segue to station detail page
+- (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    [self performSegueWithIdentifier:@"mapAnnotationSegue" sender:view];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqual:@"mapAnnotationSegue"]) {
+        MKAnnotationView * view=sender;
+        id<MKAnnotation> annotation=view.annotation;
+        NSString * name=annotation.title;
+        NSString * address=annotation.subtitle;
+        CLLocationCoordinate2D coordinate=annotation.coordinate;
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Stations"];
+        request.predicate = [NSPredicate predicateWithFormat:@"name=%@ AND address=%@",name,address,coordinate.latitude,coordinate.longitude];
+        NSArray *stations = [self.appdelegate.managedObjectContext executeFetchRequest:request error:NULL];
+        if ([segue.destinationViewController respondsToSelector:@selector(setStation:)]) {
+            [segue.destinationViewController performSelector:@selector(setStation:) withObject:stations[0]];
+        }
+    }
+}
 
 @end

@@ -102,8 +102,11 @@ float TBCellSizeForZoomScale(MKZoomScale zoomScale)
 }
 
 @interface TBCoordinateQuadTree()
-@property (nonatomic,strong) NSMutableDictionary * cachedFiles;
-@property (nonatomic) TBQuadTreeNode ** cachedRoots;
+{
+    TBQuadTreeNode * cachedRoots[4];
+}
+@property (nonatomic,strong) NSMutableDictionary * cachedFiles;//{"filename":indexIncachedRoots}
+//@property (nonatomic) TBQuadTreeNode * cachedRoots[4];//pointers to cached tree roots
 @end
 
 @implementation TBCoordinateQuadTree
@@ -115,29 +118,26 @@ float TBCellSizeForZoomScale(MKZoomScale zoomScale)
     return _cachedFiles;
 }
 
-- (TBQuadTreeNode **) cachedRoots{
-    if (!_cachedRoots) {
-        _cachedRoots=malloc(sizeof(TBQuadTreeNode *)*4);
-    }
-    return _cachedRoots;
-}
+//- (TBQuadTreeNode **) cachedRoots{
+//    if (!_cachedRoots) {
+//        _cachedRoots=malloc(sizeof(TBQuadTreeNode *)*4);
+//    }
+//    return _cachedRoots;
+//}
 
 - (void)buildTreeWithFile:(NSString *)filename
 {
     @autoreleasepool {
-        if (!filename) {
+        if (!filename||[filename isEqual:@""]) {
             _root=nil;
             return;
         }
-        NSNumber *num=[self.cachedFiles objectForKey:filename];
-        if (num) {
+        NSNumber *ind=[self.cachedFiles objectForKey:filename];
+        if (ind) {
             if (IS_DEBUG) {
                 NSLog(@"%@ from cache",filename);
             }
-//            NSInteger treeSize= [(NSNumber *)[self.cachedFileSize objectForKey:filename] integerValue];
-            
-            _root= self.cachedRoots[[num intValue]-1];
-//            [(NSData *)[self.cachedFiles objectForKey:filename] getBytes:_root length:sizeof(TBQuadTreeNode)];
+            _root= cachedRoots[[ind intValue]-1];
         }
         else{
             if (IS_DEBUG) {
@@ -157,10 +157,51 @@ float TBCellSizeForZoomScale(MKZoomScale zoomScale)
             TBBoundingBox world = TBBoundingBoxMake(-40,133,-22,153); // (botright.lat,topleft.lon,topleft.lat,botright.lon) the bound within which the nodes located. The nodes outside this bound will not be searchable.
             
             _root = TBQuadTreeBuildWithData(dataArray, (int)count, world, 4);
-            self.cachedRoots[[self.cachedFiles count]]=_root;
-            [self.cachedFiles setObject:[NSNumber numberWithInt:[self.cachedFiles count]+1] forKey:filename];
+            
+            cachedRoots[[self.cachedFiles count]]=_root;
+            [self.cachedFiles setObject:[NSNumber numberWithInt:(int)[self.cachedFiles count]+1] forKey:filename];
         }
     }
+}
+
+// cache this file for later use.
+- (void) prepareTreeWithFile:(NSString *)filename{
+    if (filename) {
+        NSNumber *ind=[self.cachedFiles objectForKey:filename];
+        if (!ind) {
+            NSString *data = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:filename ofType:@""] encoding:NSMacOSRomanStringEncoding error:nil];
+            NSArray *lines = [data componentsSeparatedByString:@"\n"];
+            
+            NSInteger count = lines.count - 1;
+            
+            TBQuadTreeNodeData *dataArray = malloc(sizeof(TBQuadTreeNodeData) * count);
+            for (NSInteger i = 0; i < count; i++) {
+                dataArray[i] = TBDataFromLine(lines[i]);
+            }
+            
+            TBBoundingBox world = TBBoundingBoxMake(-40,133,-22,153); // (botright.lat,topleft.lon,topleft.lat,botright.lon) the bound of "world" within which annotations located. The annotations outside this bound will not be searchable.
+            
+            TBQuadTreeNode* tempRoot = TBQuadTreeBuildWithData(dataArray, (int)count, world, 4);
+            cachedRoots[[self.cachedFiles count]]=tempRoot;
+            [self.cachedFiles setObject:[NSNumber numberWithInt:(int)[self.cachedFiles count]+1] forKey:filename];
+            tempRoot=nil;
+            if (IS_DEBUG) {
+                NSLog(@"builded tree for %@ file",filename);
+            }
+        }
+        else{
+            if (IS_DEBUG) {
+                NSLog(@"%@ tree exists in cache",filename);
+            }
+        }
+    }
+}
+
+-(void) clearCache{
+    for (int i=0; i<[self.cachedFiles count]; i++) {
+        cachedRoots[i]=nil;
+    }
+    self.cachedFiles=nil;
 }
 
 /*
@@ -184,6 +225,9 @@ float TBCellSizeForZoomScale(MKZoomScale zoomScale)
  */
 - (NSArray *)clusteredAnnotationsWithinMapRect:(MKMapRect)rect withZoomScale:(double)zoomScale
 {
+    if (!self.root) {
+        return nil;
+    }
     double TBCellSize = TBCellSizeForZoomScale(zoomScale);
     double scaleFactor =zoomScale / TBCellSize*2;
     

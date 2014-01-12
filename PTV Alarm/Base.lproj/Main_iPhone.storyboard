@@ -249,7 +249,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1593" y="-4552"/>
+            <point key="canvasLocation" x="1529" y="-4552"/>
         </scene>
         <!--Alarm Detail View Controller - Switch to set alarm-->
         <scene sceneID="Epk-Jv-6L5">
@@ -369,11 +369,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VH7-3Z-keh">
-                                <rect key="frame" x="43" y="452" width="234" height="29"/>
+                                <rect key="frame" x="123" y="452" width="74" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="None"/>
-                                    <segment title="Train"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
                                     <segment title=""/>
                                     <segment title=""/>
                                     <segment title=""/>
@@ -397,6 +397,7 @@
                     <connections>
                         <outlet property="mapView" destination="wB0-Dy-VQQ" id="JK4-Td-9Xf"/>
                         <outlet property="segementedControl" destination="VH7-3Z-keh" id="Zfc-5f-ahL"/>
+                        <segue destination="5o8-Hj-Zy9" kind="push" identifier="mapAnnotationSegue" id="m9U-7F-1ZT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQx-ZP-rr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -537,7 +538,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="m9U-7F-1ZT"/>
         <segue reference="J0E-T5-4fn"/>
-        <segue reference="c13-iO-rHB"/>
     </inferredMetricsTieBreakers>
 </document>
