@@ -83,4 +83,27 @@
     }
 }
 
+static PTVAlarmDefine * sharedObj=nil;
+- (id) init{
+    if (sharedObj) {
+        return self=sharedObj;
+    }
+    if (self=[super init]) {
+    }
+    return self;
+}
+
++ (id) sharedInstance{
+    if (sharedObj) {
+        return sharedObj;
+    }
+    else{
+        static dispatch_once_t pred;
+        dispatch_once(&pred,^{
+            sharedObj=[[PTVAlarmDefine alloc] init];
+        });
+        return sharedObj;
+    }
+}
+
 @end

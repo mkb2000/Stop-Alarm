@@ -8,12 +8,16 @@
 
 #import "PTVAlarmAppDelegate.h"
 #import "Stations.h"
+#import "Line.h"
 #import "FileReader.h"
+
 
 @implementation PTVAlarmAppDelegate
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,7 +31,7 @@
     [self.ptvalarmmanager activeAlarmsChange:[self activeAlarms]];
     //Any change to alarm state will be observed.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(activeAlarmsChange) name:NSManagedObjectContextObjectsDidChangeNotification object:nil];
-//    [self activeAlarms];
+    
     return YES;
 }
 							
@@ -134,6 +138,7 @@
 
 //read files and put entries into core data
 - (void) loadStations{
+//    NSArray * files=@[FILE_TRAIN,FILE_TRAM];//,FILE_TRAIN,FILE_TRAIN,FILE_TRAIN];
     NSArray * files=@[FILE_TRAIN,FILE_TRAM,FILE_BUS,FILE_VLINE];
     
     for (NSString * filename in files) {
@@ -143,24 +148,50 @@
             FileReader * reader=[[FileReader alloc] initWithFile:filepath];
             NSString * line = nil;
             int lnum=0;
+            NSMutableDictionary * existedLine=[NSMutableDictionary dictionary];//cache new created Line
             while ((line = [reader nextLine])) {
                 lnum++;
-                NSArray *parts=[line componentsSeparatedByString:@";"];
-                if ([parts count]!=4) {
-                    [NSException raise:@"Error in stop files" format:@"file: %@; stop name: %@; line: %d", filename,parts[0],lnum];
+                NSDictionary * stationInfo=[NSJSONSerialization JSONObjectWithData:[line dataUsingEncoding:NSMacOSRomanStringEncoding] options:kNilOptions error:nil];
+                if (!stationInfo) {
+                    NSLog(@"lien %d unable to deal with",lnum);
+                    continue;
                 }
                 Stations *station=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_STATION
                                                                 inManagedObjectContext:self.managedObjectContext];
-                station.name=parts[0];
+                station.name=[stationInfo objectForKey:@"name"];
                 station.initial=[[ NSString stringWithString:[station.name substringToIndex:1] ]uppercaseString];
-                station.suburb=parts[1];
-                station.address=parts[2];
-                NSArray * cor=[parts[3] componentsSeparatedByString:@","];
+                station.suburb=[stationInfo objectForKey:@"suburb"];
+                station.address= [stationInfo objectForKey:@"address"];
+                NSArray * cor=[[stationInfo objectForKey:@"coordinate"] componentsSeparatedByString:@","];
                 station.latitude=cor[0];
                 station.longitude=cor[1];
                 station.type=[NSNumber numberWithInt:[PTVAlarmDefine filenameToStationType:filename]];
+                
+                //link station with line; if line not existed,create it.
+                NSString *linename;
+                NSString *linkToLine;
+                for (int i=0; i<[[stationInfo objectForKey:@"lines"] count]; i++) {
+                    linename=[stationInfo objectForKey:@"lines"][i];
+                    linkToLine=[stationInfo objectForKey:@"linksToLines"][i];
+                    Line *templine=[existedLine objectForKey:linename];
+                    if (!templine) {
+                        //create new line.
+                        templine=[NSEntityDescription insertNewObjectForEntityForName:ENTITY_LINE inManagedObjectContext:self.managedObjectContext];
+                        templine.name=linename;
+                        templine.link=linkToLine;
+                        [existedLine setObject:templine forKey:linename];
+                    }
+                    //link station and line.
+                    NSMutableSet *temLineSet=[NSMutableSet setWithSet:station.belongTo];
+                    NSMutableSet *temStationSet=[NSMutableSet setWithSet:templine.composedOf];
+                    [temLineSet addObject:templine];
+                    [temStationSet addObject:station];
+                    station.belongTo=temLineSet;
+                    templine.composedOf=temStationSet;
+                }
             }
             reader=Nil;
+            existedLine=nil;
             NSLog(@"%d lines in file %@",lnum,filename);
         }
         else{

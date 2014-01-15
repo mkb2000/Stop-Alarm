@@ -1,25 +1,27 @@
 //
 //  Stations.m
-//  PTV Alarm
+//  Stop Alarm
 //
-//  Created by Kangbo Mo on 1/12/2013.
-//  Copyright (c) 2013 Kangbo Mo. All rights reserved.
+//  Created by Kangbo Mo on 14/01/2014.
+//  Copyright (c) 2014 Kangbo Mo. All rights reserved.
 //
 
 #import "Stations.h"
 #import "Alarms.h"
+#import "Line.h"
 
 
 @implementation Stations
 
-@dynamic name;
 @dynamic address;
+@dynamic initial;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic name;
+@dynamic stationID;
 @dynamic suburb;
 @dynamic type;
-@dynamic initial;
-@dynamic stationID;
 @dynamic alarm;
+@dynamic belongTo;
 
 @end

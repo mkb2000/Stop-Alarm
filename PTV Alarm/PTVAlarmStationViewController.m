@@ -156,7 +156,12 @@
     
     // configure cell
     //    Stations * stationInfo=[fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text=stationInfo.name;
+    if (stationInfo.type.intValue==Train) {
+        cell.textLabel.text=[stationInfo.name componentsSeparatedByString:@" "][0];
+    }
+    else{
+        cell.textLabel.text=stationInfo.name;
+    }
     cell.detailTextLabel.text=stationInfo.suburb;
     if (stationInfo.type.intValue!=Train) {
         cell.textLabel.font=[cell.textLabel.font fontWithSize:16];

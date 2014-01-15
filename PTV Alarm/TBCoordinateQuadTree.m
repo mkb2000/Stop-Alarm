@@ -16,19 +16,18 @@ typedef struct TBStationInfo {
 
 TBQuadTreeNodeData TBDataFromLine(NSString *line)
 {
-    NSArray *components = [line componentsSeparatedByString:@";"];
-    NSString * location=components[3];
-    NSArray * loci=[location componentsSeparatedByString:@","];
+    NSDictionary * stationInfo=[NSJSONSerialization JSONObjectWithData:[line dataUsingEncoding:NSMacOSRomanStringEncoding] options:kNilOptions error:nil];
+    NSArray * loci=[[stationInfo objectForKey:@"coordinate" ] componentsSeparatedByString:@","];
     double latitude = [loci[0] doubleValue];
     double longitude = [loci[1] doubleValue];
     
     TBStationInfo* stopInfo = malloc(sizeof(TBStationInfo));
     
-    NSString *name = [components[0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *name = [[stationInfo objectForKey:@"name" ] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     stopInfo->name = malloc(sizeof(char) * name.length + 1);
     strncpy(stopInfo->name, [name cStringUsingEncoding:NSMacOSRomanStringEncoding], name.length + 1);
     
-    NSString *address = [components[2] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *address = [[stationInfo objectForKey:@"address" ] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     stopInfo->address = malloc(sizeof(char) * address.length + 1);
     strncpy(stopInfo->address, [address cStringUsingEncoding:NSMacOSRomanStringEncoding], address.length + 1);
     

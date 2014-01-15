@@ -90,12 +90,12 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    if (self.station.type.intValue==Train) {
-        self.uiname.text=[self.station.name stringByAppendingString:@" Railway Station"];
-    }
-    else{
-        self.uiname.text=self.station.name;
-    }
+//    if (self.station.type.intValue==Train) {
+//        self.uiname.text=[self.station.name stringByAppendingString:@" Railway Station"];
+//    }
+//    else{
+    self.uiname.text=self.station.name;// stringByAppendingString:[[self.station.belongTo anyObject] name]];
+//    }
     self.uiaddress.text=self.station.address;
     self.uiMapView.delegate=self;
     self.iconImgView.image=[UIImage imageNamed:[PTVAlarmDefine typeToImgFile:self.station.type.intValue]];

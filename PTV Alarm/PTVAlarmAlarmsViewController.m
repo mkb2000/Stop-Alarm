@@ -76,7 +76,7 @@
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:self.managedObjectContext
                                                                       sectionNameKeyPath:nil
-                                                                               cacheName:nil];
+                                                                               cacheName:@"alarms_cache"];
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;

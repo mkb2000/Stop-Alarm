@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A9079FFB18388EF800D8267D /* train.csv in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.csv */; };
-		A92F299E185213260020673C /* bus.csv in Resources */ = {isa = PBXBuildFile; fileRef = A92F299B185213260020673C /* bus.csv */; };
-		A92F299F185213260020673C /* tram.csv in Resources */ = {isa = PBXBuildFile; fileRef = A92F299C185213260020673C /* tram.csv */; };
-		A92F29A0185213260020673C /* vline.csv in Resources */ = {isa = PBXBuildFile; fileRef = A92F299D185213260020673C /* vline.csv */; };
+		A9079FFB18388EF800D8267D /* train.txt in Resources */ = {isa = PBXBuildFile; fileRef = A9079FFA18388EF800D8267D /* train.txt */; };
+		A92F299E185213260020673C /* bus.txt in Resources */ = {isa = PBXBuildFile; fileRef = A92F299B185213260020673C /* bus.txt */; };
+		A92F299F185213260020673C /* tram.txt in Resources */ = {isa = PBXBuildFile; fileRef = A92F299C185213260020673C /* tram.txt */; };
+		A92F29A0185213260020673C /* vline.txt in Resources */ = {isa = PBXBuildFile; fileRef = A92F299D185213260020673C /* vline.txt */; };
 		A92F29A6185296150020673C /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F29A5185296150020673C /* FileReader.m */; };
 		A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F7EA5184327E700045A09 /* PTVAlarmMapAnnotation.m */; };
 		A939217A184CA27400B5E967 /* weribee.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9392179184CA27400B5E967 /* weribee.gpx */; };
@@ -40,8 +40,6 @@
 		A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9961E1A1835DA0100AAF1A9 /* PTVAlarmMapViewController.m */; };
 		A9961E631835EBF100AAF1A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9961E621835EBF100AAF1A9 /* MapKit.framework */; };
 		A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A560C7184AF39200B7D2EB /* PTVAlarmManager.m */; };
-		A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A5610F184B3B9900B7D2EB /* Alarms.m */; };
-		A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A56112184B3B9A00B7D2EB /* Stations.m */; };
 		A9B4C2431873D0C300702A1B /* TBQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2421873D0C300702A1B /* TBQuadTree.m */; };
 		A9B4C2461873D0E600702A1B /* TBCoordinateQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2451873D0E600702A1B /* TBCoordinateQuadTree.m */; };
 		A9B4C24B1873D29A00702A1B /* TBClusterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B4C2481873D29A00702A1B /* TBClusterAnnotation.m */; };
@@ -52,6 +50,9 @@
 		A9C67FB11859433400E3F45D /* iconBus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAE1859433400E3F45D /* iconBus@2x.png */; };
 		A9C67FB21859433400E3F45D /* iconTrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FAF1859433400E3F45D /* iconTrain@2x.png */; };
 		A9C67FB31859433400E3F45D /* iconVline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C67FB01859433400E3F45D /* iconVline@2x.png */; };
+		A9CA9914188558A600636F42 /* Alarms.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CA9913188558A600636F42 /* Alarms.m */; };
+		A9CA9917188558A600636F42 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CA9916188558A600636F42 /* Line.m */; };
+		A9CA9923188563BA00636F42 /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = A9CA9922188563BA00636F42 /* Stations.m */; };
 		A9E14E9C18545B5000724A54 /* Alien.caf in Resources */ = {isa = PBXBuildFile; fileRef = A9E14E9B18545B5000724A54 /* Alien.caf */; };
 		A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9F579A6184701BE0065553F /* alarms.xcdatamodeld */; };
 		A9F579C5184739850065553F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F579C4184739850065553F /* CoreData.framework */; };
@@ -83,10 +84,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A9079FFA18388EF800D8267D /* train.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.csv; sourceTree = "<group>"; };
-		A92F299B185213260020673C /* bus.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bus.csv; sourceTree = "<group>"; };
-		A92F299C185213260020673C /* tram.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tram.csv; sourceTree = "<group>"; };
-		A92F299D185213260020673C /* vline.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vline.csv; sourceTree = "<group>"; };
+		A9079FFA18388EF800D8267D /* train.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.txt; sourceTree = "<group>"; };
+		A92F299B185213260020673C /* bus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bus.txt; sourceTree = "<group>"; };
+		A92F299C185213260020673C /* tram.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tram.txt; sourceTree = "<group>"; };
+		A92F299D185213260020673C /* vline.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vline.txt; sourceTree = "<group>"; };
 		A92F29A4185296150020673C /* FileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
 		A92F29A5185296150020673C /* FileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		A92F7EA4184327E700045A09 /* PTVAlarmMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmMapAnnotation.h; sourceTree = "<group>"; };
@@ -129,10 +130,6 @@
 		A9961E621835EBF100AAF1A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9A560C6184AF39200B7D2EB /* PTVAlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTVAlarmManager.h; sourceTree = "<group>"; };
 		A9A560C7184AF39200B7D2EB /* PTVAlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTVAlarmManager.m; sourceTree = "<group>"; };
-		A9A5610E184B3B9900B7D2EB /* Alarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarms.h; sourceTree = "<group>"; };
-		A9A5610F184B3B9900B7D2EB /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
-		A9A56111184B3B9A00B7D2EB /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
-		A9A56112184B3B9A00B7D2EB /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
 		A9B4C2411873D0C300702A1B /* TBQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBQuadTree.h; sourceTree = "<group>"; };
 		A9B4C2421873D0C300702A1B /* TBQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBQuadTree.m; sourceTree = "<group>"; };
 		A9B4C2441873D0E600702A1B /* TBCoordinateQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCoordinateQuadTree.h; sourceTree = "<group>"; };
@@ -147,6 +144,12 @@
 		A9C67FAE1859433400E3F45D /* iconBus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconBus@2x.png"; sourceTree = "<group>"; };
 		A9C67FAF1859433400E3F45D /* iconTrain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTrain@2x.png"; sourceTree = "<group>"; };
 		A9C67FB01859433400E3F45D /* iconVline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconVline@2x.png"; sourceTree = "<group>"; };
+		A9CA9912188558A600636F42 /* Alarms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alarms.h; sourceTree = "<group>"; };
+		A9CA9913188558A600636F42 /* Alarms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarms.m; sourceTree = "<group>"; };
+		A9CA9915188558A600636F42 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		A9CA9916188558A600636F42 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		A9CA9921188563BA00636F42 /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
+		A9CA9922188563BA00636F42 /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
 		A9E14E9B18545B5000724A54 /* Alien.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Alien.caf; sourceTree = "<group>"; };
 		A9F579A7184701BE0065553F /* alarms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = alarms.xcdatamodel; sourceTree = "<group>"; };
 		A9F579C4184739850065553F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -341,10 +344,10 @@
 		A9B4C23E1873D04F00702A1B /* data */ = {
 			isa = PBXGroup;
 			children = (
-				A9079FFA18388EF800D8267D /* train.csv */,
-				A92F299B185213260020673C /* bus.csv */,
-				A92F299C185213260020673C /* tram.csv */,
-				A92F299D185213260020673C /* vline.csv */,
+				A9079FFA18388EF800D8267D /* train.txt */,
+				A92F299B185213260020673C /* bus.txt */,
+				A92F299C185213260020673C /* tram.txt */,
+				A92F299D185213260020673C /* vline.txt */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -363,11 +366,13 @@
 		A9F579C9184874400065553F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A9A5610E184B3B9900B7D2EB /* Alarms.h */,
-				A9A56111184B3B9A00B7D2EB /* Stations.h */,
-				A9A56112184B3B9A00B7D2EB /* Stations.m */,
-				A9A5610F184B3B9900B7D2EB /* Alarms.m */,
 				A9F579A6184701BE0065553F /* alarms.xcdatamodeld */,
+				A9CA9921188563BA00636F42 /* Stations.h */,
+				A9CA9922188563BA00636F42 /* Stations.m */,
+				A9CA9912188558A600636F42 /* Alarms.h */,
+				A9CA9913188558A600636F42 /* Alarms.m */,
+				A9CA9915188558A600636F42 /* Line.h */,
+				A9CA9916188558A600636F42 /* Line.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -460,16 +465,16 @@
 				A9FF1EBF1851E41100EB787A /* iconBus.png in Resources */,
 				A9C67FB11859433400E3F45D /* iconBus@2x.png in Resources */,
 				A9FF1EB21851E1DB00EB787A /* bus_trans.png in Resources */,
-				A92F299F185213260020673C /* tram.csv in Resources */,
+				A92F299F185213260020673C /* tram.txt in Resources */,
 				A9FF1EBC1851E41100EB787A /* logo-regional-coach.gif in Resources */,
 				A9961DF81835D54C00AAF1A9 /* Main_iPad.storyboard in Resources */,
 				A9961DFD1835D54C00AAF1A9 /* Images.xcassets in Resources */,
 				A9FF1EB31851E1DB00EB787A /* train_metro_trans.png in Resources */,
-				A9079FFB18388EF800D8267D /* train.csv in Resources */,
+				A9079FFB18388EF800D8267D /* train.txt in Resources */,
 				A9C67FB31859433400E3F45D /* iconVline@2x.png in Resources */,
 				A9C67FAB18593C4B00E3F45D /* iconVline.png in Resources */,
 				A9392180184CB6A200B5E967 /* swhereTwerribee-2.gpx in Resources */,
-				A92F29A0185213260020673C /* vline.csv in Resources */,
+				A92F29A0185213260020673C /* vline.txt in Resources */,
 				A9F579E71848867A0065553F /* location2@2x.png in Resources */,
 				A9961DF51835D54C00AAF1A9 /* Main_iPhone.storyboard in Resources */,
 				A9392182184D916200B5E967 /* bikehike_course.gpx in Resources */,
@@ -482,7 +487,7 @@
 				A9F579DE184886350065553F /* magnifying-glass.png in Resources */,
 				A9C67FAD1859407700E3F45D /* iconTram@2x.png in Resources */,
 				A9961DEC1835D54C00AAF1A9 /* InfoPlist.strings in Resources */,
-				A92F299E185213260020673C /* bus.csv in Resources */,
+				A92F299E185213260020673C /* bus.txt in Resources */,
 				A9FF1EBB1851E41100EB787A /* iconTram.png in Resources */,
 				A9F579E61848867A0065553F /* location2.png in Resources */,
 			);
@@ -503,12 +508,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A56113184B3B9A00B7D2EB /* Stations.m in Sources */,
 				A946CD4518363782003EE075 /* PTVAlarmAlarmsViewController.m in Sources */,
 				A9961DEE1835D54C00AAF1A9 /* main.m in Sources */,
-				A9A56110184B3B9900B7D2EB /* Alarms.m in Sources */,
 				A9A560C8184AF39200B7D2EB /* PTVAlarmManager.m in Sources */,
 				A9B4C24B1873D29A00702A1B /* TBClusterAnnotation.m in Sources */,
+				A9CA9917188558A600636F42 /* Line.m in Sources */,
 				A9F579A8184701BE0065553F /* alarms.xcdatamodeld in Sources */,
 				A9B4C24C1873D29A00702A1B /* TBClusterAnnotationView.m in Sources */,
 				A9F579C8184748B60065553F /* PTVAlarmDefine.m in Sources */,
@@ -516,11 +520,13 @@
 				A9B4C2431873D0C300702A1B /* TBQuadTree.m in Sources */,
 				A92F7EA6184327E700045A09 /* PTVAlarmMapAnnotation.m in Sources */,
 				A946CD4818363B65003EE075 /* PTVAlarmStationViewController.m in Sources */,
+				A9CA9914188558A600636F42 /* Alarms.m in Sources */,
 				A92F29A6185296150020673C /* FileReader.m in Sources */,
 				A9961DFB1835D54C00AAF1A9 /* PTVAlarmViewController.m in Sources */,
 				A9502EA41841E69400AE8F07 /* PTVAlarmDetailViewController.m in Sources */,
 				A9961DF21835D54C00AAF1A9 /* PTVAlarmAppDelegate.m in Sources */,
 				A9961E1B1835DA0100AAF1A9 /* PTVAlarmMapViewController.m in Sources */,
+				A9CA9923188563BA00636F42 /* Stations.m in Sources */,
 				A9B4C2461873D0E600702A1B /* TBCoordinateQuadTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

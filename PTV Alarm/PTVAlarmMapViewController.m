@@ -75,7 +75,7 @@
     
     self.coordinateQuadTree = [[TBCoordinateQuadTree alloc] init];
     [self.opQueue addOperationWithBlock:^{
-        [self.coordinateQuadTree prepareTreeWithFile:@"bus.csv"];//this takes a while to execute, so do it here.
+        [self.coordinateQuadTree prepareTreeWithFile:FILE_BUS];//this takes a while to execute, so do it here.
     }];
     
     [self.segementedControl setTitle:@"None" forSegmentAtIndex:0];
@@ -391,16 +391,16 @@
             [self.coordinateQuadTree buildTreeWithFile:@""];
             break;
         case 1:
-            [self.coordinateQuadTree buildTreeWithFile:@"train.csv"];
+            [self.coordinateQuadTree buildTreeWithFile:FILE_TRAIN];
             break;
         case 2:
-            [self.coordinateQuadTree buildTreeWithFile:@"bus.csv"];
+            [self.coordinateQuadTree buildTreeWithFile:FILE_BUS];
             break;
         case 3:
-            [self.coordinateQuadTree buildTreeWithFile:@"tram.csv"];
+            [self.coordinateQuadTree buildTreeWithFile:FILE_TRAM];
             break;
         case 4:
-            [self.coordinateQuadTree buildTreeWithFile:@"vline.csv"];
+            [self.coordinateQuadTree buildTreeWithFile:FILE_VLINE];
             break;
         default:
             break;
